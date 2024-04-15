@@ -1,28 +1,53 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const links = [
   {
     title: "Title 1",
     content: (
-      <p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+      >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sint
-        minima itaque sequi, distinctio quasi quia, harum veniam quidem nam
-        voluptas sapiente ad facere perspiciatis eveniet dicta enim, mollitia
-        eaque.
-      </p>
+        minima itaque, distinctio quasi quia, harum veniam quidem nam
+        voluptas sapiente ad facere perspiciatis eveniet dicta enim,
+        mollitia eaque.
+      </motion.p>
     ),
-    element: <div style={{ backgroundColor: "lightblue" }}>Example Div</div>,
+    element: (
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+      >
+        Example Div
+      </motion.div>
+    ),
   },
   {
     title: "Title 2",
     content: (
-      <p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+      >
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
         voluptates facere temporibus, itaque officiis accusantium laboriosam
         repellendus, autem doloremque in.
-      </p>
+      </motion.p>
     ),
-    element: <img src="example-image2.jpg" alt="Example Image" />,
+    element: (
+      <motion.img
+        src="example-image2.jpg"
+        alt="Example Image"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+      />
+    ),
   },
   // Add more links as needed
 ];
@@ -38,7 +63,13 @@ function Main() {
           {links[activeLink].element}
         </div>
         <div className="md:w-1/2">
-          <h2>{links[activeLink].title}</h2>
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            {links[activeLink].title}
+          </motion.h2>
           {links[activeLink].content}
           <a href="#">Read more.</a>
         </div>
