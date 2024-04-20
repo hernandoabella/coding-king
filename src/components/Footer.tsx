@@ -5,7 +5,7 @@ function Footer() {
     <footer>
       <div className="container-fluid">
         <p className="text-center">
-          &copy; Coding-King {new Date().getFullYear()}
+          &copy; Coding-King {new Date().getFullYear()}.
         </p>
       </div>
     </footer>
