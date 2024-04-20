@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const links = [
   {
-    title: "Title 1",
+    title: "HTML",
     content: (
       <motion.p
         initial={{ opacity: 0 }}
@@ -11,9 +11,8 @@ const links = [
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sint
-        minima itaque, distinctio quasi quia, harum veniam quidem nam
-        voluptas sapiente ad facere perspiciatis eveniet dicta enim,
-        mollitia eaque.
+        minima itaque, distinctio quasi quia, harum veniam quidem nam voluptas
+        sapiente ad facere perspiciatis eveniet dicta enim, mollitia eaque.
       </motion.p>
     ),
     element: (
@@ -27,7 +26,7 @@ const links = [
     ),
   },
   {
-    title: "Title 2",
+    title: "CSS",
     content: (
       <motion.p
         initial={{ opacity: 0 }}
@@ -74,14 +73,15 @@ function Main() {
           <a href="#">Read more.</a>
         </div>
       </div>
-      <div className="flex p-5">
+      <div className="flex p-5 gap-5 border ">
         {links.map((link, index) => (
           <div
+            className="bg-yellow"
             key={index}
             onClick={() => setActiveLink(index)}
             style={{ cursor: "pointer" }}
           >
-            {index + 1}
+            {link.title}
           </div>
         ))}
       </div>
