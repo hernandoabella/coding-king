@@ -18,10 +18,10 @@ const links = [
       <motion.img
         src="/public/html5-original.svg"
         alt="css3"
+        width={400}
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        width={400}
       />
     ),
   },
@@ -41,10 +41,10 @@ const links = [
       <motion.img
         src="/public/css3-original.svg"
         alt="css3"
+        width={400}
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        width={400}
       />
     ),
   },
@@ -56,15 +56,15 @@ function Main() {
 
   return (
     <div>
-      <div className="md:w-2xl md:mx-auto flex justify-center place-items-center p-5 gap-10">
-        <div className="md:flex">
-          <div className="md:w-1/3">
+      <div className="md:w-2xl md:mx-auto flex justify-center place-items-center p-10 gap-10">
+        <div className="md:flex gap-10">
+          <div className="md:p-10 mx-auto m-10 w-1/2">
             {/* Left side content example: code snippet or image */}
             {links[activeLink].element}
           </div>
-          <div className="md:w-1/2">
+          <div>
             <motion.h2
-              className="font-semibold"
+              className="font-semibold  md:text-9xl"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
