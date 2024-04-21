@@ -5,15 +5,48 @@ const links = [
   {
     title: "HTML",
     content: (
-      <motion.p
-        key="html-content"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        The foundation of web development, HTML is used to structure the content
-        of a webpage.
-      </motion.p>
+      <div>
+        <p>
+          The foundation of web development, HTML is used to structure the
+          content of a webpage.
+        </p>
+        <ul>
+          <li>
+            <b>!DOCTYPE: </b>Defines the document
+          </li>
+          <li>
+            <b>html: </b>Defines HTML documents
+          </li>
+          <li>
+            <b>head: </b>Contains metadata / information for the document
+          </li>
+          <li>
+            <b>title</b> Defines the title for the document
+          </li>
+          <li>
+            <b>body:</b> Defines the document
+          </li>
+          <li>
+            <b>h1 - h6:</b> Defines headings
+          </li>
+          <li>
+            <b>p:</b> Defines a paragraph
+          </li>
+          <li>
+            <b>br:</b> Insert a single line break
+          </li>
+          <li>
+            <b>hr:</b> Defines a thematic break in an HTML page
+          </li>
+          <li>
+            <b>:</b>Defines a comment
+          </li>
+        </ul>
+        <h3 className="font-semibold uppercase">Forms and inputs</h3>
+        <h3 className="font-semibold">FORMATTING</h3>
+        <h3 className="font-semibold">IMAGES</h3> <br />
+        <h3 className="font-semibold uppercase">Basic HTML</h3>
+      </div>
     ),
     element: (
       <motion.img
@@ -30,15 +63,10 @@ const links = [
   {
     title: "CSS",
     content: (
-      <motion.p
-        key="css-content"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
+      <p>
         Cascading Style Sheets (CSS) is a stylesheet language used for
         describing the look and formatting of a web page.
-      </motion.p>
+      </p>
     ),
     element: (
       <motion.img
@@ -62,19 +90,10 @@ function Main() {
       <div className="md:w-2xl md:mx-auto flex justify-center place-items-center p-10 gap-10">
         <div className="md:flex gap-10">
           <div className="md:p-10 mx-auto m-10 w-1/2">
-            <motion.div
-              style={{ height: "400px" }} // Set a fixed height for content area
-            >
-              {links[activeLink].element}
-            </motion.div>
+            <motion.div>{links[activeLink].element}</motion.div>
           </div>
           <div>
-            <motion.h2
-              className="font-semibold  md:text-9xl"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              key={links[activeLink].title}
-            >
+            <motion.h2 className="font-semibold  md:text-7xl">
               {links[activeLink].title}
             </motion.h2>
             {links[activeLink].content}
