@@ -6,7 +6,7 @@ const links = [
     title: "HTML",
     content: (
       <div>
-        <p className="py-2">
+        <p className="py-2 text-xl">
           The foundation of web development, HTML is used to structure the
           content of a webpage.
         </p>
@@ -31,7 +31,7 @@ const links = [
     title: "CSS",
     content: (
       <div>
-        <p className="py-2">
+        <p className="py-2 text-xl">
           Cascading Style Sheets (CSS) is a stylesheet language used for
           describing the look and formatting of a web page.
         </p>
@@ -59,13 +59,13 @@ function Main() {
 
   return (
     <div>
-      <div className="flex align-center items-center bg-red-500 md:mx-auto p-10">
-        <div className="md:flex gap-10 justify-center items-center">
-          <div className="md:w-2/1 flex justify-center items-center p-10">
+      <div className="md:flex md:align-center md:items-center">
+        <div className="md:flex md:justify-center md:items-center">
+          <div className="md:w-2/1 flex items-center justify-center p-10">
             <motion.div>{links[activeLink].element}</motion.div>
           </div>
-          <div className="md:w-2/1 p-10">
-            <motion.h2 className="font-semibold text-indigo-700 md:text-7xl">
+          <div className="w-full  md:w-2/1 p-10">
+            <motion.h2 className="text-xl font-semibold text-indigo-700 md:text-7xl">
               {links[activeLink].title}
             </motion.h2>
             {links[activeLink].content}
