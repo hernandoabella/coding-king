@@ -5,7 +5,7 @@ function Main() {
   return (
     <div className="container">
       <div className="p-10 md:flex">
-        <div>
+        <div className="p-10">
           <img
             src="/public/html5-original.svg"
             width={300}
@@ -24,21 +24,35 @@ function Main() {
             The foundation of web development, HTML is used to structure the
             content of a webpage.
           </p>
-          
-          <div>
-          <h2 className="text-4xl font-extrabold dark:text-white">Basic Structure:</h2>
-          &lt;!DOCTYPE html&gt;<br/>
-&lt;html&gt;<br/>
-  &lt;head&gt;<br/>
-    &lt;title&gt;My Web Page&lt;/title&gt;<br/>
-  &lt;/head&gt;<br/>
-  &lt;body&gt;<br/>
-    &lt;h1&gt;Hello, World!&lt;/h1&gt;<br/>
-    &lt;p&gt;This is my first web page.&lt;/p&gt;<br/>
-  &lt;/body&gt;<br/>
-&lt;/html&gt;
+
+          <div className="p-5">
+            <h3 className="text-3xl font-extrabold dark:text-white">
+              Basic Structure:
+            </h3>
+            <div className="p-5">
+              &lt;!DOCTYPE html&gt;
+              <br />
+              &lt;html&gt;
+              <br />
+              &nbsp;&nbsp;&lt;head&gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;My Web Page&lt;/title&gt;
+              <br />
+              &nbsp;&nbsp;&lt;/head&gt;
+              <br />
+              &nbsp;&nbsp;&lt;body&gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hello, World!&lt;/h1&gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is my first web
+              page.&lt;/p&gt;
+              <br />
+              &nbsp;&nbsp;&lt;/body&gt;
+              <br />
+              &lt;/html&gt;
+            </div>
           </div>
-          
+
           <div className="py-5">
             <a href="#">
               <button
