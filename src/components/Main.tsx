@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Prism from "prismjs";
 
 function Main() {
   return (
-    <div className="container">
+    <div className="containe">
       <div className="p-10 md:flex">
-        <div className="p-10">
+        <div className="p-10 flex md:flex-none justify-center">
           <img
             src="/public/html5-original.svg"
             width={300}
@@ -30,26 +31,31 @@ function Main() {
               Basic Structure:
             </h3>
             <div className="p-5">
-              &lt;!DOCTYPE html&gt;
-              <br />
-              &lt;html&gt;
-              <br />
-              &nbsp;&nbsp;&lt;head&gt;
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;My Web Page&lt;/title&gt;
-              <br />
-              &nbsp;&nbsp;&lt;/head&gt;
-              <br />
-              &nbsp;&nbsp;&lt;body&gt;
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hello, World!&lt;/h1&gt;
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is my first web
-              page.&lt;/p&gt;
-              <br />
-              &nbsp;&nbsp;&lt;/body&gt;
-              <br />
-              &lt;/html&gt;
+              <pre>
+                <code className="html-language">
+                  &lt;!DOCTYPE html&gt;
+                  <br />
+                  &lt;html&gt;
+                  <br />
+                  &nbsp;&nbsp;&lt;head&gt;
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;My Web
+                  Page&lt;/title&gt;
+                  <br />
+                  &nbsp;&nbsp;&lt;/head&gt;
+                  <br />
+                  &nbsp;&nbsp;&lt;body&gt;
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hello, World!&lt;/h1&gt;
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is my first web
+                  page.&lt;/p&gt;
+                  <br />
+                  &nbsp;&nbsp;&lt;/body&gt;
+                  <br />
+                  &lt;/html&gt;
+                </code>
+              </pre>
             </div>
           </div>
 
