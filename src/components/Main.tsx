@@ -25,6 +25,20 @@ function Main() {
             content of a webpage.
           </p>
           
+          <div>
+          <h2 className="text-4xl font-extrabold dark:text-white">Basic Structure:</h2>
+          &lt;!DOCTYPE html&gt;<br/>
+&lt;html&gt;<br/>
+  &lt;head&gt;<br/>
+    &lt;title&gt;My Web Page&lt;/title&gt;<br/>
+  &lt;/head&gt;<br/>
+  &lt;body&gt;<br/>
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;<br/>
+    &lt;p&gt;This is my first web page.&lt;/p&gt;<br/>
+  &lt;/body&gt;<br/>
+&lt;/html&gt;
+          </div>
+          
           <div className="py-5">
             <a href="#">
               <button
