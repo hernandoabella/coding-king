@@ -1,6 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+import hljs from "highlight.js";
+import "highlight.js/styles/dark.css"; // Import Highlight.js CSS
 
 function Main() {
+  useEffect(() => {
+    hljs.highlightAll(); // Call highlightAll() after the component has been rendered
+  }, []);
+
   return (
     <div className="container">
       <div>
@@ -47,34 +53,30 @@ function Main() {
 
           <div className="pt-5 gap-10 flex">
             <div>
-              <h3 className="text-3xl font-extrabold dark:text-white">
+              <h3 className="text-3xl font-extrabold text-orange-400">
                 Basic Structure:
               </h3>
               <div className="pt-5">
-                <pre>
-                  <code className="html-language">
-                    &lt;!DOCTYPE html&gt;
-                    <br />
-                    &lt;html&gt;
-                    <br />
-                    &nbsp;&nbsp;&lt;head&gt;
-                    <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;My Web
-                    Page&lt;/title&gt;
-                    <br />
-                    &nbsp;&nbsp;&lt;/head&gt;
-                    <br />
-                    &nbsp;&nbsp;&lt;body&gt;
-                    <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hello, World!&lt;/h1&gt;
-                    <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is my first web
-                    page.&lt;/p&gt;
-                    <br />
-                    &nbsp;&nbsp;&lt;/body&gt;
-                    <br />
-                    &lt;/html&gt;
-                  </code>
+                <pre className="html-language">
+                  &lt;!DOCTYPE html&gt;
+                  <br />
+                  &lt;html&gt;
+                  <br />
+                  &nbsp;&nbsp;&lt;head&gt;
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page Title&lt;/title&gt;
+                  <br />
+                  &nbsp;&nbsp;&lt;/head&gt;
+                  <br />
+                  &lt;body&gt;
+                  <br />
+                  &lt;h1&gt;This is a Heading&lt;/h1&gt;
+                  <br />
+                  &lt;p&gt;This is a paragraph.&lt;/p&gt;
+                  <br />
+                  &lt;/body&gt;
+                  <br />
+                  &lt;/html&gt;
                 </pre>
               </div>
             </div>
@@ -94,7 +96,7 @@ function Main() {
             <a href="#">
               <button
                 type="button"
-                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="btn"
               >
                 Full Tutorial
               </button>
