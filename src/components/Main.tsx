@@ -1,12 +1,6 @@
-import React, { useEffect } from "react";
-import hljs from "highlight.js";
-import "highlight.js/styles/dark.css"; // Import Highlight.js CSS
+import React from "react";
 
 function Main() {
-  useEffect(() => {
-    hljs.highlightAll(); // Call highlightAll() after the component has been rendered
-  }, []);
-
   return (
     <div className="container">
       <div>
@@ -51,32 +45,35 @@ function Main() {
             content of a webpage.
           </p>
 
-          <div className="pt-5 gap-10 flex">
+          <div className="pt-5 gap-20 md:flex">
             <div>
               <h3 className="text-3xl font-extrabold text-orange-400">
                 Basic Structure:
               </h3>
-              <div className="pt-5">
-                <pre className="html-language">
-                  &lt;!DOCTYPE html&gt;
-                  <br />
-                  &lt;html&gt;
-                  <br />
-                  &nbsp;&nbsp;&lt;head&gt;
-                  <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page Title&lt;/title&gt;
-                  <br />
-                  &nbsp;&nbsp;&lt;/head&gt;
-                  <br />
-                  &lt;body&gt;
-                  <br />
-                  &lt;h1&gt;This is a Heading&lt;/h1&gt;
-                  <br />
-                  &lt;p&gt;This is a paragraph.&lt;/p&gt;
-                  <br />
-                  &lt;/body&gt;
-                  <br />
-                  &lt;/html&gt;
+              <div className="py-5">
+                <pre>
+                  <code className="language-html">
+                    &lt;!DOCTYPE html&gt;
+                    <br />
+                    &lt;html&gt;
+                    <br />
+                    &nbsp;&nbsp;&lt;head&gt;
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page
+                    Title&lt;/title&gt;
+                    <br />
+                    &nbsp;&nbsp;&lt;/head&gt;
+                    <br />
+                    &nbsp;&nbsp;&lt;body&gt;
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;This is a Heading&lt;/h1&gt;
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a paragraph.&lt;/p&gt;
+                    <br />
+                    &nbsp;&nbsp;&lt;/body&gt;
+                    <br />
+                    &lt;/html&gt;
+                  </code>
                 </pre>
               </div>
             </div>
@@ -94,10 +91,7 @@ function Main() {
 
           <div className="py-5">
             <a href="#">
-              <button
-                type="button"
-                className="btn"
-              >
+              <button type="button" className="btn outline">
                 Full Tutorial
               </button>
             </a>
