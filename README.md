@@ -40,4 +40,4 @@ Essential for managing and tracking changes to your code, with Git being the mos
 - **Flutter:** A mobile app SDK developed by Google for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.
 
 By [Hernando Abella](https://www.hernandoabella.com) <br />
-Visit beat-byte-publishing.com for more resources.
+Visit [Beat Byte Publishing](https://beat-byte-publishing.com) for more resources.
