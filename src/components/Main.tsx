@@ -4,19 +4,17 @@ import Prism from "prismjs";
 
 function Main() {
   return (
-    <div className="container flex">
+    <div className="container">
       <div>
         <div>
-          <div className="p-10 w-full bg-red-400">
-            <h3>Web Technologies:</h3>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-            <h3>Control Version:</h3>
-            <ul>
-              <li>HTML</li>
+          <div className="p-5 w-full flex flex-wrap">
+            <ul className="flex gap-5">
+              <li>
+                <button className="btn btn-outline">
+                  <i className="devicon-html5-plain"></i>
+                  HTML
+                </button>
+              </li>
               <li>CSS</li>
               <li>JavaScript</li>
             </ul>
