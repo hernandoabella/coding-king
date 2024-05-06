@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import Prism from "prismjs";
 
 function Main() {
   return (
@@ -15,8 +13,18 @@ function Main() {
                   HTML
                 </button>
               </li>
-              <li>CSS</li>
-              <li>JavaScript</li>
+              <li>
+                <button className="btn btn-outline">
+                  <i className="devicon-html5-plain"></i>
+                  CSS
+                </button>
+              </li>
+              <li>
+                <button className="btn btn-outline">
+                  <i className="devicon-html5-plain"></i>
+                  JAVASCRIPT
+                </button>
+              </li>
             </ul>
           </div>
         </div>
