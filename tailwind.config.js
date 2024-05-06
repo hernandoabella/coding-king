@@ -11,7 +11,7 @@ export default {
     require("daisyui")
   ],
   daisyui: {
-    themes: ["light", "dark", "cupcake", "retro", "coffee"], // Define whether to include all themes or specific themes (light, dark, cupcake)
+    themes: ["light", "dark", "cupcake", "valentine", "aqua", "retro", "coffee", "cyberpunk"], // Define whether to include all themes or specific themes (light, dark, cupcake)
     darkTheme: "dark", // Specify the name of the dark mode theme
     base: true, // Apply background color and foreground color for the root element by default
     styled: true, // Include DaisyUI colors and design decisions for all components
