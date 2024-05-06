@@ -4,7 +4,16 @@ import Prism from "prismjs";
 
 function Main() {
   return (
-    <div className="container">
+    <div className="container flex">
+      <div>
+        <div>
+          <div className="p-10">
+            <ul>
+              <li>Link 1</li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <div className="p-10 md:flex">
         <div className="p-10 flex md:flex-none justify-center">
           <img
@@ -15,7 +24,7 @@ function Main() {
           />
         </div>
         <div>
-          <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+          <h1 className="mb-4 text-3xl font-extrabold md:text-5xl lg:text-6xl">
             <span className="text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-orange-400">
               HTML:
             </span>{" "}
@@ -72,7 +81,7 @@ function Main() {
         </div>
       </div>
 
-      <div>Navigation</div>
+      
     </div>
   );
 }
