@@ -16,7 +16,7 @@ function Main() {
 
       <div>
         <div>
-          <div className="p-5 w-full flex flex-wrap">
+          <div className="p-5 w-full flex flex-wrap justify-center">
             <ul className="flex gap-5">
               <li>
                 <button
