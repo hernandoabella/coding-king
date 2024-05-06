@@ -6,7 +6,18 @@ export default {
   ],
   theme: {
     extend: {},
-    
   },
-  plugins: [],
+  plugins: [
+    require("daisyui")
+  ],
+  daisyui: {
+    themes: ["light", "dark", "cupcake", "retro", "coffee"], // Define whether to include all themes or specific themes (light, dark, cupcake)
+    darkTheme: "dark", // Specify the name of the dark mode theme
+    base: true, // Apply background color and foreground color for the root element by default
+    styled: true, // Include DaisyUI colors and design decisions for all components
+    utils: true, // Add responsive and modifier utility classes
+    prefix: "", // Prefix for DaisyUI classnames (components, modifiers, and responsive class names, but not colors)
+    logs: true, // Show info about DaisyUI version and used config in the console when building your CSS
+    themeRoot: ":root", // The element that receives theme color CSS variables
+  },
 }
