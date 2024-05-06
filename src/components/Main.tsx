@@ -8,7 +8,7 @@ function Main() {
       <div className="p-10 md:flex">
         <div className="p-10 flex md:flex-none justify-center">
           <img
-            src="/public/html5-original.svg"
+            src="/html5-original.svg"
             width={300}
             height={300}
             alt="html"
