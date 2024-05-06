@@ -73,7 +73,7 @@ function Main() {
               </div>
             </div>
 
-            <div className="mockup-browser border bg-base-300">
+            <div className="mockup-browser bg-base-300">
               <div className="mockup-browser-toolbar">
                 <div className="input">https://example.com</div>
               </div>
