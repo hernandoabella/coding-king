@@ -1,28 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
+import HTML from "./HTML";
+import Header from "./Header";
 
 function Main() {
+  const [activeButton, setActiveButton] = useState("HTML");
+
+  // Function to handle button click
+  const handleButtonClick = (buttonName) => {
+    setActiveButton(buttonName);
+  };
+
   return (
-    <div className="container">
+    <div>
+      <Header />
+
       <div>
         <div>
           <div className="p-5 w-full flex flex-wrap">
             <ul className="flex gap-5">
               <li>
-                <button className="btn btn-outline">
+                <button
+                  className={`btn btn-outline ${
+                    activeButton === "HTML" ? "active" : ""
+                  }`}
+                  onClick={() => handleButtonClick("HTML")}
+                >
                   <i className="devicon-html5-plain"></i>
                   HTML
                 </button>
               </li>
               <li>
-                <button className="btn btn-outline">
-                  <i className="devicon-html5-plain"></i>
+                <button
+                  className={`btn btn-outline ${
+                    activeButton === "CSS" ? "active" : ""
+                  }`}
+                  onClick={() => handleButtonClick("CSS")}
+                >
+                  <i className="devicon-css3-plain"></i>
                   CSS
                 </button>
               </li>
               <li>
-                <button className="btn btn-outline">
-                  <i className="devicon-html5-plain"></i>
-                  JAVASCRIPT
+                <button
+                  className={`btn btn-outline ${
+                    activeButton === "JavaScript" ? "active" : ""
+                  }`}
+                  onClick={() => handleButtonClick("JavaScript")}
+                >
+                  <i className="devicon-javascript-plain"></i>
+                  JavaScript
                 </button>
               </li>
             </ul>
@@ -30,73 +56,23 @@ function Main() {
         </div>
       </div>
       <div className="p-10 md:flex">
-        <div className="p-10 flex md:flex-none justify-center">
-          <img src="/html5-original.svg" width={300} height={300} alt="html" />
-        </div>
-        <div>
-          <h1 className="mb-4 text-3xl font-extrabold md:text-5xl lg:text-6xl">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-orange-400">
-              HTML:
-            </span>{" "}
-            HyperText Markup Language
-          </h1>
-          <p className="py-2 text-xl">
-            The foundation of web development, HTML is used to structure the
-            content of a webpage.
-          </p>
-
-          <div className="pt-5 gap-20 md:flex">
-            <div>
-              <h3 className="text-3xl font-extrabold text-orange-400">
-                Basic Structure:
-              </h3>
-              <div className="py-5">
-                <pre>
-                  <code className="language-html">
-                    &lt;!DOCTYPE html&gt;
-                    <br />
-                    &lt;html&gt;
-                    <br />
-                    &nbsp;&nbsp;&lt;head&gt;
-                    <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page
-                    Title&lt;/title&gt;
-                    <br />
-                    &nbsp;&nbsp;&lt;/head&gt;
-                    <br />
-                    &nbsp;&nbsp;&lt;body&gt;
-                    <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;This is a Heading&lt;/h1&gt;
-                    <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a paragraph.&lt;/p&gt;
-                    <br />
-                    &nbsp;&nbsp;&lt;/body&gt;
-                    <br />
-                    &lt;/html&gt;
-                  </code>
-                </pre>
-              </div>
-            </div>
-
-            <div className="mockup-browser bg-base-300">
-              <div className="mockup-browser-toolbar">
-                <div className="input">https://example.com</div>
-              </div>
-              <div className="p-10 bg-base-200">
-                <h1>Hello, World!</h1> <br />
-                <p>This is my first web page.</p>
-              </div>
-            </div>
+        {/* Render content based on activeButton */}
+        {activeButton === "HTML" && <HTML />}
+        {activeButton === "CSS" && (
+          <div className="p-10 flex md:flex-none justify-center">
+            <img src="/css3-original.svg" width={300} height={300} alt="html" />
           </div>
-
-          <div className="py-5">
-            <a href="#">
-              <button type="button" className="btn outline">
-                Full Tutorial
-              </button>
-            </a>
+        )}
+        {activeButton === "JavaScript" && (
+          <div className="p-10 flex md:flex-none justify-center">
+            <img
+              src="/javascript-original.svg"
+              width={300}
+              height={300}
+              alt="html"
+            />
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
