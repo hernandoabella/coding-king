@@ -4,7 +4,7 @@ import Prism from "prismjs";
 
 function Main() {
   return (
-    <div className="containe">
+    <div className="container">
       <div className="p-10 md:flex">
         <div className="p-10 flex md:flex-none justify-center">
           <img
