@@ -7,21 +7,25 @@ function Main() {
     <div className="container flex">
       <div>
         <div>
-          <div className="p-10">
+          <div className="p-10 w-full bg-red-400">
+            <h3>Web Technologies:</h3>
             <ul>
-              <li>Link 1</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+            <h3>Control Version:</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
             </ul>
           </div>
         </div>
       </div>
       <div className="p-10 md:flex">
         <div className="p-10 flex md:flex-none justify-center">
-          <img
-            src="/html5-original.svg"
-            width={300}
-            height={300}
-            alt="html"
-          />
+          <img src="/html5-original.svg" width={300} height={300} alt="html" />
         </div>
         <div>
           <h1 className="mb-4 text-3xl font-extrabold md:text-5xl lg:text-6xl">
@@ -35,36 +39,48 @@ function Main() {
             content of a webpage.
           </p>
 
-          <div className="p-5">
-            <h3 className="text-3xl font-extrabold dark:text-white">
-              Basic Structure:
-            </h3>
-            <div className="p-5">
-              <pre>
-                <code className="html-language">
-                  &lt;!DOCTYPE html&gt;
-                  <br />
-                  &lt;html&gt;
-                  <br />
-                  &nbsp;&nbsp;&lt;head&gt;
-                  <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;My Web
-                  Page&lt;/title&gt;
-                  <br />
-                  &nbsp;&nbsp;&lt;/head&gt;
-                  <br />
-                  &nbsp;&nbsp;&lt;body&gt;
-                  <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hello, World!&lt;/h1&gt;
-                  <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is my first web
-                  page.&lt;/p&gt;
-                  <br />
-                  &nbsp;&nbsp;&lt;/body&gt;
-                  <br />
-                  &lt;/html&gt;
-                </code>
-              </pre>
+          <div className="pt-5 gap-10 flex">
+            <div>
+              <h3 className="text-3xl font-extrabold dark:text-white">
+                Basic Structure:
+              </h3>
+              <div className="pt-5">
+                <pre>
+                  <code className="html-language">
+                    &lt;!DOCTYPE html&gt;
+                    <br />
+                    &lt;html&gt;
+                    <br />
+                    &nbsp;&nbsp;&lt;head&gt;
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;My Web
+                    Page&lt;/title&gt;
+                    <br />
+                    &nbsp;&nbsp;&lt;/head&gt;
+                    <br />
+                    &nbsp;&nbsp;&lt;body&gt;
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hello, World!&lt;/h1&gt;
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is my first web
+                    page.&lt;/p&gt;
+                    <br />
+                    &nbsp;&nbsp;&lt;/body&gt;
+                    <br />
+                    &lt;/html&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+
+            <div className="mockup-browser border bg-base-300">
+              <div className="mockup-browser-toolbar">
+                <div className="input">https://example.com</div>
+              </div>
+              <div className="p-10 bg-base-200">
+                <h1>Hello, World!</h1> <br />
+                <p>This is my first web page.</p>
+              </div>
             </div>
           </div>
 
@@ -80,8 +96,6 @@ function Main() {
           </div>
         </div>
       </div>
-
-      
     </div>
   );
 }
