@@ -10,7 +10,7 @@ function Header() {
           of an eye.
         </p>
       </div>
-      <div className="flex gap-5">
+      <div className="flex gap-5 justify-center items-center">
         <div>
           <a
             href="https://github.com/hernandoabella/coding-king"
@@ -18,7 +18,6 @@ function Header() {
             target="_blank"
           >
             <svg
-              className="w-6 h-6 text-gray-800 dark:text-white"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -31,21 +30,70 @@ function Header() {
           </a>
         </div>
         <div>
-          <svg
-            className="w-6 h-6 text-gray-800 dark:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M11.675 2.015a.998.998 0 0 0-.403.011C6.09 2.4 2 6.722 2 12c0 5.523 4.477 10 10 10 4.356 0 8.058-2.784 9.43-6.667a1 1 0 0 0-1.02-1.33c-.08.006-.105.005-.127.005h-.001l-.028-.002A5.227 5.227 0 0 0 20 14a8 8 0 0 1-8-8c0-.952.121-1.752.404-2.558a.996.996 0 0 0 .096-.428V3a1 1 0 0 0-.825-.985Z"
-              clip-rule="evenodd"
-            />
-          </svg>
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn m-1">
+              Theme
+              <svg
+                width="12px"
+                height="12px"
+                className="h-2 w-2 fill-current opacity-60 inline-block"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 2048 2048"
+              >
+                <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+              </svg>
+            </div>
+            <ul
+              tabIndex={0}
+              className="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52"
+            >
+              <li>
+                <input
+                  type="radio"
+                  name="theme-dropdown"
+                  className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                  aria-label="Default"
+                  value="default"
+                />
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  name="theme-dropdown"
+                  className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                  aria-label="Retro"
+                  value="retro"
+                />
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  name="theme-dropdown"
+                  className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                  aria-label="Cyberpunk"
+                  value="cyberpunk"
+                />
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  name="theme-dropdown"
+                  className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                  aria-label="Valentine"
+                  value="valentine"
+                />
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  name="theme-dropdown"
+                  className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                  aria-label="Aqua"
+                  value="aqua"
+                />
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
