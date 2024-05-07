@@ -60,7 +60,7 @@ function Main() {
         {activeButton === "HTML" && <HTML />}
         {activeButton === "CSS" && (
           <div className="p-10 flex md:flex-none justify-center">
-            <img src="/css3-original.svg" width={300} height={300} alt="html" />
+            <img src="/css3-original.svg" width={300} height={300} alt="css" />
           </div>
         )}
         {activeButton === "JavaScript" && (
@@ -69,7 +69,7 @@ function Main() {
               src="/javascript-original.svg"
               width={300}
               height={300}
-              alt="html"
+              alt="JavaScript"
             />
           </div>
         )}
