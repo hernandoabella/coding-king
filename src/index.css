@@ -9,3 +9,11 @@ body {
 h1 {
   font-size: 2em;
 }
+
+pre code.hljs {
+  display: block;
+}
+
+code.hljs {
+  display: inline;
+}
