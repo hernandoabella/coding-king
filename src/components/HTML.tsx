@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Prism from "prismjs";
+import "prismjs/components/prism-cshtml";
+import "prismjs/themes/prism-okaidia.css";
 
 function Html() {
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
+
+  // Function to handle copying code to clipboard
+  const copyCodeToClipboard = (code) => {
+    navigator.clipboard.writeText(code)
+      .then(() => {
+        alert("Code copied to clipboard!");
+      })
+      .catch((error) => {
+        console.error("Failed to copy code: ", error);
+      });
+  };
+
   return (
     <div>
       <div className="md:flex">
         <div className="p-10 flex md:flex-none justify-center">
-          <img src="/html5-original.svg" width={300} height={300} alt="html" />
+          <img
+            src="/html5-original.svg"
+            width={300}
+            height={300}
+            alt="html"
+          />
         </div>
         <div>
           <h1 className="mb-4 text-3xl font-extrabold md:text-5xl lg:text-6xl">
@@ -25,27 +48,29 @@ function Html() {
                 Basic Structure:
               </h3>
               <div className="py-5">
-                <pre>
+                {/* Apply CSS to display code blocks one after the other */}
+                <pre style={{ display: "block" }}>
                   <code className="language-html">
                     &lt;!DOCTYPE html&gt;
-                    <br />
+                    {"\n"}
                     &lt;html&gt;
-                    <br />
+                    {"\n"}
                     &nbsp;&nbsp;&lt;head&gt;
-                    <br />
+                    {"\n"}
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page
                     Title&lt;/title&gt;
-                    <br />
+                    {"\n"}
                     &nbsp;&nbsp;&lt;/head&gt;
-                    <br />
+                    {"\n"}
                     &nbsp;&nbsp;&lt;body&gt;
-                    <br />
+                    {"\n"}
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hello, World!&lt;/h1&gt;
-                    <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is my first web page.&lt;/p&gt;
-                    <br />
+                    {"\n"}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is my first web
+                    page.&lt;/p&gt;
+                    {"\n"}
                     &nbsp;&nbsp;&lt;/body&gt;
-                    <br />
+                    {"\n"}
                     &lt;/html&gt;
                   </code>
                 </pre>
@@ -65,7 +90,7 @@ function Html() {
 
           <div className="py-5">
             <a href="#">
-              <button type="button" className="btn outline">
+              <button type="button" className="btn btn-outline">
                 Full Tutorial
               </button>
             </a>
