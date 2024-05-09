@@ -8,27 +8,11 @@ function Html() {
     Prism.highlightAll();
   }, []);
 
-  // Function to handle copying code to clipboard
-  const copyCodeToClipboard = (code) => {
-    navigator.clipboard.writeText(code)
-      .then(() => {
-        alert("Code copied to clipboard!");
-      })
-      .catch((error) => {
-        console.error("Failed to copy code: ", error);
-      });
-  };
-
   return (
     <div>
-      <div className="md:flex">
+      <div className="md:flex justify-center align-center">
         <div className="p-10 flex md:flex-none justify-center">
-          <img
-            src="/html5-original.svg"
-            width={300}
-            height={300}
-            alt="html"
-          />
+          <img src="/html5-original.svg" width={300} height={300} alt="html" />
         </div>
         <div>
           <h1 className="mb-4 text-3xl font-extrabold md:text-5xl lg:text-6xl">
