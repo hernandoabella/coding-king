@@ -2,7 +2,7 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="p-10 shadow-lg md:flex justify-center items-center gap-10">
+    <header className="p-10 md:flex justify-center items-center">
       <div>
         <h1 className="text-center font-bold">Coding-King 🤴</h1>
         <p className="text-center">
@@ -10,7 +10,7 @@ function Header() {
           of an eye.
         </p>
       </div>
-      <div className="flex gap-5 items-center absolute right-20">
+      <div className="flex gap-5 items-center absolute right-40">
         <div className="">
           <a
             href="https://github.com/hernandoabella/coding-king"
