@@ -1,6 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function Header() {
+  const [selectedTheme, setSelectedTheme] = useState("default");
+
+  useEffect(() => {
+    // Check if theme preference is stored in localStorage
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      setSelectedTheme(storedTheme);
+    }
+  }, []);
+
+  const handleThemeChange = (event) => {
+    const newTheme = event.target.value;
+    setSelectedTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
+
   return (
     <header className="p-10 md:flex justify-center items-center">
       <div>
@@ -31,7 +47,7 @@ function Header() {
         </div>
         <div>
           <a
-            href="https://x.com/hernandoabella/"
+            href="https://x.com/codingkingx/"
             aria-label="github project"
             target="_blank"
           >
@@ -73,6 +89,8 @@ function Header() {
                   className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
                   aria-label="Default"
                   value="default"
+                  checked={selectedTheme === "default"}
+                  onChange={handleThemeChange}
                 />
               </li>
               <li>
@@ -82,6 +100,8 @@ function Header() {
                   className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
                   aria-label="Retro"
                   value="retro"
+                  checked={selectedTheme === "retro"}
+                  onChange={handleThemeChange}
                 />
               </li>
               <li>
@@ -91,6 +111,8 @@ function Header() {
                   className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
                   aria-label="Cyberpunk"
                   value="cyberpunk"
+                  checked={selectedTheme === "cyberpunk"}
+                  onChange={handleThemeChange}
                 />
               </li>
               <li>
@@ -99,7 +121,9 @@ function Header() {
                   name="theme-dropdown"
                   className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
                   aria-label="Valentine"
-                  value="valentine"
+                  value="Valentine"
+                  checked={selectedTheme === "Valentine"}
+                  onChange={handleThemeChange}
                 />
               </li>
               <li>
@@ -109,6 +133,8 @@ function Header() {
                   className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
                   aria-label="Aqua"
                   value="aqua"
+                  checked={selectedTheme === "aqua"}
+                  onChange={handleThemeChange}
                 />
               </li>
             </ul>
