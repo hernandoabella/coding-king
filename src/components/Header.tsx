@@ -10,8 +10,8 @@ function Header() {
           of an eye.
         </p>
       </div>
-      <div className="flex gap-5 justify-center items-center">
-        <div>
+      <div className="flex gap-5 items-center absolute right-20">
+        <div className="">
           <a
             href="https://github.com/hernandoabella/coding-king"
             aria-label="github project"
