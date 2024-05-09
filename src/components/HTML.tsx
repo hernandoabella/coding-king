@@ -42,7 +42,7 @@ function Html() {
             content of a webpage.
           </p>
 
-          <div className="pt-5 gap-20 md:flex">
+          <div className="pt-5 gap-32 md:flex">
             <div>
               <h3 className="text-3xl font-extrabold text-orange-400">
                 Basic Structure:
