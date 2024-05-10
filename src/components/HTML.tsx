@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import Prism from "prismjs";
 import "prismjs/components/prism-cshtml";
 import "prismjs/themes/prism-okaidia.css";
+import { motion } from "framer-motion";
+
 
 function Html() {
   useEffect(() => {
@@ -9,7 +11,12 @@ function Html() {
   }, []);
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }} // Initial animation state
+      animate={{ opacity: 1, y: 0 }} // Animation when component mounts
+      exit={{ opacity: 0, y: -50 }} // Animation when component unmounts
+      transition={{ duration: 0.5 }} // Animation duration
+    >
       <div className="md:flex justify-center align-center">
         <div className="p-10 flex md:flex-none justify-center">
           <img src="/html5-original.svg" width={300} height={300} alt="html" />
@@ -21,18 +28,26 @@ function Html() {
             </span>{" "}
             HyperText Markup Language
           </h1>
-          <p className="py-2 text-xl">
+          <motion.p
+            initial={{ opacity: 0 }} // Initial animation state
+            animate={{ opacity: 1 }} // Animation when component mounts
+            transition={{ delay: 0.2 }} // Delay before animation starts
+            className="py-2 text-xl"
+          >
             The foundation of web development, HTML is used to structure the
             content of a webpage.
-          </p>
+          </motion.p>
 
           <div className="pt-5 gap-32 md:flex">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: -50 }} // Initial animation state
+              animate={{ opacity: 1, x: 0 }} // Animation when component mounts
+              transition={{ delay: 0.4 }} // Delay before animation starts
+            >
               <h3 className="text-3xl font-extrabold text-orange-400">
                 Basic Structure:
               </h3>
               <div className="py-5">
-                {/* Apply CSS to display code blocks one after the other */}
                 <pre style={{ display: "block" }}>
                   <code className="language-html">
                     &lt;!DOCTYPE html&gt;
@@ -59,9 +74,14 @@ function Html() {
                   </code>
                 </pre>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="mockup-browser bg-base-300">
+            <motion.div
+              initial={{ opacity: 0, x: 50 }} // Initial animation state
+              animate={{ opacity: 1, x: 0 }} // Animation when component mounts
+              transition={{ delay: 0.4 }} // Delay before animation starts
+              className="mockup-browser bg-base-300"
+            >
               <div className="mockup-browser-toolbar">
                 <div className="input">https://example.com</div>
               </div>
@@ -69,19 +89,29 @@ function Html() {
                 <h1>Hello, World!</h1> <br />
                 <p>This is my first web page.</p>
               </div>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="py-5">
+          <motion.div
+            initial={{ opacity: 0 }} // Initial animation state
+            animate={{ opacity: 1 }} // Animation when component mounts
+            transition={{ delay: 0.6 }} // Delay before animation starts
+            className="py-5"
+          >
             <a href="#">
-              <button type="button" className="btn btn-outline">
+              <motion.button
+                whileHover={{ scale: 1.1 }} // Animation on hover
+                whileTap={{ scale: 0.9 }} // Animation on tap
+                type="button"
+                className="btn btn-outline"
+              >
                 Full Tutorial
-              </button>
+              </motion.button>
             </a>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
