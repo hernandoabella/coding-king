@@ -1,5 +1,4 @@
 import Main from './components/Main.tsx';
-import Footer from './components/Footer.tsx';
 
 function App() {
 
@@ -7,7 +6,6 @@ function App() {
     <>
       <div>
         <Main/>
-        <Footer/>
       </div>
     </>
   )
