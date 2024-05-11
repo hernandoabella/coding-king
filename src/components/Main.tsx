@@ -10,48 +10,35 @@ function Main() {
     setActiveButton(buttonName);
   };
 
+  const buttonsData = [
+    { label: "HTML", icon: "devicon-html5-plain", type: "HTML" },
+    { label: "CSS", icon: "devicon-css3-plain", type: "CSS" },
+    { label: "JavaScript", icon: "devicon-javascript-plain", type: "JavaScript" },
+    // Add more buttons as needed
+  ];
+
   return (
     <div>
       <Header />
 
-      <div>
-        <div>
-          <div className="p-5 w-full flex flex-wrap justify-center">
-            <ul className="flex gap-5">
-              <li>
-                <button
-                  className={`btn btn-outline ${
-                    activeButton === "HTML" ? "active" : ""
-                  }`}
-                  onClick={() => handleButtonClick("HTML")}
-                >
-                  <i className="devicon-html5-plain"></i>
-                  HTML
-                </button>
-              </li>
-              <li>
-                <button
-                  className={`btn btn-outline ${
-                    activeButton === "CSS" ? "active" : ""
-                  }`}
-                  onClick={() => handleButtonClick("CSS")}
-                >
-                  <i className="devicon-css3-plain"></i>
-                  CSS
-                </button>
-              </li>
-              <li>
-                <button
-                  className={`btn btn-outline ${
-                    activeButton === "JavaScript" ? "active" : ""
-                  }`}
-                  onClick={() => handleButtonClick("JavaScript")}
-                >
-                  <i className="devicon-javascript-plain"></i>
-                  JavaScript
-                </button>
-              </li>
-            </ul>
+      <div className="flex">
+        <div className="">
+          <div className="p-5 bg-red-500 flex flex-wrap justify-center">
+          <ul className="flex gap-5">
+        {buttonsData.map((button, index) => (
+          <li key={index}>
+            <button
+              className={`btn btn-outline ${
+                activeButton === button.type ? "active" : ""
+              }`}
+              onClick={() => handleButtonClick(button.type)}
+            >
+              <i className={button.icon}></i>
+              {button.label}
+            </button>
+          </li>
+        ))}
+      </ul>
           </div>
         </div>
       </div>
