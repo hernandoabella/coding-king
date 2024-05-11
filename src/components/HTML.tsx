@@ -17,9 +17,9 @@ function Html() {
       transition={{ duration: 0.5 }} // Animation duration
     >
       <div className="md:flex justify-center align-center">
-        <div className="p-10 flex md:flex-none justify-center">
-          <img src="/html5-original.svg" width={300} height={300} alt="html" />
-        </div>
+        {/* <div className="p-10 flex md:flex-none justify-center">
+          <img src="/html5-original.svg" width={200} height={300} alt="html" />
+        </div> */}
         <div>
           <h1 className="mb-4 text-3xl font-extrabold md:text-5xl lg:text-6xl">
             <span className="text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-orange-400">
@@ -37,7 +37,7 @@ function Html() {
             content of a webpage.
           </motion.p>
 
-          <div className="pt-5 gap-32 md:flex">
+          <div className="pt-5 gap-8 md:flex">
             <motion.div
               initial={{ opacity: 0, x: -50 }} // Initial animation state
               animate={{ opacity: 1, x: 0 }} // Animation when component mounts
