@@ -4,7 +4,6 @@ import "prismjs/components/prism-cshtml";
 import "prismjs/themes/prism-okaidia.css";
 import { motion } from "framer-motion";
 
-
 function Html() {
   useEffect(() => {
     Prism.highlightAll();
