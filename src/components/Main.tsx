@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HTML from "./HTML";
 import CSS from "./CSS";
 import Header from "./Header";
@@ -8,6 +8,11 @@ function Main() {
   const [activeButton, setActiveButton] = useState("");
   const [activeCategory, setActiveCategory] = useState("Web Development");
   const [showButtons, setShowButtons] = useState(true);
+
+  useEffect(() => {
+    // Set the active button to "HTML" when the component mounts
+    setActiveButton("HTML");
+  }, []); // Empty dependency array ensures this effect runs only once when the component mounts
 
   const handleCategoryChange = (category) => {
     setActiveCategory(category);
@@ -82,11 +87,15 @@ function Main() {
                   ?.buttons.map((button, index) => (
                     <button
                       key={index}
-                      className={`btn btn-outline ${
+                      className={`btn ${
                         activeButton === button.type ? "active" : ""
                       } ${
                         activeCategory === "Web Development" && activeButton === button.type
-                          ? "bg-sky-900 text-white"
+                          ? "bg-slate-900 text-white"
+                          : ""
+                      } ${
+                        activeCategory === "Control Version" && activeButton === button.type
+                          ? "bg-slate-900 text-white"
                           : ""
                       }`}
                       onClick={() => handleButtonClick(button.type)}
