@@ -77,7 +77,7 @@ function Main() {
               </button>
             ))}
           </div>
-          <div className="pt-5">
+          <div className="p-5 bg-slate-900 rounded-lg mt-5">
             {showButtons && (
               <div className="flex flex-wrap gap-5">
                 {buttonsData
