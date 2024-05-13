@@ -28,7 +28,12 @@ function Main() {
     {
       label: "TypeScript",
       icon: "devicon-typescript-plain",
-      type: "JavaScript",
+      type: "TypeScript",
+    },
+    {
+      label: "React",
+      icon: "devicon-react-plain",
+      type: "React",
     },
   ];
 
