@@ -96,7 +96,7 @@ function Header() {
         </div>
       </div>
       <div>
-        <h1 className="font-bold">Coding-King 🤴</h1>
+        <h1 className="font-bold text-sky-800">Coding-King 🤴</h1>
         <p>
           Quick resources to help you reach the highest level in just the blink
           of an eye.
