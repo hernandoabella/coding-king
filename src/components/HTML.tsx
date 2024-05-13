@@ -84,7 +84,7 @@ function Html() {
               <div className="mockup-browser-toolbar">
                 <div className="input">https://example.com</div>
               </div>
-              <div className="p-10 bg-base-200">
+              <div className="p-10 bg-base-200 h-full">
                 <h1>Hello, World!</h1> <br />
                 <p>This is my first web page.</p>
               </div>
