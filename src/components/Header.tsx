@@ -76,8 +76,8 @@ function Header() {
                 name="theme-dropdown"
                 className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
                 aria-label="Valentine"
-                value="Valentine"
-                checked={selectedTheme === "Valentine"}
+                value="valentine"
+                checked={selectedTheme === "valentine"}
                 onChange={handleThemeChange}
               />
             </li>
