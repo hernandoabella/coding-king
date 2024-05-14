@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import HTML from "./HTML";
 import CSS from "./CSS";
+import Git from "./Git";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -18,7 +19,9 @@ function Main() {
     setActiveCategory(category);
     setActiveButton("");
     setShowButtons(true);
-    const firstCategoryButton = buttonsData.find((data) => data.category === category)?.buttons[0];
+    const firstCategoryButton = buttonsData.find(
+      (data) => data.category === category
+    )?.buttons[0];
     if (firstCategoryButton) {
       setActiveButton(firstCategoryButton.type);
     }
@@ -90,11 +93,13 @@ function Main() {
                       className={`btn ${
                         activeButton === button.type ? "active" : ""
                       } ${
-                        activeCategory === "Web Development" && activeButton === button.type
+                        activeCategory === "Web Development" &&
+                        activeButton === button.type
                           ? "bg-slate-900 text-white"
                           : ""
                       } ${
-                        activeCategory === "Control Version" && activeButton === button.type
+                        activeCategory === "Control Version" &&
+                        activeButton === button.type
                           ? "bg-slate-900 text-white"
                           : ""
                       }`}
@@ -114,6 +119,7 @@ function Main() {
       <div className="p-10 md:flex">
         {activeButton === "HTML" && <HTML />}
         {activeButton === "CSS" && <CSS />}
+        {activeButton === "Git" && <Git />}
       </div>
     </div>
   );
