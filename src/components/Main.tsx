@@ -61,8 +61,12 @@ function Main() {
     {
       category: "Programming Languages",
       buttons: [
-        { label: "Git", icon: "devicon-git-plain", type: "Git" },
-        { label: "Github", icon: "devicon-github-plain", type: "Github" },
+        { label: "Python", icon: "devicon-python-plain", type: "Python" },
+        { label: "Java", icon: "devicon-java-plain", type: "Java" },
+        { label: "C++", icon: "devicon-cplusplus-plain", type: "C++" },
+        { label: "C#", icon: "devicon-csharp-plain", type: "C#" },
+        { label: "Swift", icon: "devicon-swift-plain", type: "Swift" },
+        { label: "Kotlin", icon: "devicon-kotlin-plain", type: "Kotlin" },
       ],
     },
     {
@@ -95,7 +99,7 @@ function Main() {
 
   return (
     <div className="flex h-screen justify-center">
-      <div className="h-full p-10">
+      <div className="p-10">
         <Header />
         <div className="">
           <div className="space-x-5">
