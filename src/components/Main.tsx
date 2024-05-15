@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import {HTML, CSS, Git} from "./ImportUI";
+import { HTML, CSS, Git } from "./ImportUI";
 
 function Main() {
   const [activeButton, setActiveButton] = useState("");
@@ -72,7 +72,11 @@ function Main() {
       category: "Databases",
       buttons: [
         { label: "MySQL", icon: "devicon-mysql-plain", type: "Mysql" },
-        { label: "PostgresSQL", icon: "devicon-postgresql-plain", type: "PostgresSQL" },
+        {
+          label: "PostgresSQL",
+          icon: "devicon-postgresql-plain",
+          type: "PostgresSQL",
+        },
         { label: "MongoDB", icon: "devicon-mongodb-plain", type: "MongoDB" },
         { label: "Redis", icon: "devicon-redis-plain", type: "Github" },
       ],
@@ -82,18 +86,21 @@ function Main() {
       buttons: [
         { label: "AWS", icon: "devicon-amazonwebservices-plain", type: "AWS" },
         { label: "Azure", icon: "devicon-azure-plain", type: "Azure" },
-        { label: "Google Cloud", icon: "devicon-googlecloud-plain", type: "Google Cloud" },
+        {
+          label: "Google Cloud",
+          icon: "devicon-googlecloud-plain",
+          type: "Google Cloud",
+        },
       ],
     },
     {
-      category: "Mobile-Development",
+      category: "Mobile Development",
       buttons: [
         { label: "Android", icon: "devicon-android-plain", type: "Android" },
         { label: "XCode", icon: "devicon-xcode-plain", type: "XCODE" },
         { label: "Flutter", icon: "devicon-flutter-plain", type: "Flutter" },
       ],
     },
-    
   ];
 
   return (
@@ -138,7 +145,32 @@ function Main() {
                         activeButton === button.type
                           ? "bg-slate-900 text-white"
                           : ""
-                      }`}
+                      }
+                      ${
+                        activeCategory === "Programming Languages" &&
+                        activeButton === button.type
+                          ? "bg-slate-900 text-white"
+                          : ""
+                      }
+                      ${
+                        activeCategory === "Databases" &&
+                        activeButton === button.type
+                          ? "bg-slate-900 text-white"
+                          : ""
+                      }
+                      ${
+                        activeCategory === "Cloud Computing" &&
+                        activeButton === button.type
+                          ? "bg-slate-900 text-white"
+                          : ""
+                      }
+                      ${
+                        activeCategory === "Mobile Development" &&
+                        activeButton === button.type
+                          ? "bg-slate-900 text-white"
+                          : ""
+                      }
+                      `}
                       onClick={() => handleButtonClick(button.type)}
                     >
                       <i className={button.icon}></i>
