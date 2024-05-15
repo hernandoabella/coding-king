@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import HTML from "./HTML";
-import CSS from "./CSS";
-import Git from "./Git";
 import Header from "./Header";
 import Footer from "./Footer";
+import {HTML, CSS, Git} from "./ImportUI";
 
 function Main() {
   const [activeButton, setActiveButton] = useState("");
@@ -48,6 +46,9 @@ function Main() {
           type: "TypeScript",
         },
         { label: "React", icon: "devicon-react-plain", type: "React" },
+        { label: "Vue", icon: "devicon-vuejs-plain", type: "Vue" },
+        { label: "Angular", icon: "devicon-angular-plain", type: "Angular" },
+        { label: "React", icon: "devicon-react-plain", type: "React" },
       ],
     },
     {
@@ -57,7 +58,38 @@ function Main() {
         { label: "Github", icon: "devicon-github-plain", type: "Github" },
       ],
     },
-    // Add more categories and buttons here...
+    {
+      category: "Programming Languages",
+      buttons: [
+        { label: "Git", icon: "devicon-git-plain", type: "Git" },
+        { label: "Github", icon: "devicon-github-plain", type: "Github" },
+      ],
+    },
+    {
+      category: "Databases",
+      buttons: [
+        { label: "MySQL", icon: "devicon-mysql-plain", type: "Mysql" },
+        { label: "PostgresSQL", icon: "devicon-postgresql-plain", type: "PostgresSQL" },
+        { label: "MongoDB", icon: "devicon-mongodb-plain", type: "MongoDB" },
+        { label: "Redis", icon: "devicon-redis-plain", type: "Github" },
+      ],
+    },
+    {
+      category: "Cloud Computing",
+      buttons: [
+        { label: "Git", icon: "devicon-git-plain", type: "Git" },
+        { label: "Github", icon: "devicon-github-plain", type: "Github" },
+      ],
+    },
+    {
+      category: "Mobile-Development",
+      buttons: [
+        { label: "Android", icon: "devicon-android-plain", type: "Android" },
+        { label: "XCode", icon: "devicon-xcode-plain", type: "XCODE" },
+        { label: "Flutter", icon: "devicon-flutter-plain", type: "Flutter" },
+      ],
+    },
+    
   ];
 
   return (
