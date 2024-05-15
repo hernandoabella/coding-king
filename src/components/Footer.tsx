@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div>
       <footer>
-        <div className="p-10 flex justify-around gap-10">
+        <div className="p-5 flex justify-around gap-10">
           <p className="text-center">
             &copy; Coding-King {new Date().getFullYear()}.
           </p>
