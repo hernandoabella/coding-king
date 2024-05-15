@@ -19,7 +19,7 @@ function Header() {
 
   return (
     <header className="pb-5">
-      <div>
+      <div className="flex">
         <div className="dropdown mb-5">
           <div tabIndex={0} role="button" className="btn m-1">
             Theme
