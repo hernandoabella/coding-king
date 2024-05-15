@@ -9,7 +9,7 @@ Quick resources to help you reach the highest level in just the blink of an eye.
 - **React:** A popular JavaScript library for building user interfaces, developed and maintained by Facebook.
 - **Vue:** A progressive JavaScript framework for building user interfaces, designed to be incrementally adoptable.
 - **Angular:** A TypeScript-based open-source web application framework developed and maintained by Google.
-- **Stelve:** A lightweight JavaScript framework that compiles components into efficient JavaScript code.
+  
 ### Control Version
 Essential for managing and tracking changes to your code, with Git being the most popular choice.
 - **Git:** A distributed version control system that helps developers collaborate and maintain a complete history of their projects.
@@ -36,7 +36,7 @@ Essential for managing and tracking changes to your code, with Git being the mos
 
 ### Mobile App Development:
 - **Android:** Google's mobile operating system, based on the Linux kernel and designed primarily for touchscreen mobile devices.
-- **iOS:** Apple's mobile operating system, used on their iPhones, iPads, and iPod Touch devices.
+- **XCode:** Apple's mobile operating system, used on their iPhones, iPads, and iPod Touch devices.
 - **Flutter:** A mobile app SDK developed by Google for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.
 
 By [Hernando Abella](https://www.hernandoabella.com) <br />
