@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { HTML, CSS, Git } from "./ImportUI";
+import {
+  HTML,
+  CSS,
+  JavaScript,
+  TypeScript,
+  Reactd,
+  Vue,
+  Angular,
+  Git,
+} from "./ImportUI";
 import { buttonsData } from "./buttonsData";
 
 function Main() {
@@ -114,6 +123,11 @@ function Main() {
       <div className="p-10 md:flex">
         {activeButton === "HTML" && <HTML />}
         {activeButton === "CSS" && <CSS />}
+        {activeButton === "JavaScript" && <JavaScript />}
+        {activeButton === "TypeScript" && <TypeScript />}
+        {activeButton === "React" && <Reactd />}
+        {activeButton === "Vue" && <Vue />}
+        {activeButton === "Angular" && <Angular />}
         {activeButton === "Git" && <Git />}
       </div>
     </div>
