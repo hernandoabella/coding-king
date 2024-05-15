@@ -77,8 +77,9 @@ function Main() {
     {
       category: "Cloud Computing",
       buttons: [
-        { label: "Git", icon: "devicon-git-plain", type: "Git" },
-        { label: "Github", icon: "devicon-github-plain", type: "Github" },
+        { label: "AWS", icon: "devicon-amazonwebservices-plain", type: "AWS" },
+        { label: "Azure", icon: "devicon-azure-plain", type: "Azure" },
+        { label: "Google Cloud", icon: "devicon-googlecloud-plain", type: "Google Cloud" },
       ],
     },
     {
