@@ -38,6 +38,3 @@ Essential for managing and tracking changes to your code, with Git being the mos
 - **Android:** Google's mobile operating system, based on the Linux kernel and designed primarily for touchscreen mobile devices.
 - **XCode:** Apple's mobile operating system, used on their iPhones, iPads, and iPod Touch devices.
 - **Flutter:** A mobile app SDK developed by Google for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.
-
-By [Hernando Abella](https://www.hernandoabella.com) <br />
-Visit [Beat Byte Publishing](https://beat-byte-publishing.com) for more resources.
