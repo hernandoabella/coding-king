@@ -10,6 +10,7 @@ import {
   Vue,
   Angular,
   Git,
+  TailwindCSS,
 } from "./ImportUI";
 import { buttonsData } from "./buttonsData";
 import CategoryDropdown from "./CategoryDropdown";
@@ -115,6 +116,7 @@ function Main() {
       <div className="p-10 md:flex">
         {activeButton === "HTML" && <HTML />}
         {activeButton === "CSS" && <CSS />}
+        {activeButton === "TailwindCSS" && <TailwindCSS />}
         {activeButton === "JavaScript" && <JavaScript />}
         {activeButton === "TypeScript" && <TypeScript />}
         {activeButton === "React" && <Reactd />}
