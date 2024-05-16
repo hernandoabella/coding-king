@@ -4,7 +4,7 @@ import "prismjs/components/prism-cshtml";
 import "prismjs/themes/prism-okaidia.css";
 import { motion } from "framer-motion";
 
-function Css() {
+function Html() {
   useEffect(() => {
     Prism.highlightAll();
   }, []);
@@ -17,15 +17,12 @@ function Css() {
       transition={{ duration: 0.5 }} // Animation duration
     >
       <div className="md:flex justify-center align-center">
-        {/* <div className="p-10 flex md:flex-none justify-center">
-          <img src="/html5-original.svg" width={200} height={300} alt="html" />
-        </div> */}
         <div>
           <h1 className="mb-4 text-3xl font-extrabold md:text-5xl lg:text-6xl">
             <span className="text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-orange-400">
-              CSS:
+              HTML:
             </span>{" "}
-            Cascading Style Sheets
+            HyperText Markup Language
           </h1>
           <motion.p
             initial={{ opacity: 0 }} // Initial animation state
@@ -84,7 +81,7 @@ function Css() {
               <div className="mockup-browser-toolbar">
                 <div className="input">https://example.com</div>
               </div>
-              <div className="p-10 bg-base-200">
+              <div className="p-10 bg-base-200 h-full">
                 <h1>Hello, World!</h1> <br />
                 <p>This is my first web page.</p>
               </div>
@@ -114,4 +111,4 @@ function Css() {
   );
 }
 
-export default Css;
+export default Html;
