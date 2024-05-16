@@ -43,7 +43,7 @@ function Main() {
     <div className="flex h-screen w-screen overflow-hidden justify-center items-center">
       <div className="md:p-10">
         <Header />
-        <div className="">
+        <div className="flex">
           <div className="flex flex-wrap gap-5">
             {buttonsData.map((categoryData, index) => (
               <button
