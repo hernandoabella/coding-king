@@ -17,25 +17,34 @@ function Html() {
       transition={{ duration: 0.5 }} // Animation duration
     >
       <div className="md:flex justify-center align-center">
-        {/* <div className="p-10 flex md:flex-none justify-center">
-          <img src="/html5-original.svg" width={200} height={300} alt="html" />
-        </div> */}
         <div>
-          <h1 className="mb-4 text-3xl font-extrabold md:text-5xl lg:text-6xl">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-orange-400">
-              HTML:
-            </span>{" "}
-            HyperText Markup Language
-          </h1>
-          <motion.p
-            initial={{ opacity: 0 }} // Initial animation state
-            animate={{ opacity: 1 }} // Animation when component mounts
-            transition={{ delay: 0.2 }} // Delay before animation starts
-            className="py-2 text-xl"
-          >
-            The foundation of web development, HTML is used to structure the
-            content of a webpage.
-          </motion.p>
+          <div className="flex gap-5">
+            <div className="flex md:flex-none justify-center">
+              <img
+                src="/html5-original.svg"
+                width={150}
+                height={100}
+                alt="html"
+              />
+            </div>
+            <div>
+              <h1 className="mb-4 text-3xl font-extrabold md:text-5xl lg:text-4xl">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-orange-400">
+                  HTML:
+                </span>{" "}
+                HyperText Markup Language
+              </h1>
+              <motion.p
+                initial={{ opacity: 0 }} // Initial animation state
+                animate={{ opacity: 1 }} // Animation when component mounts
+                transition={{ delay: 0.2 }} // Delay before animation starts
+                className="py-2 text-xl"
+              >
+                The foundation of web development, HTML is used to structure the
+                content of a webpage.
+              </motion.p>
+            </div>
+          </div>
 
           <div className="pt-5 gap-8 md:flex">
             <motion.div
