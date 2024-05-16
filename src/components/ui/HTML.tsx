@@ -52,10 +52,10 @@ function Html() {
               animate={{ opacity: 1, x: 0 }} // Animation when component mounts
               transition={{ delay: 0.4 }} // Delay before animation starts
             >
-              <h3 className="text-3xl font-extrabold text-orange-400">
+              <h3 className="text-2xl font-bold">
                 Basic Structure:
               </h3>
-              <div className="py-5">
+              <div>
                 <pre style={{ display: "block" }}>
                   <code className="language-html">
                     &lt;!DOCTYPE html&gt;
@@ -91,7 +91,7 @@ function Html() {
               className="mockup-browser bg-base-300"
             >
               <div className="mockup-browser-toolbar">
-                <div className="input">https://example.com</div>
+                <div className="input">localhost:5500</div>
               </div>
               <div className="p-10 bg-base-200 h-full">
                 <h1>Hello, World!</h1> <br />
