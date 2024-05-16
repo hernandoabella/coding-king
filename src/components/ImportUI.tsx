@@ -22,7 +22,7 @@ import Azure from "./ui/microsoft-azure";
 import GoogleCloud from "./ui/google-cloud-platform";
 import Android from "./ui/android";
 import Xcode from "./ui/Xcode";
-import Flutter from "./ui/Flutter";
+import Flutter from "./ui/flutter";
 
 export {
   HTML,
@@ -38,4 +38,16 @@ export {
   Java,
   Cpp,
   Csharp,
+  Swift,
+  Kotlin,
+  Mysql,
+  Postgresql,
+  Mongodb,
+  Redis,
+  AWS,
+  Azure,
+  GoogleCloud,
+  Android,
+  Xcode,
+  Flutter
 };
