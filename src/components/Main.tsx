@@ -12,6 +12,7 @@ import {
   Git,
 } from "./ImportUI";
 import { buttonsData } from "./buttonsData";
+import CategoryDropdown from "./CategoryDropdown";
 
 function Main() {
   const [activeButton, setActiveButton] = useState("");
@@ -45,23 +46,14 @@ function Main() {
         <Header />
         <div>
           <div className="flex flex-wrap gap-5">
-            {buttonsData.map((categoryData, index) => (
-              <button
-                key={index}
-                className={`btn ${
-                  activeCategory === categoryData.category
-                    ? "bg-slate-900 text-white"
-                    : ""
-                }`}
-                onClick={() => handleCategoryChange(categoryData.category)}
-              >
-                {categoryData.category}
-              </button>
-            ))}
+            <CategoryDropdown
+              categories={buttonsData.map((data) => data.category)}
+              onChange={handleCategoryChange}
+            />
           </div>
           <div className="p-5 bg-slate-900 rounded-lg mt-5">
             {showButtons && (
-              <div className="flex flex-wrap gap-5">
+              <div className="flex flex-wrap gap-5 justify-center">
                 {buttonsData
                   .find(
                     (categoryData) => categoryData.category === activeCategory
