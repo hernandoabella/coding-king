@@ -4,7 +4,7 @@ export const buttonsData = [
       buttons: [
         { label: "HTML", icon: "devicon-html5-plain", type: "HTML" },
         { label: "CSS", icon: "devicon-css3-plain", type: "CSS" },
-        { label: "TailwindCSS", icon: "devicon-tailwindcss-plain", type: "CSS" },
+        { label: "TailwindCSS", icon: "devicon-tailwindcss-plain", type: "TailwindCSS" },
         {
           label: "JavaScript",
           icon: "devicon-javascript-plain",
