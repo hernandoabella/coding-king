@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Prism from "prismjs";
-import "prismjs/components/prism-cshtml";
+import "prismjs/components/prism-css";
 import "prismjs/themes/prism-okaidia.css";
 import { motion } from "framer-motion";
 
@@ -40,7 +40,8 @@ function Html() {
                 transition={{ delay: 0.2 }} // Delay before animation starts
                 className="py-2 text-xl"
               >
-                CSS is a stylesheet language used for describing the look and formatting of a web page.
+                CSS is a stylesheet language used for describing the look and
+                formatting of a web page.
               </motion.p>
             </div>
           </div>
@@ -51,33 +52,24 @@ function Html() {
               animate={{ opacity: 1, x: 0 }} // Animation when component mounts
               transition={{ delay: 0.4 }} // Delay before animation starts
             >
-              <h3 className="text-2xl font-bold">
-                Basic Styles:
-              </h3>
+              <h3 className="text-2xl font-bold">Basic Styles:</h3>
               <div>
                 <pre style={{ display: "block" }}>
                   <code className="language-css">
-                    &lt;!DOCTYPE html&gt;
-                    {"\n"}
-                    &lt;html&gt;
-                    {"\n"}
-                    &nbsp;&nbsp;&lt;head&gt;
-                    {"\n"}
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page
-                    Title&lt;/title&gt;
-                    {"\n"}
-                    &nbsp;&nbsp;&lt;/head&gt;
-                    {"\n"}
-                    &nbsp;&nbsp;&lt;body&gt;
-                    {"\n"}
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hello, World!&lt;/h1&gt;
-                    {"\n"}
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is my first web
-                    page.&lt;/p&gt;
-                    {"\n"}
-                    &nbsp;&nbsp;&lt;/body&gt;
-                    {"\n"}
-                    &lt;/html&gt;
+                    <pre>
+                      <code>
+                        body &#123;{"\n"}
+                        &nbsp;&nbsp;background-color&#58; lightblue;{"\n"}
+                        &#125;{"\n"}
+                        h1 &#123;{"\n"}
+                        &nbsp;&nbsp;color&#58; white;{"\n"}
+                        &nbsp;&nbsp;text-align&#58; center;{"\n"}
+                        &#125;{"\n"}p &#123;{"\n"}
+                        &nbsp;&nbsp;font-family&#58; verdana;{"\n"}
+                        &nbsp;&nbsp;font-size&#58; 20px;{"\n"}
+                        &#125;{"\n"}
+                      </code>
+                    </pre>
                   </code>
                 </pre>
               </div>
@@ -92,9 +84,11 @@ function Html() {
               <div className="mockup-browser-toolbar">
                 <div className="input">localhost:5500</div>
               </div>
-              <div className="p-10 bg-base-200 h-full">
-                <h1>Hello, World!</h1> <br />
-                <p>This is my first web page.</p>
+              <div className="p-10 h-full bg-sky-300">
+                <h1 className="text-center">Hello, World!</h1> <br />
+                <p className="text-black font-verdana !important">
+                  This is my first web page.
+                </p>
               </div>
             </motion.div>
           </div>
