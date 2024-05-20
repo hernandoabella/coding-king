@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-function CategoryDropdown({ categories, onChange }) {
-  const [selectedCategory, setSelectedCategory] = useState("");
+function CategoryDropdown({ categories, activeCategory, onChange }) {
+  const [selectedCategory, setSelectedCategory] = useState(activeCategory);
 
   const handleCategoryChange = (event) => {
     const newCategory = event.target.value;
@@ -12,7 +12,7 @@ function CategoryDropdown({ categories, onChange }) {
   return (
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn m-1">
-        Select Category
+        {selectedCategory || "Select Category"}
         <svg
           width="12px"
           height="12px"
