@@ -4,12 +4,11 @@ function Footer() {
   return (
     <div>
       <footer>
-        <div className="p-5 flex justify-around gap-10">
-          <p className="text-center">
+        <div className="pt-5">
+          <p>
             &copy; Coding-King {new Date().getFullYear()}.
           </p>
-          <div></div>
-          <div className="flex gap-5">
+          <div className="pt-5 flex gap-5">
             <div className="">
               <a
                 href="https://github.com/hernandoabella/coding-king"
@@ -31,7 +30,7 @@ function Footer() {
             <div>
               <a
                 href="https://x.com/codingkingx/"
-                aria-label="github project"
+                aria-label="x (twitter)"
                 target="_blank"
               >
                 <svg
