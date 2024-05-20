@@ -46,15 +46,16 @@ function Main() {
       <div className="md:p-10">
         <Header />
         <div>
-          <div className="flex flex-wrap gap-5">
+          <div>
             <CategoryDropdown
               categories={buttonsData.map((data) => data.category)}
+              activeCategory={activeCategory}
               onChange={handleCategoryChange}
             />
           </div>
-          <div className="p-5 bg-slate-900 rounded-lg mt-5">
+          <div className="rounded-lg mt-5">
             {showButtons && (
-              <div className="flex flex-wrap gap-5 justify-center">
+              <div className="flex flex-wrap gap-5">
                 {buttonsData
                   .find(
                     (categoryData) => categoryData.category === activeCategory
@@ -74,32 +75,27 @@ function Main() {
                         activeButton === button.type
                           ? "bg-slate-900 text-white"
                           : ""
-                      }
-                      ${
+                      } ${
                         activeCategory === "Programming Languages" &&
                         activeButton === button.type
                           ? "bg-slate-900 text-white"
                           : ""
-                      }
-                      ${
+                      } ${
                         activeCategory === "Databases" &&
                         activeButton === button.type
                           ? "bg-slate-900 text-white"
                           : ""
-                      }
-                      ${
+                      } ${
                         activeCategory === "Cloud Computing" &&
                         activeButton === button.type
                           ? "bg-slate-900 text-white"
                           : ""
-                      }
-                      ${
+                      } ${
                         activeCategory === "Mobile Development" &&
                         activeButton === button.type
                           ? "bg-slate-900 text-white"
                           : ""
-                      }
-                      `}
+                      }`}
                       onClick={() => handleButtonClick(button.type)}
                     >
                       <i className={button.icon}></i>
