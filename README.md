@@ -4,6 +4,7 @@ Quick resources to help you reach the highest level in just the blink of an eye.
 ### Web Technologies:
 - **HTML:** The foundation of web development, HTML is used to structure the content of a webpage.
 - **CSS:** Cascading Style Sheets (CSS) is a stylesheet language used for describing the look and formatting of a web page.
+- **Tailwind CSS:** A utility-first CSS framework that provides low-level utility classes, allowing developers to rapidly build custom user interfaces without writing custom CSS.
 - **JavaScript:** A versatile programming language that enables dynamic and interactive features on a website.
 - **TypeScript:** An open-source programming language developed and maintained by Microsoft, which is a superset of JavaScript and adds optional static typing and other features.
 - **React:** A popular JavaScript library for building user interfaces, developed and maintained by Facebook.
