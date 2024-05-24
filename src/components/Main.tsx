@@ -53,7 +53,7 @@ function Main() {
               onChange={handleCategoryChange}
             />
           </div>
-          <div className="rounded-lg mt-5">
+          <div className="rounded-lg mt-5 w-auto">
             {showButtons && (
               <div className="flex flex-wrap gap-5">
                 {buttonsData
