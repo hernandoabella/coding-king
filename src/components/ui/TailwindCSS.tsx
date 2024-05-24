@@ -29,10 +29,10 @@ function Html() {
             </div>
             <div>
               <h1 className="mb-4 text-3xl font-extrabold md:text-5xl lg:text-4xl">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-orange-400">
-                  HTML:
+                <span className="text-transparent bg-clip-text bg-gradient-to-r to-sky-600 from-sky-400">
+                  TailwindCSS
                 </span>{" "}
-                HyperText Markup Language
+                
               </h1>
               <motion.p
                 initial={{ opacity: 0 }} // Initial animation state
@@ -40,8 +40,7 @@ function Html() {
                 transition={{ delay: 0.2 }} // Delay before animation starts
                 className="py-2 text-xl"
               >
-                The foundation of web development, HTML is used to structure the
-                content of a webpage.
+                A utility-first CSS framework that provides low-level utility classes, allowing developers to rapidly build custom user interfaces without writing custom CSS.  
               </motion.p>
             </div>
           </div>
@@ -69,7 +68,7 @@ function Html() {
                     {"\n"}
                     &nbsp;&nbsp;&lt;body&gt;
                     {"\n"}
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 className="text-2xl font-bold text-blue-500"&gt;Hello, World!&lt;/h1&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hello, World!&lt;/h1&gt;
                     {"\n"}
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is my first web
                     page.&lt;/p&gt;
