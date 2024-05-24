@@ -32,7 +32,6 @@ function Html() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r to-sky-600 from-sky-400">
                   TailwindCSS
                 </span>{" "}
-                
               </h1>
               <motion.p
                 initial={{ opacity: 0 }} // Initial animation state
@@ -40,7 +39,9 @@ function Html() {
                 transition={{ delay: 0.2 }} // Delay before animation starts
                 className="py-2 text-xl"
               >
-                A utility-first CSS framework that provides low-level utility classes, allowing developers to rapidly build custom user interfaces without writing custom CSS.  
+                A utility-first CSS framework that provides low-level utility
+                classes, allowing developers to rapidly build custom user
+                interfaces without writing custom CSS.
               </motion.p>
             </div>
           </div>
@@ -51,7 +52,7 @@ function Html() {
               animate={{ opacity: 1, x: 0 }} // Animation when component mounts
               transition={{ delay: 0.4 }} // Delay before animation starts
             >
-              <h3 className="text-2xl font-bold">Basic Structure:</h3>
+              <h3 className="text-2xl font-bold">Basic Styles:</h3>
               <div>
                 <pre style={{ display: "block" }}>
                   <code className="language-html">
@@ -68,9 +69,12 @@ function Html() {
                     {"\n"}
                     &nbsp;&nbsp;&lt;body&gt;
                     {"\n"}
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hello, World!&lt;/h1&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 className&quot;text&#45;2xl
+                    text&#45;blue&#45;500 font&#45;bold&quot;&gt;Hello,
+                    World!&lt;/h1&gt;
                     {"\n"}
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is my first web
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p className&quot;text&#45;lg
+                    text&#45;gray&#45;300&quot;&gt;This is my first web
                     page.&lt;/p&gt;
                     {"\n"}
                     &nbsp;&nbsp;&lt;/body&gt;
