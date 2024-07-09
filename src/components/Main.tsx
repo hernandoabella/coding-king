@@ -77,7 +77,7 @@ function Main() {
                           ? "bg-slate-900 text-white"
                           : ""
                       } ${
-                        activeCategory === "Programming Languages" &&
+                        activeCategory === "Languages" &&
                         activeButton === button.type
                           ? "bg-slate-900 text-white"
                           : ""
