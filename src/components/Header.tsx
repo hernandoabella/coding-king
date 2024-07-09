@@ -95,7 +95,7 @@ function Header() {
           </ul>
         </div>
       </div>
-      <div>
+      <div className="text-center">
         <h1 className="font-bold">Coding-King 🤴</h1>
         <p>
           Quick resources to help you reach the highest level in just the blink
