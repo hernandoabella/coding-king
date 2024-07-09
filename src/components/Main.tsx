@@ -9,6 +9,7 @@ import {
   Reactd,
   Vue,
   Angular,
+  Svelte,
   Git,
   TailwindCSS,
 } from "./ImportUI";
@@ -44,8 +45,7 @@ function Main() {
   return (
     <div className="">
       <Header />
-      <div className="md:p-10">
-        
+      <div className="p-5">
         <div>
           <div>
             <CategoryDropdown
@@ -56,7 +56,7 @@ function Main() {
           </div>
           <div className="rounded-lg mt-5 w-auto">
             {showButtons && (
-              <div className="flex flex-wrap gap-5">
+              <div className="flex flex-wrap gap-3">
                 {buttonsData
                   .find(
                     (categoryData) => categoryData.category === activeCategory
@@ -109,7 +109,7 @@ function Main() {
         </div>
       </div>
 
-      <div className="p-10 md:flex">
+      <div className="p-5">
         {activeButton === "HTML" && <HTML />}
         {activeButton === "CSS" && <CSS />}
         {activeButton === "TailwindCSS" && <TailwindCSS />}
@@ -118,6 +118,8 @@ function Main() {
         {activeButton === "React" && <Reactd />}
         {activeButton === "Vue" && <Vue />}
         {activeButton === "Angular" && <Angular />}
+        {activeButton === "Svelte" && <Svelte />}
+
         {activeButton === "Git" && <Git />}
       </div>
 
