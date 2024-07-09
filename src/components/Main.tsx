@@ -42,9 +42,10 @@ function Main() {
   };
 
   return (
-    <div className="flex h-screen w-screen overflow-hidden justify-center items-center">
+    <div className="">
+      <Header />
       <div className="md:p-10">
-        <Header />
+        
         <div>
           <div>
             <CategoryDropdown
@@ -106,7 +107,6 @@ function Main() {
             )}
           </div>
         </div>
-        <Footer />
       </div>
 
       <div className="p-10 md:flex">
@@ -120,6 +120,8 @@ function Main() {
         {activeButton === "Angular" && <Angular />}
         {activeButton === "Git" && <Git />}
       </div>
+
+      <Footer />
     </div>
   );
 }
