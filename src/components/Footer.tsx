@@ -1,15 +1,12 @@
 import React from "react";
 
-
 function Footer() {
   return (
     <div>
       <footer>
         <div className="p-10 text-center">
-          <p>
-            &copy; Coding-King {new Date().getFullYear()}.
-          </p>
-          <div className="pt-5 flex gap-5">
+          <p>&copy; Coding-King {new Date().getFullYear()}.</p>
+          <div className="pt-5 justify-center flex gap-5">
             <div className="">
               <a
                 href="https://github.com/hernandoabella/coding-king"
