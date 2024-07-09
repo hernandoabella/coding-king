@@ -16,10 +16,10 @@ function Html() {
       exit={{ opacity: 0, y: -50 }} // Animation when component unmounts
       transition={{ duration: 0.5 }} // Animation duration
     >
-      <div className="md:flex justify-center align-center">
-        <div>
+      <div>
+        <div className="">
           <div className="flex gap-5">
-            <div className="flex md:flex-none justify-center">
+            <div className="">
               <img
                 src="/html5-original.svg"
                 width={150}
@@ -43,6 +43,23 @@ function Html() {
                 The foundation of web development, HTML is used to structure the
                 content of a webpage.
               </motion.p>
+              <motion.div
+                initial={{ opacity: 0 }} // Initial animation state
+                animate={{ opacity: 1 }} // Animation when component mounts
+                transition={{ delay: 0.6 }} // Delay before animation starts
+                className="py-5"
+              >
+                <a href="#">
+                  <motion.button
+                    whileHover={{ scale: 1.1 }} // Animation on hover
+                    whileTap={{ scale: 0.9 }} // Animation on tap
+                    type="button"
+                    className="btn btn-outline"
+                  >
+                    Full Tutorial
+                  </motion.button>
+                </a>
+              </motion.div>
             </div>
           </div>
 
@@ -52,9 +69,7 @@ function Html() {
               animate={{ opacity: 1, x: 0 }} // Animation when component mounts
               transition={{ delay: 0.4 }} // Delay before animation starts
             >
-              <h3 className="text-2xl font-bold">
-                Basic Structure:
-              </h3>
+              <h3 className="text-2xl font-bold">Basic Structure:</h3>
               <div>
                 <pre style={{ display: "block" }}>
                   <code className="language-html">
@@ -99,24 +114,6 @@ function Html() {
               </div>
             </motion.div>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0 }} // Initial animation state
-            animate={{ opacity: 1 }} // Animation when component mounts
-            transition={{ delay: 0.6 }} // Delay before animation starts
-            className="py-5"
-          >
-            <a href="#">
-              <motion.button
-                whileHover={{ scale: 1.1 }} // Animation on hover
-                whileTap={{ scale: 0.9 }} // Animation on tap
-                type="button"
-                className="btn btn-outline"
-              >
-                Full Tutorial
-              </motion.button>
-            </a>
-          </motion.div>
         </div>
       </div>
     </motion.div>
