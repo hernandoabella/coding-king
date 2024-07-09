@@ -16,8 +16,8 @@ function Html() {
       exit={{ opacity: 0, y: -50 }} // Animation when component unmounts
       transition={{ duration: 0.5 }} // Animation duration
     >
-      <div>
-        <div className="">
+      <div className="flex justify-center">
+        <div className=" items-center">
           <div className="flex gap-5">
             <div className="">
               <img
@@ -70,7 +70,9 @@ function Html() {
               transition={{ delay: 0.4 }} // Delay before animation starts
             >
               <h3 className="text-2xl font-bold">Basic Structure:</h3>
-              <p className="text-gray-600">HTML tags allows you to define the structure of a website.</p>
+              <p className="text-gray-600">
+                HTML tags allows you to define the structure of a website.
+              </p>
               <div>
                 <pre style={{ display: "block" }}>
                   <code className="language-html">
