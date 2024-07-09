@@ -20,8 +20,8 @@ function Header() {
   return (
     <header>
       <div className="m-5">
-        <div className="dropdown mb-5">
-          <div tabIndex={0} role="button" className="btn m-1">
+        <div className="dropdown mb-5 ">
+          <div tabIndex={0} role="button" className="btn m-1 btn-outline">
             Theme
             <svg
               width="12px"
