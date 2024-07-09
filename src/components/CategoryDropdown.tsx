@@ -10,8 +10,13 @@ function CategoryDropdown({ categories, activeCategory, onChange }) {
   };
 
   return (
-    <div className="dropdown ">
-      <div tabIndex={0} role="button" className="btn m-1 btn-outline">
+    <div className="dropdown">
+      <div
+        tabIndex={0}
+        role="button"
+        className="
+      btn m-1 btn-outline"
+      >
         {selectedCategory || "Select Category"}
         <svg
           width="12px"
