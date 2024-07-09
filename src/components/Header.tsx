@@ -22,7 +22,7 @@ function Header() {
       <div className="m-5">
         <div className="dropdown mb-5 ">
           <div tabIndex={0} role="button" className="btn m-1 btn-outline">
-            Theme
+            Select Theme
             <svg
               width="12px"
               height="12px"
@@ -95,7 +95,7 @@ function Header() {
           </ul>
         </div>
       </div>
-      <div className="text-center">
+      <div className="text-center px-5 md:p-0">
         <h1 className="font-bold">Coding-King 🤴</h1>
         <p>
           Quick resources to help you reach the highest level in just the blink
