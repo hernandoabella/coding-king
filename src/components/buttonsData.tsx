@@ -18,6 +18,7 @@ export const buttonsData = [
         { label: "React", icon: "devicon-react-plain", type: "React" },
         { label: "Vue", icon: "devicon-vuejs-plain", type: "Vue" },
         { label: "Angular", icon: "devicon-angular-plain", type: "Angular" },
+        { label: "Svelte", icon: "devicon-svelte-plain", type: "Svelte" },
       ],
     },
     {
