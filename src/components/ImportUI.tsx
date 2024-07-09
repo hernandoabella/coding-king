@@ -6,6 +6,7 @@ import TypeScript from "./ui/TypeScript";
 import Reactd from "./ui/Reactd";
 import Vue from "./ui/Vue";
 import Angular from "./ui/Angular";
+import Svelte from "./ui/Svelte";
 import Git from "./ui/Git";
 import Github from "./ui/Github";
 import Python from "./ui/Python";
@@ -34,6 +35,7 @@ export {
   Reactd,
   Vue,
   Angular,
+  Svelte,
   Git,
   Github,
   Python,
@@ -51,5 +53,5 @@ export {
   GoogleCloud,
   Android,
   Xcode,
-  Flutter
+  Flutter,
 };
