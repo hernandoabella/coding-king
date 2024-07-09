@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Stelve = () => {
+const Svelte = () => {
   return (
     <div>Stelve</div>
   )
 }
 
-export default Stelve
+export default Svelte
