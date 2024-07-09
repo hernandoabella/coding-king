@@ -45,7 +45,7 @@ function Main() {
   return (
     <div className="">
       <Header />
-      <div className="p-5">
+      <div className="p-5 flex justify-center">
         <div>
           <div>
             <CategoryDropdown
