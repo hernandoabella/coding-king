@@ -70,6 +70,7 @@ function Html() {
               transition={{ delay: 0.4 }} // Delay before animation starts
             >
               <h3 className="text-2xl font-bold">Basic Structure:</h3>
+              <p className="text-gray-600">HTML tags allows you to define the structure of a website.</p>
               <div>
                 <pre style={{ display: "block" }}>
                   <code className="language-html">
