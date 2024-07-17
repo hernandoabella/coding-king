@@ -1,5 +1,5 @@
 # Coding-King 🤴
-Quick resources to help you reach the highest level in just the blink of an eye.
+Quick resources for developers.
 
 ### Web Technologies:
 - **[HTML](https://www.github.com/hernandoabella/html):** The foundation of web development, HTML is used to structure the content of a webpage.
