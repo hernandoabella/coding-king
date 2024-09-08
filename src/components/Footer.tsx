@@ -8,7 +8,7 @@ function Footer() {
           <p>&copy; Coding-King {new Date().getFullYear()}.</p>
           <div className="pt-5 justify-center flex gap-5">
             <div className="">
-              <a
+              <a rel="noopener"
                 href="https://github.com/hernandoabella/coding-king"
                 aria-label="github project"
                 target="_blank"
@@ -26,7 +26,7 @@ function Footer() {
               </a>
             </div>
             <div>
-              <a
+              <a rel="noopener"
                 href="https://x.com/codingkingx/"
                 aria-label="x (twitter)"
                 target="_blank"
