@@ -1,5 +1,5 @@
 # Coding-King 🤴
-Quick resources to help you reach the highest level in just the blink of an eye.
+Quick resources for developers.
 
 ### Web Technologies:
 - **[HTML](https://www.github.com/hernandoabella/html):** The foundation of web development, HTML is used to structure the content of a webpage.
@@ -10,6 +10,7 @@ Quick resources to help you reach the highest level in just the blink of an eye.
 - **React:** A popular JavaScript library for building user interfaces, developed and maintained by Facebook.
 - **Vue:** A progressive JavaScript framework for building user interfaces, designed to be incrementally adoptable.
 - **Angular:** A TypeScript-based open-source web application framework developed and maintained by Google.
+- **Svelte:** allows developers to write concise components using familiar languages like HTML, CSS, and JavaScript.
   
 ### Control Version
 Essential for managing and tracking changes to your code, with Git being the most popular choice.
