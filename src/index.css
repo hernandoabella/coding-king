@@ -6,14 +6,22 @@ body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
-h1 {
-  font-size: 2em;
-}
-
 pre code.hljs {
   display: block;
 }
 
 code.hljs {
   display: inline;
+}
+
+.content {
+  padding-left: 320px;
+}
+
+.left-side-bar {
+  width: 320px;
+}
+
+.right-side-bar {
+  width: 320px;
 }
