@@ -15,7 +15,7 @@ function CategoryDropdown({ categories, activeCategory, onChange }) {
         tabIndex={0}
         role="button"
         className="
-      btn m-1 btn-outline"
+      btn btn-outline"
       >
         {selectedCategory || "Select Category"}
         <svg
