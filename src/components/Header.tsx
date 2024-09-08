@@ -18,11 +18,11 @@ function Header() {
   };
 
   return (
-    <header>
-      <div className="m-5">
-        <div className="dropdown mb-5 ">
+    <header className="w-full">
+      {/* <div className="m-5 w-full">
+        <div className="dropdown mb-5">
           <div tabIndex={0} role="button" className="btn m-1 btn-outline">
-            Select Theme
+            Theme
             <svg
               width="12px"
               height="12px"
@@ -94,12 +94,11 @@ function Header() {
             </li>
           </ul>
         </div>
-      </div>
-      <div className="text-center px-5 md:p-0">
-        <h1 className="font-bold">Coding-King 🤴</h1>
+      </div> */}
+      <div className="text-center p-5">
+        <h1 className="font-extrabold text-3xl">🤴codingking.net</h1>
         <p>
-          Quick resources to help you reach the highest level in just the blink
-          of an eye.
+          Free <del>programming</del> <b>coding</b> resources to help you level up
         </p>
       </div>
     </header>
