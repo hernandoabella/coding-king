@@ -15,6 +15,8 @@ import {
 } from "./ImportUI";
 import { buttonsData } from "./buttonsData";
 import CategoryDropdown from "./CategoryDropdown";
+import LeftSideBar from "./LeftSideBar";
+import RightSideBar from "./RightSideBar";
 
 function Main() {
   const [activeButton, setActiveButton] = useState("");
@@ -44,8 +46,11 @@ function Main() {
 
   return (
     <div className="">
-      <Header />
-      <div className="p-5 flex justify-center">
+      <div className="flex">
+        <LeftSideBar />
+        <div className="content w-full">
+          <Header />
+          <div className="p-5 flex justify-center">
         <div>
           <div>
             <CategoryDropdown
@@ -77,7 +82,7 @@ function Main() {
                           ? "bg-slate-900 text-white"
                           : ""
                       } ${
-                        activeCategory === "Languages" &&
+                        activeCategory === "Programming" &&
                         activeButton === button.type
                           ? "bg-slate-900 text-white"
                           : ""
@@ -109,7 +114,7 @@ function Main() {
         </div>
       </div>
 
-      <div className="p-5">
+          <div className="p-10">
         {activeButton === "HTML" && <HTML />}
         {activeButton === "CSS" && <CSS />}
         {activeButton === "TailwindCSS" && <TailwindCSS />}
@@ -122,7 +127,9 @@ function Main() {
 
         {activeButton === "Git" && <Git />}
       </div>
-
+        </div>
+        <RightSideBar />
+      </div>
       <Footer />
     </div>
   );
