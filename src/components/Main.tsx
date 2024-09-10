@@ -50,7 +50,7 @@ function Main() {
         <LeftSideBar />
         <div className="content w-full">
           <Header />
-          <div className="p-5 flex justify-center">
+          <div className="p-5 flex">
         <div>
           <div>
             <CategoryDropdown
