@@ -15,13 +15,16 @@ code.hljs {
 }
 
 .content {
-  padding-left: 320px;
+  padding-left: 300px;
+  padding-right: 300px;
 }
 
+
+
 .left-side-bar {
-  width: 320px;
+  width: 300px;
 }
 
 .right-side-bar {
-  width: 320px;
+  width: 300px;
 }
