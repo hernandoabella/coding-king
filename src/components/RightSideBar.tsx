@@ -3,7 +3,7 @@ import React from "react";
 const RightSideBar = () => {
   return (
     <div
-      className="bg-base-200
+      className="bg-neutral-content
     p-10 h-full right-side-bar fixed right-0"
     >
       <h3 className="font-bold">Related content</h3>
