@@ -16,10 +16,10 @@ function Html() {
       exit={{ opacity: 0, y: -50 }} // Animation when component unmounts
       transition={{ duration: 0.5 }} // Animation duration
     >
-      <div className="flex flex-col md:flex-row ">
-        <div className=" items-center">
-          <div className="flex flex-col items-center md:flex-row gap-5">
-            <div className="">
+      <div className="flex flex-col md:flex-row justify-center md:w-2/4 md:m-auto">
+        <div>
+          <div className="flex gap-5 flex-col items-center md:flex-row">
+            <div>
               <img
                 src="/html5-original.svg"
                 width={150}
@@ -28,7 +28,7 @@ function Html() {
               />
             </div>
             <div>
-              <h1 className="italic mb-4 text-3xl font-extrabold md:text-5xl lg:text-4xl">
+              <h1 className="mb-4 text-3xl font-extrabold md:text-5xl lg:text-4xl">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-orange-400">
                   HTML:
                 </span>{" "}
@@ -48,13 +48,11 @@ function Html() {
                 animate={{ opacity: 1 }} // Animation when component mounts
                 transition={{ delay: 0.6 }} // Delay before animation starts
                 className="py-5"
-              >
-                
-              </motion.div>
+              ></motion.div>
             </div>
           </div>
 
-          <div className="pt-5 gap-8 flex flex-col md:flex-row justify-center">
+          <div className="mt-10 flex gap-10 flex-col md:flex-row">
             <motion.div
               initial={{ opacity: 0, x: -50 }} // Initial animation state
               animate={{ opacity: 1, x: 0 }} // Animation when component mounts
@@ -64,7 +62,7 @@ function Html() {
               <p className="pb-2">
                 HTML tags allows you to define the structure of a website.
               </p>
-              <div>
+              <div className="w-full">
                 <pre style={{ display: "block" }}>
                   <code className="language-html">
                     &lt;!DOCTYPE html&gt;
@@ -97,7 +95,7 @@ function Html() {
               initial={{ opacity: 0, x: 50 }} // Initial animation state
               animate={{ opacity: 1, x: 0 }} // Animation when component mounts
               transition={{ delay: 0.4 }} // Delay before animation starts
-              className="mockup-browser bg-base-300"
+              className="mockup-browser bg-base-300 w-full"
             >
               <div className="mockup-browser-toolbar">
                 <div className="input">localhost:5500</div>
