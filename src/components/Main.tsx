@@ -50,7 +50,7 @@ function Main() {
         <LeftSideBar />
         <div className="content w-full">
           <Header />
-          <div className="p-5 flex">
+          <div className="flex md:w-2/3 md:m-auto">
         <div>
           <div>
             <CategoryDropdown
@@ -59,7 +59,7 @@ function Main() {
               onChange={handleCategoryChange}
             />
           </div>
-          <div className="rounded-lg mt-5 w-auto">
+          <div className="rounded-lg mt-5 w-auto ">
             {showButtons && (
               <div className="flex flex-wrap gap-3">
                 {buttonsData
@@ -114,7 +114,7 @@ function Main() {
         </div>
       </div>
 
-          <div className="p-10">
+          <div className="p-5 mt-10">
         {activeButton === "HTML" && <HTML />}
         {activeButton === "CSS" && <CSS />}
         {activeButton === "TailwindCSS" && <TailwindCSS />}
