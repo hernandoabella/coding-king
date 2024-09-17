@@ -7,7 +7,7 @@ const RightSideBar = () => {
     p-10 h-full right-side-bar fixed right-0"
     >
       <h3 className="font-bold">Related content</h3>
-      <ul>
+      <ul className="pl-5">
         <li>Clean Code</li>
         <li>Algorithms and Data Structure</li>
       </ul>
