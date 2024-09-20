@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 function Header() {
-  const [selectedTheme, setSelectedTheme] = useState("default");
+  const [selectedTheme, setSelectedTheme] = useState("halloween");
 
   useEffect(() => {
     // Check if theme preference is stored in localStorage
@@ -42,12 +42,68 @@ function Header() {
                 type="radio"
                 name="theme-dropdown"
                 className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Default"
-                value="default"
-                checked={selectedTheme === "default"}
+                aria-label="Light"
+                value="light"
+                checked={selectedTheme === "light"}
                 onChange={handleThemeChange}
               />
             </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Dark"
+                value="dark"
+                checked={selectedTheme === "dark"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Bumblebee"
+                value="bumblebee"
+                checked={selectedTheme === "bumblebee"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Emerald"
+                value="emerald"
+                checked={selectedTheme === "emerald"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Corporate"
+                value="corporate"
+                checked={selectedTheme === "corporate"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Synthwave"
+                value="synthwave"
+                checked={selectedTheme === "synthwave"}
+                onChange={handleThemeChange}
+              />
+            </li>
+
             <li>
               <input
                 type="radio"
@@ -86,9 +142,241 @@ function Header() {
                 type="radio"
                 name="theme-dropdown"
                 className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Halloween"
+                value="halloween"
+                checked={selectedTheme === "halloween"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Garden"
+                value="garden"
+                checked={selectedTheme === "garden"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Forest"
+                value="forest"
+                checked={selectedTheme === "forest"}
+                onChange={handleThemeChange}
+              />
+            </li>
+
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
                 aria-label="Aqua"
                 value="aqua"
                 checked={selectedTheme === "aqua"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Lofi"
+                value="lofi"
+                checked={selectedTheme === "lofi"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Pastel"
+                value="pastel"
+                checked={selectedTheme === "pastel"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Fantasy"
+                value="fantasy"
+                checked={selectedTheme === "fantasy"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Wireframe"
+                value="wireframe"
+                checked={selectedTheme === "wireframe"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Black"
+                value="black"
+                checked={selectedTheme === "black"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Luxury"
+                value="luxury"
+                checked={selectedTheme === "luxury"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Dracula"
+                value="dracula"
+                checked={selectedTheme === "dracula"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Cmyk"
+                value="cmyk"
+                checked={selectedTheme === "cmyk"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Autumn"
+                value="autumn"
+                checked={selectedTheme === "autumn"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Acid"
+                value="acid"
+                checked={selectedTheme === "acid"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Business"
+                value="business"
+                checked={selectedTheme === "business"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Lemonade"
+                value="lemonade"
+                checked={selectedTheme === "lemonade"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Night"
+                value="night"
+                checked={selectedTheme === "night"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Coffee"
+                value="coffee"
+                checked={selectedTheme === "coffee"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Winter"
+                value="winter"
+                checked={selectedTheme === "winter"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Dim"
+                value="dim"
+                checked={selectedTheme === "dim"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Nord"
+                value="nord"
+                checked={selectedTheme === "nord"}
+                onChange={handleThemeChange}
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Sunset"
+                value="sunset"
+                checked={selectedTheme === "sunset"}
                 onChange={handleThemeChange}
               />
             </li>
@@ -96,10 +384,12 @@ function Header() {
         </div>
       </div>
       <div className="text-center p-5">
-        <h1 className="font-extrabold text-5xl">🤴Coding King</h1>
-        <p>
-          Free <del>programming</del> <b>coding</b> resources to help you level
-          up
+        <h1 className="font-extrabold md:text-5xl">
+          Coding King
+        </h1>
+        <p className="mt-5">
+          Free <del>programming</del> <b>coding</b> resources to open the next
+          level.
         </p>
       </div>
     </header>
