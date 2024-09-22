@@ -50,7 +50,7 @@ function Main() {
         <LeftSideBar />
         <div className="content w-full">
           <Header />
-          <div className="flex md:w-2/3 md:m-auto">
+          <div className="flex flex-wrap m-5">
         <div>
           <div>
             <CategoryDropdown
