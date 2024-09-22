@@ -21,7 +21,7 @@ function Html() {
           <div className="flex gap-5">
             <div className="flex md:flex-none justify-center">
               <img
-                src="/tailwindcss-original.svg"
+                src="/icons/tailwindcss-original.svg"
                 width={150}
                 height={100}
                 alt="TailwindCSS"
