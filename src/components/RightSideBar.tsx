@@ -15,7 +15,27 @@ const RightSideBar = () => {
         </li>
         <li>
           <a href="#" className=" hover:underline">
-            Algorithms and Data Structure
+            DSA
+          </a>
+        </li>
+        <li>
+          <a href="#" className=" hover:underline">
+            OOP
+          </a>
+        </li>
+        <li>
+          <a href="#" className=" hover:underline">
+            Design Patterns
+          </a>
+        </li>
+        <li>
+          <a href="#" className=" hover:underline">
+            SOLID
+          </a>
+        </li>
+        <li>
+          <a href="#" className=" hover:underline">
+            TDD
           </a>
         </li>
       </ul>
