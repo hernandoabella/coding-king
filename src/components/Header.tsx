@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { LuCrown } from "react-icons/lu";
 
 function Header() {
   const [selectedTheme, setSelectedTheme] = useState("halloween");
@@ -384,9 +385,9 @@ function Header() {
         </div>
       </div>
       <div className="text-center p-5">
-        <h1 className="font-extrabold md:text-5xl">
-          Coding King
-        </h1>
+        <h1 className="mb-4 text-3xl font-bold ">Become a</h1>
+        <h1 className="font-extrabold md:text-5xl">Coding King</h1>
+
         <p className="mt-5">
           Free <del>programming</del> <b>coding</b> resources to open the next
           level.
