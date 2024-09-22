@@ -16,7 +16,7 @@ function Html() {
       exit={{ opacity: 0, y: -50 }} // Animation when component unmounts
       transition={{ duration: 0.5 }} // Animation duration
     >
-      <div className="flex flex-col md:flex-row justify-center md:w-2/4 md:m-auto">
+      <div className="flex flex-col md:flex-row md:m-auto">
         <div>
           <div className="flex gap-5 flex-col items-center md:flex-row">
             <div>

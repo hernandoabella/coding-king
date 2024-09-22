@@ -386,7 +386,7 @@ function Header() {
       </div>
       <div className="text-center p-5">
         <h1 className="mb-4 text-3xl font-bold ">Become a</h1>
-        <h1 className="font-extrabold md:text-5xl">Coding King</h1>
+        <h1 className="font-extrabold md:text-5xl">&lt;/&gt; Coding King</h1>
 
         <p className="mt-5">
           Free <del>programming</del> <b>coding</b> resources to open the next

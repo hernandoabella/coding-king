@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import { motion } from "framer-motion";
 
@@ -8,20 +8,92 @@ const SideBar = () => {
 
   // Lista de sponsors (imágenes y enlaces)
   const sponsors = [
-    { src: "/123.png", link: "https://example1.com" },
-    { src: "/123.png", link: "https://example2.com" },
-    { src: "/123.png", link: "https://example3.com" },
+    { src: "/books/50ways.jpg", link: "https://example1.com" },
+    {
+      src: "/public/books/61+vJ8aQ-8L._SL1500_.jpg",
+      link: "https://example2.com",
+    },
+    {
+      src: "/public/books/616tD4aK1eL._SL1233_.jpg",
+      link: "https://example3.com",
+    },
+    {
+      src: "/public/books/61Mwg2e5nuL._SL1500_.jpg",
+      link: "https://example3.com",
+    },
+    {
+      src: "/public/books/61ODWTeTYhL._SL1233_.jpg",
+      link: "https://example3.com",
+    },
+    {
+      src: "/public/books/61PNo3nbOKL._SL1500_.jpg",
+      link: "https://example3.com",
+    },
+    {
+      src: "/public/books/61vHVycjO3L._SL1500_.jpg",
+      link: "https://example3.com",
+    },
+    {
+      src: "/public/books/61WT09U0fQL._SL1233_.jpg",
+      link: "https://example3.com",
+    },
+    {
+      src: "/public/books/717KnnUE7SL._SL1500_.jpg",
+      link: "https://example3.com",
+    },
+    {
+      src: "/public/books/71dWGnaRK3L._SL1500_.jpg",
+      link: "https://example3.com",
+    },
+    {
+      src: "/public/books/71HxFmyNJAL._SL1500_.jpg",
+      link: "https://example3.com",
+    },
+    {
+      src: "/public/books/71iQlsLIiCL._SL1500_.jpg",
+      link: "https://example3.com",
+    },
+    {
+      src: "/public/books/71kgnO+87VL._SL1500_.jpg",
+      link: "https://example3.com",
+    },
+    {
+      src: "/public/books/71kJxYzbz+L._SL1500_.jpg",
+      link: "https://example3.com",
+    },
+    {
+      src: "/public/books/71uZ61nf20L._SL1500_.jpg",
+      link: "https://example3.com",
+    },
+    {
+      src: "/public/books/71VGoALdd4L._SL1500_.jpg",
+      link: "https://example3.com",
+    },
+    {
+      src: "/public/books/71wKSKRzxjL._SL1500_.jpg",
+      link: "https://example3.com",
+    },
   ];
 
-  // Handler para la diapositiva anterior
+  // Función para ir a la diapositiva anterior
   const handlePrevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? sponsors.length - 1 : prev - 1));
   };
 
-  // Handler para la siguiente diapositiva
+  // Función para ir a la siguiente diapositiva
   const handleNextSlide = () => {
     setCurrentSlide((prev) => (prev === sponsors.length - 1 ? 0 : prev + 1));
   };
+
+  // Efecto para hacer que el slider cambie automáticamente
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNextSlide(); // Cambia automáticamente a la siguiente diapositiva
+    }, 3000); // 3000ms = 3 segundos
+
+    // Limpiar el intervalo cuando el componente se desmonte o cambie
+    return () => clearInterval(interval);
+  }, [currentSlide]); // Se vuelve a ejecutar cada vez que el slide actual cambia
 
   return (
     <div className="h-full fixed p-10 left-side-bar bg-base-300 flex flex-col items-center">
@@ -65,9 +137,11 @@ const SideBar = () => {
         className="text-4xl cursor-pointer"
       />
 
-      <div>
+      <div className="mt-5">
         <a href="https://www.beat-byte-publishing.com/" target="_blank">
-          <button>Subscribe to Newsletter</button>
+          <video width={320} height={240} loop autoPlay muted>
+            <source src="/bbp-ad.mp4"></source>
+          </video>
         </a>
       </div>
     </div>
