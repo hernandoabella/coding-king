@@ -20,11 +20,25 @@ code.hljs {
 }
 
 
-
 .left-side-bar {
   width: 300px;
 }
 
 .right-side-bar {
   width: 300px;
+}
+
+@media only screen and (max-width: 1500px) {
+  .left-side-bar {
+    display: none;
+  }
+
+  .right-side-bar {
+    display: none;
+  }
+
+  .content {
+    padding-left: 0px;
+    padding-right: 0px;
+}
 }
