@@ -8,69 +8,72 @@ const SideBar = () => {
 
   // Lista de sponsors (imágenes y enlaces)
   const sponsors = [
-    { src: "/books/50ways.jpg", link: "https://example1.com" },
     {
-      src: "/public/books/61+vJ8aQ-8L._SL1500_.jpg",
-      link: "https://example2.com",
+      src: "/books/50ways.jpg",
+      link: "https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CW1JRCXY/",
     },
     {
-      src: "/public/books/616tD4aK1eL._SL1233_.jpg",
+      src: "/books/61+vJ8aQ-8L._SL1500_.jpg",
+      link: "https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CLL3FKKQ",
+    },
+    {
+      src: "/books/616tD4aK1eL._SL1233_.jpg",
+      link: "https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CVTLX8GS",
+    },
+    {
+      src: "/books/61Mwg2e5nuL._SL1500_.jpg",
+      link: "https://www.amazon.com/-/es/Hernando-Abella/dp/B0CN34Z6L1",
+    },
+    {
+      src: "/books/61ODWTeTYhL._SL1233_.jpg",
+      link: "https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CYHZ5QKJ",
+    },
+    {
+      src: "/books/61PNo3nbOKL._SL1500_.jpg",
+      link: "https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CNVDY62T",
+    },
+    {
+      src: "/books/61vHVycjO3L._SL1500_.jpg",
+      link: "https://www.amazon.com/-/es/Hernando-Abella/dp/B0CL9ZKTLV",
+    },
+    {
+      src: "/books/61WT09U0fQL._SL1233_.jpg",
+      link: "https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CWTF149J",
+    },
+    {
+      src: "/books/717KnnUE7SL._SL1500_.jpg",
+      link: "https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CTPZ6SVD",
+    },
+    {
+      src: "/books/71dWGnaRK3L._SL1500_.jpg",
+      link: "https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CVNG3PRV",
+    },
+    {
+      src: "/books/71HxFmyNJAL._SL1500_.jpg",
+      link: "https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CN51HJQQ",
+    },
+    {
+      src: "/books/71iQlsLIiCL._SL1500_.jpg",
+      link: "https://www.amazon.com/-/es/Hernando-Abella-ebook/dp/B0CTYK7NFR",
+    },
+    {
+      src: "/books/71kgnO+87VL._SL1500_.jpg",
       link: "https://example3.com",
     },
     {
-      src: "/public/books/61Mwg2e5nuL._SL1500_.jpg",
+      src: "/books/71kJxYzbz+L._SL1500_.jpg",
       link: "https://example3.com",
     },
     {
-      src: "/public/books/61ODWTeTYhL._SL1233_.jpg",
+      src: "/books/71uZ61nf20L._SL1500_.jpg",
       link: "https://example3.com",
     },
     {
-      src: "/public/books/61PNo3nbOKL._SL1500_.jpg",
+      src: "/books/71VGoALdd4L._SL1500_.jpg",
       link: "https://example3.com",
     },
     {
-      src: "/public/books/61vHVycjO3L._SL1500_.jpg",
-      link: "https://example3.com",
-    },
-    {
-      src: "/public/books/61WT09U0fQL._SL1233_.jpg",
-      link: "https://example3.com",
-    },
-    {
-      src: "/public/books/717KnnUE7SL._SL1500_.jpg",
-      link: "https://example3.com",
-    },
-    {
-      src: "/public/books/71dWGnaRK3L._SL1500_.jpg",
-      link: "https://example3.com",
-    },
-    {
-      src: "/public/books/71HxFmyNJAL._SL1500_.jpg",
-      link: "https://example3.com",
-    },
-    {
-      src: "/public/books/71iQlsLIiCL._SL1500_.jpg",
-      link: "https://example3.com",
-    },
-    {
-      src: "/public/books/71kgnO+87VL._SL1500_.jpg",
-      link: "https://example3.com",
-    },
-    {
-      src: "/public/books/71kJxYzbz+L._SL1500_.jpg",
-      link: "https://example3.com",
-    },
-    {
-      src: "/public/books/71uZ61nf20L._SL1500_.jpg",
-      link: "https://example3.com",
-    },
-    {
-      src: "/public/books/71VGoALdd4L._SL1500_.jpg",
-      link: "https://example3.com",
-    },
-    {
-      src: "/public/books/71wKSKRzxjL._SL1500_.jpg",
+      src: "/books/71wKSKRzxjL._SL1500_.jpg",
       link: "https://example3.com",
     },
   ];
