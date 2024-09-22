@@ -16,12 +16,12 @@ function Html() {
       exit={{ opacity: 0, y: -50 }} // Animation when component unmounts
       transition={{ duration: 0.5 }} // Animation duration
     >
-      <div className="md:flex justify-center align-center">
+      <div className="md:flex align-center">
         <div>
           <div className="flex gap-5">
             <div className="flex md:flex-none justify-center">
               <img
-                src="/css3-original.svg"
+                src="/icons/css3-original.svg"
                 width={150}
                 height={100}
                 alt="html"
@@ -99,16 +99,7 @@ function Html() {
             transition={{ delay: 0.6 }} // Delay before animation starts
             className="py-5"
           >
-            <a href="#">
-              <motion.button
-                whileHover={{ scale: 1.1 }} // Animation on hover
-                whileTap={{ scale: 0.9 }} // Animation on tap
-                type="button"
-                className="btn btn-outline"
-              >
-                Full Tutorial
-              </motion.button>
-            </a>
+            
           </motion.div>
         </div>
       </div>
