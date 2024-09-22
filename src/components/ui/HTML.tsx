@@ -21,7 +21,7 @@ function Html() {
           <div className="flex gap-5 flex-col items-center md:flex-row">
             <div>
               <img
-                src="/html5-original.svg"
+                src="/icons/html5-original.svg"
                 width={150}
                 height={100}
                 alt="html"
