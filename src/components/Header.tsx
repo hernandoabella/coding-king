@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { LuCrown } from "react-icons/lu";
+import { FaCrown } from "react-icons/fa";
 
 function Header() {
   const [selectedTheme, setSelectedTheme] = useState("halloween");
@@ -385,12 +385,13 @@ function Header() {
         </div>
       </div>
       <div className="text-center p-5">
-        <h1 className="mb-4 text-3xl font-bold ">Become a</h1>
-        <h1 className="font-extrabold md:text-5xl">&lt;/&gt; Coding King</h1>
+        <div className="flex items-center text-3xl md:text-5xl font-bold mx-auto justify-center">
+          <FaCrown className="text-yellow-500 mr-2" /> {/* Icono de corona */}
+          Coding King
+        </div>
 
         <p className="mt-5">
-          Free <del>programming</del> <b>coding</b> resources to open the next
-          level.
+          Quick <b>coding resources</b> to open the next level.
         </p>
       </div>
     </header>
