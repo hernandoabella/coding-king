@@ -40,8 +40,7 @@ function Html() {
                 transition={{ delay: 0.2 }} // Delay before animation starts
                 className="py-2 text-xl"
               >
-                CSS is a stylesheet language used for describing the look and
-                formatting of a web page.
+                CSS (Cascading Style Sheets) is used to control the presentation and layout of web pages. It allows you to style and visually enhance HTML elements.
               </motion.p>
             </div>
           </div>
