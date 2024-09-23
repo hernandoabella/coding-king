@@ -19,8 +19,8 @@ function Html() {
       <div className="flex flex-col md:flex-row md:m-auto">
         <div>
           <div>
-            <div className="md:flex gap-5 mb-10">
-              <div className="mb-10 flex items-center justify-center">
+            <div className="md:flex gap-5">
+              <div className="mb-5 flex items-center justify-center">
                 <img
                   src="/icons/html5-original.svg"
                   width={150}
@@ -83,12 +83,15 @@ function Html() {
               transition={{ delay: 0.4 }} // Delay before animation starts
             >
               <h3 className="text-2xl font-bold py-2">Structure Web Pages</h3>
-              
-              <ul list-disc >
-                <li>Define headings, paragraphs, and text using elements like &lt;h1&gt;, &lt;p&gt;, and &lt;span&gt;.</li>
+
+              <ul list-disc>
+                <li>
+                  Define headings, paragraphs, and text using elements like
+                  &lt;h1&gt;, &lt;p&gt;, and &lt;span&gt;.
+                </li>
                 <li></li>
               </ul>
-              
+
               <p className="pb-2">
                 HTML tags allows you to define the structure of a website.
               </p>
