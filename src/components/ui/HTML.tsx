@@ -57,45 +57,73 @@ function Html() {
               </h3>
 
               <ol className="list-decimal pl-10 text-lg font-medium space-y-2">
-                <li>Structure Web Pages</li>
-                <li>Embed Media</li>
-                <li>Create Hyperlinks</li>
-                <li>Create Lists</li>
-                <li>Tables</li>
-                <li>Forms for User Input</li>
-                <li>Embed Scripts and Styles</li>
-                <li>Semantic Elements</li>
-                <li>Metadata and SEO</li>
-                <li>Accessibility Features</li>
-                <li>Responsive Design</li>
-                <li>Canvas and SVG</li>
-                <li>Data Storage</li>
-                <li>Drag and Drop</li>
-                <li>Geolocation and Other APIs</li>
+                <li className="hover:underline">
+                  <a href="#structure-web-pages">Structure Web Pages</a>
+                </li>
+                <li className="hover:underline">Embed Media</li>
+                <li className="hover:underline">Create Hyperlinks</li>
+                <li className="hover:underline">Create Lists</li>
+                <li className="hover:underline">Tables</li>
+                <li className="hover:underline">Forms for User Input</li>
+                <li className="hover:underline">Embed Scripts and Styles</li>
+                <li className="hover:underline">Semantic Elements</li>
+                <li className="hover:underline">Metadata and SEO</li>
+                <li className="hover:underline">Accessibility Features</li>
+                <li className="hover:underline">Responsive Design</li>
+                <li className="hover:underline">Canvas and SVG</li>
+                <li className="hover:underline">Data Storage</li>
+                <li className="hover:underline">Drag and Drop</li>
+                <li className="hover:underline">Geolocation and Other APIs</li>
               </ol>
             </div>
           </div>
 
-          <div className="mt-10 flex gap-5 flex-col md:flex-row">
+          <div className="mt-10 flex flex-col md:flex-row">
             <motion.div
               initial={{ opacity: 0, x: -50 }} // Initial animation state
               animate={{ opacity: 1, x: 0 }} // Animation when component mounts
               transition={{ delay: 0.4 }} // Delay before animation starts
             >
-              <h3 className="text-2xl font-bold py-2">Structure Web Pages</h3>
+              <h3 className="text-2xl font-bold py-2" id="structure-web-pages">
+                Structure Web Pages
+              </h3>
 
-              <ul list-disc>
-                <li>
+              <ul className="list-disc pl-10">
+                <li className="py-2">
                   Define headings, paragraphs, and text using elements like
-                  &lt;h1&gt;, &lt;p&gt;, and &lt;span&gt;.
+                  <span className="rounded code bg-base-300 text-[#f92672] ml-1">
+                    {" "}
+                    &lt;h1&gt;
+                  </span>
+                  ,{" "}
+                  <span className="rounded code bg-base-300 text-[#f92672] ml-1">
+                    &lt;p&gt;
+                  </span>
+                  , and{" "}
+                  <span className="rounded code bg-base-300 text-[#f92672] ml-1">
+                    &lt;span&gt;
+                  </span>
+                  .
                 </li>
-                <li></li>
+                <li className="py-2">
+                  Create sections of a webpage with{" "}
+                  <span className="rounded code bg-base-300 text-[#f92672] ml-1">
+                    &lt;div&gt;
+                  </span>
+                  ,
+                  <span className="rounded code bg-base-300 text-[#f92672] ml-1">
+                    {" "}
+                    &lt;section&gt;
+                  </span>
+                  , and{" "}
+                  <span className="rounded code bg-base-300 text-[#f92672] ml-1">
+                    &lt;article&gt;
+                  </span>
+                  .
+                </li>
               </ul>
 
-              <p className="pb-2">
-                HTML tags allows you to define the structure of a website.
-              </p>
-              <div className="w-full">
+              <div className="w-full md:pr-5">
                 <pre style={{ display: "block" }}>
                   <code className="language-html">
                     &lt;!DOCTYPE html&gt;
@@ -128,7 +156,7 @@ function Html() {
               initial={{ opacity: 0, x: 50 }} // Initial animation state
               animate={{ opacity: 1, x: 0 }} // Animation when component mounts
               transition={{ delay: 0.4 }} // Delay before animation starts
-              className="mockup-browser bg-base-300 w-full"
+              className="mockup-browser bg-base-300 w-full md:1/2"
             >
               <div className="mockup-browser-toolbar">
                 <div className="input">localhost:5500</div>
