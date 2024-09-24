@@ -30,7 +30,7 @@ function Html() {
               </div>
 
               <div>
-                <h1 className="md:text-left text-center mb-4 text-3xl font-extrabold md:text-5xl lg:text-4xl">
+                <h1 className="md:text-left mb-4 text-3xl font-extrabold md:text-5xl lg:text-4xl">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-orange-400">
                     HTML:
                   </span>{" "}
@@ -40,7 +40,7 @@ function Html() {
                   initial={{ opacity: 0 }} // Initial animation state
                   animate={{ opacity: 1 }} // Animation when component mounts
                   transition={{ delay: 0.2 }} // Delay before animation starts
-                  className="py-2 text-xl text-center md:text-left"
+                  className="py-2 text-xl md:text-left"
                 >
                   HTML (Hypertext Markup Language) is the backbone of web
                   development and allows you to structure and display content on
@@ -50,10 +50,8 @@ function Html() {
             </div>
 
             <div>
-              <h3 className=" text-1x2 font-bold md:text-2xl mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-orange-400">
-                  What can i do with HTML?
-                </span>{" "}
+              <h3 className="text-2xl font-bold py-2" id="structure-web-pages">
+                What can i do with HTML?
               </h3>
 
               <ol className="list-decimal pl-10 text-lg font-medium space-y-2">
