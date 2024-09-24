@@ -9,52 +9,52 @@ const RightSideBar = () => {
       <h3 className="font-bold">Related content</h3>
       <ul className="pl-2">
         <li>
-          <a href="#" className="hover:underline">
+          <a href="#" className="hover:underline text-sm hover:text-xl transition-all">
             Clean Code
           </a>
         </li>
         <li>
-          <a href="#" className=" hover:underline">
-            DSA
+          <a href="#" className=" hover:underline text-sm hover:text-xl transition-all">
+            Algorithms and Data Structures
           </a>
         </li>
         <li>
-          <a href="#" className=" hover:underline">
-            OOP
+          <a href="#" className=" hover:underline text-sm hover:text-xl transition-all">
+            Object Oriented Programming
           </a>
         </li>
         <li>
-          <a href="#" className=" hover:underline">
+          <a href="#" className=" hover:underline text-sm hover:text-xl transition-all">
             Design Patterns
           </a>
         </li>
         <li>
-          <a href="#" className=" hover:underline">
+          <a href="#" className=" hover:underline text-sm hover:text-xl transition-all">
             SOLID
           </a>
         </li>
         <li>
-          <a href="#" className=" hover:underline">
-            TDD
+          <a href="#" className=" hover:underline text-sm hover:text-xl transition-all">
+            Test Driven Data
           </a>
         </li>
         <li>
-          <a href="#" className=" hover:underline">
+          <a href="#" className=" hover:underline text-sm hover:text-xl transition-all">
             Cyber Security
           </a>
         </li>
         <li>
-          <a href="#" className=" hover:underline">
-            AI
+          <a href="#" className=" hover:underline text-sm hover:text-xl transition-all">
+            Artificial Inteligence
           </a>
         </li>
         <li>
-          <a href="#" className=" hover:underline">
+          <a href="#" className=" hover:underline text-sm hover:text-xl transition-all">
             Soft Skills
           </a>
         </li>
         <li>
-          <a href="https://github.com/hernandoabella/programming-terms-and-definitions" target="_blank" className=" hover:underline">
+          <a href="https://github.com/hernandoabella/programming-terms-and-definitions" target="_blank" className=" hover:underline hover:text-xl transition-all text-sm">
             +200 Programming Terms and Definitions
           </a>
         </li>
