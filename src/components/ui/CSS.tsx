@@ -85,7 +85,7 @@ function Html() {
               animate={{ opacity: 1, x: 0 }} // Animation when component mounts
               transition={{ delay: 0.4 }} // Delay before animation starts
             >
-              <h3 className="text-2xl font-bold">Basic Styles:</h3>
+              <h3 className="text-2xl font-bold">Style Text</h3>
               <div>
                 <pre style={{ display: "block" }}>
                   <code className="language-css">
