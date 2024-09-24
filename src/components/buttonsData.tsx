@@ -81,4 +81,19 @@ export const buttonsData = [
       { label: "Flutter", icon: "devicon-flutter-plain", type: "Flutter" },
     ],
   },
+  {
+    category: "Data Science",
+    buttons: [
+      { label: "Pandas", icon: "devicon-pandas-plain", type: "Pandas" },
+      { label: "NumPy", icon: "devicon-numpy-plain", type: "NumPy" },
+      { label: "Pandas", icon: "devicon-pandas-plain", type: "Pandas" },
+      { label: "Pandas", icon: "devicon-pandas-plain", type: "Pandas" },
+      { label: "Pandas", icon: "devicon-pandas-plain", type: "Pandas" },
+      { label: "Pandas", icon: "devicon-pandas-plain", type: "Pandas" },
+    ],
+  },
+  {
+    category: "UI/UX Design",
+    buttons: [{ label: "Figma", icon: "devicon-figma-plain", type: "Figma" }],
+  },
 ];
