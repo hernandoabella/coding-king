@@ -38,6 +38,26 @@ const RightSideBar = () => {
             TDD
           </a>
         </li>
+        <li>
+          <a href="#" className=" hover:underline">
+            Cyber Security
+          </a>
+        </li>
+        <li>
+          <a href="#" className=" hover:underline">
+            AI
+          </a>
+        </li>
+        <li>
+          <a href="#" className=" hover:underline">
+            Soft Skills
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/hernandoabella/programming-terms-and-definitions" target="_blank" className=" hover:underline">
+            +200 Programming Terms and Definitions
+          </a>
+        </li>
       </ul>
     </div>
   );
