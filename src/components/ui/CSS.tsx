@@ -18,7 +18,7 @@ function Html() {
     >
       <div className="md:flex align-center">
         <div>
-          <div className="flex gap-5">
+          <div className="flex gap-5 mb-4">
             <div className="flex md:flex-none justify-center">
               <img
                 src="/icons/css3-original.svg"
@@ -40,9 +40,43 @@ function Html() {
                 transition={{ delay: 0.2 }} // Delay before animation starts
                 className="py-2 text-xl"
               >
-                CSS (Cascading Style Sheets) is used to control the presentation and layout of web pages. It allows you to style and visually enhance HTML elements.
+                CSS (Cascading Style Sheets) is used to control the presentation
+                and layout of web pages. It allows you to style and visually
+                enhance HTML elements.
               </motion.p>
             </div>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-bold py-2" id="structure-web-pages">
+              What can i do with HTML?
+            </h3>
+
+            <ol className="list-decimal pl-10 text-lg font-medium space-y-2">
+              <li className="hover:underline">
+                <a href="#style-text">Style Text</a>
+              </li>
+              <li className="hover:underline">Style Backgrounds</li>
+              <li className="hover:underline">Control Layout</li>
+              <li className="hover:underline">Responsive Design</li>
+              <li className="hover:underline">Add Animations and Transitions</li>
+              <li className="hover:underline">Control Element Visibility</li>
+              <li className="hover:underline">Style Borders and Outlines</li>
+              <li className="hover:underline">Pseudo-classes and Pseudo-elements</li>
+              <li className="hover:underline">Create Custom Cursors and Pointer Effects</li>
+              <li className="hover:underline">Layer and Control Z-Index</li>
+              <li className="hover:underline">Implement Flexbox Layout</li>
+              <li className="hover:underline">Grid Layouts</li>
+              <li className="hover:underline">Responsive Typography</li>
+              <li className="hover:underline">Create Navigation Menus</li>
+              <li className="hover:underline">Customize Forms</li>
+              <li className="hover:underline">Use Variables and Preprocessors</li>
+              <li className="hover:underline">Typography and Font Styling</li>
+              <li className="hover:underline">Styling Forms and Buttons</li>
+              <li className="hover:underline">Styling Images and Media</li>
+              <li className="hover:underline">Icons and Vector Graphics</li>
+              <li className="hover:underline">Blend Modes and Filters</li>
+            </ol>
           </div>
 
           <div className="pt-5 gap-8 md:flex">
@@ -97,9 +131,7 @@ function Html() {
             animate={{ opacity: 1 }} // Animation when component mounts
             transition={{ delay: 0.6 }} // Delay before animation starts
             className="py-5"
-          >
-            
-          </motion.div>
+          ></motion.div>
         </div>
       </div>
     </motion.div>
