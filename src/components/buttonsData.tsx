@@ -58,7 +58,8 @@ export const buttonsData = [
         type: "PostgresSQL",
       },
       { label: "MongoDB", icon: "devicon-mongodb-plain", type: "MongoDB" },
-      { label: "Redis", icon: "devicon-redis-plain", type: "Github" },
+      { label: "Redis", icon: "devicon-redis-plain", type: "Redis" },
+      { label: "MariaDB", icon: "devicon-mariadb-plain", type: "MariaDB" },
     ],
   },
   {
@@ -86,17 +87,40 @@ export const buttonsData = [
     buttons: [
       { label: "Jenkins", icon: "devicon-jenkins-plain", type: "Jenkins" },
       { label: "CircleCI", icon: "devicon-circleci-plain", type: "CircleCI" },
+      { label: "Gitlab", icon: "devicon-gitlab-plain", type: "Gitlab" },
       { label: "Travis", icon: "devicon-travis-plain", type: "Travis" },
       { label: "Ansible", icon: "devicon-ansible-plain", type: "Ansible" },
       { label: "Docker", icon: "devicon-docker-plain", type: "Docker" },
-      { label: "Kubernetes", icon: "devicon-kubernetes-plain", type: "Kubernetes" },
-      { label: "Terraform", icon: "devicon-terraform-plain", type: "Terraform" },
+      {
+        label: "Kubernetes",
+        icon: "devicon-kubernetes-plain",
+        type: "Kubernetes",
+      },
+      {
+        label: "Terraform",
+        icon: "devicon-terraform-plain",
+        type: "Terraform",
+      },
       { label: "Docker", icon: "devicon-docker-plain", type: "Docker" },
-      { label: "Kubernetes", icon: "devicon-kubernetes-plain", type: "Kubernetes" },
+      {
+        label: "Prometheus",
+        icon: "devicon-prometheus-plain",
+        type: "Prometheus",
+      },
+      { label: "Bamboo", icon: "devicon-bamboo-plain", type: "Bamboo" },
+      { label: "Grafana", icon: "devicon-grafana-plain", type: "Grafana" },
+      { label: "Slack", icon: "devicon-slack-plain", type: "Slack" },
+      {
+        label: "Bitbucket",
+        icon: "devicon-bitbucket-plain",
+        type: "Bitbucket",
+      },
+      { label: "Jira", icon: "devicon-jira-plain", type: "Jira" },
+      { label: "Maven", icon: "devicon-maven-plain", type: "Maven" },
     ],
   },
   {
-    category: "Api Development",
+    category: "API Development",
     buttons: [
       { label: "Swagger", icon: "devicon-swagger-plain", type: "Swagger" },
       { label: "Postman", icon: "devicon-postman-plain", type: "Postman" },
@@ -123,7 +147,11 @@ export const buttonsData = [
         icon: "devicon-cypressio-plain",
         type: "Cypress",
       },
-      { label: "Playwright", icon: "devicon-playwright-plain", type: "Playwright" },
+      {
+        label: "Playwright",
+        icon: "devicon-playwright-plain",
+        type: "Playwright",
+      },
       { label: "Cucumber", icon: "devicon-cucumber-plain", type: "Cucumber" },
       { label: "Gatling ", icon: "devicon-gatling-plain", type: "Gatling" },
       { label: "k6", icon: "devicon-k6-plain", type: "k6" },
@@ -157,6 +185,13 @@ export const buttonsData = [
   },
   {
     category: "UI/UX Design",
-    buttons: [{ label: "Figma", icon: "devicon-figma-plain", type: "Figma" }],
+    buttons: [
+      { label: "Figma", icon: "devicon-figma-plain", type: "Figma" },
+      { label: "Sketch", icon: "devicon-sketch-plain", type: "Sketch" },
+      { label: "Webflow", icon: "devicon-webflow-plain", type: "Webflow" },
+      { label: "Adobe XD", icon: "devicon-xd-plain", type: "Adobe XD" },
+      { label: "Adobe Illustrator", icon: "devicon-illustrator-plain", type: "Adobe Illustrator" },
+      { label: "Adobe Photoshop", icon: "devicon-photoshop-plain", type: "Adobe Photoshop" },
+    ],
   },
 ];
