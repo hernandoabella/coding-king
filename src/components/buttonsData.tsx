@@ -82,14 +82,77 @@ export const buttonsData = [
     ],
   },
   {
+    category: "DevOps & Automation",
+    buttons: [
+      { label: "Jenkins", icon: "devicon-jenkins-plain", type: "Jenkins" },
+      { label: "CircleCI", icon: "devicon-circleci-plain", type: "CircleCI" },
+      { label: "Travis", icon: "devicon-travis-plain", type: "Travis" },
+      { label: "Ansible", icon: "devicon-ansible-plain", type: "Ansible" },
+      { label: "Docker", icon: "devicon-docker-plain", type: "Docker" },
+      { label: "Kubernetes", icon: "devicon-kubernetes-plain", type: "Kubernetes" },
+      { label: "Terraform", icon: "devicon-terraform-plain", type: "Terraform" },
+      { label: "Docker", icon: "devicon-docker-plain", type: "Docker" },
+      { label: "Kubernetes", icon: "devicon-kubernetes-plain", type: "Kubernetes" },
+    ],
+  },
+  {
+    category: "Api Development",
+    buttons: [
+      { label: "Swagger", icon: "devicon-swagger-plain", type: "Swagger" },
+      { label: "Postman", icon: "devicon-postman-plain", type: "Postman" },
+      { label: "Insomnia", icon: "devicon-insomnia-plain", type: "Insomnia" },
+    ],
+  },
+  {
+    category: "Testing & QA",
+    buttons: [
+      { label: "JUnit ", icon: "devicon-junit-plain", type: "JUnit " },
+      { label: "PyTest ", icon: "devicon-pytest-plain", type: "PyTest " },
+      {
+        label: "Jest  ",
+        icon: "devicon-jest-plain",
+        type: "Jest   ",
+      },
+      {
+        label: "Selenium",
+        icon: "devicon-selenium-plain",
+        type: "Selenium",
+      },
+      {
+        label: "Cypress ",
+        icon: "devicon-cypressio-plain",
+        type: "Cypress",
+      },
+      { label: "Playwright", icon: "devicon-playwright-plain", type: "Playwright" },
+      { label: "Cucumber", icon: "devicon-cucumber-plain", type: "Cucumber" },
+      { label: "Gatling ", icon: "devicon-gatling-plain", type: "Gatling" },
+      { label: "k6", icon: "devicon-k6-plain", type: "k6" },
+    ],
+  },
+  {
     category: "Data Science",
     buttons: [
       { label: "Pandas", icon: "devicon-pandas-plain", type: "Pandas" },
       { label: "NumPy", icon: "devicon-numpy-plain", type: "NumPy" },
-      { label: "Pandas", icon: "devicon-pandas-plain", type: "Pandas" },
-      { label: "Pandas", icon: "devicon-pandas-plain", type: "Pandas" },
-      { label: "Pandas", icon: "devicon-pandas-plain", type: "Pandas" },
-      { label: "Pandas", icon: "devicon-pandas-plain", type: "Pandas" },
+      {
+        label: "Matplotlib",
+        icon: "devicon-matplotlib-plain",
+        type: "Matplotlib ",
+      },
+      {
+        label: "Scikit-learn",
+        icon: "devicon-scikitlearn-plain",
+        type: "Scikit-learn",
+      },
+      {
+        label: "TensorFlow ",
+        icon: "devicon-tensorflow-original",
+        type: "TensorFlow",
+      },
+      { label: "PyTorch", icon: "devicon-pytorch-plain", type: "PyTorch" },
+      { label: "RStudio", icon: "devicon-rstudio-plain", type: "RStudio" },
+      { label: "Hadoop ", icon: "devicon-hadoop-plain", type: "Hadoop" },
+      { label: "PyTorch", icon: "devicon-pytorch-plain", type: "PyTorch" },
     ],
   },
   {
