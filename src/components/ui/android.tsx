@@ -1,9 +1,9 @@
 import React from 'react'
 
-const android = () => {
+const Android = () => {
   return (
     <div>android</div>
   )
 }
 
-export default android
+export default Android
