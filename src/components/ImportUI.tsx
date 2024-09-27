@@ -22,7 +22,7 @@ import Redis from "./ui/Redis";
 import AWS from "./ui/aws";
 import Azure from "./ui/microsoft-azure";
 import GoogleCloud from "./ui/google-cloud-platform";
-import Android from "./ui/android";
+import Android from "./ui/Android";
 import Xcode from "./ui/Xcode";
 import Flutter from "./ui/flutter";
 
