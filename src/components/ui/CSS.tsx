@@ -4,7 +4,7 @@ import "prismjs/components/prism-css";
 import "prismjs/themes/prism-okaidia.css";
 import { motion } from "framer-motion";
 
-function Html() {
+function CSS() {
   useEffect(() => {
     Prism.highlightAll();
   }, []);
@@ -47,9 +47,47 @@ function Html() {
             </div>
           </div>
 
-          <div>
-            <h3 className="text-2xl font-bold py-2" id="structure-web-pages">
-              What can i do with HTML?
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+          >
+            <h3 className="font-bold text-xl text-blue-600">Main features: </h3>
+            <ul className="list-disc pl-5">
+              <li className="my-2">
+                <span className="font-bold">Styling elements </span> such as
+                colors, fonts, and backgrounds.
+              </li>
+              <li className="my-2">
+                <span className="font-bold">Layout control </span> with
+                positioning, margins, padding, and display properties.
+              </li>
+              <li className="my-2">
+                <span className="font-bold">Responsive design </span> using
+                media queries to adapt layouts to different screen sizes (e.g.,
+                mobile, tablet, desktop).
+              </li>
+              <li className="my-2">
+                <span className="font-bold">Flexbox and Grid systems </span> for
+                advanced layout management.
+              </li>
+              <li className="my-2">
+                <span className="font-bold">Animations and transitions </span>
+                to create dynamic visual effects.
+              </li>
+            </ul>
+          </motion.div>
+          <motion.div className="my-5 bg-gradient-to-r to-blue-600 from-blue-400 w-full h-2 rounded"></motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5 }}
+          >
+            <h3
+              className="text-2xl font-bold py-2 text-blue-600"
+              id="structure-web-pages"
+            >
+              What can i do with CSS?
             </h3>
 
             <ol className="list-decimal pl-10 text-lg font-medium space-y-2">
@@ -59,25 +97,33 @@ function Html() {
               <li className="hover:underline">Style Backgrounds</li>
               <li className="hover:underline">Control Layout</li>
               <li className="hover:underline">Responsive Design</li>
-              <li className="hover:underline">Add Animations and Transitions</li>
+              <li className="hover:underline">
+                Add Animations and Transitions
+              </li>
               <li className="hover:underline">Control Element Visibility</li>
               <li className="hover:underline">Style Borders and Outlines</li>
-              <li className="hover:underline">Pseudo-classes and Pseudo-elements</li>
-              <li className="hover:underline">Create Custom Cursors and Pointer Effects</li>
+              <li className="hover:underline">
+                Pseudo-classes and Pseudo-elements
+              </li>
+              <li className="hover:underline">
+                Create Custom Cursors and Pointer Effects
+              </li>
               <li className="hover:underline">Layer and Control Z-Index</li>
               <li className="hover:underline">Implement Flexbox Layout</li>
               <li className="hover:underline">Grid Layouts</li>
               <li className="hover:underline">Responsive Typography</li>
               <li className="hover:underline">Create Navigation Menus</li>
               <li className="hover:underline">Customize Forms</li>
-              <li className="hover:underline">Use Variables and Preprocessors</li>
+              <li className="hover:underline">
+                Use Variables and Preprocessors
+              </li>
               <li className="hover:underline">Typography and Font Styling</li>
               <li className="hover:underline">Styling Forms and Buttons</li>
               <li className="hover:underline">Styling Images and Media</li>
               <li className="hover:underline">Icons and Vector Graphics</li>
               <li className="hover:underline">Blend Modes and Filters</li>
             </ol>
-          </div>
+          </motion.div>
 
           <div className="pt-5 gap-8 md:flex">
             <motion.div
@@ -138,4 +184,4 @@ function Html() {
   );
 }
 
-export default Html;
+export default CSS;
