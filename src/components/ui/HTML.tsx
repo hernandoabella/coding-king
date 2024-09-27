@@ -49,8 +49,50 @@ function Html() {
               </div>
             </div>
 
-            <div>
-              <h3 className="text-2xl font-bold py-2" id="structure-web-pages">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              <h3 className="font-bold text-xl text-orange-600">Main features: </h3>
+              <ul className="list-disc pl-5">
+                <li className="my-2">
+                  <span className="font-bold">Structuring content</span> with
+                  tags like &lt;h1&gt;, &lt;p&gt;, &lt;div&gt;, &lt;img&gt;,
+                  etc.
+                </li>
+                <li className="my-2">
+                  <span className="font-bold">Creating links</span> with the
+                  &lt;a&gt; tag for navigation between web pages.
+                </li>
+                <li className="my-2">
+                  <span className="font-bold">Displaying images</span> with the
+                  &lt;img&gt; tag.
+                </li>
+                <li className="my-2">
+                  <span className="font-bold">Organizing data</span> in tables
+                  using the &lt;table&gt; tag.
+                </li>
+                <li className="my-2">
+                  <span className="font-bold">Embedding multimedia </span>
+                  elements such as video and audio.
+                </li>
+                <li className="my-2">
+                  <span className="font-bold">SEO support </span>
+                  with semantic tags like &lt;article&gt;, &lt;nav&gt;, and
+                  &lt;section&gt;.
+                </li>
+              </ul>
+            </motion.div>
+
+            <motion.div className="my-5 bg-gradient-to-r to-orange-600 from-orange-400 w-full h-2 rounded"></motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5 }}
+            >
+              <h3 className="text-2xl font-bold py-2 text-orange-600" id="structure-web-pages">
                 What can i do with HTML?
               </h3>
 
@@ -73,14 +115,14 @@ function Html() {
                 <li className="hover:underline">Drag and Drop</li>
                 <li className="hover:underline">Geolocation and Other APIs</li>
               </ol>
-            </div>
+            </motion.div>
           </div>
 
           <div className="mt-10 flex flex-col md:flex-row">
             <motion.div
-              initial={{ opacity: 0, x: -50 }} // Initial animation state
-              animate={{ opacity: 1, x: 0 }} // Animation when component mounts
-              transition={{ delay: 0.4 }} // Delay before animation starts
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4 }}
             >
               <h3 className="text-2xl font-bold py-2" id="structure-web-pages">
                 Structure Web Pages
