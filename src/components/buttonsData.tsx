@@ -20,6 +20,11 @@ export const buttonsData = [
         type: "JavaScript",
       },
       {
+        label: "JQuery",
+        icon: "devicon-jquery-plain",
+        type: "JQuery",
+      },
+      {
         label: "TypeScript",
         icon: "devicon-typescript-plain",
         type: "TypeScript",
@@ -28,6 +33,16 @@ export const buttonsData = [
       { label: "Vue", icon: "devicon-vuejs-plain", type: "Vue" },
       { label: "Angular", icon: "devicon-angular-plain", type: "Angular" },
       { label: "Svelte", icon: "devicon-svelte-plain", type: "Svelte" },
+      { label: "Gatsby", icon: "devicon-gatsby-plain", type: "Gatsby" },
+      { label: "Ionic", icon: "devicon-ionic-original", type: "Ionic" },
+      { label: "Astro", icon: "devicon-astro-plain", type: "Astro" },
+      { label: "Ember", icon: "devicon-ember-plain", type: "Ember" },
+      { label: "PHP", icon: "devicon-php-plain", type: "PHP" },
+      { label: "Laravel", icon: "devicon-laravel-plain", type: "Laravel" },
+      { label: "Node.js", icon: "devicon-nodejs-plain", type: "Node.JS" },
+      { label: "Django", icon: "devicon-django-plain", type: "Django" },
+      { label: "Next.js", icon: "devicon-nextjs-plain", type: "Next.js" },
+      { label: "Nuxt.js", icon: "devicon-nuxtjs-plain", type: "Nuxt.js" },
     ],
   },
   {
@@ -60,6 +75,11 @@ export const buttonsData = [
       { label: "MongoDB", icon: "devicon-mongodb-plain", type: "MongoDB" },
       { label: "Redis", icon: "devicon-redis-plain", type: "Redis" },
       { label: "MariaDB", icon: "devicon-mariadb-plain", type: "MariaDB" },
+      {
+        label: "Cassandra",
+        icon: "devicon-cassandra-plain",
+        type: "Cassandra",
+      },
     ],
   },
   {
@@ -72,12 +92,17 @@ export const buttonsData = [
         icon: "devicon-googlecloud-plain",
         type: "Google Cloud",
       },
+      { label: "Azure", icon: "devicon-azure-plain", type: "Azure" },
     ],
   },
   {
     category: "Mobile Development",
     buttons: [
-      { label: "Android", icon: "devicon-android-plain", type: "Android" },
+      {
+        label: "Android Studio",
+        icon: "devicon-androidstudio-plain",
+        type: "Android Studio",
+      },
       { label: "XCode", icon: "devicon-xcode-plain", type: "XCODE" },
       { label: "Flutter", icon: "devicon-flutter-plain", type: "Flutter" },
     ],
@@ -158,6 +183,14 @@ export const buttonsData = [
     ],
   },
   {
+    category: "Big Data",
+    buttons: [
+      { label: "Spark", icon: "devicon-apachespark-plain", type: "Spark" },
+      { label: "Kafka", icon: "devicon-apachekafka-plain", type: "Kafka" },
+      { label: "Hadoop ", icon: "devicon-hadoop-plain", type: "Hadoop" },
+    ],
+  },
+  {
     category: "Data Science",
     buttons: [
       { label: "Pandas", icon: "devicon-pandas-plain", type: "Pandas" },
@@ -179,8 +212,18 @@ export const buttonsData = [
       },
       { label: "PyTorch", icon: "devicon-pytorch-plain", type: "PyTorch" },
       { label: "RStudio", icon: "devicon-rstudio-plain", type: "RStudio" },
-      { label: "Hadoop ", icon: "devicon-hadoop-plain", type: "Hadoop" },
-      { label: "PyTorch", icon: "devicon-pytorch-plain", type: "PyTorch" },
+      { label: "Anaconda", icon: "devicon-anaconda-plain", type: "Anaconda" },
+
+      {
+        label: "Airflow",
+        icon: "devicon-apacheairflow-plain",
+        type: "Airflow",
+      },
+      {
+        label: "D3JS",
+        icon: "devicon-d3js-plain",
+        type: "D3JS",
+      },
     ],
   },
   {
@@ -190,8 +233,16 @@ export const buttonsData = [
       { label: "Sketch", icon: "devicon-sketch-plain", type: "Sketch" },
       { label: "Webflow", icon: "devicon-webflow-plain", type: "Webflow" },
       { label: "Adobe XD", icon: "devicon-xd-plain", type: "Adobe XD" },
-      { label: "Adobe Illustrator", icon: "devicon-illustrator-plain", type: "Adobe Illustrator" },
-      { label: "Adobe Photoshop", icon: "devicon-photoshop-plain", type: "Adobe Photoshop" },
+      {
+        label: "Adobe Illustrator",
+        icon: "devicon-illustrator-plain",
+        type: "Adobe Illustrator",
+      },
+      {
+        label: "Adobe Photoshop",
+        icon: "devicon-photoshop-plain",
+        type: "Adobe Photoshop",
+      },
     ],
   },
 ];
