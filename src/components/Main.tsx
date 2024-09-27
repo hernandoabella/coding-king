@@ -17,6 +17,7 @@ import { buttonsData } from "./buttonsData";
 import CategoryDropdown from "./CategoryDropdown";
 import LeftSideBar from "./LeftSideBar";
 import RightSideBar from "./RightSideBar";
+import Bootstrap from "./ui/Bootstrap";
 
 function Main() {
   const [activeButton, setActiveButton] = useState("");
@@ -51,82 +52,83 @@ function Main() {
         <div className="content w-full">
           <Header />
           <div className="flex flex-wrap m-5">
-        <div>
-          <div>
-            <CategoryDropdown
-              categories={buttonsData.map((data) => data.category)}
-              activeCategory={activeCategory}
-              onChange={handleCategoryChange}
-            />
-          </div>
-          <div className="rounded-lg mt-5 w-auto ">
-            {showButtons && (
-              <div className="flex flex-wrap gap-3">
-                {buttonsData
-                  .find(
-                    (categoryData) => categoryData.category === activeCategory
-                  )
-                  ?.buttons.map((button, index) => (
-                    <button
-                      key={index}
-                      className={`btn ${
-                        activeButton === button.type ? "active" : ""
-                      } ${
-                        activeCategory === "Web Development" &&
-                        activeButton === button.type
-                          ? "bg-slate-900 text-white"
-                          : ""
-                      } ${
-                        activeCategory === "Control Version" &&
-                        activeButton === button.type
-                          ? "bg-slate-900 text-white"
-                          : ""
-                      } ${
-                        activeCategory === "Programming" &&
-                        activeButton === button.type
-                          ? "bg-slate-900 text-white"
-                          : ""
-                      } ${
-                        activeCategory === "Databases" &&
-                        activeButton === button.type
-                          ? "bg-slate-900 text-white"
-                          : ""
-                      } ${
-                        activeCategory === "Cloud Computing" &&
-                        activeButton === button.type
-                          ? "bg-slate-900 text-white"
-                          : ""
-                      } ${
-                        activeCategory === "Mobile Development" &&
-                        activeButton === button.type
-                          ? "bg-slate-900 text-white"
-                          : ""
-                      }`}
-                      onClick={() => handleButtonClick(button.type)}
-                    >
-                      <i className={button.icon}></i>
-                      {button.label}
-                    </button>
-                  ))}
+            <div>
+              <div>
+                <CategoryDropdown
+                  categories={buttonsData.map((data) => data.category)}
+                  activeCategory={activeCategory}
+                  onChange={handleCategoryChange}
+                />
               </div>
-            )}
+              <div className="rounded-lg mt-5 w-auto ">
+                {showButtons && (
+                  <div className="flex flex-wrap gap-3">
+                    {buttonsData
+                      .find(
+                        (categoryData) =>
+                          categoryData.category === activeCategory
+                      )
+                      ?.buttons.map((button, index) => (
+                        <button
+                          key={index}
+                          className={`btn ${
+                            activeButton === button.type ? "active" : ""
+                          } ${
+                            activeCategory === "Web Development" &&
+                            activeButton === button.type
+                              ? "bg-slate-900 text-white"
+                              : ""
+                          } ${
+                            activeCategory === "Control Version" &&
+                            activeButton === button.type
+                              ? "bg-slate-900 text-white"
+                              : ""
+                          } ${
+                            activeCategory === "Programming" &&
+                            activeButton === button.type
+                              ? "bg-slate-900 text-white"
+                              : ""
+                          } ${
+                            activeCategory === "Databases" &&
+                            activeButton === button.type
+                              ? "bg-slate-900 text-white"
+                              : ""
+                          } ${
+                            activeCategory === "Cloud Computing" &&
+                            activeButton === button.type
+                              ? "bg-slate-900 text-white"
+                              : ""
+                          } ${
+                            activeCategory === "Mobile Development" &&
+                            activeButton === button.type
+                              ? "bg-slate-900 text-white"
+                              : ""
+                          }`}
+                          onClick={() => handleButtonClick(button.type)}
+                        >
+                          <i className={button.icon}></i>
+                          {button.label}
+                        </button>
+                      ))}
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
           <div className="p-5 mt-10">
-        {activeButton === "HTML" && <HTML />}
-        {activeButton === "CSS" && <CSS />}
-        {activeButton === "TailwindCSS" && <TailwindCSS />}
-        {activeButton === "JavaScript" && <JavaScript />}
-        {activeButton === "TypeScript" && <TypeScript />}
-        {activeButton === "React" && <Reactd />}
-        {activeButton === "Vue" && <Vue />}
-        {activeButton === "Angular" && <Angular />}
-        {activeButton === "Svelte" && <Svelte />}
-
-        {activeButton === "Git" && <Git />}
-      </div>
+            {activeButton === "HTML" && <HTML />}
+            {activeButton === "CSS" && <CSS />}
+            {activeButton === "Bootstrap" && <Bootstrap />}
+            {activeButton === "TailwindCSS" && <TailwindCSS />}
+            {activeButton === "JavaScript" && <JavaScript />}
+            {activeButton === "TypeScript" && <TypeScript />}
+            {activeButton === "React" && <Reactd />}
+            {activeButton === "Vue" && <Vue />}
+            {activeButton === "Angular" && <Angular />}
+            {activeButton === "Svelte" && <Svelte />}
+            {activeButton === "Git" && <Git />}
+          </div>
         </div>
         <RightSideBar />
       </div>
