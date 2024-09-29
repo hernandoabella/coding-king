@@ -46,6 +46,37 @@ function JavaScript() {
               </div>
             </div>
 
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              <h3 className="font-bold text-xl">Key features: </h3>
+              <ul className="list-disc pl-5">
+                <li className="my-2">
+                  <span className="font-bold">Client-side scripting</span> for
+                  real-time interaction without refreshing the page.
+                </li>
+                <li className="my-2">
+                  <span className="font-bold">DOM manipulation</span> to
+                  dynamically change content, styles, and structure.
+                </li>
+                <li className="my-2">
+                  <span className="font-bold">Event handling</span> to respond
+                  to user actions like clicks, form submissions, or key presses.
+                </li>
+                <li className="my-2">
+                  <span className="font-bold">Asynchronous operations</span>{" "}
+                  using AJAX or Fetch API for loading data in the background.
+                </li>
+                <li className="my-2">
+                  <span className="font-bold">Extensibility </span>
+                  with numerous libraries and frameworks like React, Angular,
+                  and Vue.js.
+                </li>
+              </ul>
+            </motion.div>
+
             {/* <div>
               <h3 className="text-2xl font-bold py-2" id="structure-web-pages">
                 What can i do with HTML?
