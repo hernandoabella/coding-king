@@ -1,5 +1,6 @@
 import HTML from "./ui/HTML";
 import CSS from "./ui/CSS";
+import Bootstrap from "./ui/Bootstrap";
 import TailwindCSS from "./ui/TailwindCSS";
 import JavaScript from "./ui/JavaScript";
 import TypeScript from "./ui/TypeScript";
@@ -29,6 +30,7 @@ import Flutter from "./ui/flutter";
 export {
   HTML,
   CSS,
+  Bootstrap,
   TailwindCSS,
   JavaScript,
   TypeScript,
