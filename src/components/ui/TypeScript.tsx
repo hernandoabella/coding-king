@@ -31,7 +31,7 @@ function TypeScript() {
 
               <div>
                 <h1 className="md:text-left mb-4 text-3xl font-extrabold md:text-5xl lg:text-4xl">
-                  <span className="text-[#323330]">TypeScript</span>{" "}
+                  <span>TypeScript</span>
                 </h1>
                 <motion.p
                   initial={{ opacity: 0 }}
