@@ -46,6 +46,41 @@ function Html() {
             </div>
           </div>
 
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+          >
+            <h3 className="font-bold text-xl text-sky-600">Key features: </h3>
+            <ul className="list-disc pl-5">
+              <li className="my-2">
+                <span className="font-bold">Utility-first classes:</span>{" "}
+                Predefined classes like p-4 for padding or text-center for
+                centering text allow for fast and flexible styling.
+              </li>
+              <li className="my-2">
+                <span className="font-bold">Responsive design:</span> Tailwind
+                includes built-in classes for responsive breakpoints, making it
+                easy to design for different screen sizes.
+              </li>
+              <li className="my-2">
+                <span className="font-bold">Customization:</span> Tailwind can
+                be extended with custom configurations, giving developers
+                control over color schemes, spacing, and more.
+              </li>
+              <li className="my-2">
+                <span className="font-bold">No pre-styled components:</span>{" "}
+                Unlike other CSS frameworks like Bootstrap, Tailwind doesn’t
+                come with pre-designed components, offering more design freedom.
+              </li>
+              <li className="my-2">
+                <span className="font-bold">JIT (Just-in-Time) mode: </span>
+                Generates only the styles you need for your project, making your
+                CSS file smaller and more efficient.
+              </li>
+            </ul>
+          </motion.div>
+
           <div className="pt-5 gap-8 md:flex">
             <motion.div
               initial={{ opacity: 0, x: -50 }} // Initial animation state
@@ -106,18 +141,7 @@ function Html() {
             animate={{ opacity: 1 }} // Animation when component mounts
             transition={{ delay: 0.6 }} // Delay before animation starts
             className="py-5"
-          >
-            <a href="#">
-              <motion.button
-                whileHover={{ scale: 1.1 }} // Animation on hover
-                whileTap={{ scale: 0.9 }} // Animation on tap
-                type="button"
-                className="btn btn-outline"
-              >
-                Full Tutorial
-              </motion.button>
-            </a>
-          </motion.div>
+          ></motion.div>
         </div>
       </div>
     </motion.div>
