@@ -4,7 +4,9 @@ import Footer from "./Footer";
 import {
   HTML,
   CSS,
+  Bootstrap,
   JavaScript,
+  Jquery,
   TypeScript,
   Reactd,
   Vue,
@@ -17,7 +19,7 @@ import { buttonsData } from "./buttonsData";
 import CategoryDropdown from "./CategoryDropdown";
 import LeftSideBar from "./LeftSideBar";
 import RightSideBar from "./RightSideBar";
-import Bootstrap from "./ui/Bootstrap";
+
 
 function Main() {
   const [activeButton, setActiveButton] = useState("");
@@ -122,6 +124,7 @@ function Main() {
             {activeButton === "Bootstrap" && <Bootstrap />}
             {activeButton === "TailwindCSS" && <TailwindCSS />}
             {activeButton === "JavaScript" && <JavaScript />}
+            {activeButton === "JQuery" && <Jquery />}
             {activeButton === "TypeScript" && <TypeScript />}
             {activeButton === "React" && <Reactd />}
             {activeButton === "Vue" && <Vue />}
