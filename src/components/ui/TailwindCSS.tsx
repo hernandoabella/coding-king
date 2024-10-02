@@ -51,30 +51,30 @@ function Html() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            <h3 className="font-bold text-xl text-sky-600">Key features: </h3>
+            <h3 className="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r to-sky-600 from-sky-400">Key features: </h3>
             <ul className="list-disc pl-5">
               <li className="my-2">
-                <span className="font-bold">Utility-first classes:</span>{" "}
+                <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-sky-600 from-sky-400">Utility-first classes:</span>{" "}
                 Predefined classes like p-4 for padding or text-center for
                 centering text allow for fast and flexible styling.
               </li>
               <li className="my-2">
-                <span className="font-bold">Responsive design:</span> Tailwind
+                <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-sky-600 from-sky-400">Responsive design:</span> Tailwind
                 includes built-in classes for responsive breakpoints, making it
                 easy to design for different screen sizes.
               </li>
               <li className="my-2">
-                <span className="font-bold">Customization:</span> Tailwind can
+                <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-sky-600 from-sky-400">Customization:</span> Tailwind can
                 be extended with custom configurations, giving developers
                 control over color schemes, spacing, and more.
               </li>
               <li className="my-2">
-                <span className="font-bold">No pre-styled components:</span>{" "}
+                <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-sky-600 from-sky-400">No pre-styled components:</span>{" "}
                 Unlike other CSS frameworks like Bootstrap, Tailwind doesn’t
                 come with pre-designed components, offering more design freedom.
               </li>
               <li className="my-2">
-                <span className="font-bold">JIT (Just-in-Time) mode: </span>
+                <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-sky-600 from-sky-400">JIT (Just-in-Time) mode: </span>
                 Generates only the styles you need for your project, making your
                 CSS file smaller and more efficient.
               </li>
