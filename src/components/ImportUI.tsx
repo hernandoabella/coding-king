@@ -3,6 +3,7 @@ import CSS from "./ui/CSS";
 import Bootstrap from "./ui/Bootstrap";
 import TailwindCSS from "./ui/TailwindCSS";
 import JavaScript from "./ui/JavaScript";
+import Jquery from "./ui/Jquery";
 import TypeScript from "./ui/TypeScript";
 import Reactd from "./ui/Reactd";
 import Vue from "./ui/Vue";
@@ -32,6 +33,7 @@ export {
   Bootstrap,
   TailwindCSS,
   JavaScript,
+  Jquery,
   TypeScript,
   Reactd,
   Vue,
