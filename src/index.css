@@ -28,6 +28,8 @@ code.hljs {
   width: 300px;
 }
 
+
+
 @media only screen and (max-width: 1500px) {
   .left-side-bar {
     display: none;
