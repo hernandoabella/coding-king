@@ -24,7 +24,7 @@ function CSS() {
                 src="/icons/css3-original.svg"
                 width={150}
                 height={100}
-                alt="html"
+                alt="css"
               />
             </div>
             <div>
@@ -52,27 +52,27 @@ function CSS() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            <h3 className="font-bold text-xl text-blue-600">Main features: </h3>
+            <h3 className="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-blue-400">Main features: </h3>
             <ul className="list-disc pl-5">
               <li className="my-2">
-                <span className="font-bold">Styling elements </span> such as
+                <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-blue-400">Styling elements </span> such as
                 colors, fonts, and backgrounds.
               </li>
               <li className="my-2">
-                <span className="font-bold">Layout control </span> with
+                <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-blue-400">Layout control </span> with
                 positioning, margins, padding, and display properties.
               </li>
               <li className="my-2">
-                <span className="font-bold">Responsive design </span> using
+                <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-blue-400">Responsive design </span> using
                 media queries to adapt layouts to different screen sizes (e.g.,
                 mobile, tablet, desktop).
               </li>
               <li className="my-2">
-                <span className="font-bold">Flexbox and Grid systems </span> for
+                <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-blue-400">Flexbox and Grid systems </span> for
                 advanced layout management.
               </li>
               <li className="my-2">
-                <span className="font-bold">Animations and transitions </span>
+                <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-blue-400">Animations and transitions </span>
                 to create dynamic visual effects.
               </li>
             </ul>
@@ -84,7 +84,7 @@ function CSS() {
             transition={{ delay: 0.5 }}
           >
             <h3
-              className="text-2xl font-bold py-2 text-blue-600"
+              className="text-2xl font-bold py-2 text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-blue-400"
               id="structure-web-pages"
             >
               What can i do with CSS?
