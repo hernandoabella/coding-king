@@ -141,7 +141,7 @@ const SideBar = () => {
       />
 
       <div className="mt-5">
-        <a href="https://www.beat-byte-publishing.com/" target="_blank">
+        <a href="https://www.beat-byte-publishing.com/" target="_blank" title="beat-byte-publishing">
           <video width={320} height={240} loop autoPlay muted>
             <source src="/bbp-ad.mp4"></source>
           </video>
