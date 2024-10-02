@@ -57,28 +57,28 @@ function Html() {
               <h3 className="font-bold text-xl text-orange-600">Main features: </h3>
               <ul className="list-disc pl-5">
                 <li className="my-2">
-                  <span className="font-bold">Structuring content</span> with
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-orange-400">Structuring content</span> with
                   tags like &lt;h1&gt;, &lt;p&gt;, &lt;div&gt;, &lt;img&gt;,
                   etc.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">Creating links</span> with the
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-orange-400">Creating links</span> with the
                   &lt;a&gt; tag for navigation between web pages.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">Displaying images</span> with the
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-orange-400">Displaying images</span> with the
                   &lt;img&gt; tag.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">Organizing data</span> in tables
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-orange-400">Organizing data</span> in tables
                   using the &lt;table&gt; tag.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">Embedding multimedia </span>
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-orange-400">Embedding multimedia </span>
                   elements such as video and audio.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">SEO support </span>
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-orange-400">SEO support </span>
                   with semantic tags like &lt;article&gt;, &lt;nav&gt;, and
                   &lt;section&gt;.
                 </li>
