@@ -31,7 +31,7 @@ function Reactd() {
 
               <div>
                 <h1 className="md:text-left mb-4 text-3xl font-extrabold md:text-5xl lg:text-4xl">
-                  <span>TypeScript</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r to-cyan-600 from-cyan-400">React</span>
                 </h1>
                 <motion.p
                   initial={{ opacity: 0 }}
@@ -39,8 +39,9 @@ function Reactd() {
                   transition={{ delay: 0.2 }}
                   className="py-2 text-xl md:text-left"
                 >
-                  TypeScript is a superset of JavaScript that introduces static
-                  typing, making it easier to catch errors during development.
+                  React is a popular JavaScript library developed by Facebook
+                  for building user interfaces, specifically for single-page
+                  applications.
                 </motion.p>
               </div>
             </div>
@@ -50,31 +51,32 @@ function Reactd() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              <h3 className="font-bold text-xl">Key features: </h3>
+              <h3 className="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r to-cyan-600 from-cyan-400">Key features: </h3>
               <ul className="list-disc pl-5">
                 <li className="my-2">
-                  <span className="font-bold">Static typing</span> to catch
-                  type-related errors before runtime.
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-cyan-600 from-cyan-400">
+                    Component-based architecture
+                  </span>{" "}
+                  Build UIs by combining independent, reusable components.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">Type inference</span> to infer
-                  types automatically where possible.
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-cyan-600 from-cyan-400">Virtual DOM</span> Improves
+                  performance by updating only parts of the actual DOM that have
+                  changed.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">Interfaces and generics</span> to
-                  define complex data structures with better flexibility.
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-cyan-600 from-cyan-400">State management</span> Use state
+                  and props to manage and pass data within components.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">Improved tooling</span> for code
-                  editors with better autocompletion, refactoring, and error
-                  checking.
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-cyan-600 from-cyan-400">Declarative syntax</span> Write
+                  clear, predictable code that describes how the UI should look
+                  at any given time.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">
-                    Compatibility with JavaScript
-                  </span>
-                  , allowing JavaScript code to be gradually migrated to
-                  TypeScript.
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-cyan-600 from-cyan-400">React Hooks </span>
+                  Provide a simpler way to handle state and side effects in
+                  functional components.
                 </li>
               </ul>
             </motion.div>
