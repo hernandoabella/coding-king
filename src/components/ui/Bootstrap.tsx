@@ -25,7 +25,7 @@ function Bootstrap() {
                   src="/icons/bootstrap-original.svg"
                   width={150}
                   height={100}
-                  alt="html"
+                  alt="bootstrap"
                 />
               </div>
 
@@ -53,29 +53,29 @@ function Bootstrap() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              <h3 className="font-bold text-xl text-blue-600">
+              <h3 className="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r to-violet-600 from-violet-400">
                 Main features:{" "}
               </h3>
               <ul className="list-disc pl-5">
                 <li className="my-2">
-                  <span className="font-bold">Responsive design </span> with a
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-violet-600 from-violet-400">Responsive design </span> with a
                   mobile-first approach.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">Customizable components </span>{" "}
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-violet-600 from-violet-400">Customizable components </span>{" "}
                   such as buttons, forms, modals, and navigation bars.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">Grid system </span> for creating
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-violet-600 from-violet-400">Grid system </span> for creating
                   flexible layouts.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-violet-600 from-violet-400">
                     Cross-browser compatibility.{" "}
                   </span>
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">Predefined styles </span>
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-violet-600 from-violet-400">Predefined styles </span>
                   and easy theming with CSS and SASS.
                 </li>
               </ul>
