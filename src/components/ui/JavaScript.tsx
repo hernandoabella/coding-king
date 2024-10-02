@@ -25,13 +25,13 @@ function JavaScript() {
                   src="/icons/javascript-original.svg"
                   width={150}
                   height={100}
-                  alt="html"
+                  alt="javascript"
                 />
               </div>
 
               <div>
                 <h1 className="md:text-left mb-4 text-3xl font-extrabold md:text-5xl lg:text-4xl">
-                  <span className="text-[#323330]">JavaScript</span>{" "}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r to-yellow-600 from-yellow-400">JavaScript</span>{" "}
                 </h1>
                 <motion.p
                   initial={{ opacity: 0 }} // Initial animation state
@@ -51,26 +51,26 @@ function JavaScript() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              <h3 className="font-bold text-xl">Key features: </h3>
+              <h3 className="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r to-yellow-600 from-yellow-400">Key features: </h3>
               <ul className="list-disc pl-5">
                 <li className="my-2">
-                  <span className="font-bold">Client-side scripting</span> for
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-yellow-600 from-yellow-400">Client-side scripting</span> for
                   real-time interaction without refreshing the page.
                 </li>
-                <li className="my-2">
-                  <span className="font-bold">DOM manipulation</span> to
+                <li className="my-2 ">
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-yellow-600 from-yellow-400">DOM manipulation</span> to
                   dynamically change content, styles, and structure.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">Event handling</span> to respond
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-yellow-600 from-yellow-400">Event handling</span> to respond
                   to user actions like clicks, form submissions, or key presses.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">Asynchronous operations</span>{" "}
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-yellow-600 from-yellow-400">Asynchronous operations</span>{" "}
                   using AJAX or Fetch API for loading data in the background.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">Extensibility </span>
+                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r to-yellow-600 from-yellow-400">Extensibility </span>
                   with numerous libraries and frameworks like React, Angular,
                   and Vue.js.
                 </li>
