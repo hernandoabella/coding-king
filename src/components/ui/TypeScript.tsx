@@ -31,7 +31,7 @@ function TypeScript() {
 
               <div>
                 <h1 className="md:text-left mb-4 text-3xl font-extrabold md:text-5xl lg:text-4xl">
-                  <span>TypeScript</span>
+                  <span className=" text-[#007ACC] ">TypeScript</span>
                 </h1>
                 <motion.p
                   initial={{ opacity: 0 }}
@@ -50,27 +50,37 @@ function TypeScript() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              <h3 className="font-bold text-xl">Key features: </h3>
+              <h3 className="font-bold text-xl  text-[#007ACC] ">
+                Key features:{" "}
+              </h3>
               <ul className="list-disc pl-5">
                 <li className="my-2">
-                  <span className="font-bold">Static typing</span> to catch
-                  type-related errors before runtime.
+                  <span className="font-bold  text-[#007ACC] ">
+                    Static typing
+                  </span>{" "}
+                  to catch type-related errors before runtime.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">Type inference</span> to infer
-                  types automatically where possible.
+                  <span className="font-bold  text-[#007ACC] ">
+                    Type inference
+                  </span>{" "}
+                  to infer types automatically where possible.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">Interfaces and generics</span> to
-                  define complex data structures with better flexibility.
+                  <span className="font-bold  text-[#007ACC] ">
+                    Interfaces and generics
+                  </span>{" "}
+                  to define complex data structures with better flexibility.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">Improved tooling</span> for code
-                  editors with better autocompletion, refactoring, and error
-                  checking.
+                  <span className="font-bold  text-[#007ACC] ">
+                    Improved tooling
+                  </span>{" "}
+                  for code editors with better autocompletion, refactoring, and
+                  error checking.
                 </li>
                 <li className="my-2">
-                  <span className="font-bold">
+                  <span className="font-bold  text-[#007ACC] ">
                     Compatibility with JavaScript
                   </span>
                   , allowing JavaScript code to be gradually migrated to
