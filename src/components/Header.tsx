@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaCrown } from "react-icons/fa";
 
 function Header() {
-  const [selectedTheme, setSelectedTheme] = useState("halloween");
+  const [selectedTheme, setSelectedTheme] = useState("light");
 
   useEffect(() => {
     // Check if theme preference is stored in localStorage
@@ -62,7 +62,7 @@ function Header() {
   }, []);
 
   return (
-    <header className="w-full">
+    <header className="w-full border-b-4 shadow-sm">
       <div className="m-5 w-full flex item-center justify-between">
         <div className="dropdown mb-5">
           <div tabIndex={0} role="button" className="btn btn-outline">
@@ -92,17 +92,7 @@ function Header() {
                 onChange={handleThemeChange}
               />
             </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Dark"
-                value="dark"
-                checked={selectedTheme === "dark"}
-                onChange={handleThemeChange}
-              />
-            </li>
+
             <li>
               <input
                 type="radio"
