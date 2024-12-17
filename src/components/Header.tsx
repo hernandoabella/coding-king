@@ -20,7 +20,8 @@ function Header() {
 
   const [text, setText] = useState("");
   const targetText = "Coding King"; // The target text you want to reveal
-  const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; // Random characters
+  const chars =
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; // Random characters
 
   useEffect(() => {
     let i = 0; // Use a counter to keep track of the letter position
@@ -59,7 +60,6 @@ function Header() {
 
     return () => clearInterval(intervalId); // Cleanup on unmount
   }, []);
-
 
   return (
     <header className="w-full">
@@ -114,28 +114,7 @@ function Header() {
                 onChange={handleThemeChange}
               />
             </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Emerald"
-                value="emerald"
-                checked={selectedTheme === "emerald"}
-                onChange={handleThemeChange}
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Corporate"
-                value="corporate"
-                checked={selectedTheme === "corporate"}
-                onChange={handleThemeChange}
-              />
-            </li>
+
             <li>
               <input
                 type="radio"
@@ -153,56 +132,13 @@ function Header() {
                 type="radio"
                 name="theme-dropdown"
                 className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Retro"
-                value="retro"
-                checked={selectedTheme === "retro"}
-                onChange={handleThemeChange}
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
                 aria-label="Cyberpunk"
                 value="cyberpunk"
                 checked={selectedTheme === "cyberpunk"}
                 onChange={handleThemeChange}
               />
             </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Valentine"
-                value="valentine"
-                checked={selectedTheme === "valentine"}
-                onChange={handleThemeChange}
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Halloween"
-                value="halloween"
-                checked={selectedTheme === "halloween"}
-                onChange={handleThemeChange}
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Garden"
-                value="garden"
-                checked={selectedTheme === "garden"}
-                onChange={handleThemeChange}
-              />
-            </li>
+
             <li>
               <input
                 type="radio"
@@ -220,67 +156,13 @@ function Header() {
                 type="radio"
                 name="theme-dropdown"
                 className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Aqua"
-                value="aqua"
-                checked={selectedTheme === "aqua"}
-                onChange={handleThemeChange}
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
                 aria-label="Lofi"
                 value="lofi"
                 checked={selectedTheme === "lofi"}
                 onChange={handleThemeChange}
               />
             </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Pastel"
-                value="pastel"
-                checked={selectedTheme === "pastel"}
-                onChange={handleThemeChange}
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Fantasy"
-                value="fantasy"
-                checked={selectedTheme === "fantasy"}
-                onChange={handleThemeChange}
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Wireframe"
-                value="wireframe"
-                checked={selectedTheme === "wireframe"}
-                onChange={handleThemeChange}
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Black"
-                value="black"
-                checked={selectedTheme === "black"}
-                onChange={handleThemeChange}
-              />
-            </li>
+
             <li>
               <input
                 type="radio"
@@ -292,72 +174,7 @@ function Header() {
                 onChange={handleThemeChange}
               />
             </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Dracula"
-                value="dracula"
-                checked={selectedTheme === "dracula"}
-                onChange={handleThemeChange}
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Cmyk"
-                value="cmyk"
-                checked={selectedTheme === "cmyk"}
-                onChange={handleThemeChange}
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Autumn"
-                value="autumn"
-                checked={selectedTheme === "autumn"}
-                onChange={handleThemeChange}
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Acid"
-                value="acid"
-                checked={selectedTheme === "acid"}
-                onChange={handleThemeChange}
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Business"
-                value="business"
-                checked={selectedTheme === "business"}
-                onChange={handleThemeChange}
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Lemonade"
-                value="lemonade"
-                checked={selectedTheme === "lemonade"}
-                onChange={handleThemeChange}
-              />
-            </li>
+
             <li>
               <input
                 type="radio"
@@ -377,50 +194,6 @@ function Header() {
                 aria-label="Coffee"
                 value="coffee"
                 checked={selectedTheme === "coffee"}
-                onChange={handleThemeChange}
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Winter"
-                value="winter"
-                checked={selectedTheme === "winter"}
-                onChange={handleThemeChange}
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Dim"
-                value="dim"
-                checked={selectedTheme === "dim"}
-                onChange={handleThemeChange}
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Nord"
-                value="nord"
-                checked={selectedTheme === "nord"}
-                onChange={handleThemeChange}
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Sunset"
-                value="sunset"
-                checked={selectedTheme === "sunset"}
                 onChange={handleThemeChange}
               />
             </li>
