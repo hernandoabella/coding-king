@@ -116,17 +116,17 @@ function Main() {
 
           <div className="p-5 mt-10">
             {activeButton === "HTML" && <HTML />}
-            {activeButton === "CSS" && <CSS />}
-            {activeButton === "Bootstrap" && <Bootstrap />}
-            {activeButton === "TailwindCSS" && <TailwindCSS />}
-            {activeButton === "JavaScript" && <JavaScript />}
-            {activeButton === "JQuery" && <Jquery />}
-            {activeButton === "TypeScript" && <TypeScript />}
-            {activeButton === "React" && <Reactd />}
-            {activeButton === "Vue" && <Vue />}
-            {activeButton === "Angular" && <Angular />}
-            {activeButton === "Svelte" && <Svelte />}
-            {activeButton === "Git" && <Git />}
+            {/* {activeButton === "CSS" && <CSS />} */}
+            {/* {activeButton === "Bootstrap" && <Bootstrap />} */}
+            {/* {activeButton === "TailwindCSS" && <TailwindCSS />} */}
+            {/* {activeButton === "JavaScript" && <JavaScript />} */}
+            {/* {activeButton === "JQuery" && <Jquery />} */}
+            {/* {activeButton === "TypeScript" && <TypeScript />} */}
+            {/* {activeButton === "React" && <Reactd />} */}
+            {/* {activeButton === "Vue" && <Vue />} */}
+            {/* {activeButton === "Angular" && <Angular />} */}
+            {/* {activeButton === "Svelte" && <Svelte />} */}
+            {/* {activeButton === "Git" && <Git />} */}
           </div>
         </div>
       </div>
