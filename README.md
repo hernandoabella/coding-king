@@ -1,2 +1,2 @@
 # Coding King 🤴
-Quick resources for developers.
+Quick resources for developers
