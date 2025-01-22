@@ -17,9 +17,6 @@ import {
 } from "./ImportUI";
 import { buttonsData } from "./buttonsData";
 import CategoryDropdown from "./CategoryDropdown";
-import LeftSideBar from "./LeftSideBar";
-import RightSideBar from "./RightSideBar";
-
 
 function Main() {
   const [activeButton, setActiveButton] = useState("");
@@ -50,7 +47,6 @@ function Main() {
   return (
     <div className="">
       <div className="flex">
-        <LeftSideBar />
         <div className="content w-full">
           <Header />
           <div className="flex flex-wrap m-5">
@@ -133,7 +129,6 @@ function Main() {
             {activeButton === "Git" && <Git />}
           </div>
         </div>
-        <RightSideBar />
       </div>
       <Footer />
     </div>
