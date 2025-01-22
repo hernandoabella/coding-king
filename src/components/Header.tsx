@@ -243,7 +243,7 @@ function Header() {
         </div>
 
         <p className="mt-5">
-          Quick <b>coding resources</b> to open the next level.
+          Quick resources for developers
         </p>
       </div>
     </header>
