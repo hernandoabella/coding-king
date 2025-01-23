@@ -3,9 +3,7 @@ import Prism from "prismjs";
 import "prismjs/components/prism-cshtml";
 import "prismjs/themes/prism-okaidia.css";
 import { motion } from "framer-motion";
-import { FaLink, FaImage, FaTable, FaVideo, FaGlobe, FaTools, FaBook, FaCode } from "react-icons/fa";
-
-
+import { FaLink, FaImage, FaTable, FaVideo, FaGlobe, FaTools} from "react-icons/fa";
 
 function Html() {
   useEffect(() => {
@@ -179,7 +177,6 @@ function Html() {
               </div>
             </div>
 
-
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -195,71 +192,71 @@ function Html() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="p-8 bg-white rounded-lg shadow-lg"
-            >
-              <h3 className="font-extrabold text-3xl text-orange-600 mb-6 text-center">
-                Main Features
-              </h3>
-              <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {[
-                  {
-                    title: "Structuring Content",
-                    description:
-                      "Effortlessly organize content with tags like <h1>, <p>, <div>, <img>, and more.",
-                    icon: <FaTools className="text-2xl text-white" />, // Icon for structuring
-                  },
-                  {
-                    title: "Creating Links",
-                    description:
-                      "Enable seamless navigation between pages using the versatile <a> tag.",
-                    icon: <FaLink className="text-2xl text-white" />, // Link icon
-                  },
-                  {
-                    title: "Displaying Images",
-                    description:
-                      "Add stunning visuals to your pages with the simple <img> tag.",
-                    icon: <FaImage className="text-2xl text-white" />, // Image icon
-                  },
-                  {
-                    title: "Organizing Data",
-                    description:
-                      "Present information clearly in tables using the <table> tag.",
-                    icon: <FaTable className="text-2xl text-white" />, // Table icon
-                  },
-                  {
-                    title: "Embedding Multimedia",
-                    description:
-                      "Integrate video and audio content effortlessly into your site.",
-                    icon: <FaVideo className="text-2xl text-white" />, // Video icon
-                  },
-                  {
-                    title: "SEO Optimization",
-                    description:
-                      "Boost your site's visibility using semantic tags like <article>, <nav>, and <section>.",
-                    icon: <FaGlobe className="text-2xl text-white" />, // Globe icon
-                  },
-                ].map((feature, index) => (
-                  <motion.li
-                    key={index}
-                    className="flex flex-col items-center text-center gap-4 p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 + index * 0.2 }}
-                  >
-                    <div className="w-14 h-14 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white shadow-md">
-                      {feature.icon}
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg text-gray-800">{feature.title}</h4>
-                      <p className="text-gray-600">{feature.description}</p>
-                    </div>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.5 }}
+  className="p-8"
+>
+  <h3 className="font-extrabold text-3xl text-orange-600 mb-6 text-center">
+    Main Features
+  </h3>
+  <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    {[
+      {
+        title: "Structuring Content",
+        description:
+          "Effortlessly organize content with tags like <code className='bg-gray-800 text-[#f92672] rounded px-2 py-1 text-sm'>&lt;h1&gt;</code>, <code className='bg-gray-800 text-[#f92672] rounded px-2 py-1 text-sm'>&lt;p&gt;</code>, <code className='bg-gray-800 text-[#f92672] rounded px-2 py-1 text-sm'>&lt;div&gt;</code>, <code className='bg-gray-800 text-[#f92672] rounded px-2 py-1 text-sm'>&lt;img&gt;</code>, and more.",
+        icon: <FaTools className="text-2xl text-white" />, // Icon for structuring
+      },
+      {
+        title: "Creating Links",
+        description:
+          "Enable seamless navigation between pages using the versatile <code className='bg-gray-800 text-[#f92672] rounded px-2 py-1 text-sm'>&lt;a&gt;</code> tag.",
+        icon: <FaLink className="text-2xl text-white" />, // Link icon
+      },
+      {
+        title: "Displaying Images",
+        description:
+          "Add stunning visuals to your pages with the simple <code className='bg-gray-800 text-[#f92672] rounded px-2 py-1 text-sm'>&lt;img&gt;</code> tag.",
+        icon: <FaImage className="text-2xl text-white" />, // Image icon
+      },
+      {
+        title: "Organizing Data",
+        description:
+          "Present information clearly in tables using the <code className='bg-gray-800 text-[#f92672] rounded px-2 py-1 text-sm'>&lt;table&gt;</code> tag.",
+        icon: <FaTable className="text-2xl text-white" />, // Table icon
+      },
+      {
+        title: "Embedding Multimedia",
+        description:
+          "Integrate video and audio content effortlessly into your site using <code className='bg-gray-800 text-[#f92672] rounded px-2 py-1 text-sm'>&lt;video&gt;</code> and <code className='bg-gray-800 text-[#f92672] rounded px-2 py-1 text-sm'>&lt;audio&gt;</code> tags.",
+        icon: <FaVideo className="text-2xl text-white" />, // Video icon
+      },
+      {
+        title: "SEO Optimization",
+        description:
+          "Boost your site's visibility using semantic tags like <code className='bg-gray-800 text-[#f92672] rounded px-2 py-1 text-sm'>&lt;article&gt;</code>, <code className='bg-gray-800 text-[#f92672] rounded px-2 py-1 text-sm'>&lt;nav&gt;</code>, and <code className='bg-gray-800 text-[#f92672] rounded px-2 py-1 text-sm'>&lt;section&gt;</code>.",
+        icon: <FaGlobe className="text-2xl text-white" />, // Globe icon
+      },
+    ].map((feature, index) => (
+      <motion.li
+        key={index}
+        className="flex flex-col items-center text-center gap-4 p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 + index * 0.2 }}
+      >
+        <div className="w-14 h-14 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white shadow-md">
+          {feature.icon}
+        </div>
+        <div>
+          <h4 className="font-bold text-lg text-gray-800">{feature.title}</h4>
+          <p className="text-gray-600" dangerouslySetInnerHTML={{ __html: feature.description }} />
+        </div>
+      </motion.li>
+    ))}
+  </ul>
+</motion.div>
 
 
           </div>
@@ -308,7 +305,87 @@ function Html() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
-        className="mt-12 p-6 bg-gray-50 rounded-lg shadow-sm"
+        className="mt-6 p-6 bg-gray-900 rounded-lg shadow-sm"
+      >
+        <h2 className="text-2xl font-bold mb-6 text-blue-400 text-center">
+          HTML Extensions for VS Code
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          {/* Extension 1 */}
+          <div className="flex flex-col items-center text-white">
+            <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-3">
+              <img src="https://abusaidm.gallerycdn.vsassets.io/extensions/abusaidm/html-snippets/0.2.1/1514476281055/Microsoft.VisualStudio.Services.Icons.Default" alt="HTML Snippets" className="w-full h-full object-contain" />
+            </div>
+            <span className="font-semibold text-lg">HTML Snippets</span>
+            <p className="text-center text-gray-400 text-sm mt-2">
+              Adds rich HTML snippets to speed up coding and improve productivity.
+            </p>
+          </div>
+
+          {/* Extension 2 */}
+          <div className="flex flex-col items-center text-white">
+            <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-3">
+              <img src="https://formulahendry.gallerycdn.vsassets.io/extensions/formulahendry/auto-close-tag/0.5.15/1702959502562/Microsoft.VisualStudio.Services.Icons.Default" alt="Auto Close Tag" className="w-full h-full object-contain" />
+            </div>
+            <span className="font-semibold text-lg">Auto Close Tag</span>
+            <p className="text-center text-gray-400 text-sm mt-2">
+              Automatically closes HTML tags as you type, saving time and reducing errors.
+            </p>
+          </div>
+
+          {/* Extension 3 */}
+          <div className="flex flex-col items-center text-white">
+            <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-3">
+              <img src="https://christian-kohler.gallerycdn.vsassets.io/extensions/christian-kohler/path-intellisense/2.3.0/1599815793523/Microsoft.VisualStudio.Services.Icons.Default" alt="Path Intellisense" className="w-full h-full object-contain" />
+            </div>
+            <span className="font-semibold text-lg">Path Intellisense</span>
+            <p className="text-center text-gray-400 text-sm mt-2">
+              Autocompletes file paths in HTML documents to streamline navigation and workflow.
+            </p>
+          </div>
+
+          {/* Extension 4 */}
+          <div className="flex flex-col items-center text-white">
+            <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-3">
+              <img src="https://ecmel.gallerycdn.vsassets.io/extensions/ecmel/vscode-html-css/2.0.12/1735740148938/Microsoft.VisualStudio.Services.Icons.Default" alt="HTML CSS Support" className="w-full h-full object-contain" />
+            </div>
+            <span className="font-semibold text-lg">HTML CSS Support</span>
+            <p className="text-center text-gray-400 text-sm mt-2">
+              Provides CSS class name suggestions within HTML files, making styling easier.
+            </p>
+          </div>
+
+          {/* Extension 5 */}
+          <div className="flex flex-col items-center text-white">
+            <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-3">
+              <img src="https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.9/1736542717282/Microsoft.VisualStudio.Services.Icons.Default" alt="Live Server" className="w-full h-full object-contain" />
+            </div>
+            <span className="font-semibold text-lg">Live Server</span>
+            <p className="text-center text-gray-400 text-sm mt-2">
+              Launches a local development server with live reload for quick preview of changes.
+            </p>
+          </div>
+
+          {/* Extension 6 */}
+          <div className="flex flex-col items-center text-white">
+            <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-3">
+              <img src="https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/11.0.0/1723648421534/Microsoft.VisualStudio.Services.Icons.Default" alt="Prettier" className="w-full h-full object-contain" />
+            </div>
+            <span className="font-semibold text-lg">Prettier</span>
+            <p className="text-center text-gray-400 text-sm mt-2">
+              Formats your HTML code consistently, adhering to best practices and readability.
+            </p>
+          </div>
+        </div>
+      </motion.div>
+
+      <hr className="mt-8" />
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6 }}
+        className="p-6 bg-gray-50 rounded-lg shadow-sm"
       >
         <h2 className="text-2xl font-bold mb-3 text-orange-600">Useful Resources</h2>
         <p className="text-gray-700 text-lg mb-6">
