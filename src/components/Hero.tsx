@@ -51,14 +51,14 @@ function Hero() {
       <div className="text-center mt-10">
         <div className="flex items-center text-3xl md:text-5xl font-bold mx-auto justify-center">
           &#123;
-          <FaCrown className="text-yellow-500" />
+          👑
           &#125;{" "}
           <span className="matrix-effect ml-2" data-text="Coding King">
             {text}
           </span>
         </div>
 
-        <p className="mt-5 text-xl">
+        <p className="mt-5 text-2xl">
           Quick resources for developers
         </p>
       </div>
