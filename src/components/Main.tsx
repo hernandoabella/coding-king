@@ -50,7 +50,7 @@ function Main() {
     <div className="">
       <div className="flex">
         <div className="content w-full">
-          <Header />
+          
           <Hero />
           <div className="flex flex-wrap m-5">
             <div>
