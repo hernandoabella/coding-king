@@ -47,8 +47,8 @@ function Hero() {
   }, []);
 
   return (
-    <div className="w-full ">
-      <div className="text-center p-5">
+    <div>
+      <div className="text-center mt-10">
         <div className="flex items-center text-3xl md:text-5xl font-bold mx-auto justify-center">
           &#123;
           <FaCrown className="text-yellow-500" />
@@ -58,7 +58,7 @@ function Hero() {
           </span>
         </div>
 
-        <p className="mt-5">
+        <p className="mt-5 text-xl">
           Quick resources for developers
         </p>
       </div>
