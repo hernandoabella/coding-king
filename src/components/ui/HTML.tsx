@@ -163,7 +163,7 @@ function Html() {
                   initial={{ opacity: 0 }} // Initial animation state
                   animate={{ opacity: 1 }} // Animation when component mounts
                   transition={{ delay: 0.3 }} // Delay before animation starts
-                  className="text-xl text-gray-700 md:text-left text-center mb-4"
+                  className="text-xl text-gray-500 md:text-left text-center mb-4"
                 >
                   HTML (Hypertext Markup Language) forms the backbone of web development,
                   enabling you to structure and display content effectively on the web.
@@ -173,13 +173,13 @@ function Html() {
                 <div className="mt-4 space-y-2">
                   <div className="text-lg">
                     <strong>Developed By:</strong>{" "}
-                    <span className="text-gray-700">
+                    <span className="text-gray-500">
 
                       World Wide Web Consortium (W3C; formerly)</span>
                   </div>
                   <div className="text-lg">
                     <strong>Filename Extension:</strong>{" "}
-                    <span className="text-gray-700">.html, .htm</span>
+                    <span className="text-gray-500">.html, .htm</span>
                   </div>
                   <div className="text-lg">
                     <strong>Official Website:</strong>{" "}
@@ -194,11 +194,11 @@ function Html() {
                   </div>
                   <div className="text-lg">
                     <strong>First Released:</strong>{" "}
-                    <span className="text-gray-700">1993</span>
+                    <span className="text-gray-500">1993</span>
                   </div>
                   <div className="text-lg">
                     <strong>Use Case:</strong>{" "}
-                    <span className="text-gray-700">
+                    <span className="text-gray-500">
                       Structuring and presenting content on the web.
                     </span>
                   </div>
@@ -213,7 +213,7 @@ function Html() {
               transition={{ delay: 0.5 }}
               className="mt-10"
             >
-              <h3 className="font-extrabold text-3xl text-orange-600  text-center">
+              <h3 className="font-extrabold text-3xl text-orange-600 mb-10  text-center">
                 Main Features
               </h3>
               <ul className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
@@ -266,8 +266,8 @@ function Html() {
                       {feature.icon}
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-gray-800">{feature.title}</h4>
-                      <p className="text-gray-600" dangerouslySetInnerHTML={{ __html: feature.description }} />
+                      <h4 className="font-bold text-lg text-white">{feature.title}</h4>
+                      <p className="text-gray-500" dangerouslySetInnerHTML={{ __html: feature.description }} />
                     </div>
                   </motion.li>
                 ))}
@@ -286,7 +286,7 @@ function Html() {
               className="md:w-1/4 p-6 border rounded-lg "
             >
               <h3 className="text-2xl font-bold py-2 text-orange-600 border-b-2 border-orange-300 mb-4">
-                HTML Topics
+                HTML Tutorial
               </h3>
               <ol className="list-decimal pl-6 text-lg font-medium space-y-3">
                 {sections.map((section) => (
@@ -294,7 +294,7 @@ function Html() {
                     key={section.id}
                     className={`hover:underline cursor-pointer ${activeSection.id === section.id
                       ? "text-orange-600 font-semibold transform scale-105"
-                      : "text-gray-700"
+                      : "text-gray-500"
                       } transition duration-300 ease-in-out`}
                     onClick={() => setActiveSection(section)}
                   >
@@ -309,7 +309,7 @@ function Html() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5 }}
-              className="md:w-3/4 px-5 py-6 bg-white rounded-lg border"
+              className="md:w-3/4 px-5 py-6   rounded-lg border"
             >
               {activeSection.content}
             </motion.div>
@@ -330,7 +330,7 @@ function Html() {
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
           {/* Extension 1 */}
-          <div className="flex flex-col items-center border p-4">
+          <div className="flex flex-col items-center border p-4 rounded-lg">
             <div className="w-16 h-16  flex items-center justify-center mb-3">
               <img src="https://abusaidm.gallerycdn.vsassets.io/extensions/abusaidm/html-snippets/0.2.1/1514476281055/Microsoft.VisualStudio.Services.Icons.Default" alt="HTML Snippets" className="w-full h-full object-contain" />
             </div>
@@ -341,7 +341,7 @@ function Html() {
           </div>
 
           {/* Extension 2 */}
-          <div className="flex flex-col items-center border p-4">
+          <div className="flex flex-col items-center border p-4 rounded-lg">
             <div className="w-16 h-16  flex items-center justify-center mb-3">
               <img src="https://formulahendry.gallerycdn.vsassets.io/extensions/formulahendry/auto-close-tag/0.5.15/1702959502562/Microsoft.VisualStudio.Services.Icons.Default" alt="Auto Close Tag" className="w-full h-full object-contain" />
             </div>
@@ -352,7 +352,7 @@ function Html() {
           </div>
 
           {/* Extension 3 */}
-          <div className="flex flex-col items-center border p-4">
+          <div className="flex flex-col items-center border p-4 rounded-lg">
             <div className="w-16 h-16  flex items-center justify-center mb-3">
               <img src="https://christian-kohler.gallerycdn.vsassets.io/extensions/christian-kohler/path-intellisense/2.3.0/1599815793523/Microsoft.VisualStudio.Services.Icons.Default" alt="Path Intellisense" className="w-full h-full object-contain" />
             </div>
@@ -363,7 +363,7 @@ function Html() {
           </div>
 
           {/* Extension 4 */}
-          <div className="flex flex-col items-center border p-4">
+          <div className="flex flex-col items-center border p-4 rounded-lg">
             <div className="w-16 h-16  flex items-center justify-center mb-3">
               <img src="https://ecmel.gallerycdn.vsassets.io/extensions/ecmel/vscode-html-css/2.0.12/1735740148938/Microsoft.VisualStudio.Services.Icons.Default" alt="HTML CSS Support" className="w-full h-full object-contain" />
             </div>
@@ -374,7 +374,7 @@ function Html() {
           </div>
 
           {/* Extension 5 */}
-          <div className="flex flex-col items-center border p-4">
+          <div className="flex flex-col items-center border p-4 rounded-lg">
             <div className="w-16 h-16  flex items-center justify-center mb-3">
               <img src="https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.9/1736542717282/Microsoft.VisualStudio.Services.Icons.Default" alt="Live Server" className="w-full h-full object-contain" />
             </div>
@@ -385,7 +385,7 @@ function Html() {
           </div>
 
           {/* Extension 6 */}
-          <div className="flex flex-col items-center border p-4">
+          <div className="flex flex-col items-center border p-4 rounded-lg">
             <div className="w-16 h-16 flex items-center justify-center mb-3">
               <img src="https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/11.0.0/1723648421534/Microsoft.VisualStudio.Services.Icons.Default" alt="Prettier" className="w-full h-full object-contain" />
             </div>
@@ -398,34 +398,28 @@ function Html() {
       </motion.div>
 
       <div className="my-10">
-        <h2 className="text-2xl font-bold mb-3 text-orange-600">FAQ</h2>
-        {tabs.map((tab) => (
-          <motion.div
-            key={tab.id}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="mb-4 border rounded-lg shadow-sm"
-          >
-            <div
-              className="cursor-pointer px-5 py-3 flex justify-between items-center "
-              onClick={() => setActiveTab(activeTab === tab.id ? null : tab.id)}
-            >
-              <h2 className="font-bold text-black">{tab.question}</h2>
-              {activeTab === tab.id ? (
-                <FaChevronUp className="text-black" />
-              ) : (
-                <FaChevronDown className="text-black" />
-              )}
-            </div>
-            {activeTab === tab.id && (
-              <div className="px-5 py-3 text-gray-500 rounded-b-lg">
-                <p className="text-lg">{tab.answer}</p>
-              </div>
-            )}
-          </motion.div>
-        ))}
+  <h2 className="text-2xl font-bold mb-3 text-orange-600">FAQ</h2>
+  {tabs.map((tab, index) => (
+    <div key={tab.id} className="collapse collapse-arrow bg-base-200">
+      {/* Radio Input for Each Tab */}
+      <input 
+        type="radio" 
+        name="my-accordion-2" 
+        defaultChecked={index === 0} // First tab is checked by default
+        id={`tab-${tab.id}`}
+      />
+      {/* Tab Title */}
+      <div className="collapse-title text-xl font-medium" >
+        {tab.question}
       </div>
+      {/* Tab Content */}
+      <div className="collapse-content">
+        <p className="text-lg text-gray-500">{tab.answer}</p>
+      </div>
+    </div>
+  ))}
+</div>
+
 
       <hr className="my-10" />
 
@@ -433,10 +427,10 @@ function Html() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
-        className="bg-gray-50 rounded-lg shadow-sm"
+        className="rounded-lg shadow-sm"
       >
         <h2 className="text-2xl font-bold mb-3 text-orange-600">Useful Resources</h2>
-        <p className="text-gray-700 text-lg mb-6">
+        <p className="text-gray-500 text-lg mb-6">
           Here are some excellent resources to enhance your HTML learning journey. Check out these tutorials, references, and tools to level up your skills.
         </p>
         <ul className="space-y-2 list-disc ml-10">
