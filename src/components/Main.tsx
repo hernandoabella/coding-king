@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
+import Hero from "./Hero";
 import Footer from "./Footer";
 import {
   HTML,
@@ -17,6 +18,7 @@ import {
 } from "./ImportUI";
 import { buttonsData } from "./buttonsData";
 import CategoryDropdown from "./CategoryDropdown";
+
 
 function Main() {
   const [activeButton, setActiveButton] = useState("");
@@ -49,6 +51,7 @@ function Main() {
       <div className="flex">
         <div className="content w-full">
           <Header />
+          <Hero />
           <div className="flex flex-wrap m-5">
             <div>
               <div>
@@ -74,32 +77,32 @@ function Main() {
                           } ${
                             activeCategory === "Web Development" &&
                             activeButton === button.type
-                              ? "bg-slate-900 text-white"
+                              ? "bg-base-300"
                               : ""
                           } ${
                             activeCategory === "Control Version" &&
                             activeButton === button.type
-                              ? "bg-slate-900 text-white"
+                              ? "bg-slate-300"
                               : ""
                           } ${
                             activeCategory === "Programming" &&
                             activeButton === button.type
-                              ? "bg-slate-900 text-white"
+                              ? "bg-slate-300"
                               : ""
                           } ${
                             activeCategory === "Databases" &&
                             activeButton === button.type
-                              ? "bg-slate-900 text-white"
+                              ? "bg-slate-300"
                               : ""
                           } ${
                             activeCategory === "Cloud Computing" &&
                             activeButton === button.type
-                              ? "bg-slate-900 text-white"
+                              ? "bg-slate-300"
                               : ""
                           } ${
                             activeCategory === "Mobile Development" &&
                             activeButton === button.type
-                              ? "bg-slate-900 text-white"
+                              ? "bg-base-300"
                               : ""
                           }`}
                           onClick={() => handleButtonClick(button.type)}
