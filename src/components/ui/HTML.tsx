@@ -3,6 +3,9 @@ import Prism from "prismjs";
 import "prismjs/components/prism-cshtml";
 import "prismjs/themes/prism-okaidia.css";
 import { motion } from "framer-motion";
+import { FaLink, FaImage, FaTable, FaVideo, FaGlobe, FaTools, FaBook, FaCode } from "react-icons/fa";
+
+
 
 function Html() {
   useEffect(() => {
@@ -133,30 +136,64 @@ function Html() {
                   initial={{ opacity: 0 }} // Initial animation state
                   animate={{ opacity: 1 }} // Animation when component mounts
                   transition={{ delay: 0.3 }} // Delay before animation starts
-                  className="text-xl text-gray-700 md:text-left text-center"
+                  className="text-xl text-gray-700 md:text-left text-center mb-4"
                 >
                   HTML (Hypertext Markup Language) forms the backbone of web development,
                   enabling you to structure and display content effectively on the web.
                 </motion.p>
+
+                {/* Additional Information */}
+                <div className="mt-4 space-y-2">
+                  <div className="text-lg">
+                    <strong>Developed By:</strong>{" "}
+                    <span className="text-gray-700">
+
+                      World Wide Web Consortium (W3C; formerly)</span>
+                  </div>
+                  <div className="text-lg">
+                    <strong>Filename Extension:</strong>{" "}
+                    <span className="text-gray-700">.html, .htm</span>
+                  </div>
+                  <div className="text-lg">
+                    <strong>Official Website:</strong>{" "}
+                    <a
+                      href="https://html.spec.whatwg.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-orange-600 underline hover:text-orange-800"
+                    >
+                      https://html.spec.whatwg.org/
+                    </a>
+                  </div>
+                  <div className="text-lg">
+                    <strong>First Released:</strong>{" "}
+                    <span className="text-gray-700">1993</span>
+                  </div>
+                  <div className="text-lg">
+                    <strong>Use Case:</strong>{" "}
+                    <span className="text-gray-700">
+                      Structuring and presenting content on the web.
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Additional Info Section */}
+
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
               className="mt-6 p-6 bg-gray-50 rounded-lg shadow-sm"
             >
-              <h2 className="text-2xl font-bold mb-3 text-orange-600">
-                Why Learn HTML?
-              </h2>
+              <h2 className="text-2xl font-bold mb-3 text-orange-600">Why Learn HTML?</h2>
               <p className="text-gray-700 text-lg">
                 Mastering HTML allows you to build the foundation of web pages, making it
                 an essential skill for developers, designers, and anyone looking to
                 explore web technologies.
               </p>
             </motion.div>
+
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -172,53 +209,58 @@ function Html() {
                     title: "Structuring Content",
                     description:
                       "Effortlessly organize content with tags like <h1>, <p>, <div>, <img>, and more.",
+                    icon: <FaTools className="text-2xl text-white" />, // Icon for structuring
                   },
                   {
                     title: "Creating Links",
                     description:
                       "Enable seamless navigation between pages using the versatile <a> tag.",
+                    icon: <FaLink className="text-2xl text-white" />, // Link icon
                   },
                   {
                     title: "Displaying Images",
                     description:
                       "Add stunning visuals to your pages with the simple <img> tag.",
+                    icon: <FaImage className="text-2xl text-white" />, // Image icon
                   },
                   {
                     title: "Organizing Data",
                     description:
                       "Present information clearly in tables using the <table> tag.",
+                    icon: <FaTable className="text-2xl text-white" />, // Table icon
                   },
                   {
                     title: "Embedding Multimedia",
                     description:
                       "Integrate video and audio content effortlessly into your site.",
+                    icon: <FaVideo className="text-2xl text-white" />, // Video icon
                   },
                   {
                     title: "SEO Optimization",
                     description:
                       "Boost your site's visibility using semantic tags like <article>, <nav>, and <section>.",
+                    icon: <FaGlobe className="text-2xl text-white" />, // Globe icon
                   },
                 ].map((feature, index) => (
                   <motion.li
                     key={index}
-                    className="flex items-start gap-4 p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
+                    className="flex flex-col items-center text-center gap-4 p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 + index * 0.2 }}
                   >
-                    <div className="w-10 h-10 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold shadow-md">
-                      {index + 1}
+                    <div className="w-14 h-14 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white shadow-md">
+                      {feature.icon}
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-gray-800">
-                        {feature.title}
-                      </h4>
+                      <h4 className="font-bold text-lg text-gray-800">{feature.title}</h4>
                       <p className="text-gray-600">{feature.description}</p>
                     </div>
                   </motion.li>
                 ))}
               </ul>
             </motion.div>
+
 
           </div>
 
@@ -238,8 +280,8 @@ function Html() {
                   <li
                     key={section.id}
                     className={`hover:underline cursor-pointer ${activeSection.id === section.id
-                        ? "text-orange-600 font-bold"
-                        : ""
+                      ? "text-orange-600 font-bold"
+                      : ""
                       }`}
                     onClick={() => setActiveSection(section)}
                   >
@@ -261,7 +303,58 @@ function Html() {
           </div>
         </div>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6 }}
+        className="mt-12 p-6 bg-gray-50 rounded-lg shadow-sm"
+      >
+        <h2 className="text-2xl font-bold mb-3 text-orange-600">Useful Resources</h2>
+        <p className="text-gray-700 text-lg mb-6">
+          Here are some excellent resources to enhance your HTML learning journey. Check out these tutorials, references, and tools to level up your skills.
+        </p>
+        <ul className="space-y-4 list-disc ml-10">
+          {[
+            {
+              title: "HTML Documentation",
+              link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+            },
+            {
+              title: "W3Schools HTML Tutorial",
+              link: "https://www.w3schools.com/html/",
+            },
+            {
+              title: "HTML5 Validator",
+              link: "https://validator.w3.org/",
+            },
+            {
+              title: "CSS Tricks",
+              link: "https://css-tricks.com/",
+            },
+          ].map((resource, index) => (
+            <motion.li
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 + index * 0.2 }}
+            >
+              <a
+                href={resource.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-orange-600 hover:underline"
+              >
+                {resource.title}
+              </a>
+            </motion.li>
+          ))}
+        </ul>
+      </motion.div>
+
     </motion.div>
+
+
   );
 }
 
