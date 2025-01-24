@@ -4,6 +4,24 @@ import { FaXTwitter } from "react-icons/fa6";
 
 function Hero() {
 
+
+    const [theme, setTheme] = useState("default");
+
+    // Retrieve theme from localStorage on component mount
+    useEffect(() => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        setTheme(savedTheme);
+        document.body.setAttribute("data-theme", savedTheme); // Apply saved theme
+      }
+    }, []);
+  
+    const handleThemeChange = (e) => {
+      const selectedTheme = e.target.checked ? "synthwave" : "default";
+      setTheme(selectedTheme);
+      localStorage.setItem("theme", selectedTheme); // Save theme to localStorage
+      document.body.setAttribute("data-theme", selectedTheme); // Apply theme
+    };
     const [text, setText] = useState("");
     const targetText = "Coding King"; // The target text you want to reveal
     const chars =
@@ -49,14 +67,16 @@ function Hero() {
 
     return (
         <div className="flex justify-center items-center gap-10">
-            
-            <div className="absolute 10px left-10 hidden md:block">
-            <input
-  type="checkbox"
-  value="synthwave"
-  className="toggle theme-controller col-span-2 col-start-1 row-start-1 border-sky-400 bg-amber-300 [--tglbg:theme(colors.sky.500)] checked:border-blue-800 checked:bg-blue-300 checked:[--tglbg:theme(colors.blue.900)]" />
-            </div>
-            
+
+<div className="absolute 10px left-10 hidden md:block">
+      <input
+        type="checkbox"
+        className="toggle theme-controller col-span-2 col-start-1 row-start-1 border-sky-400 bg-amber-300 [--tglbg:theme(colors.sky.500)] checked:border-blue-800 checked:bg-blue-300 checked:[--tglbg:theme(colors.blue.900)]"
+        checked={theme === "synthwave"}
+        onChange={handleThemeChange}
+      />
+    </div>
+
             <div className="text-center mt-10">
                 <div className="flex items-center text-3xl md:text-5xl font-bold mx-auto justify-center">
                     &#123;
@@ -73,7 +93,7 @@ function Hero() {
             </div>
 
             <div className="gap-5 absolute right-10 hidden md:flex">
-                <a href="https://www.github.com/hernandoabella" target="_blank"><FaGithub className="h-10 w-10"/></a>
+                <a href="https://www.github.com/hernandoabella" target="_blank"><FaGithub className="h-10 w-10" /></a>
                 <a href="https://www.x.com/hernandoabella" target="_blank"><FaXTwitter className="h-10 w-10" /></a>
             </div>
 
