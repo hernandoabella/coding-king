@@ -15,13 +15,13 @@ function CategoryDropdown({ categories, activeCategory, onChange }) {
         tabIndex={0}
         role="button"
         className="
-      btn bg-base-300 w-52"
+      btn w-52 borde bg-base-300"
       >
         {selectedCategory || "Select Category"}
         <svg
           width="12px"
           height="12px"
-          className="h-2 w-2 fill-current opacity-60 inline-block"
+          className="h-2 w-2 fill-current opacity-60 inline-block "
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 2048 2048"
         >
@@ -30,14 +30,14 @@ function CategoryDropdown({ categories, activeCategory, onChange }) {
       </div>
       <ul
         tabIndex={0}
-        className="dropdown-content z-[1] p-2 shadow-2xl bg-blue-900 rounded-box w-52"
+        className="dropdown-content border z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52"
       >
         {categories.map((category, index) => (
           <li key={index}>
             <input
               type="radio"
               name="category-dropdown"
-              className="my-1 theme-controller btn btn-sm btn-block btn-ghost justify-start"
+              className="my-1 border  theme-controller btn btn-sm btn-block btn-ghost justify-start"
               aria-label={category}
               value={category}
               checked={selectedCategory === category}
