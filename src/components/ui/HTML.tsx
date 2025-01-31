@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Prism from "prismjs";
 import "prismjs/components/prism-cshtml";
-import "prismjs/themes/prism-okaidia.css";
+import "prismjs/themes/prism.css";
 import { motion } from "framer-motion";
-import { FaLink, FaImage, FaTable, FaVideo, FaGlobe, FaTools, FaChevronUp, FaChevronDown } from "react-icons/fa";
+import { FaLink, FaImage, FaTable, FaVideo, FaGlobe, FaTools, } from "react-icons/fa";
 
 function Html() {
   useEffect(() => {
@@ -12,69 +12,32 @@ function Html() {
 
   const sections = [
     {
+      id: "getting-started",
+      title: "Getting Started with Web Pages",
+      content: (
+        <>
+          <div>...</div>
+        </>
+      ),
+    },
+
+    {
       id: "structure-web-pages",
       title: "Structure Web Pages",
       content: (
         <>
-          <h3 className="text-2xl font-bold py-2">Structure Web Pages</h3>
-          <ul className="list-disc pl-10">
-            <li className="py-2">
-              Define headings, paragraphs, and text using elements like
-              <span className="rounded code bg-base-300 text-[#f92672] ml-1">
-                {" "}
-                &lt;h1&gt;
-              </span>
-              ,{" "}
-              <span className="rounded code bg-base-300 text-[#f92672] ml-1">
-                &lt;p&gt;
-              </span>
-              , and{" "}
-              <span className="rounded code bg-base-300 text-[#f92672] ml-1">
-                &lt;span&gt;
-              </span>
-              .
-            </li>
-            <li className="py-2">
-              Create sections of a webpage with{" "}
-              <span className="rounded code bg-base-300 text-[#f92672] ml-1">
-                &lt;div&gt;
-              </span>
-              ,
-              <span className="rounded code bg-base-300 text-[#f92672] ml-1">
-                {" "}
-                &lt;section&gt;
-              </span>
-              , and{" "}
-              <span className="rounded code bg-base-300 text-[#f92672] ml-1">
-                &lt;article&gt;
-              </span>
-              .
-            </li>
-          </ul>
+          <div>...</div>
         </>
       ),
     },
+
+
     {
       id: "embed-media",
       title: "Embed Media",
       content: (
         <>
-          <h3 className="text-2xl font-bold py-2">Embed Media</h3>
-          <p className="pl-10">
-            Use HTML elements like{" "}
-            <span className="rounded code bg-base-300 text-[#f92672] ml-1">
-              &lt;img&gt;
-            </span>{" "}
-            to embed images,{" "}
-            <span className="rounded code bg-base-300 text-[#f92672] ml-1">
-              &lt;audio&gt;
-            </span>{" "}
-            for audio, and{" "}
-            <span className="rounded code bg-base-300 text-[#f92672] ml-1">
-              &lt;video&gt;
-            </span>{" "}
-            to include videos in your web pages.
-          </p>
+          <div></div>
         </>
       ),
     },
@@ -83,15 +46,7 @@ function Html() {
       title: "Create Hyperlinks",
       content: (
         <>
-          <h3 className="text-2xl font-bold py-2">Create Hyperlinks</h3>
-          <p className="pl-10">
-            Use the{" "}
-            <span className="rounded code bg-base-300 text-[#f92672] ml-1">
-              &lt;a&gt;
-            </span>{" "}
-            element to create links that navigate to other web pages or
-            resources.
-          </p>
+          <div></div>
         </>
       ),
     },
@@ -266,7 +221,7 @@ function Html() {
                       {feature.icon}
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-white">{feature.title}</h4>
+                      <h4 className="font-bold text-lg">{feature.title}</h4>
                       <p className="text-gray-500" dangerouslySetInnerHTML={{ __html: feature.description }} />
                     </div>
                   </motion.li>
@@ -283,7 +238,7 @@ function Html() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5 }}
-              className="md:w-1/4 p-6 border rounded-lg "
+              className=" p-10 border rounded-lg w-2/3"
             >
               <h3 className="text-2xl font-bold py-2 text-orange-600 border-b-2 border-orange-300 mb-4">
                 HTML Tutorial
@@ -309,7 +264,7 @@ function Html() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5 }}
-              className="md:w-3/4 px-5 py-6   rounded-lg border"
+              className="p-10 rounded-lg border"
             >
               {activeSection.content}
             </motion.div>
@@ -398,27 +353,27 @@ function Html() {
       </motion.div>
 
       <div className="my-10">
-  <h2 className="text-2xl font-bold mb-3 text-orange-600">FAQ</h2>
-  {tabs.map((tab, index) => (
-    <div key={tab.id} className="collapse collapse-arrow bg-base-200">
-      {/* Radio Input for Each Tab */}
-      <input 
-        type="radio" 
-        name="my-accordion-2" 
-        defaultChecked={index === 0} // First tab is checked by default
-        id={`tab-${tab.id}`}
-      />
-      {/* Tab Title */}
-      <div className="collapse-title text-xl font-medium" >
-        {tab.question}
+        <h2 className="text-2xl font-bold mb-3 text-orange-600">FAQ</h2>
+        {tabs.map((tab, index) => (
+          <div key={tab.id} className="collapse collapse-arrow bg-base-200">
+            {/* Radio Input for Each Tab */}
+            <input
+              type="radio"
+              name="my-accordion-2"
+              defaultChecked={index === 0} // First tab is checked by default
+              id={`tab-${tab.id}`}
+            />
+            {/* Tab Title */}
+            <div className="collapse-title text-xl font-medium" >
+              {tab.question}
+            </div>
+            {/* Tab Content */}
+            <div className="collapse-content">
+              <p className="text-lg text-gray-500">{tab.answer}</p>
+            </div>
+          </div>
+        ))}
       </div>
-      {/* Tab Content */}
-      <div className="collapse-content">
-        <p className="text-lg text-gray-500">{tab.answer}</p>
-      </div>
-    </div>
-  ))}
-</div>
 
 
       <hr className="my-10" />
