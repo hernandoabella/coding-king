@@ -3,7 +3,6 @@ import Prism from "prismjs";
 import "prismjs/components/prism-cshtml";
 import "prismjs/themes/prism.css";
 import { motion } from "framer-motion";
-import { FaLink, FaImage, FaTable, FaVideo, FaGlobe, FaTools, } from "react-icons/fa";
 
 function Html() {
   useEffect(() => {
@@ -16,10 +15,75 @@ function Html() {
       title: "Getting Started with Web Pages",
       content: (
         <>
-          <div>...</div>
+          <div className="p-6 bg-gray-100 rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold text-blue-600 mb-4">Introduction</h2>
+            <p className="text-gray-700 mb-4">
+              HTML (HyperText Markup Language) is the backbone of web pages. It
+              provides the structure for content displayed on the internet.
+            </p>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mb-3">What is HTML?</h3>
+            <p className="text-gray-700 mb-4">
+              HTML is a markup language used to define the elements of a webpage,
+              such as headings, paragraphs, images, links, and more. It works
+              alongside CSS (for styling) and JavaScript (for interactivity) to
+              create engaging web experiences.
+            </p>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mb-3">Basic HTML Structure</h3>
+            <p className="text-gray-700 mb-2">Every HTML document follows a basic structure:</p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<!DOCTYPE html>
+    <html>
+      <head>
+        <title>My First Web Page</title>
+      </head>
+      <body>
+        <h1>Welcome to My Website</h1>
+        <p>This is a simple paragraph.</p>
+      </body>
+    </html>`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Understanding the Elements</h3>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2">
+              <li>
+                <strong className="text-gray-900">&lt;!DOCTYPE html&gt;</strong> - Declares the document type as HTML5.
+              </li>
+              <li>
+                <strong className="text-gray-900">&lt;html&gt;</strong> - The root element of the HTML page.
+              </li>
+              <li>
+                <strong className="text-gray-900">&lt;head&gt;</strong> - Contains metadata, such as the page title and linked stylesheets.
+              </li>
+              <li>
+                <strong className="text-gray-900">&lt;body&gt;</strong> - Contains the main content displayed on the page.
+              </li>
+            </ul>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Creating Your First Web Page</h3>
+            <p className="text-gray-700 mb-3">To create an HTML file, follow these steps:</p>
+            <ol className="list-decimal pl-6 text-gray-700 space-y-2">
+              <li>Open a text editor (like Notepad, VS Code, or Sublime Text).</li>
+              <li>Type the basic HTML structure shown above.</li>
+              <li>Save the file with a <code className="bg-gray-200 px-1 rounded">.html</code> extension (e.g., <code className="bg-gray-200 px-1 rounded">index.html</code>).</li>
+              <li>Open the file in a web browser to see your first webpage.</li>
+            </ol>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Next Steps</h3>
+            <p className="text-gray-700">
+              Now that you understand the basic structure of an HTML page, you can
+              start adding elements like images, links, and lists to enhance your
+              webpage. In the next sections, we'll explore HTML tags in more
+              detail.
+            </p>
+          </div>
         </>
       ),
-    },
+    }
+    ,
 
     {
       id: "structure-web-pages",
@@ -44,6 +108,105 @@ function Html() {
     {
       id: "create-hyperlinks",
       title: "Create Hyperlinks",
+      content: (
+        <>
+          <div></div>
+        </>
+      ),
+    },
+    {
+      id: "create-lists",
+      title: "Create Lists",
+      content: (
+        <>
+          <div></div>
+        </>
+      ),
+    },
+    {
+      id: "Tables",
+      title: "Tables",
+      content: (
+        <>
+          <div></div>
+        </>
+      ),
+    },
+    {
+      id: "forms-for-user-input",
+      title: "Forms for user input",
+      content: (
+        <>
+          <div></div>
+        </>
+      ),
+    },
+    {
+      id: "embed-scripts-and-styles",
+      title: "Embed Scripts and Styles",
+      content: (
+        <>
+          <div></div>
+        </>
+      ),
+    },
+    {
+      id: "semantic-elements",
+      title: "Semantic Elements",
+      content: (
+        <>
+          <div></div>
+        </>
+      ),
+    },
+    {
+      id: "metadata-and-seo",
+      title: "Metadata and SEO",
+      content: (
+        <>
+          <div></div>
+        </>
+      ),
+    },
+    {
+      id: "accessibility-features",
+      title: "Accessibility Features",
+      content: (
+        <>
+          <div></div>
+        </>
+      ),
+    },
+    {
+      id: "responsive-design",
+      title: "Responsive Design",
+      content: (
+        <>
+          <div></div>
+        </>
+      ),
+    },
+    {
+      id: "canvas-and-svg",
+      title: "Canvas and SVG",
+      content: (
+        <>
+          <div></div>
+        </>
+      ),
+    },
+    {
+      id: "drag-and-drop",
+      title: "Drag and Drop",
+      content: (
+        <>
+          <div></div>
+        </>
+      ),
+    },
+    {
+      id: "geolocation-and-other-apis",
+      title: "Geolocation and other APIs",
       content: (
         <>
           <div></div>
@@ -99,7 +262,7 @@ function Html() {
               <div className="flex-shrink-0 flex items-center justify-center">
                 <img
                   src="/icons/html5-original.svg"
-                  width={150}
+                  width={100}
                   height={100}
                   alt="HTML Icon"
                   className="w-24 h-24 md:w-36 md:h-36"
@@ -163,13 +326,15 @@ function Html() {
 
           </div>
 
+          {/* dynamic tutorial */}
+
           <div className="mt-10 flex flex-col md:flex-row gap-10">
             {/* Sidebar */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5 }}
-              className=" p-10 border rounded-lg w-2/3"
+              className=" p-10 rounded-lg w-2/3"
             >
               <h3 className="text-2xl font-bold py-2 text-orange-600 border-b-2 border-orange-300 mb-4">
                 HTML Tutorial
@@ -195,7 +360,7 @@ function Html() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5 }}
-              className="p-10 rounded-lg border"
+              className="p-10 rounded-lg border "
             >
               {activeSection.content}
             </motion.div>
