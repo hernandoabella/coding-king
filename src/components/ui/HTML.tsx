@@ -216,7 +216,7 @@ function Html() {
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
           {/* Extension 1 */}
-          <div className="flex flex-col items-center border p-4 rounded-lg">
+          <div className="flex flex-col items-center  p-4 rounded-lg">
             <div className="w-16 h-16  flex items-center justify-center mb-3">
               <img src="https://abusaidm.gallerycdn.vsassets.io/extensions/abusaidm/html-snippets/0.2.1/1514476281055/Microsoft.VisualStudio.Services.Icons.Default" alt="HTML Snippets" className="w-full h-full object-contain" />
             </div>
@@ -227,7 +227,7 @@ function Html() {
           </div>
 
           {/* Extension 2 */}
-          <div className="flex flex-col items-center border p-4 rounded-lg">
+          <div className="flex flex-col items-center  p-4 rounded-lg">
             <div className="w-16 h-16  flex items-center justify-center mb-3">
               <img src="https://formulahendry.gallerycdn.vsassets.io/extensions/formulahendry/auto-close-tag/0.5.15/1702959502562/Microsoft.VisualStudio.Services.Icons.Default" alt="Auto Close Tag" className="w-full h-full object-contain" />
             </div>
@@ -238,7 +238,7 @@ function Html() {
           </div>
 
           {/* Extension 3 */}
-          <div className="flex flex-col items-center border p-4 rounded-lg">
+          <div className="flex flex-col items-center  p-4 rounded-lg">
             <div className="w-16 h-16  flex items-center justify-center mb-3">
               <img src="https://christian-kohler.gallerycdn.vsassets.io/extensions/christian-kohler/path-intellisense/2.3.0/1599815793523/Microsoft.VisualStudio.Services.Icons.Default" alt="Path Intellisense" className="w-full h-full object-contain" />
             </div>
@@ -249,7 +249,7 @@ function Html() {
           </div>
 
           {/* Extension 4 */}
-          <div className="flex flex-col items-center border p-4 rounded-lg">
+          <div className="flex flex-col items-center  p-4 rounded-lg">
             <div className="w-16 h-16  flex items-center justify-center mb-3">
               <img src="https://ecmel.gallerycdn.vsassets.io/extensions/ecmel/vscode-html-css/2.0.12/1735740148938/Microsoft.VisualStudio.Services.Icons.Default" alt="HTML CSS Support" className="w-full h-full object-contain" />
             </div>
@@ -260,7 +260,7 @@ function Html() {
           </div>
 
           {/* Extension 5 */}
-          <div className="flex flex-col items-center border p-4 rounded-lg">
+          <div className="flex flex-col items-center  p-4 rounded-lg">
             <div className="w-16 h-16  flex items-center justify-center mb-3">
               <img src="https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.9/1736542717282/Microsoft.VisualStudio.Services.Icons.Default" alt="Live Server" className="w-full h-full object-contain" />
             </div>
@@ -271,7 +271,7 @@ function Html() {
           </div>
 
           {/* Extension 6 */}
-          <div className="flex flex-col items-center border p-4 rounded-lg">
+          <div className="flex flex-col items-center  p-4 rounded-lg">
             <div className="w-16 h-16 flex items-center justify-center mb-3">
               <img src="https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/11.0.0/1723648421534/Microsoft.VisualStudio.Services.Icons.Default" alt="Prettier" className="w-full h-full object-contain" />
             </div>
