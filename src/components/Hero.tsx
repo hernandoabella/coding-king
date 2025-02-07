@@ -92,9 +92,9 @@ function Hero() {
                 </p>
             </div>
 
-            <div className="gap-5 absolute right-10 hidden md:flex">
-                <a href="https://www.github.com/hernandoabella" target="_blank"><FaGithub className="h-10 w-10" /></a>
-                <a href="https://www.x.com/hernandoabella" target="_blank"><FaXTwitter className="h-10 w-10" /></a>
+            <div className="gap-4 absolute right-10 hidden md:flex">
+                <a href="https://www.github.com/hernandoabella" target="_blank"><FaGithub className="h-8 w-8" /></a>
+                <a href="https://www.x.com/hernandoabella" target="_blank"><FaXTwitter className="h-8 w-8" /></a>
             </div>
 
 
