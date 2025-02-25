@@ -90,10 +90,89 @@ function Html() {
       title: "Structure Web Pages",
       content: (
         <>
-          <div>...</div>
+          <div className="p-6 bg-gray-100 rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold text-blue-600 mb-4">Understanding Web Page Structure</h2>
+            <p className="text-gray-700 mb-4">
+              Structuring a web page properly is essential for readability,
+              maintainability, and accessibility. HTML provides a set of elements
+              that help organize content in a meaningful way.
+            </p>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mb-3">Essential HTML Structure</h3>
+            <p className="text-gray-700 mb-2">A well-structured HTML page includes the following sections:</p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<!DOCTYPE html>
+    <html>
+      <head>
+        <title>Structured Web Page</title>
+      </head>
+      <body>
+        <header>
+          <h1>Website Title</h1>
+        </header>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <main>
+          <section>
+            <h2>Main Content</h2>
+            <p>This is the main content of the page.</p>
+          </section>
+          <aside>
+            <h3>Sidebar</h3>
+            <p>Additional information or links.</p>
+          </aside>
+        </main>
+        <footer>
+          <p>&copy; 2025 My Website</p>
+        </footer>
+      </body>
+    </html>`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Key Structural Elements</h3>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2">
+              <li>
+                <strong className="text-gray-900">&lt;header&gt;</strong> - Contains the website's title or branding.
+              </li>
+              <li>
+                <strong className="text-gray-900">&lt;nav&gt;</strong> - Holds navigation links for easy site navigation.
+              </li>
+              <li>
+                <strong className="text-gray-900">&lt;main&gt;</strong> - The main content section of the webpage.
+              </li>
+              <li>
+                <strong className="text-gray-900">&lt;section&gt;</strong> - Defines sections within the main content.
+              </li>
+              <li>
+                <strong className="text-gray-900">&lt;aside&gt;</strong> - Represents additional or sidebar content.
+              </li>
+              <li>
+                <strong className="text-gray-900">&lt;footer&gt;</strong> - Contains footer information, such as copyright.
+              </li>
+            </ul>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Why Structure Matters</h3>
+            <p className="text-gray-700 mb-4">
+              A well-structured page improves accessibility, SEO, and user experience.
+              It helps search engines and screen readers understand content better.
+            </p>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Next Steps</h3>
+            <p className="text-gray-700">
+              Now that you understand how to structure a webpage, you can start styling
+              it using CSS and adding interactivity with JavaScript.
+            </p>
+          </div>
         </>
       ),
-    },
+    },    
 
 
     {
@@ -101,46 +180,471 @@ function Html() {
       title: "Embed Media",
       content: (
         <>
-          <div></div>
+          <div className="p-6 bg-gray-100 rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold text-blue-600 mb-4">Embedding Media in HTML</h2>
+            <p className="text-gray-700 mb-4">
+              Adding media elements such as images, videos, and audio enhances the user experience on a webpage. HTML provides specific tags to embed different types of media.
+            </p>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mb-3">Adding Images</h3>
+            <p className="text-gray-700 mb-2">
+              The <code className="bg-gray-200 px-1 rounded">&lt;img&gt;</code> tag is used to display images on a webpage.
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<img src="image.jpg" alt="A beautiful scenery" width="600">`}
+              </code>
+            </pre>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2 mt-3">
+              <li><strong>src</strong> - Specifies the image URL or file path.</li>
+              <li><strong>alt</strong> - Provides alternative text for accessibility.</li>
+              <li><strong>width</strong> - Defines the image width in pixels.</li>
+            </ul>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Embedding Videos</h3>
+            <p className="text-gray-700 mb-2">
+              The <code className="bg-gray-200 px-1 rounded">&lt;video&gt;</code> tag is used to embed video content.
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<video width="600" controls>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>`}
+              </code>
+            </pre>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2 mt-3">
+              <li><strong>controls</strong> - Adds play, pause, and volume controls.</li>
+              <li><strong>source</strong> - Specifies the video file and format.</li>
+              <li><strong>Fallback Text</strong> - Displays text if the browser doesn't support videos.</li>
+            </ul>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Embedding Audio</h3>
+            <p className="text-gray-700 mb-2">
+              The <code className="bg-gray-200 px-1 rounded">&lt;audio&gt;</code> tag is used to embed audio files.
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<audio controls>
+      <source src="audio.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>`}
+              </code>
+            </pre>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2 mt-3">
+              <li><strong>controls</strong> - Enables playback controls.</li>
+              <li><strong>source</strong> - Defines the audio file and format.</li>
+              <li><strong>Fallback Text</strong> - Shown if the browser doesn’t support audio.</li>
+            </ul>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Embedding YouTube Videos</h3>
+            <p className="text-gray-700 mb-2">
+              You can embed a YouTube video using the <code className="bg-gray-200 px-1 rounded">&lt;iframe&gt;</code> tag.
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<iframe width="600" height="315" src="https://www.youtube.com/embed/video_id" frameborder="0" allowfullscreen></iframe>`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Next Steps</h3>
+            <p className="text-gray-700">
+              Now that you know how to embed images, videos, and audio, you can experiment with different media formats and attributes to enhance your web pages.
+            </p>
+          </div>
         </>
       ),
-    },
+    },    
+    
     {
       id: "create-hyperlinks",
       title: "Create Hyperlinks",
       content: (
         <>
-          <div></div>
+          <div className="p-6 bg-gray-100 rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold text-blue-600 mb-4">Creating Hyperlinks in HTML</h2>
+            <p className="text-gray-700 mb-4">
+              Hyperlinks allow users to navigate between pages or sections within a webpage. In HTML, links are created using the 
+              <code className="bg-gray-200 px-1 rounded"> &lt;a&gt; </code> tag.
+            </p>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mb-3">Basic Hyperlink</h3>
+            <p className="text-gray-700 mb-2">
+              To create a hyperlink, use the <code className="bg-gray-200 px-1 rounded">href</code> attribute to define the destination URL.
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<a href="https://www.example.com">Visit Example</a>`}
+              </code>
+            </pre>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2 mt-3">
+              <li><strong>href</strong> - Specifies the URL of the page to link to.</li>
+              <li>The anchor text (between <code>&lt;a&gt;</code> and <code>&lt;/a&gt;</code>) is what users click.</li>
+            </ul>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Opening Links in a New Tab</h3>
+            <p className="text-gray-700 mb-2">
+              Use the <code className="bg-gray-200 px-1 rounded">target="_blank"</code> attribute to open links in a new tab.
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<a href="https://www.example.com" target="_blank">Open in New Tab</a>`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Linking to an Email</h3>
+            <p className="text-gray-700 mb-2">
+              You can create an email link using the <code className="bg-gray-200 px-1 rounded">mailto:</code> scheme.
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<a href="mailto:someone@example.com">Send an Email</a>`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Creating Internal Links</h3>
+            <p className="text-gray-700 mb-2">
+              Internal links help users navigate within the same webpage using IDs.
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<a href="#section1">Go to Section 1</a>
+    ...
+    <section id="section1">
+      <h2>Section 1</h2>
+      <p>This is Section 1 content.</p>
+    </section>`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Creating Download Links</h3>
+            <p className="text-gray-700 mb-2">
+              Use the <code className="bg-gray-200 px-1 rounded">download</code> attribute to let users download a file.
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<a href="file.pdf" download>Download PDF</a>`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Next Steps</h3>
+            <p className="text-gray-700">
+              Now that you understand how to create hyperlinks, you can start styling them using CSS and improving user navigation.
+            </p>
+          </div>
         </>
       ),
-    },
+    }
+    ,
     {
       id: "create-lists",
       title: "Create Lists",
       content: (
         <>
-          <div></div>
+          <div className="p-6 bg-gray-100 rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold text-blue-600 mb-4">Creating Lists in HTML</h2>
+            <p className="text-gray-700 mb-4">
+              Lists help organize content in a structured way. HTML provides three types of lists: ordered, unordered, and definition lists.
+            </p>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mb-3">Unordered Lists</h3>
+            <p className="text-gray-700 mb-2">
+              Unordered lists use bullet points and are created with the 
+              <code className="bg-gray-200 px-1 rounded"> &lt;ul&gt; </code> tag.
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Ordered Lists</h3>
+            <p className="text-gray-700 mb-2">
+              Ordered lists use numbers and are created with the 
+              <code className="bg-gray-200 px-1 rounded"> &lt;ol&gt; </code> tag.
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<ol>
+      <li>First step</li>
+      <li>Second step</li>
+      <li>Third step</li>
+    </ol>`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Definition Lists</h3>
+            <p className="text-gray-700 mb-2">
+              Definition lists consist of terms and their definitions, created with the 
+              <code className="bg-gray-200 px-1 rounded"> &lt;dl&gt; </code> tag.
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<dl>
+      <dt>HTML</dt>
+      <dd>HyperText Markup Language</dd>
+      <dt>CSS</dt>
+      <dd>Cascading Style Sheets</dd>
+    </dl>`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Styling Lists with CSS</h3>
+            <p className="text-gray-700 mb-2">
+              You can customize lists using CSS. Example:
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`ul {
+      list-style-type: square;
+    }
+    
+    ol {
+      list-style-type: upper-roman;
+    }`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Next Steps</h3>
+            <p className="text-gray-700">
+              Now that you understand how to create lists, you can experiment with styling them using CSS to enhance their appearance.
+            </p>
+          </div>
         </>
       ),
-    },
+    }
+    ,
     {
-      id: "Tables",
+      id: "tables",
       title: "Tables",
       content: (
         <>
-          <div></div>
+          <div className="p-6 bg-gray-100 rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold text-blue-600 mb-4">Creating Tables in HTML</h2>
+            <p className="text-gray-700 mb-4">
+              Tables in HTML are used to display structured data in rows and columns. The 
+              <code className="bg-gray-200 px-1 rounded"> &lt;table&gt; </code> tag is used to create tables.
+            </p>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mb-3">Basic Table Structure</h3>
+            <p className="text-gray-700 mb-2">
+              A basic table consists of rows (<code className="bg-gray-200 px-1 rounded">&lt;tr&gt;</code>), 
+              headers (<code className="bg-gray-200 px-1 rounded">&lt;th&gt;</code>), and cells (<code className="bg-gray-200 px-1 rounded">&lt;td&gt;</code>).
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<table border="1">
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+      </tr>
+      <tr>
+        <td>Alice</td>
+        <td>25</td>
+        <td>New York</td>
+      </tr>
+      <tr>
+        <td>Bob</td>
+        <td>30</td>
+        <td>Los Angeles</td>
+      </tr>
+    </table>`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Adding Table Borders</h3>
+            <p className="text-gray-700 mb-2">
+              Use the <code className="bg-gray-200 px-1 rounded">border</code> attribute to add borders around a table.
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<table border="1">
+      <tr>
+        <td>Cell 1</td>
+        <td>Cell 2</td>
+      </tr>
+    </table>`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Using Table Headers</h3>
+            <p className="text-gray-700 mb-2">
+              Use the <code className="bg-gray-200 px-1 rounded">&lt;th&gt;</code> tag to define table headers, making them bold and centered by default.
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<table border="1">
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>Laptop</td>
+        <td>$1000</td>
+      </tr>
+    </table>`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Merging Cells (colspan & rowspan)</h3>
+            <p className="text-gray-700 mb-2">
+              Use <code className="bg-gray-200 px-1 rounded">colspan</code> to merge columns and 
+              <code className="bg-gray-200 px-1 rounded">rowspan</code> to merge rows.
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<table border="1">
+      <tr>
+        <th colspan="2">Header</th>
+      </tr>
+      <tr>
+        <td rowspan="2">Merged Cell</td>
+        <td>Cell 2</td>
+      </tr>
+      <tr>
+        <td>Cell 3</td>
+      </tr>
+    </table>`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Styling Tables with CSS</h3>
+            <p className="text-gray-700 mb-2">
+              You can improve table appearance using CSS.
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #f4f4f4;
+    }`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Next Steps</h3>
+            <p className="text-gray-700">
+              Now that you understand how to create and style tables, try adding advanced features like table captions and responsive designs.
+            </p>
+          </div>
         </>
       ),
-    },
+    }
+    ,
     {
       id: "forms-for-user-input",
-      title: "Forms for user input",
+      title: "Forms for User Input",
       content: (
         <>
-          <div></div>
+          <div className="p-6 bg-gray-100 rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold text-blue-600 mb-4">Creating Forms in HTML</h2>
+            <p className="text-gray-700 mb-4">
+              Forms in HTML allow users to enter and submit data. The 
+              <code className="bg-gray-200 px-1 rounded"> &lt;form&gt; </code> element is used to create a form.
+            </p>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mb-3">Basic Form Structure</h3>
+            <p className="text-gray-700 mb-2">
+              A simple form includes input fields and a submit button.
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<form action="/submit" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      
+      <button type="submit">Submit</button>
+    </form>`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Common Form Elements</h3>
+            <ul className="list-disc pl-6 text-gray-700 space-y-2">
+              <li><strong>Text Input:</strong> <code>&lt;input type="text"&gt;</code></li>
+              <li><strong>Email Input:</strong> <code>&lt;input type="email"&gt;</code></li>
+              <li><strong>Password Input:</strong> <code>&lt;input type="password"&gt;</code></li>
+              <li><strong>Radio Buttons:</strong> <code>&lt;input type="radio"&gt;</code></li>
+              <li><strong>Checkboxes:</strong> <code>&lt;input type="checkbox"&gt;</code></li>
+              <li><strong>Dropdown Menu:</strong> <code>&lt;select&gt;</code></li>
+              <li><strong>Submit Button:</strong> <code>&lt;button type="submit"&gt;</code></li>
+            </ul>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Example: Form with Different Inputs</h3>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`<form action="/submit" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+    
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    
+      <label>Gender:</label>
+      <input type="radio" name="gender" value="male"> Male
+      <input type="radio" name="gender" value="female"> Female
+    
+      <label for="interests">Interests:</label>
+      <input type="checkbox" name="interests" value="coding"> Coding
+      <input type="checkbox" name="interests" value="gaming"> Gaming
+    
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option value="us">United States</option>
+        <option value="uk">United Kingdom</option>
+      </select>
+    
+      <button type="submit">Register</button>
+    </form>`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Styling Forms with CSS</h3>
+            <p className="text-gray-700 mb-2">
+              You can enhance the appearance of forms using CSS.
+            </p>
+            <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-x-auto">
+              <code>
+                {`input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+    
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+    }`}
+              </code>
+            </pre>
+    
+            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Next Steps</h3>
+            <p className="text-gray-700">
+              Now that you know how to create forms, try adding validation and styling to improve user experience.
+            </p>
+          </div>
         </>
       ),
-    },
+    }
+    ,
     {
       id: "embed-scripts-and-styles",
       title: "Embed Scripts and Styles",

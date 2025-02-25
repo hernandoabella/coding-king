@@ -3,8 +3,6 @@ import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 function Hero() {
-
-
     const [theme, setTheme] = useState("default");
 
     // Retrieve theme from localStorage on component mount
@@ -79,9 +77,7 @@ function Hero() {
 
             <div className="text-center mt-10">
                 <div className="flex items-center text-3xl md:text-5xl font-bold mx-auto justify-center">
-                    &#123;
-                    👑
-                    &#125;{" "}
+                    &#123;👑&#125;{" "}
                     <span className="matrix-effect ml-2" data-text="Coding King">
                         {text}
                     </span>
@@ -93,11 +89,9 @@ function Hero() {
             </div>
 
             <div className="gap-4 absolute right-10 hidden md:flex">
-                <a href="https://www.github.com/hernandoabella" target="_blank"><FaGithub className="h-8 w-8" /></a>
-                <a href="https://www.x.com/hernandoabella" target="_blank"><FaXTwitter className="h-8 w-8" /></a>
+                <a href="https://www.github.com/hernandoabella/coding_king" target="_blank"><FaGithub className="h-6 w-6" /></a>
+                <a href="https://www.x.com/hernandoabella/coding_king" target="_blank"><FaXTwitter className="h-6 w-6" /></a>
             </div>
-
-
         </div>
     );
 }

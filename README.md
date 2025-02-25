@@ -1,5 +1,10 @@
 # Coding King 🤴
-Quick resources for developers
+**Quick resources for developers**
 
-## Web Development
-- HTML:
+### Supported Languages:
+- Python
+- JavaScript
+- Java
+- C#
+- C++
+- C#

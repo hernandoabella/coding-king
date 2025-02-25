@@ -2,21 +2,10 @@ import React, { useState, useEffect } from "react";
 import Hero from "./Hero";
 import Footer from "./Footer";
 import {
-  HTML,
-  CSS,
-  Bootstrap,
-  JavaScript,
-  Jquery,
-  TypeScript,
-  Reactd,
-  Vue,
-  Angular,
-  Svelte,
-  Git,
-  TailwindCSS,
+  Python,
 } from "./ImportUI";
 import { buttonsData } from "./buttonsData";
-import CategoryDropdown from "./CategoryDropdown";
+
 
 
 function Main() {
@@ -51,16 +40,8 @@ function Main() {
         <div className="content w-full">
           
           <Hero />
-          <div className="flex flex-wrap m-5">
-            <div>
-              <div>
-                <CategoryDropdown
-                  categories={buttonsData.map((data) => data.category)}
-                  activeCategory={activeCategory}
-                  onChange={handleCategoryChange}
-                />
-              </div>
-              <div className="rounded-lg mt-5 w-auto ">
+
+          <div className="flex flex-wrap m-10 mx-auto justify-center">
                 {showButtons && (
                   <div className="flex flex-wrap gap-3">
                     {buttonsData
@@ -112,23 +93,10 @@ function Main() {
                       ))}
                   </div>
                 )}
-              </div>
-            </div>
           </div>
 
           <div className="p-5 mt-10">
-            {activeButton === "HTML" && <HTML />}
-            {/* {activeButton === "CSS" && <CSS />} */}
-            {/* {activeButton === "Bootstrap" && <Bootstrap />} */}
-            {/* {activeButton === "TailwindCSS" && <TailwindCSS />} */}
-            {/* {activeButton === "JavaScript" && <JavaScript />} */}
-            {/* {activeButton === "JQuery" && <Jquery />} */}
-            {/* {activeButton === "TypeScript" && <TypeScript />} */}
-            {/* {activeButton === "React" && <Reactd />} */}
-            {/* {activeButton === "Vue" && <Vue />} */}
-            {/* {activeButton === "Angular" && <Angular />} */}
-            {/* {activeButton === "Svelte" && <Svelte />} */}
-            {/* {activeButton === "Git" && <Git />} */}
+            {activeButton === "Python" && <Python />}
           </div>
         </div>
       </div>
