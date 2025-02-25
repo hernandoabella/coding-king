@@ -6,16 +6,14 @@ import {
 } from "./ImportUI";
 import { buttonsData } from "./buttonsData";
 
-
-
 function Main() {
   const [activeButton, setActiveButton] = useState("");
-  const [activeCategory, setActiveCategory] = useState("Web Development");
+  const [activeCategory, setActiveCategory] = useState("Programming");
   const [showButtons, setShowButtons] = useState(true);
 
   useEffect(() => {
     // Set the active button to "HTML" when the component mounts
-    setActiveButton("HTML");
+    setActiveButton("Python");
   }, []); // Empty dependency array ensures this effect runs only once when the component mounts
 
   const handleCategoryChange = (category) => {
@@ -35,64 +33,35 @@ function Main() {
   };
 
   return (
-    <div className="">
+    <div>
       <div className="flex">
         <div className="content w-full">
-          
           <Hero />
-
           <div className="flex flex-wrap m-10 mx-auto justify-center">
-                {showButtons && (
-                  <div className="flex flex-wrap gap-3">
-                    {buttonsData
-                      .find(
-                        (categoryData) =>
-                          categoryData.category === activeCategory
-                      )
-                      ?.buttons.map((button, index) => (
-                        <button
-                          key={index}
-                          className={`btn ${
-                            activeButton === button.type ? "active" : ""
-                          } ${
-                            activeCategory === "Web Development" &&
-                            activeButton === button.type
-                              ? "bg-base-300"
-                              : ""
-                          } ${
-                            activeCategory === "Control Version" &&
-                            activeButton === button.type
-                              ? "bg-slate-300"
-                              : ""
-                          } ${
-                            activeCategory === "Programming" &&
-                            activeButton === button.type
-                              ? "bg-slate-300"
-                              : ""
-                          } ${
-                            activeCategory === "Databases" &&
-                            activeButton === button.type
-                              ? "bg-slate-300"
-                              : ""
-                          } ${
-                            activeCategory === "Cloud Computing" &&
-                            activeButton === button.type
-                              ? "bg-slate-300"
-                              : ""
-                          } ${
-                            activeCategory === "Mobile Development" &&
-                            activeButton === button.type
-                              ? "bg-base-300"
-                              : ""
-                          }`}
-                          onClick={() => handleButtonClick(button.type)}
-                        >
-                          <i className={button.icon}></i>
-                          {button.label}
-                        </button>
-                      ))}
-                  </div>
-                )}
+            {showButtons && (
+              <div className="flex flex-wrap gap-3">
+                {buttonsData
+                  .find(
+                    (categoryData) =>
+                      categoryData.category === activeCategory
+                  )
+                  ?.buttons.map((button, index) => (
+                    <button
+                      key={index}
+                      className={`btn ${activeButton === button.type ? "active" : ""
+                        } ${activeCategory === "Programming" &&
+                          activeButton === button.type
+                          ? "bg-base-300"
+                          : ""
+                        }`}
+                      onClick={() => handleButtonClick(button.type)}
+                    >
+                      <i className={button.icon}></i>
+                      {button.label}
+                    </button>
+                  ))}
+              </div>
+            )}
           </div>
 
           <div className="p-5 mt-10">
