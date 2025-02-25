@@ -85,6 +85,7 @@ function Hero() {
                 <p className="mt-5 text-2xl text-gray-500">
                   Quick resources for <em>conquering the world of coding</em>
                 </p>
+
             </div>
 
             <div className="gap-4 absolute right-10 hidden md:flex">
