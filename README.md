@@ -1,5 +1,5 @@
 # Coding King 🤴
-**Quick resources for developers**
+**Quick resources for conquering the world of coding**
 
 ### Supported Languages:
 - Python
@@ -8,3 +8,5 @@
 - C#
 - C++
 - C#
+
+Made with love by **@hernandoabella**
