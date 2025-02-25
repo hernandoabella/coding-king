@@ -5,7 +5,7 @@ function Footer() {
     <div>
       <footer>
         <div className="p-10 text-center">
-          <p>&copy; Coding King 2024 - {new Date().getFullYear()}. <em>Made with love by <a href="https://www.x.com/hernandoabella">@hernandoabella</a></em></p>
+          <p>&copy; Coding King 2024 - {new Date().getFullYear()}. <em className="text-gray-500">Made with love by <a href="https://www.x.com/hernandoabella">@hernandoabella</a></em></p>
         </div>
       </footer>
     </div>
