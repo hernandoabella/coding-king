@@ -37,6 +37,7 @@ function Main() {
       <div className="flex">
         <div className="content w-full">
           <Hero />
+
           <div className="flex flex-wrap m-10 mx-auto justify-center">
             {showButtons && (
               <div className="flex flex-wrap gap-3">
@@ -48,10 +49,10 @@ function Main() {
                   ?.buttons.map((button, index) => (
                     <button
                       key={index}
-                      className={`btn ${activeButton === button.type ? "active" : ""
+                      className={`btn ${activeButton === button.type ? "active" : "bg-blue-300 text-black"
                         } ${activeCategory === "Programming" &&
                           activeButton === button.type
-                          ? "bg-base-300"
+                          ? "bg-blue-500 text-blue-200"
                           : ""
                         }`}
                       onClick={() => handleButtonClick(button.type)}
@@ -64,9 +65,13 @@ function Main() {
             )}
           </div>
 
+          <hr className="border border-blue-500"/>
+
           <div className="p-5 mt-10">
             {activeButton === "Python" && <Python />}
           </div>
+
+          
         </div>
       </div>
       <Footer />
