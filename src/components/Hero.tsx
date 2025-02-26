@@ -66,7 +66,7 @@ function Hero() {
     return (
         <div className="flex justify-center items-center gap-10">
 
-            <div className="absolute 10px left-10 hidden md:block">
+            <div className="hidden md:block">
                 <input
                     type="checkbox"
                     className="toggle theme-controller col-span-2 col-start-1 row-start-1 border-sky-400 bg-amber-300 [--tglbg:theme(colors.sky.500)] checked:border-blue-800 checked:bg-blue-300 checked:[--tglbg:theme(colors.blue.900)]"
@@ -88,7 +88,7 @@ function Hero() {
 
             </div>
 
-            <div className="gap-4 absolute right-10 hidden md:flex">
+            <div className="gap-4 hidden md:flex">
                 <a href="https://www.github.com/hernandoabella/coding_king" target="_blank"><FaGithub className="h-6 w-6" /></a>
                 <a href="https://www.x.com/hernandoabella/coding_king" target="_blank"><FaXTwitter className="h-6 w-6" /></a>
             </div>
