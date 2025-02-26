@@ -2,13 +2,27 @@ import React, { useState, useEffect } from "react";
 import Prism from "prismjs";
 import "prismjs/components/prism-python";
 import "prismjs/themes/prism-twilight.css";
-import { FaBolt, FaBookOpen, FaBrain, FaCheck, FaCopy, FaGamepad, FaHandRock, FaHashtag, FaKey, FaQrcode, FaQuestionCircle, FaStar, FaStopwatch, FaTools, FaUserSecret } from "react-icons/fa";
+import { FaBolt, FaBook, FaBookOpen, FaBrain, FaCheck, FaCode, FaCopy, FaGamepad, FaGlobe, FaHandRock, FaHashtag, FaKey, FaPython, FaQrcode, FaQuestionCircle, FaStar, FaStopwatch, FaTools, FaUserSecret, FaVideo } from "react-icons/fa";
 import { SiPython } from "react-icons/si";
 
 const Python = () => {
+
+  
+
   useEffect(() => {
     Prism.highlightAll();
   }, []);
+  
+  const [selectedProject, setSelectedProject] = useState(null);
+  
+  const pythonResources = [
+    { name: "Official Python Docs", url: "https://docs.python.org/3/", icon: <FaBook /> },
+    { name: "Real Python", url: "https://realpython.com/", icon: <FaGlobe /> },
+    { name: "Python YouTube Tutorials", url: "https://www.youtube.com/results?search_query=python+tutorial", icon: <FaVideo /> },
+    { name: "Awesome Python", url: "https://github.com/vinta/awesome-python", icon: <FaCode /> },
+    { name: "GeeksforGeeks Python", url: "https://www.geeksforgeeks.org/python-programming-language/", icon: <FaBook /> },
+    { name: "Full Stack Python", url: "https://www.fullstackpython.com/", icon: <FaGlobe /> },
+  ];
 
   const oneLiners = {
     Strings: [
@@ -115,6 +129,19 @@ const Python = () => {
     ],
   };
 
+  const INITIAL_VISIBLE_ONELINERS = 2;
+  const [visibleOneliners, setVisibleOneliners] = useState(INITIAL_VISIBLE_ONELINERS);
+  const [expandedOneliners, setExpandedOneliners] = useState(false);
+
+  const toggleOnelinersView = () => {
+    if (expandedOneliners) {
+      setVisibleOneliners(INITIAL_VISIBLE_ONELINERS);
+    } else {
+      setVisibleOneliners(Object.keys(oneLiners).length);
+    }
+    setExpandedOneliners(!expandedOneliners);
+  };
+
 
   const [copied, setCopied] = useState({}); // Track copied state per category
 
@@ -126,14 +153,14 @@ const Python = () => {
 
 
   const projects = [
-    { name: "Mad Libs", difficulty: 1, icon: <FaBrain className="text-yellow-300 text-2xl" /> },
-    { name: "Guess the Number Game", difficulty: 2, icon: <FaHashtag className="text-green-300 text-2xl" /> },
-    { name: "Rock, Paper, Scissors", difficulty: 2, icon: <FaHandRock className="text-red-400 text-2xl" /> },
-    { name: "Hangman", difficulty: 3, icon: <FaUserSecret className="text-purple-300 text-2xl" /> },
-    { name: "Countdown Timer", difficulty: 3, icon: <FaStopwatch className="text-blue-400 text-2xl" /> },
-    { name: "Password Generator", difficulty: 4, icon: <FaKey className="text-orange-300 text-2xl" /> },
-    { name: "QR Code Encoder / Decoder", difficulty: 4, icon: <FaQrcode className="text-gray-300 text-2xl" /> },
-    { name: "Tic-Tac-Toe", difficulty: 5, icon: <FaGamepad className="text-pink-400 text-2xl" /> }
+    { name: "Mad Libs", difficulty: 1, icon: <FaBrain className="text-yellow-300 text-2xl" />, tutorial: "This is a Mad Libs tutorial..." },
+    { name: "Guess the Number Game", difficulty: 2, icon: <FaHashtag className="text-green-300 text-2xl" />, tutorial: "This is a Guess the Number tutorial..." },
+    { name: "Rock, Paper, Scissors", difficulty: 2, icon: <FaHandRock className="text-red-400 text-2xl" />, tutorial: "This is a Rock, Paper, Scissors tutorial..." },
+    { name: "Hangman", difficulty: 3, icon: <FaUserSecret className="text-purple-300 text-2xl" />, tutorial: "This is a Hangman tutorial..." },
+    { name: "Countdown Timer", difficulty: 3, icon: <FaStopwatch className="text-blue-400 text-2xl" />, tutorial: "This is a Countdown Timer tutorial..." },
+    { name: "Password Generator", difficulty: 4, icon: <FaKey className="text-orange-300 text-2xl" />, tutorial: "This is a Password Generator tutorial..." },
+    { name: "QR Code Encoder / Decoder", difficulty: 4, icon: <FaQrcode className="text-gray-300 text-2xl" />, tutorial: "This is a QR Code tutorial..." },
+    { name: "Tic-Tac-Toe", difficulty: 5, icon: <FaGamepad className="text-pink-400 text-2xl" />, tutorial: "This is a Tic-Tac-Toe tutorial..." }
   ];
 
   const sections = [
@@ -142,7 +169,15 @@ const Python = () => {
       title: "Learning basics",
       content: (
         <>
-          <div>something</div>
+          <div>
+            <h3 className="text-xl font-semibold">What is Python?</h3>
+            <p className="text-sm">Python is a high-level, interpreted programming language known for its simplicity and readability. It is widely used in web development, data science, automation, AI, and more.
+
+</p>
+            <p>Created by <em><b>Guido van Rossum</b></em></p>
+            <div><img src="/images/guido-van-rossum.jpg" alt="author" /></div>
+            <p>Released in <em><b>1991</b></em></p>
+          </div>
         </>
       ),
     }
@@ -213,8 +248,10 @@ a, b = b, a  # Now a = 10, b = 5`,
 
 
   return (
+    
     <div>
       <div className="">
+        
         <div className="my-10">
           <div className="flex items-center gap-2">
             <FaBookOpen className="text-blue-500 text-3xl" />
@@ -227,10 +264,10 @@ a, b = b, a  # Now a = 10, b = 5`,
             {/* Sidebar */}
             <div
 
-              className="rounded-lg"
+              className="rounded-lg w-72"
             >
               <h3 className="text-2xl font-bold py-2 border-b-2 mb-4">
-                Python for beginners
+                Python Tutorial
               </h3>
               <ul className="list-disc pl-5 text-lg">
                 {sections.map((section) => (
@@ -252,50 +289,46 @@ a, b = b, a  # Now a = 10, b = 5`,
             </div>
             {/* Content goes here */}
           </div>
-
-
         </div>
 
-        <div className="my-10 rounded-xl ">
-          {/* Header */}
-          <div className="flex items-center gap-3 mb-5">
-            <FaBolt className="text-blue-500 text-4xl" />
-            <h2 className="text-blue-500 font-bold md:text-3xl">One-Liners</h2>
-          </div>
+        <div>
+      <div className="my-10 rounded-xl">
+        <div className="flex items-center gap-3 mb-5">
+          <FaBolt className="text-blue-500 text-4xl" />
+          <h2 className="text-blue-500 font-bold md:text-3xl">One-Liners</h2>
+        </div>
 
-          {/* Categories */}
-          {Object.entries(oneLiners).map(([category, items]) => (
-            <div key={category} className="mb-6">
-              <hr className="border border-blue-500 mb-4"/>
-              <h3 className="font-bold mb-3 md:text-2xl">{category}</h3>
-              <div className="flex-wrap flex gap-10 items-center">
-                {items.map((item, index) => (
-                  <div key={index} className="">
-                    {/* Code & Copy Button */}
-                    <div className="flex justify-between items-center bg-blue-900 text-white p-3 rounded-lg relative">
-                      <pre className="overflow-x-auto w-full">
-                        <code className="language-python">{item.code}</code>
-                      </pre>
-                      <button
-                        className="ml-3 text-white hover:text-gray-300 transition"
-                        onClick={() => handleCopy(item.code, category, index)}
-                      >
-                        {copied[category] === index ? <FaCheck className="text-green-400" /> : <FaCopy />}
-                      </button>
-
-                    </div>
-
-                    {/* Description */}
-                    <p className="text-blue-500 mt-2 font-semibold text-lg">{item.description}</p>
-
-                    {/* Walkthrough */}
-                    <p className="text-sm">{item.walkthrough}</p>
+        {Object.entries(oneLiners).slice(0, visibleOneliners).map(([category, items]) => (
+          <div key={category} className="mb-6">
+            <h3 className="font-bold mb-3 md:text-2xl">{category}</h3>
+            <div className="flex-wrap flex gap-10 items-center">
+              {items.map((item, index) => (
+                <div key={index}>
+                  <div className="flex justify-between items-center bg-blue-900 text-white p-3 rounded-lg relative">
+                    <pre className="overflow-x-auto w-full">
+                      <code className="language-python">{item.code}</code>
+                    </pre>
+                    <button className="ml-3 text-white hover:text-gray-300 transition">
+                      <FaCopy />
+                    </button>
                   </div>
-                ))}
-              </div>
+                  <p className="text-blue-500 mt-2 font-semibold text-lg">{item.description}</p>
+                  <p className="text-sm">{item.walkthrough}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+
+        {Object.keys(oneLiners).length > INITIAL_VISIBLE_ONELINERS && (
+          <div className="text-center my-5">
+            <button onClick={toggleOnelinersView} className="bg-blue-900 text-white px-5 py-2 rounded-xl">
+              {expandedOneliners ? "View Less" : "View More..."}
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
 
         <div className="rounded-xl my-10">
       {/* Header */}
@@ -375,6 +408,28 @@ a, b = b, a  # Now a = 10, b = 5`,
             ))}
           </ul>
         </div>
+
+        <div className="my-10 rounded-xl">
+      <div className="flex items-center gap-3 mb-5">
+        <FaPython className="text-blue-500 text-4xl" />
+        <h2 className="text-blue-500 font-bold md:text-3xl">Python Resources</h2>
+      </div>
+      <ul>
+        {pythonResources.map((resource, index) => (
+          <li key={index} className="mb-3">
+            <a
+              href={resource.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-lg text-blue-500 hover:underline"
+            >
+              {resource.icon} {resource.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+      
+    </div>
 
 
       </div>
