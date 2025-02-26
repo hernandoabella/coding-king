@@ -65,9 +65,7 @@ function Main() {
             )}
           </div>
 
-          <hr className="border border-blue-500"/>
-
-          <div className="p-5 mt-10">
+          <div className="">
             {activeButton === "Python" && <Python />}
           </div>
 
