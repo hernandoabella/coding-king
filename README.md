@@ -20,4 +20,4 @@
    git clone https://github.com/hernandoabella/coding_king.git
    cd coding_king
 
-Made with love by **@hernandoabella**
+Made with *<3* by **@hernandoabella**
