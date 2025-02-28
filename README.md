@@ -2,7 +2,7 @@
 **Quick resources for conquering the world of coding**
 
 ### Supported Languages:
-- [Python](./programing-languages/python.md)
+- [Python](./programing-languages/python/python.md)
 - JavaScript
 - Java
 - C#
