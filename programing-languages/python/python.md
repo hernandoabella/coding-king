@@ -89,3 +89,11 @@ dict1 = {'a': 1, 'b': 2}
 - Password Generator
 - QR Code Encoder / Decoder
 - Tic-Tac-Toe
+
+## Python Resources
+- [Official Python Docs](https://docs.python.org/3/)
+- [Real Python](https://realpython.com/)
+- [Python YouTube Tutorials](https://www.youtube.com/results?search_query=python+tutorial)
+- [Awesome Python](https://github.com/vinta/awesome-python)
+- [GeeksforGeeks Python](https://www.geeksforgeeks.org/python-programming-language-tutorial/)
+- [Full Stack Python](https://www.fullstackpython.com/)
