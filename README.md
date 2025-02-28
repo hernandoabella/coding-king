@@ -2,7 +2,7 @@
 **Quick resources for conquering the world of coding**
 
 ### Supported Languages:
-- Python
+- [Python](./programing-languages/python.md)
 - JavaScript
 - Java
 - C#
@@ -17,7 +17,7 @@
 
 2. **Clone Your Fork**  
    ```bash
-   git clone https://github.com/hernandoabella/coding_king.git
-   cd coding_king
+   git clone https://github.com/hernandoabella/coding-king.git
+   cd coding-king
 
 Made with *<3* by **@hernandoabella**
