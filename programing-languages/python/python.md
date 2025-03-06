@@ -1,13 +1,13 @@
 # Python
 
-table of contents
+Table of contents
 
 ## Learning the basics
 
 ### What's Python
 Python is a high-level, interpreted programming language known for its simplicity and readability. It is widely used in web development, data science, automation, AI, and more.
 
-##
+[Python Tutorial](./)
 
 
 ## One-Liners
@@ -15,15 +15,7 @@ A one-liner is a single line of code that performs a function.
 
 ### Strings
 
-### Math
- 
-### Lists
-
-### Dictionaries
-
-### Datetime
-
-### Randomization
+[+ View more](./)
 
 ## Tips & Tricks
 
@@ -58,27 +50,7 @@ my_list = []
 
 **Why?:** An empty list evaluates to False, making the condition cleaner.
 
-
-### Find the Most Frequent Eleent in a List
-Use the `max()` function with `key=list.count` to find the most frequent element.
-
-```
-nums = [1, 3, 3, 7, 3, 2, 2]
-  most_frequent = max(set(nums), key=nums.count)  # Output: 3
-```
-
-**Why?:** This method avoids extra loops and is more readable.
-
-### Merge Two Dictionaries
-Use the `|` operator (Python 3.9+) or `update()` to merge dictionaries.
-
-```
-dict1 = {'a': 1, 'b': 2}
-  dict2 = {'c': 3, 'd': 4}
-  merged = dict1 | dict2  # Output: {'a': 1, 'b': 2, 'c': 3, 'd': 4}
-```
-
-**Why?:** This is the most modern and concise way to merge dictionaries.
+[+ More tricks?](./python-tricks.md)
 
 ## Python Projects
 - Mad Libs
