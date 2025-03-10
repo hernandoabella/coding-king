@@ -1,5 +1,5 @@
 # Coding King 🤴
-**Quick resources for conquering the world of coding**
+Quick resources for conquering the world of coding
 
 ### Supported Languages:
 - [Python](./programing-languages/python/python.md)
