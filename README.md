@@ -9,4 +9,4 @@ Quick resources for conquering the world of coding
 - C++
 - C#
 
-Made with ❤️ by [*@hernandoabella*](https://www.github.com/hernandoabella)
+Made with ❤️ by [@hernandoabella](https://www.github.com/hernandoabella)
