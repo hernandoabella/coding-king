@@ -16,3 +16,33 @@ Python is a powerful, high-level programming language known for its readability 
 - **Cybersecurity** – Frequently used for writing tools, scanning vulnerabilities, and building automation for security tasks.
 - **Game Development** – Libraries like Pygame allow developers to prototype and build simple games.
 - **Internet of Things (IoT)** – Works with Raspberry Pi and microcontrollers to create hardware-based projects.
+
+### Installing Python
+
+#### Windows
+1. Download Python from the official Python website.
+2. Run the installer and check "Add Python to PATH".
+3. Click Install and wait for completion.
+4. Open Command Prompt and type:
+```
+python --version
+```
+#### MacOS
+1. Open Terminal and type: (Requires Homebrew).
+```
+brew install python
+```
+2. Verify the installation with:
+```
+python3 --version
+```
+
+#### Linux (Debian-based)
+1. Open Terminal and type:
+```
+sudo apt update && sudo apt install python3
+```
+2. Verify with:
+```
+python3 --version
+```
