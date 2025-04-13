@@ -1,10 +1,10 @@
 # CodingKing 🤴
 Quick resources for conquering the world of coding 
-
-### Supported Languages:
+### What would you like to learn?
 - [Python](./programing-languages/python/python.md)
 - [JavaScript](#)
 - [Java](#)
+- [Go](#)
 - [C](#)
 - [C++](#)
 - [C#](#)
