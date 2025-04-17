@@ -1,5 +1,5 @@
 # Python Tutorial
-
+## Introduction
 ### What is Python?
 > Python is a high-level, interpreted programming language known for its simplicity and readability. It is widely used in web development, data science, automation, AI, and more.
 
@@ -7,6 +7,16 @@
 
 *Created by Guido van Rossum*
 *Released in 1991*
+
+### History of Python
+- Created by Guido van Rossum in 1989.
+- Officially released in 1991 as version 0.9.0.
+- Named after the TV show “Monty Python’s Flying Circus” — not the snake! 🐍😂
+- Current stable version (as of 2025): Python 3.x
+
+### Milestones:
+- Python 2.0 (2000): Introduced list comprehensions, garbage collection
+- Python 3.0 (2008): Not backward compatible with Python 2
 
 ### What's Python Used for?
 Python is a powerful, high-level programming language known for its readability and versatility. It's used in a wide range of fields, including:
@@ -48,3 +58,43 @@ sudo apt update && sudo apt install python3
 ```
 python3 --version
 ```
+
+### Setting Up IDEs (VS Code, PyCharm, Jupyter)
+#### VS Code (Recommended for Beginners)
+- Install from [https://code.visualstudio.com](https://code.visualstudio.com)
+- Install the Python extension (Microsoft)
+Create .py file and run it using terminal or “Run” button
+#### Jupyter Notebook
+- Great for data science and experimentation
+- Install via pip:
+```
+pip install notebook
+jupyter notebook
+```
+#### PyCharm
+- Install from https://www.jetbrains.com/pycharm/
+- Professional (paid) vs Community (free)
+- Feature-rich with code completion and debugger
+
+### Your First Python Program: Hello, World!
+Let’s write your very first Python program:
+1. Open any code editor (or terminal).
+2. Create a file called hello.py.
+3. Type:
+```
+print("Hello, World!")
+```
+4. Save and run it:
+```
+python hello.py
+```
+Output:
+```
+Hello, World!
+```
+You’ve just written your first Python program! 🎉
+
+
+
+
+
