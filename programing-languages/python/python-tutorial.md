@@ -94,6 +94,7 @@ Hello, World!
 ```
 You’ve just written your first Python program! 🎉
 
+## Python Basics
 
 
 
