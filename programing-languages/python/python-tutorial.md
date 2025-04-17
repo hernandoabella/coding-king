@@ -78,17 +78,17 @@ jupyter notebook
 
 ### Your First Python Program: Hello, World!
 Let’s write your very first Python program:
-1. Open any code editor (or terminal).
-2. Create a file called hello.py.
-3. Type:
+#### 1. Open any code editor (or terminal).
+#### 2. Create a file called hello.py.
+#### 3. Type:
 ```
 print("Hello, World!")
 ```
-4. Save and run it:
+#### 4. Save and run it:
 ```
 python hello.py
 ```
-Output:
+#### Output:
 ```
 Hello, World!
 ```
