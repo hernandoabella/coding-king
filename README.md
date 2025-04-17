@@ -1,5 +1,4 @@
-# Coding King 🤴
-Quick resources for conquering the world of coding 
+![GitHub Banners (9)](https://github.com/user-attachments/assets/11c1d908-b651-475a-8df9-2078fc7b4eb6)
 
 ### What would you like to learn?
 - [Python](./programing-languages/python/python.md)
