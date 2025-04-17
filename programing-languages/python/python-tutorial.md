@@ -3,6 +3,8 @@
 ### What is Python?
 > Python is a high-level, interpreted programming language known for its simplicity and readability. It is widely used in web development, data science, automation, AI, and more.
 
+![Guido-portrait-2014-drc](https://github.com/user-attachments/assets/c223c4f8-e07e-4336-bc4f-3e4e1d470914)
+
 *Created by Guido van Rossum*
 *Released in 1991*
 
