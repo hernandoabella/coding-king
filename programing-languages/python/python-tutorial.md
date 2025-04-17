@@ -30,21 +30,21 @@ Python is a powerful, high-level programming language known for its readability 
 python --version
 ```
 #### MacOS
-1. Open Terminal and type: (Requires Homebrew).
+##### 1. Open Terminal and type: (Requires Homebrew).
 ```
 brew install python
 ```
-2. Verify the installation with:
+##### 2. Verify the installation with:
 ```
 python3 --version
 ```
 
 #### Linux (Debian-based)
-1. Open Terminal and type:
+##### 1. Open Terminal and type:
 ```
 sudo apt update && sudo apt install python3
 ```
-2. Verify with:
+##### 2. Verify with:
 ```
 python3 --version
 ```
