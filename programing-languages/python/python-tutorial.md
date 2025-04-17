@@ -14,10 +14,6 @@
 - Named after the TV show “Monty Python’s Flying Circus” — not the snake! 🐍😂
 - Current stable version (as of 2025): Python 3.x
 
-### Milestones:
-- Python 2.0 (2000): Introduced list comprehensions, garbage collection
-- Python 3.0 (2008): Not backward compatible with Python 2
-
 ### What's Python Used for?
 Python is a powerful, high-level programming language known for its readability and versatility. It's used in a wide range of fields, including:
 
