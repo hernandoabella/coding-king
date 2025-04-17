@@ -1,5 +1,6 @@
-# CodingKing 🤴
+# Coding King 🤴
 Quick resources for conquering the world of coding 
+
 ### What would you like to learn?
 - [Python](./programing-languages/python/python.md)
 - [JavaScript](#)
