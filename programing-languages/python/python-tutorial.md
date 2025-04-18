@@ -88,9 +88,100 @@ python hello.py
 ```python
 Hello, World!
 ```
+
 You’ve just written your first Python program! 🎉
 
 ## Python Basics
+### Comments:
+Used to explain code and make it more readable. Ignored during execution.
+
+**Single-line comment:**
+```python
+# This is a single-line comment
+print("Hello")
+```
+
+**Multi-line comment (not official, but using multiple # lines or strings):**
+```python
+# This is a
+# multi-line
+# comment
+```
+
+### Docstrings:
+Used to describe modules, functions, classes, or methods.
+```python
+def greet():
+    """This function prints a greeting message."""
+    print("Hello!")
+```
+You can access the docstring like this:
+```python
+print(greet.__doc__)
+```
+
+### Declaring Variables:
+```python
+name = "Alice"       # string
+age = 25             # integer
+height = 5.7         # float
+is_student = True    # boolean
+```
+
+### Common Data Types:
+| Type | Example |
+| ---- | ------- |
+| int | `10`, `-3` |
+| float	 | `3.14`, `-0.5` |
+| str | `"hello"` |
+| bool | `True`, `False` |
+| list | `[1, 2, 3]` |
+| tuple | `(1, 2, 3)` |
+| dict | `{"a": 1, "b": 2}` |
+
+- Python is dynamically typed, so you don’t need to declare the type explicitly.
+
+### Type Casting
+Convert values between data types:
+```python
+x = "10"
+y = int(x)      # str to int
+z = float(x)    # str to float
+s = str(25)     # int to str
+
+print(type(y))  # <class 'int'>
+```
+- Common casting functions: `int()`, `float()`, `str()`, `bool()`
+
+### Input and Output
+#### Output with print()
+```python
+print("Hello", "World", sep=", ", end="!\n")  # Hello, World!
+```
+#### Input with input()
+```python
+name = input("Enter your name: ")
+print("Hello, " + name)
+```
+`input()` always returns a string. Cast it if needed:
+```python
+age = int(input("Enter your age: "))
+```
+
+### Arithmetic Operations
+
+| Operator | Description | Example (`a = 10`, `b = 3`) | Result |
+| -------- | ----------- | ---------------------------- | ------ |
+| `+` | Addition | `a + b` | `13` |
+| `-` | Subtraction | `a - b` | `7` |
+| `*` | Multiplication | `a * b` | `30` |
+| `/` | Division | `a / b` | `3.33` |
+| `//` | Floor Division | `a // b` | `3` |
+| `%` | Modulus | `a % b` | `1` |
+| `**` | Exponentiation	 | `a ** b` | `1000` |
+
+
+
 
 
 
