@@ -32,7 +32,7 @@ Python is a powerful, high-level programming language known for its readability 
 2. Run the installer and check "Add Python to PATH".
 3. Click Install and wait for completion.
 4. Open Command Prompt and type:
-```
+```bash
 python --version
 ```
 #### MacOS
@@ -41,7 +41,7 @@ python --version
 brew install python
 ```
 ##### 2. Verify the installation with:
-```
+```bash
 python3 --version
 ```
 
@@ -62,8 +62,8 @@ python3 --version
 Create .py file and run it using terminal or “Run” button
 #### Jupyter Notebook
 - Great for data science and experimentation
-- Install via pip:
-```
+- **Install via pip:**
+```bash
 pip install notebook
 jupyter notebook
 ```
@@ -75,17 +75,17 @@ jupyter notebook
 ### Your First Python Program: Hello, World!
 Let’s write your very first Python program:
 #### 1. Open any code editor (or terminal).
-#### 2. Create a file called hello.py.
+#### 2. Create a file called `hello.py`.
 #### 3. Type:
-```
+```python
 print("Hello, World!")
 ```
 #### 4. Save and run it:
-```
+```bash
 python hello.py
 ```
 #### Output:
-```
+```python
 Hello, World!
 ```
 You’ve just written your first Python program! 🎉
