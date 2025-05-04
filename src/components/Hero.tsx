@@ -73,19 +73,16 @@ function Hero() {
     }, []);
 
     return (
-        <div className="flex justify-center items-center min-h-[80vh] px-6 text-center bg-base-100 relative overflow-hidden">
-            {/* Glow Background */}
-            <div className="absolute w-[500px] h-[500px] bg-purple-500 opacity-20 rounded-full blur-3xl top-[-100px] left-[-100px] z-0"></div>
-            <div className="absolute w-[500px] h-[500px] bg-purple-500 opacity-20 rounded-full blur-3xl top-[500px] left-[500px] z-0"></div>
+        <div className="items-center min-h-[80vh text-center  relative overflow-hidden">
+            
             <div
-                className="z-10 max-w-3xl"
-            >
+                className="max-w-3xl">
                 <div className="text-4xl md:text-6xl font-extrabold tracking-wider">
                     {textElements}
                 </div>
 
-                <p className="mt-6 text-xl md:text-2xl">
-                    Quick resources for <em className="italic text-purple-500">conquering the world of coding</em>
+                <p className="mt-6 text-xl md:text-2xl  ">
+                    Quick resources for <b className="text-blue-500 underline-offset-8 italic underline">conquering the world of coding</b>
                 </p>
             </div>
         </div>
