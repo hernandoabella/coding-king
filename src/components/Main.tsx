@@ -5,6 +5,7 @@ import {
   Python,
 } from "./ImportUI";
 import { buttonsData } from "./buttonsData";
+import Header from "./Header";
 
 function Main() {
   const [activeButton, setActiveButton] = useState("");
@@ -36,6 +37,7 @@ function Main() {
     <div>
       <div className="flex">
         <div className="content w-full">
+          <Header />
           <Hero />
 
           <div className="flex flex-wrap m-10 mx-auto justify-center">
