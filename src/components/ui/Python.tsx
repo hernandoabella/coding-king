@@ -1841,14 +1841,14 @@ a, b = b, a  # Now a = 10, b = 5`,
 
         <div className="my-10">
           <div className="flex items-center gap-2">
-            <FaBookOpen className="text-blue-500 text-3xl" />
-            <h2 className="text-blue-500 font-bold md:text-3xl my-2">Learning the Basics</h2>
+            
+            
           </div>
 
           <div className="flex flex-col md:flex-row">
             {/* Sidebar */}
             <div className="rounded-lg">
-              <h3 className="text-2xl font-bold py-2 border-b-2 mb-4">Python Tutorial</h3>
+            <FaBookOpen className="text-blue-500 text-3xl" /><h3 className="text-2xl font-bold py-2 border-b-2 mb-4">Python Tutorial</h3>
               <ul className="list-disc pl-5 text-lg">
                 {sections.map((section) => (
                   <li key={section.id}>
