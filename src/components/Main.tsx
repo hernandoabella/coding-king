@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import Hero from "./Hero";
 import Footer from "./Footer";
 import Header from "./Header";
-import { Python, JavaScript, Java, C } from "./ImportUI"; // Add other components here if needed
+import { Python, JavaScript, Java, C, Cpp, Csharp } from "./ImportUI"; 
 import { buttonsData } from "./buttonsData";
+import PHP from "./ui/PHP";
 
 
 function Main() {
@@ -41,7 +42,12 @@ function Main() {
         return <Java />;
         case "C":
         return <C />;
-      // Add more cases like "Java", "C++", etc. as you create components
+        case "Cpp":
+        return <Cpp />;
+        case "Csharp":
+        return <Csharp />;
+        case "PHP":
+        return <PHP />;
       default:
         return <p className="text-center text-gray-500">Select a tool to display content.</p>;
     }
