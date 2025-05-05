@@ -1,258 +1,328 @@
-import React, { useState, useEffect } from "react";
-import Prism from "prismjs";
-import "prismjs/components/prism-cpp";
-import "prismjs/themes/prism-tomorrow.css";
-import {  FaChevronRight } from "react-icons/fa";
-import { PiFileCppFill } from "react-icons/pi";
+import React, { useState } from 'react';
+import { FaChevronRight, FaClipboard, FaCheck } from 'react-icons/fa';
+import { SiC, SiCplusplus } from "react-icons/si";
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 const tutorialData = [
   {
-    id: "basics",
-    title: "C++ Basics",
+    id: 'basics',
+    title: 'C++ Basics',
     subtopics: [
       {
-        id: "variables",
-        title: "Variables",
-        description: "Learn how to declare and use variables in C++.",
-        content: (
-          <pre>
-            <code className="language-cpp">{`int x = 5;\nstd::string y = "Hello";\nstd::cout << x << " " << y << std::endl;`}</code>
-          </pre>
-        ),
+        id: 'hello-world',
+        title: 'Hello World',
+        description: 'Your first C++ program.',
+        content: `#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}`,
       },
       {
-        id: "data-types",
-        title: "Data Types",
-        description: "Understand C++'s built-in data types such as int, float, char, and double.",
-        content: (
-          <pre>
-            <code className="language-cpp">{`int a = 10;\nfloat b = 3.14f;\nchar c = 'A';\ndouble d = 9.81;`}</code>
-          </pre>
-        ),
-      },
-      {
-        id: "type-casting",
-        title: "Type Casting",
-        description: "Convert between data types using casting.",
-        content: (
-          <pre>
-            <code className="language-cpp">{`int x = 10;\ndouble y = static_cast<double>(x);\nchar c = static_cast<char>(65);`}</code>
-          </pre>
-        ),
-      },
-      {
-        id: "input-output",
-        title: "User Input & Output",
-        description: "Use cin and cout for user interaction.",
-        content: (
-          <pre>
-            <code className="language-cpp">{`std::string name;\nstd::cout << "Enter your name: ";\nstd::cin >> name;\nstd::cout << "Hello, " << name << std::endl;`}</code>
-          </pre>
-        ),
+        id: 'variables',
+        title: 'Variables & Data Types',
+        description: 'Declaring variables of different types.',
+        content: `#include <iostream>
+
+int main() {
+    int age = 25;
+    float height = 5.9;
+    char grade = 'A';
+
+    std::cout << "Age: " << age << std::endl;
+    std::cout << "Height: " << height << std::endl;
+    std::cout << "Grade: " << grade << std::endl;
+
+    return 0;
+}`,
       },
     ],
   },
   {
-    id: "control",
-    title: "Control Flow",
+    id: 'control-flow',
+    title: 'Control Flow',
     subtopics: [
       {
-        id: "if-else",
-        title: "If / Else",
-        description: "Make decisions using if, else if, and else.",
-        content: (
-          <pre>
-            <code className="language-cpp">{`int x = 10;\nif (x > 5) {\n    std::cout << "Greater than 5" << std::endl;\n} else if (x == 5) {\n    std::cout << "Equal to 5" << std::endl;\n} else {\n    std::cout << "Less than 5" << std::endl;\n}`}</code>
-          </pre>
-        ),
+        id: 'if-else',
+        title: 'If-Else Statements',
+        description: 'Make decisions with if-else.',
+        content: `#include <iostream>
+
+int main() {
+    int score = 70;
+
+    if (score >= 90) {
+        std::cout << "Excellent" << std::endl;
+    } else if (score >= 60) {
+        std::cout << "Passed" << std::endl;
+    } else {
+        std::cout << "Failed" << std::endl;
+    }
+
+    return 0;
+}`,
       },
       {
-        id: "loops",
-        title: "Loops",
-        description: "Repeat actions using for and while loops.",
-        content: (
-          <pre>
-            <code className="language-cpp">{`for (int i = 0; i < 5; i++) {\n    std::cout << i << std::endl;\n}\n\nint count = 0;\nwhile (count < 5) {\n    std::cout << count << std::endl;\n    count++;\n}`}</code>
-          </pre>
-        ),
-      },
-      {
-        id: "break-continue",
-        title: "Break & Continue",
-        description: "Control the flow of loops using break and continue.",
-        content: (
-          <pre>
-            <code className="language-cpp">{`for (int i = 0; i < 5; i++) {\n    if (i == 3) {\n        continue;\n    }\n    std::cout << i << std::endl;\n}`}</code>
-          </pre>
-        ),
+        id: 'switch',
+        title: 'Switch Statement',
+        description: 'Control flow with switch-case.',
+        content: `#include <iostream>
+
+int main() {
+    int day = 2;
+
+    switch(day) {
+        case 1:
+            std::cout << "Monday" << std::endl;
+            break;
+        case 2:
+            std::cout << "Tuesday" << std::endl;
+            break;
+        default:
+            std::cout << "Other Day" << std::endl;
+    }
+
+    return 0;
+}`,
       },
     ],
   },
   {
-    id: "functions",
-    title: "Functions",
+    id: 'loops',
+    title: 'Loops',
     subtopics: [
       {
-        id: "defining-functions",
-        title: "Defining Functions",
-        description: "Learn how to define and call functions in C++.",
-        content: (
-          <pre>
-            <code className="language-cpp">{`#include <iostream>\n\nvoid greet(const std::string& name) {\n    std::cout << "Hello, " << name << std::endl;\n}\n\ngreet("Alice");`}</code>
-          </pre>
-        ),
+        id: 'for-loop',
+        title: 'For Loop',
+        description: 'Loop using for syntax.',
+        content: `#include <iostream>
+
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        std::cout << "i = " << i << std::endl;
+    }
+
+    return 0;
+}`,
       },
       {
-        id: "arguments",
-        title: "Function Arguments",
-        description: "Understand how to pass arguments to functions.",
-        content: (
-          <pre>
-            <code className="language-cpp">{`int add(int a, int b) {\n    return a + b;\n}\n\nint result = add(5, 3);\nstd::cout << result << std::endl;`}</code>
-          </pre>
-        ),
+        id: 'while-loop',
+        title: 'While Loop',
+        description: 'Loop using while.',
+        content: `#include <iostream>
+
+int main() {
+    int i = 1;
+    while (i <= 5) {
+        std::cout << "i = " << i << std::endl;
+        i++;
+    }
+
+    return 0;
+}`,
       },
     ],
   },
   {
-    id: "collections",
-    title: "Arrays and Structs",
+    id: 'functions',
+    title: 'Functions',
     subtopics: [
       {
-        id: "arrays",
-        title: "Arrays",
-        description: "Use arrays to store sequences of elements.",
-        content: (
-          <pre>
-            <code className="language-cpp">{`int nums[] = {1, 2, 3, 4};\nstd::cout << nums[2] << std::endl;`}</code>
-          </pre>
-        ),
+        id: 'function-definition',
+        title: 'Defining Functions',
+        description: 'Create and call functions.',
+        content: `#include <iostream>
+
+void greet(std::string name) {
+    std::cout << "Hello, " << name << "!" << std::endl;
+}
+
+int main() {
+    greet("Alice");
+    return 0;
+}`,
       },
       {
-        id: "structs",
-        title: "Structs",
-        description: "Use structs to group different data types.",
-        content: (
-          <pre>
-            <code className="language-cpp">{`struct Person {\n    std::string name;\n    int age;\n};\n\nPerson p = {"Alice", 25};\nstd::cout << p.name << " is " << p.age << " years old." << std::endl;`}</code>
-          </pre>
-        ),
+        id: 'return-value',
+        title: 'Functions with Return Values',
+        description: 'Returning values from functions.',
+        content: `#include <iostream>
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int result = add(5, 3);
+    std::cout << "Sum = " << result << std::endl;
+    return 0;
+}`,
       },
     ],
   },
   {
-    id: "errors",
-    title: "Error Handling",
+    id: 'arrays-pointers',
+    title: 'Arrays & Pointers',
     subtopics: [
       {
-        id: "return-codes",
-        title: "Return Codes",
-        description: "Use return values to indicate errors.",
-        content: (
-          <pre>
-            <code className="language-cpp">{`bool divide(int a, int b, int& result) {\n    if (b == 0) return false;\n    result = a / b;\n    return true;\n}\n\nint r;\nif (divide(10, 0, r)) {\n    std::cout << "Result: " << r << std::endl;\n} else {\n    std::cout << "Division by zero!" << std::endl;\n}`}</code>
-          </pre>
-        ),
+        id: 'arrays',
+        title: 'Arrays',
+        description: 'Working with arrays in C++.',
+        content: `#include <iostream>
+
+int main() {
+    int numbers[] = {10, 20, 30};
+
+    for (int i = 0; i < 3; i++) {
+        std::cout << numbers[i] << std::endl;
+    }
+
+    return 0;
+}`,
+      },
+      {
+        id: 'pointers',
+        title: 'Pointers',
+        description: 'Understanding pointers and memory.',
+        content: `#include <iostream>
+
+int main() {
+    int num = 10;
+    int* p = &num;
+
+    std::cout << "Value: " << *p << std::endl;
+    std::cout << "Address: " << p << std::endl;
+
+    return 0;
+}`,
       },
     ],
   },
   {
-    id: "files",
-    title: "File Handling",
+    id: 'classes',
+    title: 'Classes & Objects',
     subtopics: [
       {
-        id: "read-file",
-        title: "Reading Files",
-        description: "Read text from files using ifstream.",
-        content: (
-          <pre>
-            <code className="language-cpp">{`#include <fstream>\n#include <iostream>\n\nstd::ifstream file("file.txt");\nstd::string line;\nif (file.is_open()) {\n    std::getline(file, line);\n    std::cout << line << std::endl;\n    file.close();\n}`}</code>
-          </pre>
-        ),
-      },
-      {
-        id: "write-file",
-        title: "Writing Files",
-        description: "Write text to files using ofstream.",
-        content: (
-          <pre>
-            <code className="language-cpp">{`#include <fstream>\n\nstd::ofstream file("file.txt");\nif (file.is_open()) {\n    file << "Hello, file!" << std::endl;\n    file.close();\n}`}</code>
-          </pre>
-        ),
+        id: 'classes',
+        title: 'Defining Classes',
+        description: 'Learn how to create classes and objects.',
+        content: `#include <iostream>
+
+class Car {
+public:
+    std::string make;
+    std::string model;
+
+    Car(std::string m, std::string mo) {
+        make = m;
+        model = mo;
+    }
+
+    void display() {
+        std::cout << "Make: " << make << ", Model: " << model << std::endl;
+    }
+};
+
+int main() {
+    Car car("Toyota", "Corolla");
+    car.display();
+    return 0;
+}`,
       },
     ],
   },
   {
-    id: "oop",
-    title: "Object-Oriented Basics",
+    id: 'inheritance',
+    title: 'Inheritance',
     subtopics: [
       {
-        id: "classes-objects",
-        title: "Classes and Objects",
-        description: "Learn how to use classes to encapsulate data and behavior.",
-        content: (
-          <pre>
-            <code className="language-cpp">{`class Car {\npublic:\n    std::string brand;\n    int speed;\n\n    void drive() {\n        std::cout << "Driving " << brand << " at " << speed << " km/h" << std::endl;\n    }\n};\n\nCar myCar;\nmyCar.brand = "Toyota";\nmyCar.speed = 80;\nmyCar.drive();`}</code>
-          </pre>
-        ),
+        id: 'inheritance-definition',
+        title: 'Inheritance in C++',
+        description: 'Learn how to use inheritance in C++.',
+        content: `#include <iostream>
+
+class Vehicle {
+public:
+    std::string make;
+    Vehicle(std::string m) : make(m) {}
+};
+
+class Car : public Vehicle {
+public:
+    std::string model;
+    Car(std::string m, std::string mod) : Vehicle(m), model(mod) {}
+
+    void display() {
+        std::cout << "Make: " << make << ", Model: " << model << std::endl;
+    }
+};
+
+int main() {
+    Car car("Toyota", "Corolla");
+    car.display();
+    return 0;
+}`,
       },
     ],
   },
 ];
 
-
 const CppTutorial = () => {
   const [activeSection, setActiveSection] = useState(tutorialData[0]);
   const [activeSubtopic, setActiveSubtopic] = useState(tutorialData[0].subtopics[0]);
+  const [copied, setCopied] = useState(false); // Track copied status
 
-  useEffect(() => {
-    Prism.highlightAll();
-  }, [activeSubtopic]);
+  const handleCopyToClipboard = () => {
+    navigator.clipboard.writeText(activeSubtopic.content)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000); // Reset to "Copy Code" after 2 seconds
+      })
+      .catch((err) => console.error('Failed to copy: ', err));
+  };
 
   return (
     <div className="flex flex-col lg:flex-row justify-center items-start mt-10 px-4">
-      {/* Glow bg effect */}
-      <div className=" w-[500px] h-[400px] bg-sky-500 opacity-20 rounded-full blur-3xl flex absolute justify-center item-center z-0"></div>
       {/* Sidebar */}
-      <aside className="z-10 w-full lg:w-[450px] max-h-[400px] overflow-auto p-4 bg-base-100 rounded-md  shadow-md mb-6 lg:mb-0 lg:mr-6">
+      <aside className="z-10 w-full lg:w-[450px] max-h-[400px] overflow-auto p-4 bg-base-100 rounded-md shadow-md mb-6 lg:mb-0 lg:mr-6">
         <div className="flex items-center gap-3 border-b border-gray-600 pb-4 mb-4">
-          <PiFileCppFill  className="text-3xl text-sky-500" />
+          <SiCplusplus className="text-3xl text-sky-500" />
           <h2 className="text-2xl font-semibold text-sky-500">C++ Tutorial</h2>
         </div>
-
         <ul className="space-y-2 text-sm">
           {tutorialData.map((section) => (
             <li key={section.id}>
               <button
-  onClick={() => {
-    setActiveSection(section);
-    setActiveSubtopic(section.subtopics[0]);
-  }}
-  className={`flex items-center w-full text-left px-3 py-2 rounded-md transition-colors ${
-    activeSection.id === section.id
-      ? "bg-sky-900 text-white"
-      : "text-gray-400 hover:text-gray-200 hover:bg-gray-800"
-  }`}
->
-  <FaChevronRight
-    className={`mr-2 transition-transform duration-300 ${
-      activeSection.id === section.id ? "rotate-90" : ""
-    }`}
-  />
-  {section.title}
-</button>
-
-              {/* Render subtopics if this section is active */}
+                onClick={() => {
+                  setActiveSection(section);
+                  setActiveSubtopic(section.subtopics[0]);
+                }}
+                className={`flex items-center w-full text-left px-3 py-2 rounded-md transition-colors ${
+                  activeSection.id === section.id
+                    ? 'bg-sky-900 text-white'
+                    : 'text-gray-400 hover:text-gray-200 hover:bg-gray-800'
+                }`}
+              >
+                <FaChevronRight
+                  className={`mr-2 transition-transform duration-300 ${
+                    activeSection.id === section.id ? 'rotate-90' : ''
+                  }`}
+                />
+                {section.title}
+              </button>
               {activeSection.id === section.id && (
                 <ul className="pl-6 mt-2 space-y-1">
                   {section.subtopics.map((sub) => (
                     <li key={sub.id}>
                       <button
                         onClick={() => setActiveSubtopic(sub)}
-                        className={`text-sm w-full text-left px-2 py-1 rounded-md transition-colors ${activeSubtopic.id === sub.id
-                            ? "bg-sky-700 text-white"
-                            : "text-gray-400 hover:bg-gray-700"
-                          }`}
+                        className={`text-sm w-full text-left px-2 py-1 rounded-md transition-colors ${
+                          activeSubtopic.id === sub.id
+                            ? 'bg-sky-700 text-white'
+                            : 'text-gray-400 hover:bg-gray-700'
+                        }`}
                       >
                         {sub.title}
                       </button>
@@ -263,18 +333,42 @@ const CppTutorial = () => {
             </li>
           ))}
         </ul>
-
       </aside>
 
-      {/* Main Content */}
+      {/* Main content */}
       <main className="z-10 flex-grow w-full p-4 overflow-y-auto bg-base-100 rounded-md shadow-md">
         <h3 className="text-2xl md:text-3xl font-bold text-sky-500">{activeSubtopic.title}</h3>
         <p className="my-4 md:text-lg">{activeSubtopic.description}</p>
-        <div className="prose prose-invert max-w-none">{activeSubtopic.content}</div>
+        
+        {/* Copy Button */}
+        <div className="flex justify-end">
+          <button
+            onClick={handleCopyToClipboard}
+            className="text-sm p-2 bg-sky-500 text-white flex items-center gap-2 hover:bg-sky-600"
+          >
+            {copied ? (
+              <>
+                <FaCheck /> Copied!
+              </>
+            ) : (
+              <>
+                <FaClipboard /> Copy Code
+              </>
+            )}
+          </button>
+        </div>
+        
+        {/* SyntaxHighlighter */}
+        <SyntaxHighlighter
+          language="cpp"
+          style={atomOneDark}
+          showLineNumbers={true} // This will enable line numbers
+        >
+          {activeSubtopic.content}
+        </SyntaxHighlighter>
       </main>
     </div>
   );
 };
-
 
 export default CppTutorial;
