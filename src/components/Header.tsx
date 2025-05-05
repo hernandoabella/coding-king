@@ -21,7 +21,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex flex-wrap justify-between items-center gap-6 p-6 sm:px-10 w-full">
+    <div className="flex flex-wrap justify-evenly items-center gap-6 p-6 sm:px-10 w-full">
       {/* Theme Toggle */}
       <div>
         <input
