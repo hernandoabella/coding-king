@@ -58,11 +58,11 @@ function Main() {
       <Header />
 
       {/* Main Content */}
-      <main className="flex-grow flex flex-col items-center justify-center px-4 py-10">
+      <main className="flex flex-col items-center justify-center relative">
         <Hero />
 
         {showButtons && (
-          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mt-6">
+          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mt-10">
             {buttonsData
               .find((cat) => cat.category === activeCategory)
               ?.buttons.map((button, index) => {
@@ -73,7 +73,7 @@ function Main() {
                   <button
                     key={index}
                     onClick={() => handleButtonClick(button.type)}
-                    className={`flex items-center gap-2 p-4 rounded-3xl transition duration-300 shadow-md hover:scale-105 font-semibold text-base
+                    className={`flex items-center gap-2 p-2 rounded-3xl transition duration-300 shadow-md hover:scale-105 font-semibold text-base
                     ${
                       isActive
                         ? isProgramming
