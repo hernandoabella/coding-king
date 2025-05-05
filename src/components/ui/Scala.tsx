@@ -389,7 +389,7 @@ const ScalaTutorial = () => {
         
         {/* SyntaxHighlighter */}
         <SyntaxHighlighter
-          language="ruby"
+          language="scala"
           style={atomOneDark}
           showLineNumbers={true} // This will enable line numbers
         >
