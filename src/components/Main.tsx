@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Hero from "./Hero";
 import Footer from "./Footer";
-import {
-  Python,
-} from "./ImportUI";
+import { Python } from "./ImportUI";
 import { buttonsData } from "./buttonsData";
 import Header from "./Header";
 
@@ -45,47 +43,43 @@ function Main() {
           <Hero />
 
           <div className="flex flex-col items-center justify-center px-4 py-10">
-  {showButtons && (
-    <div className="flex flex-wrap justify-center gap-4 max-w-4xl">
-      {buttonsData
-        .find((cat) => cat.category === activeCategory)
-        ?.buttons.map((button, index) => {
-          const isActive = activeButton === button.type;
-          const isProgramming = activeCategory === "Programming";
+            {showButtons && (
+              <div className="flex flex-wrap justify-center gap-4 max-w-4xl">
+                {buttonsData
+                  .find((cat) => cat.category === activeCategory)
+                  ?.buttons.map((button, index) => {
+                    const isActive = activeButton === button.type;
+                    const isProgramming = activeCategory === "Programming";
 
-          return (
-            <button
-              key={index}
-              onClick={() => handleButtonClick(button.type)}
-              className={`flex items-center gap-2 px-5 py-3 rounded-lg transition duration-300 shadow-md hover:scale-105 font-semibold text-base
+                    return (
+                      <button
+                        key={index}
+                        onClick={() => handleButtonClick(button.type)}
+                        className={`flex items-center gap-2 p-4 rounded-3xl transition duration-300 shadow-md hover:scale-105 font-semibold text-base
                 ${
                   isActive
                     ? isProgramming
-                      ? "bg-purple-600 text-white border-blue-600"
+                      ? "bg-sky-500 text-white"
                       : "bg-blue-400 text-black"
-                    : "bg-gray-300 border  text-gray-800 hover:bg-gray-300"
+                    : "bg-gray-300 border text-gray-800 hover:bg-gray-300"
                 }`}
-            >
-              <i className={button.icon}></i>
-              {button.label}
-            </button>
-          );
-        })}
-    </div>
-  )}
+                      >
+                        <i className={button.icon}></i>
+                        {button.label}
+                      </button>
+                    );
+                  })}
+              </div>
+            )}
 
-  {/* Render based on active button */}
-  <div className="mt-10 w-full max-w-3xl">
-    {activeButton === "Python" && <Python />}
-  </div>
-</div>
-
-
-          
+            {/* Render based on active button */}
+            <div className="">
+              {activeButton === "Python" && <Python />}
+            </div>
+          </div>
         </div>
       </div>
 
-      
       <Footer />
     </div>
   );
