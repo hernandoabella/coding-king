@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 function Hero() {
     const [textElements, setTextElements] = useState<React.ReactNode[]>([]);
-    const targetText = "Coding King";
+    const targetText = "</Coding King>";
     const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:',.<>/?";
     const colors = ["#f87171", "#60a5fa", "#a78bfa", "#34d399", "#fbbf24", "#f472b6", "#38bdf8"];
 
