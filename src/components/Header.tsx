@@ -3,38 +3,37 @@ import { FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
 const Header = () => {
-  // Set dark mode ("synthwave") as default if no theme is saved
+  // Set "night" as default if no theme is saved
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
-    return savedTheme ? savedTheme : "synthwave"; // Default to "synthwave" (dark mode)
+    return savedTheme ? savedTheme : "night";
   });
 
   useEffect(() => {
-    // Apply the saved theme to the body
     document.body.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme); // Save theme preference to localStorage
-  }, [theme]); // Re-run when theme changes
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const handleThemeChange = (e) => {
-    // Toggle between "synthwave" (dark) and "default" (light)
-    const selectedTheme = e.target.checked ? "synthwave" : "default";
+    // Toggle between "night" and "default"
+    const selectedTheme = e.target.checked ? "night" : "default";
     setTheme(selectedTheme);
   };
 
   return (
     <div className="flex flex-wrap justify-between items-center gap-6 p-6 sm:px-10 w-full">
-      {/* Theme Toggle (always visible now) */}
+      {/* Theme Toggle */}
       <div>
         <input
           title="Toggle Theme"
           type="checkbox"
           className="toggle theme-controller border-sky-400 bg-amber-300 [--tglbg:theme(colors.sky.500)] checked:border-blue-800 checked:bg-blue-300 checked:[--tglbg:theme(colors.blue.900)]"
-          checked={theme === "synthwave"}
+          checked={theme === "night"}
           onChange={handleThemeChange}
         />
       </div>
 
-      {/* Social Icons (always visible now) */}
+      {/* Social Icons */}
       <div className="flex gap-4">
         <a
           href="https://www.github.com/hernandoabella/coding_king"
