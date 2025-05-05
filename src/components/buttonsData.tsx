@@ -8,6 +8,7 @@ export const buttonsData = [
       { label: "C", icon: "devicon-c-plain", type: "C" },
       { label: "C++", icon: "devicon-cplusplus-plain", type: "C++" },
       { label: "C#", icon: "devicon-csharp-plain", type: "C#" },
+      { label: "PHP", icon: "devicon-php-plain", type: "PHP" },
     ],
   },
 ];
