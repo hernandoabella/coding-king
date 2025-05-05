@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Hero from "./Hero";
 import Footer from "./Footer";
-import { Python } from "./ImportUI";
-import { buttonsData } from "./buttonsData";
 import Header from "./Header";
+import { Python, JavaScript } from "./ImportUI"; // Add other components here if needed
+import { buttonsData } from "./buttonsData";
 
 function Main() {
   const [activeButton, setActiveButton] = useState("");
@@ -11,9 +11,8 @@ function Main() {
   const [showButtons, setShowButtons] = useState(true);
 
   useEffect(() => {
-    // Set the active button to "HTML" when the component mounts
     setActiveButton("Python");
-  }, []); // Empty dependency array ensures this effect runs only once when the component mounts
+  }, []);
 
   const handleCategoryChange = (category) => {
     setActiveCategory(category);
@@ -31,55 +30,63 @@ function Main() {
     setActiveButton(buttonType);
   };
 
+  const renderComponent = () => {
+    switch (activeButton) {
+      case "Python":
+        return <Python />;
+      case "JavaScript":
+        return <JavaScript />;
+      // Add more cases like "Java", "C++", etc. as you create components
+      default:
+        return <p className="text-center text-gray-500">Select a tool to display content.</p>;
+    }
+  };
+
   return (
-    <div>
-      {/* Glow Background */}
-      <div className="absolute w-[500px] h-[500px] bg-purple-500  opacity-20 rounded-full blur-3xl top-[-300px] left-[700px] "></div>
-      {/* <div className="absolute w-[500px] h-[500px] bg-purple-500 opacity-20 rounded-full blur-3xl top-[100px] right-[500px] z-0"></div>
-      <div className="absolute w-[500px] h-[500px] bg-purple-500 opacity-20 rounded-full blur-3xl top-[500px] right-[500px] z-0"></div> */}
-      <div className="flex">
-        <div className="content w-full">
-          <Header />
-          <Hero />
+    <div className="min-h-screen flex flex-col">
+      {/* Header always on top */}
+      <Header />
 
-          <div className="flex flex-col items-center justify-center px-4 py-10">
-            {showButtons && (
-              <div className="flex flex-wrap justify-center gap-4 max-w-4xl">
-                {buttonsData
-                  .find((cat) => cat.category === activeCategory)
-                  ?.buttons.map((button, index) => {
-                    const isActive = activeButton === button.type;
-                    const isProgramming = activeCategory === "Programming";
+      {/* Main Content */}
+      <main className="flex-grow flex flex-col items-center justify-center px-4 py-10">
+        <Hero />
 
-                    return (
-                      <button
-                        key={index}
-                        onClick={() => handleButtonClick(button.type)}
-                        className={`flex items-center gap-2 p-4 rounded-3xl transition duration-300 shadow-md hover:scale-105 font-semibold text-base
-                ${
-                  isActive
-                    ? isProgramming
-                      ? "bg-sky-500 text-white"
-                      : "bg-blue-400 text-black"
-                    : "bg-gray-300 border text-gray-800 hover:bg-gray-300"
-                }`}
-                      >
-                        <i className={button.icon}></i>
-                        {button.label}
-                      </button>
-                    );
-                  })}
-              </div>
-            )}
+        {showButtons && (
+          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mt-6">
+            {buttonsData
+              .find((cat) => cat.category === activeCategory)
+              ?.buttons.map((button, index) => {
+                const isActive = activeButton === button.type;
+                const isProgramming = activeCategory === "Programming";
 
-            {/* Render based on active button */}
-            <div className="">
-              {activeButton === "Python" && <Python />}
-            </div>
+                return (
+                  <button
+                    key={index}
+                    onClick={() => handleButtonClick(button.type)}
+                    className={`flex items-center gap-2 p-4 rounded-3xl transition duration-300 shadow-md hover:scale-105 font-semibold text-base
+                    ${
+                      isActive
+                        ? isProgramming
+                          ? "bg-sky-900 text-white"
+                          : "bg-blue-400 text-black"
+                        : "bg-gray-300 border text-gray-800 hover:bg-gray-300"
+                    }`}
+                  >
+                    <i className={button.icon}></i>
+                    {button.label}
+                  </button>
+                );
+              })}
           </div>
+        )}
+
+        {/* Render selected component */}
+        <div className="mt-10 w-full max-w-4xl">
+          {renderComponent()}
         </div>
-      </div>
-      
+      </main>
+
+      {/* Footer always at the bottom */}
       <Footer />
     </div>
   );
