@@ -4,7 +4,6 @@ import "prismjs/components/prism-python";
 import "prismjs/themes/prism-twilight.css";
 import { FaPython, FaChevronRight } from "react-icons/fa";
 
-// Datos del tutorial con descripción
 const tutorialData = [
   {
     id: "basics",
@@ -30,6 +29,26 @@ const tutorialData = [
           </pre>
         ),
       },
+      {
+        id: "type-casting",
+        title: "Type Casting",
+        description: "Convert between data types using casting functions.",
+        content: (
+          <pre>
+            <code className="language-python">{`x = int("10")\ny = float("3.14")\nz = str(100)`}</code>
+          </pre>
+        ),
+      },
+      {
+        id: "input-output",
+        title: "User Input & Output",
+        description: "Use input() and print() to interact with users.",
+        content: (
+          <pre>
+            <code className="language-python">{`name = input("Enter your name: ")\nprint("Hello,", name)`}</code>
+          </pre>
+        ),
+      },
     ],
   },
   {
@@ -39,10 +58,10 @@ const tutorialData = [
       {
         id: "if-else",
         title: "If / Else",
-        description: "Make decisions in your code using if, elif, and else statements.",
+        description: "Make decisions using if, elif, and else.",
         content: (
           <pre>
-            <code className="language-python">{`x = 10\nif x > 5:\n    print("Greater than 5")\nelse:\n    print("5 or less")`}</code>
+            <code className="language-python">{`x = 10\nif x > 5:\n    print("Greater than 5")\nelif x == 5:\n    print("Equal to 5")\nelse:\n    print("Less than 5")`}</code>
           </pre>
         ),
       },
@@ -52,14 +71,211 @@ const tutorialData = [
         description: "Repeat actions using for and while loops.",
         content: (
           <pre>
-            <code className="language-python">{`for i in range(5):\n    print(i)`}</code>
+            <code className="language-python">{`for i in range(5):\n    print(i)\n\ncount = 0\nwhile count < 5:\n    print(count)\n    count += 1`}</code>
           </pre>
         ),
       },
-      
+      {
+        id: "break-continue",
+        title: "Break & Continue",
+        description: "Control the flow of loops using break and continue.",
+        content: (
+          <pre>
+            <code className="language-python">{`for i in range(5):\n    if i == 3:\n        continue\n    print(i)`}</code>
+          </pre>
+        ),
+      },
+    ],
+  },
+  {
+    id: "functions",
+    title: "Functions",
+    subtopics: [
+      {
+        id: "defining-functions",
+        title: "Defining Functions",
+        description: "Learn how to define and call functions in Python.",
+        content: (
+          <pre>
+            <code className="language-python">{`def greet(name):\n    return f"Hello, {name}!"\n\nprint(greet("Alice"))`}</code>
+          </pre>
+        ),
+      },
+      {
+        id: "arguments",
+        title: "Function Arguments",
+        description: "Understand positional, keyword, and default arguments.",
+        content: (
+          <pre>
+            <code className="language-python">{`def greet(name="Guest"):\n    print("Hello", name)\n\ngreet()\ngreet("Ana")`}</code>
+          </pre>
+        ),
+      },
+      {
+        id: "lambda",
+        title: "Lambda Functions",
+        description: "Use small anonymous functions with lambda.",
+        content: (
+          <pre>
+            <code className="language-python">{`square = lambda x: x * x\nprint(square(5))`}</code>
+          </pre>
+        ),
+      },
+    ],
+  },
+  {
+    id: "collections",
+    title: "Data Collections",
+    subtopics: [
+      {
+        id: "lists",
+        title: "Lists",
+        description: "Use lists to store sequences of items.",
+        content: (
+          <pre>
+            <code className="language-python">{`fruits = ["apple", "banana", "cherry"]\nfruits.append("mango")\nprint(fruits[1])`}</code>
+          </pre>
+        ),
+      },
+      {
+        id: "dictionaries",
+        title: "Dictionaries",
+        description: "Use dictionaries to store key-value pairs.",
+        content: (
+          <pre>
+            <code className="language-python">{`person = {"name": "Alice", "age": 25}\nprint(person["name"])`}</code>
+          </pre>
+        ),
+      },
+      {
+        id: "tuples",
+        title: "Tuples",
+        description: "Tuples are immutable sequences.",
+        content: (
+          <pre>
+            <code className="language-python">{`coordinates = (10, 20)\nprint(coordinates[0])`}</code>
+          </pre>
+        ),
+      },
+      {
+        id: "sets",
+        title: "Sets",
+        description: "Sets store unique elements.",
+        content: (
+          <pre>
+            <code className="language-python">{`nums = {1, 2, 3, 3, 4}\nprint(nums)`}</code>
+          </pre>
+        ),
+      },
+    ],
+  },
+  {
+    id: "errors",
+    title: "Error Handling",
+    subtopics: [
+      {
+        id: "try-except",
+        title: "Try / Except",
+        description: "Handle runtime errors using try/except blocks.",
+        content: (
+          <pre>
+            <code className="language-python">{`try:\n    x = 10 / 0\nexcept ZeroDivisionError:\n    print("Cannot divide by zero.")`}</code>
+          </pre>
+        ),
+      },
+      {
+        id: "finally",
+        title: "Finally Block",
+        description: "Run code no matter what using finally.",
+        content: (
+          <pre>
+            <code className="language-python">{`try:\n    print("Try block")\nfinally:\n    print("Always runs")`}</code>
+          </pre>
+        ),
+      },
+    ],
+  },
+  {
+    id: "modules",
+    title: "Modules & Packages",
+    subtopics: [
+      {
+        id: "import",
+        title: "Importing Modules",
+        description: "Use external or built-in modules in your project.",
+        content: (
+          <pre>
+            <code className="language-python">{`import math\nprint(math.sqrt(16))`}</code>
+          </pre>
+        ),
+      },
+      {
+        id: "custom-modules",
+        title: "Custom Modules",
+        description: "Create your own reusable Python modules.",
+        content: (
+          <pre>
+            <code className="language-python">{`# utils.py\ndef greet(name):\n    return f"Hello {name}"\n\n# main.py\nimport utils\nprint(utils.greet("Ana"))`}</code>
+          </pre>
+        ),
+      },
+    ],
+  },
+  {
+    id: "files",
+    title: "File Handling",
+    subtopics: [
+      {
+        id: "read-file",
+        title: "Reading Files",
+        description: "Read text from files using open().",
+        content: (
+          <pre>
+            <code className="language-python">{`with open("file.txt", "r") as file:\n    content = file.read()\n    print(content)`}</code>
+          </pre>
+        ),
+      },
+      {
+        id: "write-file",
+        title: "Writing Files",
+        description: "Write text to a file using write().",
+        content: (
+          <pre>
+            <code className="language-python">{`with open("file.txt", "w") as file:\n    file.write("Hello, file!")`}</code>
+          </pre>
+        ),
+      },
+    ],
+  },
+  {
+    id: "oop",
+    title: "Object-Oriented Programming",
+    subtopics: [
+      {
+        id: "classes",
+        title: "Classes & Objects",
+        description: "Create classes and instantiate objects.",
+        content: (
+          <pre>
+            <code className="language-python">{`class Person:\n    def __init__(self, name):\n        self.name = name\n\np = Person("Alice")\nprint(p.name)`}</code>
+          </pre>
+        ),
+      },
+      {
+        id: "inheritance",
+        title: "Inheritance",
+        description: "Extend one class from another using inheritance.",
+        content: (
+          <pre>
+            <code className="language-python">{`class Animal:\n    def speak(self):\n        print("Sound")\n\nclass Dog(Animal):\n    def speak(self):\n        print("Woof")\n\nd = Dog()\nd.speak()`}</code>
+          </pre>
+        ),
+      },
     ],
   },
 ];
+
+
 
 const PythonTutorial = () => {
   const [activeSection, setActiveSection] = useState(tutorialData[0]);
@@ -70,10 +286,10 @@ const PythonTutorial = () => {
   }, [activeSubtopic]);
 
   return (
-    <div className="flex mt-10">
+    <div className="flex justify-center items-center mt-10">
       {/* Sidebar */}
-      <aside className="w-[300px] border-r border-gray-300 p-4">
-        <div className="flex items-center gap-3 border-gray-600 pb-4 mb-4">
+      <aside className="w-[340px] h-[357px] overflow-auto border-r border-gray-300 p-4">
+        <div className="flex items-center gap-3 border-gray-600 pb-4">
           <FaPython className="text-3xl" />
           <h2 className="text-2xl font-semibold">Python Tutorial</h2>
         </div>
