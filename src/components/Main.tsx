@@ -34,7 +34,7 @@ function Main() {
   return (
     <div>
       {/* Glow Background */}
-      <div className="absolute w-[600px] h-[600px] bg-purple-500 opacity-20 rounded-full blur-3xl top-[-300px] left-[500px] "></div>
+      <div className="absolute w-[500px] h-[500px] bg-purple-500  opacity-20 rounded-full blur-3xl top-[-300px] left-[500px] "></div>
       {/* <div className="absolute w-[500px] h-[500px] bg-purple-500 opacity-20 rounded-full blur-3xl top-[100px] right-[500px] z-0"></div>
       <div className="absolute w-[500px] h-[500px] bg-purple-500 opacity-20 rounded-full blur-3xl top-[500px] right-[500px] z-0"></div> */}
       <div className="flex">
