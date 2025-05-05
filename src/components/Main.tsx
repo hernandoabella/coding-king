@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import Hero from "./Hero";
 import Footer from "./Footer";
 import Header from "./Header";
-import { Python, JavaScript } from "./ImportUI"; // Add other components here if needed
+import { Python, JavaScript, Java, C } from "./ImportUI"; // Add other components here if needed
 import { buttonsData } from "./buttonsData";
+
 
 function Main() {
   const [activeButton, setActiveButton] = useState("");
@@ -36,6 +37,10 @@ function Main() {
         return <Python />;
       case "JavaScript":
         return <JavaScript />;
+        case "Java":
+        return <Java />;
+        case "C":
+        return <C />;
       // Add more cases like "Java", "C++", etc. as you create components
       default:
         return <p className="text-center text-gray-500">Select a tool to display content.</p>;
