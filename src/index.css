@@ -2,49 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
-
-pre code.hljs {
-  display: block;
-}
-
-code.hljs {
-  display: inline;
-}
-
-.content {
-  padding-left: 300px;
-  padding-right: 300px;
-}
-
-
-.left-side-bar {
-  width: 300px;
-}
-
-.right-side-bar {
-  width: 300px;
-}
-
-
-
-@media only screen and (max-width: 1500px) {
-  .left-side-bar {
-    display: none;
-  }
-
-  .right-side-bar {
-    display: none;
-  }
-
-  .content {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
-
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
