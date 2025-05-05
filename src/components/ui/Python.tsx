@@ -56,6 +56,7 @@ const tutorialData = [
           </pre>
         ),
       },
+      
     ],
   },
 ];
@@ -71,18 +72,18 @@ const PythonTutorial = () => {
   return (
     <div className="flex mt-10">
       {/* Sidebar */}
-      <aside className="w-[300px] p-6 border-r border-gray-700 shadow-lg bg-[#1e1e1e] rounded-3xl">
-        <div className="flex items-center gap-3 border-b border-gray-600 pb-4 mb-4">
-          <FaPython className="text-3xl text-yellow-400" />
-          <h2 className="text-xl font-bold text-white">Python Tutorial</h2>
+      <aside className="w-[300px] border-r border-gray-300 p-4">
+        <div className="flex items-center gap-3 border-gray-600 pb-4 mb-4">
+          <FaPython className="text-3xl" />
+          <h2 className="text-2xl font-semibold">Python Tutorial</h2>
         </div>
 
-        <ul className="space-y-2 text-sm text-white">
+        <ul className="space-y-2 text-sm">
           {tutorialData.map((section) => (
             <li key={section.id}>
               <div
                 className={`flex items-center gap-2 cursor-pointer transition-all ${
-                  activeSection.id === section.id ? "text-sky-400 font-semibold" : "hover:text-sky-300"
+                  activeSection.id === section.id ? "text-sky-500 font-bold" : "hover:text-sky-500"
                 }`}
                 onClick={() => {
                   setActiveSection(section);
@@ -95,7 +96,7 @@ const PythonTutorial = () => {
                     activeSection.id === section.id ? "rotate-90" : ""
                   }`}
                 />
-                {section.title}
+                <span className="text-lg font-semibold">{section.title}</span>
               </div>
 
               {activeSection.id === section.id && (
@@ -103,10 +104,10 @@ const PythonTutorial = () => {
                   {section.subtopics.map((sub) => (
                     <li
                       key={sub.id}
-                      className={`cursor-pointer transition ${
+                      className={`cursor-pointer transition-all ${
                         activeSubtopic.id === sub.id
-                          ? "text-sky-300 font-medium"
-                          : "hover:text-sky-200"
+                          ? "text-sky-500 font-bold"
+                          : "hover:text-sky-500"
                       }`}
                       onClick={() => setActiveSubtopic(sub)}
                     >
@@ -121,11 +122,9 @@ const PythonTutorial = () => {
       </aside>
 
       {/* Contenido dinámico */}
-      <main className="flex-grow p-10 overflow-y-auto ">
-        <h3 className="text-3xl font-bold text-sky-500 border-gray-700 ">
-          {activeSubtopic.title}
-        </h3>
-        <p className="text-gray-400">{activeSubtopic.description}</p>
+      <main className="flex-grow p-10 overflow-y-auto">
+        <h3 className="text-3xl font-bold">{activeSubtopic.title}</h3>
+        <p className="text-gray-500">{activeSubtopic.description}</p>
         <div className="prose prose-invert max-w-none">{activeSubtopic.content}</div>
       </main>
     </div>
