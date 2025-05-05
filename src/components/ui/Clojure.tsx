@@ -311,7 +311,7 @@ const ClojureTutorial = () => {
         
         {/* SyntaxHighlighter */}
         <SyntaxHighlighter
-          language="ruby"
+          language="clojure"
           style={atomOneDark}
           showLineNumbers={true} // This will enable line numbers
         >
