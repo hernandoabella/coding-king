@@ -1,332 +1,263 @@
-import React, { useState, useEffect } from "react";
-import Prism from "prismjs";
-import "prismjs/components/prism-python";
-import "prismjs/themes/prism-tomorrow.css";
-import { FaPython, FaChevronRight } from "react-icons/fa";
+import React, { useState } from 'react';
+import { FaChevronRight, FaPython, FaClipboard, FaCheck } from 'react-icons/fa';
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 const tutorialData = [
   {
-    id: "basics",
-    title: "Python Basics",
+    id: 'basics',
+    title: 'Python Basics',
     subtopics: [
       {
-        id: "variables",
-        title: "Variables",
-        description: "Learn how to declare and use variables in Python.",
-        content: (
-          <pre>
-            <code className="language-python">{`x = 5\ny = "Hello"\nprint(x, y)`}</code>
-          </pre>
-        ),
+        id: 'variables',
+        title: 'Variables',
+        description: 'Learn how to declare and use variables in Python.',
+        content: `name = "Alice"
+age = 25
+print(f"Name: {name}, Age: {age}")`,
       },
       {
-        id: "data-types",
-        title: "Data Types",
-        description: "Understand Python's built-in data types such as int, float, str, and bool.",
-        content: (
-          <pre>
-            <code className="language-python">{`a = 10       # int\nb = 3.14     # float\nc = "Python" # str\nd = True     # bool`}</code>
-          </pre>
-        ),
+        id: 'data-types',
+        title: 'Data Types',
+        description: 'Understand Python\'s data types like int, float, string, and boolean.',
+        content: `integer = 10
+floating = 3.14
+string = "Python"
+boolean = True
+print(type(integer), type(floating), type(string), type(boolean))`,
       },
       {
-        id: "type-casting",
-        title: "Type Casting",
-        description: "Convert between data types using casting functions.",
-        content: (
-          <pre>
-            <code className="language-python">{`x = int("10")\ny = float("3.14")\nz = str(100)`}</code>
-          </pre>
-        ),
-      },
-      {
-        id: "input-output",
-        title: "User Input & Output",
-        description: "Use input() and print() to interact with users.",
-        content: (
-          <pre>
-            <code className="language-python">{`name = input("Enter your name: ")\nprint("Hello,", name)`}</code>
-          </pre>
-        ),
+        id: 'constants',
+        title: 'Constants',
+        description: 'Learn how to define constants in Python (by convention).',
+        content: `PI = 3.14159  # Python does not enforce constants
+print(PI)`,
       },
     ],
   },
   {
-    id: "control",
-    title: "Control Flow",
+    id: 'control-structures',
+    title: 'Control Structures',
     subtopics: [
       {
-        id: "if-else",
-        title: "If / Else",
-        description: "Make decisions using if, elif, and else.",
-        content: (
-          <pre>
-            <code className="language-python">{`x = 10\nif x > 5:\n    print("Greater than 5")\nelif x == 5:\n    print("Equal to 5")\nelse:\n    print("Less than 5")`}</code>
-          </pre>
-        ),
+        id: 'if-else',
+        title: 'If-Else Statements',
+        description: 'Learn how to use conditional statements in Python.',
+        content: `age = 20
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are a minor.")`,
       },
       {
-        id: "loops",
-        title: "Loops",
-        description: "Repeat actions using for and while loops.",
-        content: (
-          <pre>
-            <code className="language-python">{`for i in range(5):\n    print(i)\n\ncount = 0\nwhile count < 5:\n    print(count)\n    count += 1`}</code>
-          </pre>
-        ),
-      },
-      {
-        id: "break-continue",
-        title: "Break & Continue",
-        description: "Control the flow of loops using break and continue.",
-        content: (
-          <pre>
-            <code className="language-python">{`for i in range(5):\n    if i == 3:\n        continue\n    print(i)`}</code>
-          </pre>
-        ),
+        id: 'match-case',
+        title: 'Match-Case (Switch Alternative)',
+        description: 'Understand how to use match-case in Python 3.10+.',
+        content: `day = "Monday"
+match day:
+    case "Monday":
+        print("Start of the week.")
+    case "Friday":
+        print("End of the week.")
+    case _:
+        print("Midweek day.")`,
       },
     ],
   },
   {
-    id: "functions",
-    title: "Functions",
+    id: 'loops',
+    title: 'Loops',
     subtopics: [
       {
-        id: "defining-functions",
-        title: "Defining Functions",
-        description: "Learn how to define and call functions in Python.",
-        content: (
-          <pre>
-            <code className="language-python">{`def greet(name):\n    return f"Hello, {name}!"\n\nprint(greet("Alice"))`}</code>
-          </pre>
-        ),
+        id: 'for-loop',
+        title: 'For Loop',
+        description: 'Learn how to use a for loop in Python.',
+        content: `for i in range(1, 6):
+    print(f"Number {i}")`,
       },
       {
-        id: "arguments",
-        title: "Function Arguments",
-        description: "Understand positional, keyword, and default arguments.",
-        content: (
-          <pre>
-            <code className="language-python">{`def greet(name="Guest"):\n    print("Hello", name)\n\ngreet()\ngreet("Ana")`}</code>
-          </pre>
-        ),
+        id: 'while-loop',
+        title: 'While Loop',
+        description: 'Understand how to use while loops in Python.',
+        content: `i = 1
+while i <= 5:
+    print(f"Number {i}")
+    i += 1`,
       },
       {
-        id: "lambda",
-        title: "Lambda Functions",
-        description: "Use small anonymous functions with lambda.",
-        content: (
-          <pre>
-            <code className="language-python">{`square = lambda x: x * x\nprint(square(5))`}</code>
-          </pre>
-        ),
+        id: 'for-each-loop',
+        title: 'For-Each Loop',
+        description: 'Loop over lists with for-in.',
+        content: `fruits = ["Apple", "Banana", "Cherry"]
+for fruit in fruits:
+    print(fruit)`,
       },
     ],
   },
   {
-    id: "collections",
-    title: "Data Collections",
+    id: 'lists',
+    title: 'Lists (Arrays)',
     subtopics: [
       {
-        id: "lists",
-        title: "Lists",
-        description: "Use lists to store sequences of items.",
-        content: (
-          <pre>
-            <code className="language-python">{`fruits = ["apple", "banana", "cherry"]\nfruits.append("mango")\nprint(fruits[1])`}</code>
-          </pre>
-        ),
+        id: 'indexed-lists',
+        title: 'Indexed Lists',
+        description: 'Learn about indexed lists in Python.',
+        content: `colors = ["Red", "Green", "Blue"]
+print(colors[0])  # Outputs: Red`,
       },
       {
-        id: "dictionaries",
-        title: "Dictionaries",
-        description: "Use dictionaries to store key-value pairs.",
-        content: (
-          <pre>
-            <code className="language-python">{`person = {"name": "Alice", "age": 25}\nprint(person["name"])`}</code>
-          </pre>
-        ),
+        id: 'dictionaries',
+        title: 'Dictionaries',
+        description: 'Understand dictionaries in Python.',
+        content: `person = {"name": "Alice", "age": 25}
+print(person["name"])  # Outputs: Alice`,
       },
       {
-        id: "tuples",
-        title: "Tuples",
-        description: "Tuples are immutable sequences.",
-        content: (
-          <pre>
-            <code className="language-python">{`coordinates = (10, 20)\nprint(coordinates[0])`}</code>
-          </pre>
-        ),
-      },
-      {
-        id: "sets",
-        title: "Sets",
-        description: "Sets store unique elements.",
-        content: (
-          <pre>
-            <code className="language-python">{`nums = {1, 2, 3, 3, 4}\nprint(nums)`}</code>
-          </pre>
-        ),
+        id: 'nested-structures',
+        title: 'Nested Data Structures',
+        description: 'Learn about nested lists and dictionaries in Python.',
+        content: `contacts = [
+    {"name": "Alice", "email": "alice@example.com"},
+    {"name": "Bob", "email": "bob@example.com"}
+]
+print(contacts[0]["name"])  # Outputs: Alice`,
       },
     ],
   },
   {
-    id: "errors",
-    title: "Error Handling",
+    id: 'functions',
+    title: 'Functions',
     subtopics: [
       {
-        id: "try-except",
-        title: "Try / Except",
-        description: "Handle runtime errors using try/except blocks.",
-        content: (
-          <pre>
-            <code className="language-python">{`try:\n    x = 10 / 0\nexcept ZeroDivisionError:\n    print("Cannot divide by zero.")`}</code>
-          </pre>
-        ),
+        id: 'basic-functions',
+        title: 'Basic Functions',
+        description: 'Learn how to create and use functions in Python.',
+        content: `def greet(name):
+    return f"Hello, {name}!"
+
+print(greet("Alice"))  # Outputs: Hello, Alice!`,
       },
       {
-        id: "finally",
-        title: "Finally Block",
-        description: "Run code no matter what using finally.",
-        content: (
-          <pre>
-            <code className="language-python">{`try:\n    print("Try block")\nfinally:\n    print("Always runs")`}</code>
-          </pre>
-        ),
+        id: 'return-values',
+        title: 'Returning Values',
+        description: 'Understand how to return values from functions.',
+        content: `def add(a, b):
+    return a + b
+
+print(add(3, 4))  # Outputs: 7`,
+      },
+      {
+        id: 'variable-scope',
+        title: 'Variable Scope',
+        description: 'Learn about variable scope in Python.',
+        content: `x = 10
+
+def test():
+    global x
+    print(x)  # Outputs: 10
+
+test()`,
       },
     ],
   },
   {
-    id: "modules",
-    title: "Modules & Packages",
+    id: 'object-oriented',
+    title: 'Object-Oriented Programming (OOP)',
     subtopics: [
       {
-        id: "import",
-        title: "Importing Modules",
-        description: "Use external or built-in modules in your project.",
-        content: (
-          <pre>
-            <code className="language-python">{`import math\nprint(math.sqrt(16))`}</code>
-          </pre>
-        ),
+        id: 'classes-objects',
+        title: 'Classes and Objects',
+        description: 'Learn how to create classes and objects in Python.',
+        content: `class Car:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+
+    def display(self):
+        print(f"Make: {self.make}, Model: {self.model}")
+
+car = Car("Toyota", "Corolla")
+car.display()  # Outputs: Make: Toyota, Model: Corolla`,
       },
       {
-        id: "custom-modules",
-        title: "Custom Modules",
-        description: "Create your own reusable Python modules.",
-        content: (
-          <pre>
-            <code className="language-python">{`# utils.py\ndef greet(name):\n    return f"Hello {name}"\n\n# main.py\nimport utils\nprint(utils.greet("Ana"))`}</code>
-          </pre>
-        ),
-      },
-    ],
-  },
-  {
-    id: "files",
-    title: "File Handling",
-    subtopics: [
-      {
-        id: "read-file",
-        title: "Reading Files",
-        description: "Read text from files using open().",
-        content: (
-          <pre>
-            <code className="language-python">{`with open("file.txt", "r") as file:\n    content = file.read()\n    print(content)`}</code>
-          </pre>
-        ),
-      },
-      {
-        id: "write-file",
-        title: "Writing Files",
-        description: "Write text to a file using write().",
-        content: (
-          <pre>
-            <code className="language-python">{`with open("file.txt", "w") as file:\n    file.write("Hello, file!")`}</code>
-          </pre>
-        ),
-      },
-    ],
-  },
-  {
-    id: "oop",
-    title: "Object-Oriented Programming",
-    subtopics: [
-      {
-        id: "classes",
-        title: "Classes & Objects",
-        description: "Create classes and instantiate objects.",
-        content: (
-          <pre>
-            <code className="language-python">{`class Person:\n    def __init__(self, name):\n        self.name = name\n\np = Person("Alice")\nprint(p.name)`}</code>
-          </pre>
-        ),
-      },
-      {
-        id: "inheritance",
-        title: "Inheritance",
-        description: "Extend one class from another using inheritance.",
-        content: (
-          <pre>
-            <code className="language-python">{`class Animal:\n    def speak(self):\n        print("Sound")\n\nclass Dog(Animal):\n    def speak(self):\n        print("Woof")\n\nd = Dog()\nd.speak()`}</code>
-          </pre>
-        ),
+        id: 'inheritance',
+        title: 'Inheritance',
+        description: 'Understand inheritance in Python.',
+        content: `class Vehicle:
+    def __init__(self, make):
+        self.make = make
+
+class Car(Vehicle):
+    def __init__(self, make, model):
+        super().__init__(make)
+        self.model = model
+
+    def display(self):
+        print(f"Make: {self.make}, Model: {self.model}")
+
+car = Car("Toyota", "Corolla")
+car.display()  # Outputs: Make: Toyota, Model: Corolla`,
       },
     ],
   },
 ];
 
+
+
 const PythonTutorial = () => {
   const [activeSection, setActiveSection] = useState(tutorialData[0]);
   const [activeSubtopic, setActiveSubtopic] = useState(tutorialData[0].subtopics[0]);
+  const [copied, setCopied] = useState(false); // Track copied status
 
-  useEffect(() => {
-    Prism.highlightAll();
-  }, [activeSubtopic]);
+  const handleCopyToClipboard = () => {
+    navigator.clipboard.writeText(activeSubtopic.content)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000); // Reset to "Copy Code" after 2 seconds
+      })
+      .catch((err) => console.error('Failed to copy: ', err));
+  };
 
   return (
     <div className="flex flex-col lg:flex-row justify-center items-start mt-10 px-4">
-      {/* Glow bg effect */}
-      <div className=" w-[500px] h-[400px] bg-sky-500 opacity-20 rounded-full blur-3xl flex absolute justify-center item-center z-0"></div>
       {/* Sidebar */}
-      <aside className="z-10 w-full lg:w-[450px] max-h-[400px] overflow-auto p-4 bg-base-100 rounded-md  shadow-md mb-6 lg:mb-0 lg:mr-6">
+      <aside className="z-10 w-full lg:w-[450px] max-h-[400px] overflow-auto p-4 bg-base-100 rounded-md shadow-md mb-6 lg:mb-0 lg:mr-6">
         <div className="flex items-center gap-3 border-b border-gray-600 pb-4 mb-4">
           <FaPython className="text-3xl text-sky-500" />
           <h2 className="text-2xl font-semibold text-sky-500">Python Tutorial</h2>
         </div>
-
         <ul className="space-y-2 text-sm">
           {tutorialData.map((section) => (
             <li key={section.id}>
               <button
-  onClick={() => {
-    setActiveSection(section);
-    setActiveSubtopic(section.subtopics[0]);
-  }}
-  className={`flex items-center w-full text-left px-3 py-2 rounded-md transition-colors ${
-    activeSection.id === section.id
-      ? "bg-sky-900 text-white"
-      : "text-gray-400 hover:text-gray-200 hover:bg-gray-800"
-  }`}
->
-  <FaChevronRight
-    className={`mr-2 transition-transform duration-300 ${
-      activeSection.id === section.id ? "rotate-90" : ""
-    }`}
-  />
-  {section.title}
-</button>
-
-              {/* Render subtopics if this section is active */}
+                onClick={() => {
+                  setActiveSection(section);
+                  setActiveSubtopic(section.subtopics[0]);
+                }}
+                className={`flex items-center w-full text-left px-3 py-2 rounded-md transition-colors ${
+                  activeSection.id === section.id
+                    ? 'bg-sky-900 text-white'
+                    : 'text-gray-400 hover:text-gray-200 hover:bg-gray-800'
+                }`}
+              >
+                <FaChevronRight
+                  className={`mr-2 transition-transform duration-300 ${
+                    activeSection.id === section.id ? 'rotate-90' : ''
+                  }`}
+                />
+                {section.title}
+              </button>
               {activeSection.id === section.id && (
                 <ul className="pl-6 mt-2 space-y-1">
                   {section.subtopics.map((sub) => (
                     <li key={sub.id}>
                       <button
                         onClick={() => setActiveSubtopic(sub)}
-                        className={`text-sm w-full text-left px-2 py-1 rounded-md transition-colors ${activeSubtopic.id === sub.id
-                            ? "bg-sky-700 text-white"
-                            : "text-gray-400 hover:bg-gray-700"
-                          }`}
+                        className={`text-sm w-full text-left px-2 py-1 rounded-md transition-colors ${
+                          activeSubtopic.id === sub.id
+                            ? 'bg-sky-700 text-white'
+                            : 'text-gray-400 hover:bg-gray-700'
+                        }`}
                       >
                         {sub.title}
                       </button>
@@ -337,18 +268,42 @@ const PythonTutorial = () => {
             </li>
           ))}
         </ul>
-
       </aside>
 
-      {/* Main Content */}
+      {/* Main content */}
       <main className="z-10 flex-grow w-full p-4 overflow-y-auto bg-base-100 rounded-md shadow-md">
         <h3 className="text-2xl md:text-3xl font-bold text-sky-500">{activeSubtopic.title}</h3>
         <p className="my-4 md:text-lg">{activeSubtopic.description}</p>
-        <div className="prose prose-invert max-w-none">{activeSubtopic.content}</div>
+        
+        {/* Copy Button */}
+        <div className="flex justify-end">
+          <button
+            onClick={handleCopyToClipboard}
+            className="text-sm p-2 bg-sky-500 text-white flex items-center gap-2 hover:bg-sky-600"
+          >
+            {copied ? (
+              <>
+                <FaCheck /> Copied!
+              </>
+            ) : (
+              <>
+                <FaClipboard /> Copy Code
+              </>
+            )}
+          </button>
+        </div>
+        
+        {/* SyntaxHighlighter */}
+        <SyntaxHighlighter
+          language="python"
+          style={atomOneDark}
+          showLineNumbers={true} // This will enable line numbers
+        >
+          {activeSubtopic.content}
+        </SyntaxHighlighter>
       </main>
     </div>
   );
 };
-
 
 export default PythonTutorial;
