@@ -288,7 +288,7 @@ const PythonTutorial = () => {
       {/* Glow bg effect */}
       <div className=" w-[500px] h-[400px] bg-sky-500 opacity-20 rounded-full blur-3xl flex absolute justify-center item-center z-0"></div>
       {/* Sidebar */}
-      <aside className="z-10 w-full lg:w-[420px] max-h-[400px] overflow-auto p-4 bg-base-100 rounded-md  shadow-md mb-6 lg:mb-0 lg:mr-6">
+      <aside className="z-10 w-full lg:w-[450px] max-h-[400px] overflow-auto p-4 bg-base-100 rounded-md  shadow-md mb-6 lg:mb-0 lg:mr-6">
         <div className="flex items-center gap-3 border-b border-gray-600 pb-4 mb-4">
           <FaPython className="text-3xl text-sky-500" />
           <h2 className="text-2xl font-semibold text-sky-500">Python Tutorial</h2>
