@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Prism from "prismjs";
 import "prismjs/components/prism-python";
-import "prismjs/themes/prism-twilight.css";
+import "prismjs/themes/prism-tomorrow.css";
 import { FaPython, FaChevronRight } from "react-icons/fa";
 
 const tutorialData = [
@@ -284,48 +284,52 @@ const PythonTutorial = () => {
   }, [activeSubtopic]);
 
   return (
-    <div className="flex justify-center items-center mt-10">
+    <div className="flex flex-col lg:flex-row justify-center items-start mt-10 px-4">
+      {/* Glow bg effect */}
+      <div className=" w-[500px] h-[400px] bg-sky-500 opacity-20 rounded-full blur-3xl flex absolute justify-center item-center z-0"></div>
       {/* Sidebar */}
-      <aside className="w-[340px] h-[357px] overflow-auto  p-4">
-        <div className="flex items-center gap-3 border-gray-600 pb-4">
-          <FaPython className="text-3xl" />
-          <h2 className="text-2xl font-semibold">Python Tutorial</h2>
+      <aside className="z-10 w-full lg:w-[420px] max-h-[400px] overflow-auto p-4 bg-base-100 rounded-md  shadow-md mb-6 lg:mb-0 lg:mr-6">
+        <div className="flex items-center gap-3 border-b border-gray-600 pb-4 mb-4">
+          <FaPython className="text-3xl text-sky-500" />
+          <h2 className="text-2xl font-semibold text-sky-500">Python Tutorial</h2>
         </div>
 
         <ul className="space-y-2 text-sm">
           {tutorialData.map((section) => (
             <li key={section.id}>
-              <div
-                className={`flex items-center gap-2 cursor-pointer transition-all ${
-                  activeSection.id === section.id ? "text-sky-500 font-bold" : "hover:text-sky-500"
-                }`}
-                onClick={() => {
-                  setActiveSection(section);
-                  setActiveSubtopic(section.subtopics[0]);
-                }}
-              >
-                <FaChevronRight
-                  size={14}
-                  className={`transition-transform duration-300 ${
-                    activeSection.id === section.id ? "rotate-90" : ""
-                  }`}
-                />
-                <span className="text-lg font-semibold">{section.title}</span>
-              </div>
+              <button
+  onClick={() => {
+    setActiveSection(section);
+    setActiveSubtopic(section.subtopics[0]);
+  }}
+  className={`flex items-center w-full text-left px-3 py-2 rounded-md transition-colors ${
+    activeSection.id === section.id
+      ? "bg-sky-900 text-white"
+      : "text-gray-400 hover:text-gray-200 hover:bg-gray-800"
+  }`}
+>
+  <FaChevronRight
+    className={`mr-2 transition-transform duration-300 ${
+      activeSection.id === section.id ? "rotate-90" : ""
+    }`}
+  />
+  {section.title}
+</button>
 
+              {/* Render subtopics if this section is active */}
               {activeSection.id === section.id && (
-                <ul className="ml-5 mt-1 space-y-1">
+                <ul className="pl-6 mt-2 space-y-1">
                   {section.subtopics.map((sub) => (
-                    <li
-                      key={sub.id}
-                      className={`cursor-pointer transition-all ${
-                        activeSubtopic.id === sub.id
-                          ? "text-sky-500 font-bold"
-                          : "hover:text-sky-500"
-                      }`}
-                      onClick={() => setActiveSubtopic(sub)}
-                    >
-                      {sub.title}
+                    <li key={sub.id}>
+                      <button
+                        onClick={() => setActiveSubtopic(sub)}
+                        className={`text-sm w-full text-left px-2 py-1 rounded-md transition-colors ${activeSubtopic.id === sub.id
+                            ? "bg-sky-700 text-white"
+                            : "text-gray-400 hover:bg-gray-700"
+                          }`}
+                      >
+                        {sub.title}
+                      </button>
                     </li>
                   ))}
                 </ul>
@@ -333,16 +337,18 @@ const PythonTutorial = () => {
             </li>
           ))}
         </ul>
+
       </aside>
 
-      {/* Contenido dinámico */}
-      <main className="flex-grow p-10 overflow-y-auto">
-        <h3 className="text-3xl font-bold text-sky-500">{activeSubtopic.title}</h3>
-        <p className="my-4">{activeSubtopic.description}</p>
+      {/* Main Content */}
+      <main className="z-10 flex-grow w-full p-4 overflow-y-auto bg-base-100 rounded-md shadow-md">
+        <h3 className="text-2xl md:text-3xl font-bold text-sky-500">{activeSubtopic.title}</h3>
+        <p className="my-4 md:text-lg">{activeSubtopic.description}</p>
         <div className="prose prose-invert max-w-none">{activeSubtopic.content}</div>
       </main>
     </div>
   );
 };
+
 
 export default PythonTutorial;
