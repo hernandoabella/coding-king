@@ -339,8 +339,8 @@ const PythonTutorial = () => {
 
       {/* Contenido dinámico */}
       <main className="flex-grow p-10 overflow-y-auto">
-        <h3 className="text-3xl font-bold">{activeSubtopic.title}</h3>
-        <p className="text-gray-500">{activeSubtopic.description}</p>
+        <h3 className="text-3xl font-bold text-sky-500">{activeSubtopic.title}</h3>
+        <p className="my-4">{activeSubtopic.description}</p>
         <div className="prose prose-invert max-w-none">{activeSubtopic.content}</div>
       </main>
     </div>
