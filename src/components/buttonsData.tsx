@@ -5,6 +5,7 @@ export const buttonsData = [
       { label: "Python", icon: "devicon-python-plain", type: "Python" },
       { label: "JavaScript", icon: "devicon-javascript-plain", type: "JavaScript" },
       { label: "Java", icon: "devicon-java-plain", type: "Java" },
+      { label: "C", icon: "devicon-c-plain", type: "C" },
       { label: "C++", icon: "devicon-cplusplus-plain", type: "C++" },
       { label: "C#", icon: "devicon-csharp-plain", type: "C#" },
     ],
