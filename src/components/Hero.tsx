@@ -77,7 +77,7 @@ function Hero() {
             
             <div
                 className="max-w-3xl">
-                <div className="text-4xl md:text-6xl font-bold">
+                <div className="text-4xl md:text-6xl bg-gradient-to-t from-sky-500 to-sky-700 bg-clip-text text-transparent p-3 font-bold">
                     {textElements}
                 </div>
 
