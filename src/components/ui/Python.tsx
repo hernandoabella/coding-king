@@ -275,8 +275,6 @@ const tutorialData = [
   },
 ];
 
-
-
 const PythonTutorial = () => {
   const [activeSection, setActiveSection] = useState(tutorialData[0]);
   const [activeSubtopic, setActiveSubtopic] = useState(tutorialData[0].subtopics[0]);
