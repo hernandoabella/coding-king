@@ -288,7 +288,7 @@ const PythonTutorial = () => {
   return (
     <div className="flex justify-center items-center mt-10">
       {/* Sidebar */}
-      <aside className="w-[340px] h-[357px] overflow-auto border-r border-gray-300 p-4">
+      <aside className="w-[340px] h-[357px] overflow-auto  p-4">
         <div className="flex items-center gap-3 border-gray-600 pb-4">
           <FaPython className="text-3xl" />
           <h2 className="text-2xl font-semibold">Python Tutorial</h2>
