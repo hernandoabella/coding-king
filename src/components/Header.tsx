@@ -3,21 +3,22 @@ import { FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
 const Header = () => {
-  const [theme, setTheme] = useState("default");
+  // Set dark mode ("synthwave") as default if no theme is saved
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme ? savedTheme : "synthwave"; // Default to "synthwave" (dark mode)
+  });
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.body.setAttribute("data-theme", savedTheme);
-    }
-  }, []);
+    // Apply the saved theme to the body
+    document.body.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme); // Save theme preference to localStorage
+  }, [theme]); // Re-run when theme changes
 
   const handleThemeChange = (e) => {
+    // Toggle between "synthwave" (dark) and "default" (light)
     const selectedTheme = e.target.checked ? "synthwave" : "default";
     setTheme(selectedTheme);
-    localStorage.setItem("theme", selectedTheme);
-    document.body.setAttribute("data-theme", selectedTheme);
   };
 
   return (
