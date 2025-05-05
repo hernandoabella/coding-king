@@ -17,7 +17,7 @@ function Hero() {
                 const display = targetText.split("").map((char, index) => {
                     if (index < i) {
                         return (
-                            <span key={index} className="font-bold">
+                            <span key={index} >
                                 {char}
                             </span>
                         );
@@ -46,7 +46,7 @@ function Hero() {
                     setTextElements((prev) => {
                         const updated = [...prev];
                         updated[i] = (
-                            <span key={i} className="font-bold">
+                            <span key={i}>
                                 {targetText[i]}
                             </span>
                         );
@@ -59,7 +59,7 @@ function Hero() {
                 const finalText = targetText.split("").map((char, index) => (
                     <span
                         key={index}
-                        className="font-extrabold"
+                        
                     >
                         {char}
                     </span>
@@ -77,7 +77,7 @@ function Hero() {
             
             <div
                 className="max-w-3xl">
-                <div className="text-4xl md:text-6xl font-extrabold tracking-wider">
+                <div className="text-4xl md:text-6xl font-bold">
                     {textElements}
                 </div>
 
