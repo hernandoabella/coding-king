@@ -6,7 +6,6 @@ import { Python, JavaScript, Java, C, Cpp, Csharp } from "./ImportUI";
 import { buttonsData } from "./buttonsData";
 import PHP from "./ui/PHP";
 
-
 function Main() {
   const [activeButton, setActiveButton] = useState("");
   const [activeCategory, setActiveCategory] = useState("Programming");
