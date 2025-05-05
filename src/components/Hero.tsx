@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 function Hero() {
     const [textElements, setTextElements] = useState<React.ReactNode[]>([]);
     const targetText = "Coding King";
-    const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:',.<>/?";
     const colors = ["#f87171", "#60a5fa", "#a78bfa", "#34d399", "#fbbf24", "#f472b6", "#38bdf8"];
 
     const getRandomChar = () => chars.charAt(Math.floor(Math.random() * chars.length));
@@ -59,7 +59,7 @@ function Hero() {
                 const finalText = targetText.split("").map((char, index) => (
                     <span
                         key={index}
-                        className="bg-gradient-to-b from-purple-500 to-pink-500 bg-clip-text text-transparent font-extrabold"
+                        className="font-extrabold"
                     >
                         {char}
                     </span>
@@ -73,7 +73,7 @@ function Hero() {
     }, []);
 
     return (
-        <div className="items-center min-h-[80vh text-center  relative overflow-hidden">
+        <div className="flex justify-center items-center text-center">
             
             <div
                 className="max-w-3xl">
@@ -82,7 +82,7 @@ function Hero() {
                 </div>
 
                 <p className="mt-6 text-xl md:text-2xl  ">
-                    Quick resources for <b className="text-blue-500 underline-offset-8 italic underline">conquering the world of coding</b>
+                    Quick resources for <b className="text-sky-500">conquering the world of coding</b>
                 </p>
             </div>
         </div>
