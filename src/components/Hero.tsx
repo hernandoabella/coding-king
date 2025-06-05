@@ -81,8 +81,8 @@ function Hero() {
                     {textElements}
                 </div>
 
-                <p className="mt-6 text-xl md:text-2xl  ">
-                    Quick resources for <b className="text-sky-500">conquering the world of coding</b>
+                <p className="mt-6 text-xl md:text-2xl">
+                    Quick resources for <b className="text-sky-500">Conquering the World of Coding</b>
                 </p>
             </div>
         </div>
