@@ -4,10 +4,10 @@ function Hero() {
     const [textElements, setTextElements] = useState<React.ReactNode[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const targetTexts = ["</Coding King>", "undefined", "We never give up!","⚠CRASH", "Learn and ship!"];
+    const targetTexts = ["</Coding King>", "Writing code is easy!", "We never give up!","CRASH"];
     const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:',.<>/?";
     const colors = ["#f87171", "#60a5fa", "#a78bfa", "#34d399", "#fbbf24", "#f472b6", "#38bdf8"];
-    const fakeErrors = ["!404", "[ERR]", "undefined", "<NaN>", "⚠CRASH", "??///", "#%*!"];
+    const fakeErrors = ["!404", "[ERR]", "undefined", "NaN", "CRASH", "??///", "#%*!"];
 
     const getRandomChar = () => chars.charAt(Math.floor(Math.random() * chars.length));
     const getRandomColor = () => colors[Math.floor(Math.random() * colors.length)];
@@ -24,7 +24,7 @@ function Hero() {
                 const display = text.split("").map((char, index) => {
                     if (index < i) {
                         return (
-                            <span key={index} className="transition-all duration-300 ease-in-out">
+                            <span key={index} className="transition-all">
                                 {char}
                             </span>
                         );
@@ -33,7 +33,7 @@ function Hero() {
                         return (
                             <span
                                 key={index}
-                                className="font-mono transition-all duration-500 ease-in-out inline-block"
+                                className="font-mono transition-all inline-block"
                                 style={{
                                     color,
                                     textShadow: `0 0 8px ${color}`,
@@ -49,7 +49,7 @@ function Hero() {
                         return (
                             <span
                                 key={index}
-                                className="opacity-0 transition-opacity duration-300 ease-in-out"
+                                className="opacity-0 transition-opacity"
                             >
                                 {char}
                             </span>
@@ -63,7 +63,7 @@ function Hero() {
                     setTextElements((prev) => {
                         const updated = [...prev];
                         updated[i] = (
-                            <span key={i} className="transition-all duration-300 ease-in-out">
+                            <span key={i} className="transition-all">
                                 {text[i]}
                             </span>
                         );
@@ -74,14 +74,14 @@ function Hero() {
                 i++;
             } else {
                 const finalText = text.split("").map((char, index) => (
-                    <span key={index} className="transition-all duration-300 ease-in-out">
+                    <span key={index} className="transition-all">
                         {char}
                     </span>
                 ));
                 setTextElements(finalText);
                 clearInterval(intervalId);
 
-                setTimeout(callback, 2000); // wait before next text
+                setTimeout(callback, 3000); // wait before next text
             }
         }, 120);
     };
@@ -94,8 +94,8 @@ function Hero() {
 
     return (
         <div className="flex justify-center items-center text-center p-10">
-            <div className="max-w-3xl" style={{ perspective: "1000px" }}>
-                <div className="text-4xl md:text-6xl bg-gradient-to-t from-sky-500 to-sky-700 bg-clip-text text-transparent p-3 font-bold drop-shadow-[0_0_15px_rgba(56,189,248,0.8)]">
+            <div className="max-w-3xl">
+                <div className="text-4xl md:text-6xl font-bold">
                     {textElements}
                 </div>
                 <p className="mt-6 text-xl md:text-2xl">
