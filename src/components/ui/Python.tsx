@@ -1,7 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaChevronRight, FaPython, FaClipboard, FaCheck } from 'react-icons/fa';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import python from 'react-syntax-highlighter/dist/esm/languages/hljs/python';
+
+// Register Python language explicitly
+SyntaxHighlighter.registerLanguage('python', python);
+
 
 const tutorialData = [
   {
