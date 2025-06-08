@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, ReactNode, ReactElement } from "react";
 
 function Hero() {
-  const [textElements, setTextElements] = useState<React.ReactNode[]>([]);
+  const [textElements, setTextElements] = useState<ReactNode[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -11,12 +11,11 @@ function Hero() {
   const targetTexts = ["</Coding King>", "undefined", "We never give up!", "CRASH"];
   const chars =
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:',.<>/?";
-  const colors = ["#f87171", "#60a5fa", "#a78bfa", "#34d399", "#fbbf24", "#f472b6", "#38bdf8"];
+  const colors = ["#0EA5E9"];
 
   const getRandomChar = () => chars.charAt(Math.floor(Math.random() * chars.length));
   const getRandomColor = () => colors[Math.floor(Math.random() * colors.length)];
 
-  // Function to create the displayed array of spans given a string and optional highlighted indexes
   const createTextSpans = (text: string, highlightIndex: number | null = null) => {
     return text.split("").map((char, index) => {
       if (highlightIndex !== null && index === highlightIndex) {
@@ -37,11 +36,7 @@ function Hero() {
         );
       }
       return (
-        <span
-          key={index}
-          className="transition-all"
-          style={{ opacity: 1 }}
-        >
+        <span key={index} className="transition-all" style={{ opacity: 1 }}>
           {char}
         </span>
       );
@@ -55,21 +50,16 @@ function Hero() {
 
     intervalRef.current = setInterval(() => {
       if (i < maxLen) {
-        // Replace character at i with either random char (to animate) or final char
         displayedChars = displayedChars.map((c, idx) => {
           if (idx < i) {
-            // Already finalized characters from toText
             return toText[idx] || " ";
           } else if (idx === i) {
-            // Currently animating this character: show random char
             return getRandomChar();
           } else {
-            // Characters not reached yet: keep old char or space
             return displayedChars[idx];
           }
         });
 
-        // Build React nodes with highlight on i-th character
         setTextElements(
           displayedChars.map((char, index) => {
             if (index === i) {
@@ -99,7 +89,6 @@ function Hero() {
 
         i++;
       } else {
-        // Animation done: show full toText normally
         setTextElements(createTextSpans(toText));
         if (intervalRef.current) clearInterval(intervalRef.current);
         timeoutRef.current = setTimeout(callback, 2000);
@@ -107,9 +96,21 @@ function Hero() {
     }, 100);
   };
 
+  // Función para extraer texto plano de ReactNode[] sin errores
+  function getTextFromReactNodes(nodes: ReactNode | ReactNode[]): string {
+    if (typeof nodes === "string") {
+      return nodes;
+    } else if (Array.isArray(nodes)) {
+      return nodes.map(getTextFromReactNodes).join("");
+    } else if (React.isValidElement(nodes)) {
+      return getTextFromReactNodes(nodes.props.children);
+    } else {
+      return "";
+    }
+  }
+
   useEffect(() => {
-    // Animate from previous text to current text
-    const previousText = textElements.length > 0 ? textElements.map(el => (typeof el === "string" ? el : el.props.children)).join("") : "";
+    const previousText = getTextFromReactNodes(textElements) || "";
     animateMorph(previousText, targetTexts[currentIndex], () => {
       setCurrentIndex((prev) => (prev + 1) % targetTexts.length);
     });
