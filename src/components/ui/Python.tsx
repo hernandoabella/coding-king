@@ -7,7 +7,6 @@ import python from 'react-syntax-highlighter/dist/esm/languages/hljs/python';
 // Register Python language explicitly
 SyntaxHighlighter.registerLanguage('python', python);
 
-
 const tutorialData = [
   {
     id: 'basics',
