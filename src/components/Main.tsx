@@ -62,21 +62,21 @@ function Main() {
         return <Csharp />;
       case "PHP":
         return <PHP />;
-        case "Rust":
+      case "Rust":
         return <Rust />;
-        case "Haskell":
+      case "Haskell":
         return <Haskell />;
-        case "Ruby":
+      case "Ruby":
         return <Ruby />;
-        case "Elixir":
+      case "Elixir":
         return <Elixir />;
-        case "Clojure":
+      case "Clojure":
         return <Clojure />;
-        case "Scala":
+      case "Scala":
         return <Scala />;
-        case "Swift":
+      case "Swift":
         return <Swift />;
-        case "Bash":
+      case "Bash":
         return <Bash />;
       default:
         return <p className="text-center text-gray-500">Select a tool to display content.</p>;
