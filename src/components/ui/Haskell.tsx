@@ -4,6 +4,9 @@ import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { SiHaskell } from "react-icons/si";
 
+import haskell from 'react-syntax-highlighter/dist/esm/languages/hljs/haskell';
+SyntaxHighlighter.registerLanguage('haskell', haskell);
+
 const tutorialData = [
     {
       id: 'basics',
