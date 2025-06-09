@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaChevronRight, FaClipboard, FaCheck } from 'react-icons/fa';
 import { SiC, SiCplusplus } from "react-icons/si";
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
+import cpp from 'react-syntax-highlighter/dist/esm/languages/hljs/cpp';
+SyntaxHighlighter.registerLanguage('cpp', cpp);
 
 const tutorialData = [
   {
