@@ -4,6 +4,9 @@ import { FaGolang } from "react-icons/fa6";
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
+import go from 'react-syntax-highlighter/dist/esm/languages/hljs/go';
+SyntaxHighlighter.registerLanguage('go', go);
+
 const tutorialData = [
   {
     id: 'basics',
