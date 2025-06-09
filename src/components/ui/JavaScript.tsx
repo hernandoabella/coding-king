@@ -3,7 +3,8 @@ import { FaChevronRight, FaClipboard, FaCheck } from 'react-icons/fa';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { IoLogoJavascript } from "react-icons/io5";
-
+import javascript from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
+SyntaxHighlighter.registerLanguage('javascript', javascript);
 
 const tutorialData = [
   {
