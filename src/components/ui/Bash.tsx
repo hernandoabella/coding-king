@@ -4,6 +4,11 @@ import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { SiGnubash } from "react-icons/si";
 
+import bash from 'react-syntax-highlighter/dist/esm/languages/hljs/bash';
+
+SyntaxHighlighter.registerLanguage('bash', bash);
+
+
 const tutorialData = [
     {
         id: 'basics',
