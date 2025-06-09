@@ -3,6 +3,9 @@ import { FaRust, FaChevronRight, FaClipboard, FaCheck } from 'react-icons/fa';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
+import rust from 'react-syntax-highlighter/dist/esm/languages/hljs/rust';
+SyntaxHighlighter.registerLanguage('rust', rust);
+
 const tutorialData = [
     {
       id: 'basics',
