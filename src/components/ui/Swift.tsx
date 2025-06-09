@@ -4,6 +4,9 @@ import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { SiSwift } from "react-icons/si";
 
+import swift from 'react-syntax-highlighter/dist/esm/languages/hljs/swift';
+SyntaxHighlighter.registerLanguage('swift', swift);
+
 const tutorialData = [
     {
         id: 'basics',
