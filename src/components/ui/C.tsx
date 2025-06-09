@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaChevronRight, FaClipboard, FaCheck } from 'react-icons/fa';
 import { TbBrandCSharp } from "react-icons/tb";
 
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
+import c from 'react-syntax-highlighter/dist/esm/languages/hljs/c';
+
+SyntaxHighlighter.registerLanguage('c', c);
+
 
 const tutorialData = [
   {
