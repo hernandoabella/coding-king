@@ -3,7 +3,8 @@ import { FaChevronRight, FaJava, FaClipboard, FaCheck } from 'react-icons/fa';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
-
+import java from 'react-syntax-highlighter/dist/esm/languages/hljs/java';
+SyntaxHighlighter.registerLanguage('java', java);
 
 const tutorialData = [
   {
