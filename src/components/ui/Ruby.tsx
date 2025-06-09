@@ -4,6 +4,9 @@ import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { DiRuby } from "react-icons/di";
 
+import ruby from 'react-syntax-highlighter/dist/esm/languages/hljs/ruby';
+SyntaxHighlighter.registerLanguage('ruby', ruby);
+
 const tutorialData = [
     {
         id: 'basics',
