@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaChevronRight, FaClipboard, FaCheck } from 'react-icons/fa';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { SiElixir } from "react-icons/si";
+
+import elixir from 'react-syntax-highlighter/dist/esm/languages/hljs/elixir';
+SyntaxHighlighter.registerLanguage('elixir', elixir);
 
 const tutorialData = [
   {
