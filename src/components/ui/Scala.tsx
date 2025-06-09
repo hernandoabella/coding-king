@@ -4,6 +4,9 @@ import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { SiScala } from "react-icons/si";
 
+import scala from 'react-syntax-highlighter/dist/esm/languages/hljs/scala';
+SyntaxHighlighter.registerLanguage('scala', scala);
+
 const tutorialData = [
     {
       id: 'basics',
