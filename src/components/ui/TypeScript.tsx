@@ -4,6 +4,8 @@ import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { SiTypescript } from "react-icons/si";
 
+import typescript from 'react-syntax-highlighter/dist/esm/languages/hljs/typescript';
+SyntaxHighlighter.registerLanguage('typescript', typescript);
 
 const tutorialData = [
   {
