@@ -4,6 +4,9 @@ import { SiC, SiCplusplus } from "react-icons/si";
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
+import csharp from 'react-syntax-highlighter/dist/esm/languages/hljs/csharp';
+SyntaxHighlighter.registerLanguage('csharp', csharp);
+
 const tutorialData = [
   {
     id: 'basics',
