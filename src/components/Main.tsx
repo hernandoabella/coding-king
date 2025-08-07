@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Hero from "./Hero";
 import Footer from "./Footer";
-import Header from "./Header";
 import { Python, JavaScript, Java, C, Cpp, Csharp, TypeScript, Rust } from "./ImportUI";
 import { buttonsData } from "./buttonsData";
 import PHP from "./ui/PHP";
@@ -84,14 +83,14 @@ function Main() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="">
      
       {/* Main Content */}
-      <main className="flex flex-col items-center justify-center relative">
+      <main className="">
         <Hero />
 
         {showButtons && (
-          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mt-10">
+          <div className="flex flex-wrap justify-center gap-2 max-w-4xl m-auto">
             {buttonsData
               .find((cat) => cat.category === activeCategory)
               ?.buttons.map((button, index) => {
@@ -102,16 +101,16 @@ function Main() {
                   <button
                     key={index}
                     onClick={() => handleButtonClick(button.type)}
-                    className={`flex items-center gap-2 p-2 rounded-3xl transition duration-300 shadow-md hover:scale-105 font-semibold text-base
+                    className={`flex items-center gap-2 p-2 rounded transition duration-300 shadow-lg text-2xl
                     ${isActive
                         ? isProgramming
-                          ? "bg-sky-900 text-white"
+                          ? "bg-blue-500 text-white"
                           : "bg-blue-400 text-black"
-                        : "bg-gray-300 border text-gray-800 hover:bg-gray-300"
+                        : "bg-gray-200"
                       }`}
                   >
                     <i className={button.icon}></i>
-                    {button.label}
+                    
                   </button>
                 );
               })}
@@ -119,7 +118,7 @@ function Main() {
         )}
 
         {/* Render selected component */}
-        <div className="mt-10 w-full max-w-4xl">
+        <div className="">
           {renderComponent()}
         </div>
       </main>
