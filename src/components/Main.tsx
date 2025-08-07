@@ -85,9 +85,7 @@ function Main() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header always on top */}
-      <Header />
-
+     
       {/* Main Content */}
       <main className="flex flex-col items-center justify-center relative">
         <Hero />
