@@ -77,7 +77,7 @@ const PythonTutorial = () => {
                 }}
                 className={`flex items-center justify-between w-full px-3 py-2 rounded-lg transition-all duration-200 ${
                   activeSection.id === section.id
-                    ? 'bg-blue-100 font-semibold text-blue-700'
+                    ? 'bg-blue-500 font-semibold text-white'
                     : 'hover:bg-gray-100 text-gray-700'
                 }`}
               >
