@@ -8,7 +8,7 @@ function Hero() {
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const targetTexts = ["</Coding King>", "undefined", "We never give up!", "CRASH"];
+  const targetTexts = ["Coding King", "undefined", "We never give up!", "Quick resources", "Conquer the World of Coding!"];
   const chars =
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:',.<>/?";
   const colors = ["#0EA5E9"];
