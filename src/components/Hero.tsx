@@ -130,10 +130,6 @@ function Hero() {
         >
           {textElements.length > 0 ? textElements : null}
         </div>
-        <p className="mt-6 text-xl md:text-2xl">
-          Quick resources for{" "}
-          <b className="text-sky-500 underline">Conquering the World of Coding</b>
-        </p>
       </div>
     </section>
   );
