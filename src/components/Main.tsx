@@ -101,12 +101,12 @@ function Main() {
                   <button
                     key={index}
                     onClick={() => handleButtonClick(button.type)}
-                    className={`flex items-center gap-2 p-2 rounded transition duration-300 shadow-lg text-2xl
+                    className={`border flex items-center gap-4 p-2 rounded-lg transition duration-300 shadow-lg text-3xl
                     ${isActive
                         ? isProgramming
-                          ? "bg-blue-500 text-white"
-                          : "bg-blue-400 text-black"
-                        : "bg-gray-200"
+                          ? "bg-slate-800 text-blue-400"
+                          : "bg-blue-400 text-slate-700"
+                        : "bg-gray-200 text-slate-500"
                       }`}
                   >
                     <i className={button.icon}></i>
