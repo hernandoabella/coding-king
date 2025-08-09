@@ -268,7 +268,7 @@ const PythonTutorial = () => {
                   ? 'opacity-50 cursor-not-allowed'
                   : 'hover:bg-gray-200 dark:hover:bg-gray-700'
               } ${
-                isDarkMode ? 'text-gray-300' : 'text-gray-700'
+                isDarkMode ? 'text-gray-500' : 'text-gray-700'
               }`}
             >
               <FaChevronLeft />
