@@ -191,12 +191,13 @@ const PythonTutorial = () => {
         isDarkMode ? 'border-gray-700 bg-gray-900' : 'border-gray-200 bg-white'
       }`}>
         {/* Progress bar */}
-        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mb-6">
-          <div 
-            className="bg-blue-600 h-2.5 rounded-full transition-all duration-500 ease-out" 
-            style={{ width: `${progress}%` }}
-          ></div>
-        </div>
+<div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mb-6">
+  <div
+    className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 h-2.5 rounded-full transition-all duration-500 ease-out"
+    style={{ width: `${progress}%` }}
+  ></div>
+</div>
+
 
         <motion.div
           key={activeSubtopic.id}
