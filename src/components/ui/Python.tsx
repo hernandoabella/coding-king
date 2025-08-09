@@ -81,9 +81,6 @@ const PythonTutorial = () => {
       .catch((err) => console.error('Failed to copy: ', err));
   };
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
 
   // Navigation functions
   const getCurrentSubtopicIndex = () => {
@@ -110,9 +107,9 @@ const PythonTutorial = () => {
   return (
     <div className="flex flex-col lg:flex-row gap-6 max-w-6xl mx-auto p-4 md:p-6 transition-all duration-300">
       {/* Sidebar */}
-      <aside className={`w-full lg:w-80 p-5 rounded-2xl shadow-lg border ${
-        isDarkMode ? 'border-gray-700 bg-gray-900' : 'border-gray-200 bg-white'
-      }`}>
+      <aside className={`w-full lg:w-80 p-5 rounded-2xl shadow-lg border overflow-y-auto max-h-[calc(100vh-8rem)] custom-scroll
+    ${isDarkMode ? 'border-gray-700 bg-gray-900' : 'border-gray-200 bg-white'}
+  `}>
         <div className={`flex items-center justify-between gap-3 pb-4 mb-4 border-b ${
           isDarkMode ? 'border-gray-700' : 'border-gray-200'
         }`}>
@@ -187,9 +184,9 @@ const PythonTutorial = () => {
       </aside>
 
       {/* Main content */}
-      <main className={`flex-1 p-6 rounded-2xl shadow-lg border overflow-hidden relative ${
-        isDarkMode ? 'border-gray-700 bg-gray-900' : 'border-gray-200 bg-white'
-      }`}>
+      <main className={`flex-1 p-6 rounded-2xl shadow-lg border overflow-y-auto max-h-[calc(100vh-8rem)] custom-scroll
+    ${isDarkMode ? 'border-gray-700 bg-gray-900' : 'border-gray-200 bg-white'}
+  `}>
         {/* Progress bar */}
 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mb-6">
   <div
