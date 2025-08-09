@@ -99,19 +99,24 @@ function Main() {
 
                 return (
                   <button
-                    key={index}
-                    onClick={() => handleButtonClick(button.type)}
-                    className={`border flex items-center gap-4 p-2 rounded-lg transition duration-300 shadow-lg text-3xl
-                    ${isActive
-                        ? isProgramming
-                          ? "bg-slate-800 text-blue-400"
-                          : "bg-blue-400 text-slate-700"
-                        : "bg-gray-200 text-slate-500"
-                      }`}
-                  >
-                    <i className={button.icon}></i>
-                    
-                  </button>
+  key={index}
+  onClick={() => handleButtonClick(button.type)}
+  className={`
+    flex items-center justify-center gap-3 
+    p-3 md:p-4 lg:p-5 rounded-xl border transition-all duration-300 shadow-lg
+    text-2xl md:text-3xl lg:text-4xl
+    hover:scale-105 hover:shadow-blue-400/50 hover:border-blue-400
+    ${isActive
+      ? isProgramming
+        ? "bg-gradient-to-br from-slate-900 to-slate-700 text-blue-400 border-blue-500"
+        : "bg-gradient-to-br from-blue-400 to-blue-300 text-slate-800 border-blue-500"
+      : "bg-gray-200 text-slate-500 border-gray-300 dark:bg-gray-700 dark:text-gray-400"
+    }
+  `}
+>
+  <i className={button.icon}></i>
+</button>
+
                 );
               })}
           </div>
