@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Hero from "./Hero";
 import Footer from "./Footer";
-import { Python, JavaScript, Java, C, Cpp, Csharp, TypeScript, Rust } from "./ImportUI";
+import { Python, JavaScript, Java, C, Cpp, Csharp, TypeScript, Rust, Assembly } from "./ImportUI";
 import { buttonsData } from "./buttonsData";
 import PHP from "./ui/PHP";
 import Go from "./ui/Go";
@@ -13,27 +13,25 @@ import Clojure from "./ui/Clojure";
 import Scala from "./ui/Scala";
 import Swift from "./ui/Swift";
 import Bash from "./ui/Bash";
+import Julia from "./ui/Julia";
+import Lua from "./ui/Lua";
+import Perl from "./ui/Perl";
+import R from "./ui/R";
+import Dart from "./ui/Dart";
+import Matlab from "./ui/Matlab";
+import Elm from "./ui/Elm";
+import FSharp from "./ui/FSharp";
+import Prolog from "./ui/Prolog";
+import Objetivec from "./ui/Objetivec";
 
 function Main() {
   const [activeButton, setActiveButton] = useState("");
-  const [activeCategory, setActiveCategory] = useState("Programming");
-  const [showButtons, setShowButtons] = useState(true);
+  const [activeCategory] = useState("Programming");
+  const [showButtons] = useState(true);
 
   useEffect(() => {
     setActiveButton("Python");
   }, []);
-
-  const handleCategoryChange = (category) => {
-    setActiveCategory(category);
-    setActiveButton("");
-    setShowButtons(true);
-    const firstCategoryButton = buttonsData.find(
-      (data) => data.category === category
-    )?.buttons[0];
-    if (firstCategoryButton) {
-      setActiveButton(firstCategoryButton.type);
-    }
-  };
 
   const handleButtonClick = (buttonType) => {
     setActiveButton(buttonType);
@@ -63,10 +61,14 @@ function Main() {
         return <PHP />;
       case "Rust":
         return <Rust />;
-      case "Haskell":
-        return <Haskell />;
+      case "Assembly":
+        return <Assembly />;
+      case "Bash":
+        return <Bash />;
       case "Ruby":
         return <Ruby />;
+      case "Haskell":
+        return <Haskell />;
       case "Elixir":
         return <Elixir />;
       case "Clojure":
@@ -75,16 +77,40 @@ function Main() {
         return <Scala />;
       case "Swift":
         return <Swift />;
-      case "Bash":
-        return <Bash />;
+      case "Julia":
+        return <Julia />;
+      case "Lua":
+        return <Lua />;
+      case "Clojure":
+        return <Clojure />;
+      case "Perl":
+        return <Perl />;
+      case "R":
+        return <R />;
+      case "Dart":
+        return <Dart />;
+      case "Matlab":
+        return <Matlab />;
+      case "Elm":
+        return <Elm />;
+      case "FSharp":
+        return <FSharp />;
+      case "Prolog":
+        return <Prolog />;
+      case "Objetivec":
+        return <Objetivec />;
       default:
-        return <p className="text-center text-gray-500">Select a tool to display content.</p>;
+        return (
+          <p className="text-center text-gray-500">
+            Select a tool to display content.
+          </p>
+        );
     }
   };
 
   return (
     <div className="flex flex-col min-h-screen">
-     
+
       {/* Main Content */}
       <main>
         <Hero />
@@ -99,23 +125,23 @@ function Main() {
 
                 return (
                   <button
-  key={index}
-  onClick={() => handleButtonClick(button.type)}
-  className={`
+                    key={index}
+                    onClick={() => handleButtonClick(button.type)}
+                    className={`
     flex items-center justify-center gap-3 
     p-3 md:p-4 lg:p-5 rounded-xl border transition-all duration-300 shadow-lg
     text-2xl md:text-3xl lg:text-4xl
     hover:scale-105 hover:shadow-blue-400/50 hover:border-blue-400
     ${isActive
-      ? isProgramming
-        ? "bg-gradient-to-br from-slate-900 to-slate-700 text-blue-400 border-blue-500"
-        : "bg-gradient-to-br from-blue-400 to-blue-300 text-slate-800 border-blue-500"
-      : "bg-gray-200 text-slate-500 border-gray-300 dark:bg-gray-700 dark:text-gray-400"
-    }
+                        ? isProgramming
+                          ? "bg-gradient-to-br from-slate-900 to-slate-700 text-blue-400 border-blue-500"
+                          : "bg-gradient-to-br from-blue-400 to-blue-300 text-slate-800 border-blue-500"
+                        : "bg-gray-200 text-slate-500 border-gray-300 dark:bg-gray-700 dark:text-gray-400"
+                      }
   `}
->
-  <i className={button.icon}></i>
-</button>
+                  >
+                    <i className={button.icon}></i>
+                  </button>
 
                 );
               })}
