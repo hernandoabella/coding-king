@@ -51,8 +51,6 @@ print(PI)`,
   },
 ];
 
-
-
 const PythonTutorial = () => {
   const [activeSection, setActiveSection] = useState(tutorialData[0]);
   const [activeSubtopic, setActiveSubtopic] = useState(tutorialData[0].subtopics[0]);
@@ -92,17 +90,12 @@ const PythonTutorial = () => {
       .catch((err) => console.error('Failed to copy: ', err));
   };
 
-
-// Run code instantly — no animation, no partial output
-const handleRunCode = () => {
-  setIsRunning(true);
-  setOutput(activeSubtopic.output || ""); // Directly show the pre-defined output
-  setTimeout(() => setIsRunning(false), 200); // Quick reset so button isn't stuck
-};
-
-
-
-
+  // Run code instantly — no animation, no partial output
+  const handleRunCode = () => {
+    setIsRunning(true);
+    setOutput(activeSubtopic.output || ""); // Directly show the pre-defined output
+    setTimeout(() => setIsRunning(false), 200); // Quick reset so button isn't stuck
+  };
 
   const getCurrentSubtopicIndex = () => {
     return activeSection.subtopics.findIndex(sub => sub.id === activeSubtopic.id);
@@ -145,13 +138,12 @@ const handleRunCode = () => {
                   setActiveSubtopic(section.subtopics[0]);
                   setOutput("");
                 }}
-                className={`flex items-center justify-between w-full px-3 py-2 rounded-lg transition-all duration-200 ${
-                  activeSection.id === section.id
+                className={`flex items-center justify-between w-full px-3 py-2 rounded-lg transition-all duration-200 ${activeSection.id === section.id
                     ? 'bg-blue-600 font-semibold text-white shadow-md'
                     : isDarkMode
                       ? 'hover:bg-gray-800 text-gray-300'
                       : 'hover:bg-gray-100 text-gray-700'
-                }`}>
+                  }`}>
                 <span className="flex items-center">
                   <motion.span
                     animate={{ rotate: activeSection.id === section.id ? 90 : 0 }}
@@ -179,13 +171,12 @@ const handleRunCode = () => {
                             setActiveSubtopic(sub);
                             setOutput("");
                           }}
-                          className={`block w-full text-left px-2 py-1 rounded-md text-sm transition-all ${
-                            activeSubtopic.id === sub.id
+                          className={`block w-full text-left px-2 py-1 rounded-md text-sm transition-all ${activeSubtopic.id === sub.id
                               ? 'bg-blue-600 text-white shadow'
                               : isDarkMode
                                 ? 'hover:bg-gray-800 text-gray-300'
                                 : 'hover:bg-gray-100 text-gray-600'
-                          }`}>
+                            }`}>
                           {sub.title}
                         </button>
                       </li>
@@ -201,7 +192,7 @@ const handleRunCode = () => {
       {/* Main content */}
       <main className={`flex-1 p-6 rounded-2xl shadow-lg border overflow-y-auto max-h-[calc(100vh-8rem)] custom-scroll
         ${isDarkMode ? 'border-gray-700 bg-gray-900' : 'border-gray-200 bg-white'}`}>
-        
+
         {/* Progress bar */}
         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mb-6">
           <div
@@ -228,11 +219,10 @@ const handleRunCode = () => {
             {/* Copy button */}
             <button
               onClick={handleCopyToClipboard}
-              className={`absolute top-3 right-3 z-10 flex items-center gap-1 px-3 py-1.5 text-xs rounded-md font-medium shadow transition-all ${
-                copied
+              className={`absolute top-3 right-3 z-10 flex items-center gap-1 px-3 py-1.5 text-xs rounded-md font-medium shadow transition-all ${copied
                   ? 'bg-green-500 text-white'
                   : 'bg-blue-600 text-white hover:bg-blue-500'
-              }`}>
+                }`}>
               {copied ? <><FaCheck className="text-xs" /> Copied!</> : <><FaClipboard className="text-xs" /> Copy</>}
             </button>
 
@@ -259,20 +249,19 @@ const handleRunCode = () => {
           <button
             onClick={handleRunCode}
             disabled={isRunning}
-            className={`mt-4 flex items-center gap-2 px-4 py-2 rounded-md text-white font-semibold transition-all ${
-              isRunning ? 'bg-gray-500 cursor-not-allowed' : 'bg-green-600 hover:bg-green-500'
-            }`}>
+            className={`mt-4 flex items-center gap-2 px-4 py-2 rounded-md text-white font-semibold transition-all ${isRunning ? 'bg-gray-500 cursor-not-allowed' : 'bg-green-600 hover:bg-green-500'
+              }`}>
             <FaPlay /> {isRunning ? "Running..." : "Run"}
           </button>
 
           {/* Output console */}
           {output && (
             <div
-  className={`mt-4 p-4 rounded-lg font-mono text-sm shadow-inner ${isDarkMode ? 'bg-black text-green-400' : 'bg-gray-900 text-green-300'}`}
-  style={{ whiteSpace: 'pre-wrap' }}
->
-  {output}
-</div>
+              className={`mt-4 p-4 rounded-lg font-mono text-sm shadow-inner ${isDarkMode ? 'bg-black text-green-400' : 'bg-gray-900 text-green-300'}`}
+              style={{ whiteSpace: 'pre-wrap' }}
+            >
+              {output}
+            </div>
 
           )}
 
@@ -281,11 +270,10 @@ const handleRunCode = () => {
             <button
               onClick={goToPrevSubtopic}
               disabled={getCurrentSubtopicIndex() === 0}
-              className={`flex items-center gap-2 px-4 py-2 rounded-md transition-all ${
-                getCurrentSubtopicIndex() === 0
+              className={`flex items-center gap-2 px-4 py-2 rounded-md transition-all ${getCurrentSubtopicIndex() === 0
                   ? 'opacity-50 cursor-not-allowed'
                   : 'hover:bg-gray-200 dark:hover:bg-gray-700'
-              } ${isDarkMode ? 'text-gray-500' : 'text-gray-700'}`}>
+                } ${isDarkMode ? 'text-gray-500' : 'text-gray-700'}`}>
               <FaChevronLeft /> Previous
             </button>
 
@@ -296,11 +284,10 @@ const handleRunCode = () => {
             <button
               onClick={goToNextSubtopic}
               disabled={getCurrentSubtopicIndex() === activeSection.subtopics.length - 1}
-              className={`flex items-center gap-2 px-4 py-2 rounded-md transition-all ${
-                getCurrentSubtopicIndex() === activeSection.subtopics.length - 1
+              className={`flex items-center gap-2 px-4 py-2 rounded-md transition-all ${getCurrentSubtopicIndex() === activeSection.subtopics.length - 1
                   ? 'opacity-50 cursor-not-allowed'
                   : 'hover:bg-gray-200 dark:hover:bg-gray-700'
-              } ${isDarkMode ? 'text-gray-500' : 'text-gray-700'}`}>
+                } ${isDarkMode ? 'text-gray-500' : 'text-gray-700'}`}>
               Next <FaChevronRight />
             </button>
           </div>
