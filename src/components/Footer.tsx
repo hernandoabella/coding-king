@@ -24,7 +24,7 @@ function Footer() {
         {/* Left side: copyright + link */}
         <div className="flex flex-col sm:flex-row items-center gap-2">
           <span className="font-medium text-center sm:text-left">
-            &copy; {new Date().getFullYear()} Coding King. All rights reserved.
+            &copy; {new Date().getFullYear()} Coding King.
           </span>
           <a
             href="https://www.codingking.net"
