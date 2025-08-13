@@ -83,14 +83,14 @@ function Main() {
   };
 
   return (
-    <div className="">
+    <div className="flex flex-col min-h-screen">
      
       {/* Main Content */}
-      <main className="">
+      <main>
         <Hero />
 
         {showButtons && (
-          <div className="flex flex-wrap justify-center gap-2 max-w-4xl m-auto">
+          <div className="flex flex-wrap justify-center p-4 gap-2 max-w-4xl m-auto">
             {buttonsData
               .find((cat) => cat.category === activeCategory)
               ?.buttons.map((button, index) => {
