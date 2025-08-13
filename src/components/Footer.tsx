@@ -19,7 +19,7 @@ function Footer() {
   };
 
   return (
-    <footer className="absolute bottom w-full bg-slate-800 text-white py-4 px-6 mt-auto">
+    <footer className=" bottom w-full bg-slate-800 text-white py-4 px-6 mt-auto">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
         {/* Left side: copyright + link */}
         <div className="flex flex-col sm:flex-row items-center gap-2">
