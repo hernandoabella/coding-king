@@ -116,7 +116,7 @@ function Main() {
         <Hero />
 
         {showButtons && (
-          <div className="flex flex-wrap justify-center p-4 gap-2 max-w-4xl m-auto">
+          <div className="flex flex-wrap justify-center p-4 gap-4 max-w-7xl m-auto">
             {buttonsData
               .find((cat) => cat.category === activeCategory)
               ?.buttons.map((button, index) => {
@@ -130,7 +130,7 @@ function Main() {
                     className={`
     flex items-center justify-center gap-3 
     p-3 md:p-4 lg:p-5 rounded-xl border transition-all duration-300 shadow-lg
-    text-2xl md:text-3xl lg:text-4xl
+    text-2xl md:text-2xl lg:text-2xl
     hover:scale-105 hover:shadow-blue-400/50 hover:border-blue-400
     ${isActive
                         ? isProgramming
