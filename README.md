@@ -8,5 +8,3 @@
 - [C](#)
 - [C++](#)
 - [C#](#)
-
-Made with ❤️ by [@hernandoabella](https://www.github.com/hernandoabella)
