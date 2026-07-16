@@ -2,24 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
+@layer base {
+  body {
+    @apply antialiased;
+  }
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .glass-light {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
 }
 
-/* Handle */
+/* animated grid background */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridScroll 20s linear infinite;
+}
+
+@keyframes gridScroll {
+  from { background-position: 0 0; }
+  to { background-position: 40px 40px; }
+}
+
+/* premium scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-  background: #1F9CEA;
-  border-radius: 5px;
+  background: rgba(100, 120, 180, 0.3);
+  border-radius: 3px;
 }
-
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  
+  background: rgba(100, 120, 180, 0.5);
 }
 
+/* code block window dots */
+.window-dots {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+.window-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.window-dots span:nth-child(1) { background: #ff5f56; }
+.window-dots span:nth-child(2) { background: #ffbd2e; }
+.window-dots span:nth-child(3) { background: #27c93f; }
+
+/* glow pulse */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(59, 130, 246, 0.3); }
+  50% { box-shadow: 0 0 16px rgba(59, 130, 246, 0.5); }
+}
+.glow-active {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* output fade-in */
+@keyframes outputIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.output-enter {
+  animation: outputIn 0.3s ease-out;
+}

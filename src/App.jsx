@@ -1,14 +1,12 @@
-import Main from './components/Main.tsx';
+import { ThemeProvider } from './components/ThemeContext';
+import Main from './components/Main';
 
 function App() {
-
   return (
-    <>
-      <div>
-        <Main/>
-      </div>
-    </>
-  )
+    <ThemeProvider>
+      <Main />
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;

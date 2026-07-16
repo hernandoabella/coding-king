@@ -1,27 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useTheme } from "./ThemeContext";
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 function Footer() {
-  const [theme, setTheme] = useState(() => {
-    const savedTheme = localStorage.getItem("theme");
-    return savedTheme ? savedTheme : "night";
-  });
-
-  useEffect(() => {
-    document.body.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  const handleThemeChange = (e) => {
-    const selectedTheme = e.target.checked ? "night" : "default";
-    setTheme(selectedTheme);
-  };
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <footer className=" bottom w-full bg-slate-800 text-white py-4 px-6 mt-auto">
+    <footer className="bottom w-full bg-slate-800 text-white py-4 px-6 mt-auto">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
-        {/* Left side: copyright + link */}
         <div className="flex flex-col sm:flex-row items-center gap-2">
           <span className="font-medium text-center sm:text-left">
             &copy; {new Date().getFullYear()} Coding King.
@@ -36,18 +22,15 @@ function Footer() {
           </a>
         </div>
 
-        {/* Right side: theme toggle + social icons */}
         <div className="flex items-center gap-6">
-          {/* Theme toggle */}
           <input
             title="Toggle Theme"
             type="checkbox"
             className="toggle theme-controller border-sky-400 bg-amber-300 [--tglbg:theme(colors.sky.500)] checked:border-blue-800 checked:bg-blue-300 checked:[--tglbg:theme(colors.blue.900)]"
             checked={theme === "night"}
-            onChange={handleThemeChange}
+            onChange={toggleTheme}
           />
 
-          {/* Social icons */}
           <div className="flex gap-4">
             <a
               href="https://www.github.com/hernandoabella/coding_king"
