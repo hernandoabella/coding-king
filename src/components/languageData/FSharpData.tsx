@@ -1,226 +1,198 @@
-import fsharp from 'react-syntax-highlighter/dist/esm/languages/hljs/fsharp';
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { LanguageConfig } from '../languageRegistry';
 
-SyntaxHighlighter.registerLanguage('fsharp', fsharp);
-
-export const fSharpConfig = {
-  title: "F# Tutorial",
+// Auto-generated comprehensive tutorial. Edit freely.
+export const fSharpConfig: LanguageConfig = {
+  title: 'F#',
   language: 'fsharp',
   tutorialData: [
-  {
-    id: 'basics',
-    title: 'Basics',
-    subtopics: [
-      {
-        id: 'let-bindings',
-        title: 'Let Bindings',
-        description: 'Declare immutable values and mutable variables with let.',
-        content: `let name = "Alice"
-let age = 25
-let mutable counter = 0
-counter <- counter + 1
-printfn "%s is %d, counter=%d" name age counter`,
-        output: "Alice is 25, counter=1"
-      },
-      {
-        id: 'types',
-        title: 'Types',
-        description: 'F# has a strong type system with type inference.',
-        content: `let number: int = 42
-let pi: float = 3.14159
-let greeting: string = "Hello"
-let isActive: bool = true
-printfn "%d, %f, %s, %b" number pi greeting isActive`,
-        output: "42, 3.141590, Hello, true"
-      },
-      {
-        id: 'tuples',
-        title: 'Tuples',
-        description: 'Group multiple values into a single compound value.',
-        content: `let point = (3, 4)
-let person = ("Alice", 25, true)
-let (name, age, active) = person
-let x, y = point
-printfn "%s is %d (active=%b) at (%d,%d)" name age active x y`,
-        output: "Alice is 25 (active=true) at (3,4)"
-      },
-      {
-        id: 'records',
-        title: 'Records',
-        description: 'Define named types with labeled fields.',
-        content: `type Person = { Name: string; Age: int }
-let alice = { Name = "Alice"; Age = 25 }
-let older = { alice with Age = 26 }
-printfn "%s is %d" older.Name older.Age`,
-        output: "Alice is 26"
-      },
-    ],
-  },
-  {
-    id: 'pattern-matching',
-    title: 'Pattern Matching',
-    subtopics: [
-      {
-        id: 'match',
-        title: 'Match Expressions',
-        description: 'Use match expressions to branch on patterns.',
-        content: `let describe n =
-    match n with
-    | 0 -> "zero"
-    | 1 -> "one"
-    | 2 -> "two"
-    | _ -> "many"
-
-printfn "%s" (describe 1)
-printfn "%s" (describe 5)`,
-        output: "one\nmany"
-      },
-      {
-        id: 'guards',
-        title: 'Guards',
-        description: 'Add conditional guards with when clauses.',
-        content: `let classify n =
-    match n with
-    | 0 -> "zero"
-    | x when x > 0 -> "positive"
-    | _ -> "negative"
-
-printfn "%s" (classify 10)
-printfn "%s" (classify -3)`,
-        output: "positive\nnegative"
-      },
-      {
-        id: 'options',
-        title: 'Options',
-        description: 'Option type for values that may or may not exist.',
-        content: `let tryDivide x y =
-    if y = 0 then None
-    else Some (x / y)
-
-match tryDivide 10 2 with
-| Some result -> printfn "Result: %d" result
-| None -> printfn "Cannot divide by zero"`,
-        output: "Result: 5"
-      },
-      {
-        id: 'discriminated-unions',
-        title: 'Discriminated Unions',
-        description: 'Define types that can be one of several named cases.',
-        content: `type Shape =
-    | Circle of radius: float
-    | Rectangle of width: float * height: float
-
-let area shape =
-    match shape with
-    | Circle r -> System.Math.PI * r * r
-    | Rectangle (w, h) -> w * h
-
-printfn "%f" (area (Circle 2.0))
-printfn "%f" (area (Rectangle (3.0, 4.0)))`,
-        output: "12.566371\n12.000000"
-      },
-    ],
-  },
-  {
-    id: 'functions',
-    title: 'Functions',
-    subtopics: [
-      {
-        id: 'functions',
-        title: 'Functions',
-        description: 'Define and call functions with parameters.',
-        content: `let add x y = x + y
-let multiply a b = a * b
-
-printfn "%d" (add 3 5)
-printfn "%d" (multiply 4 7)`,
-        output: "8\n28"
-      },
-      {
-        id: 'piping',
-        title: 'Piping',
-        description: 'Chain function calls with the forward pipe operator.',
-        content: `let square x = x * x
-let addOne x = x + 1
-
-let result = 3 |> addOne |> square
-printfn "%d" result`,
-        output: "16"
-      },
-      {
-        id: 'composition',
-        title: 'Composition',
-        description: 'Combine functions into new functions.',
-        content: `let square x = x * x
-let addOne x = x + 1
-let addOneThenSquare = addOne >> square
-
-printfn "%d" (addOneThenSquare 4)`,
-        output: "25"
-      },
-      {
-        id: 'partial-application',
-        title: 'Partial Application',
-        description: 'Fix some arguments to create new functions.',
-        content: `let multiply a b = a * b
-let double = multiply 2
-let triple = multiply 3
-
-printfn "%d, %d" (double 7) (triple 7)`,
-        output: "14, 21"
-      },
-    ],
-  },
-  {
-    id: 'collections',
-    title: 'Collections',
-    subtopics: [
-      {
-        id: 'lists',
-        title: 'Lists',
-        description: 'Immutable linked lists with cons and append.',
-        content: `let nums = [1; 2; 3; 4; 5]
-let more = 0 :: nums
-let combined = nums @ [6; 7]
-
-printfn "%A" more
-printfn "%A" combined`,
-        output: "[0; 1; 2; 3; 4; 5]\n[1; 2; 3; 4; 5; 6; 7]"
-      },
-      {
-        id: 'arrays',
-        title: 'Arrays',
-        description: 'Fixed-size mutable collections.',
-        content: `let arr = [| 10; 20; 30; 40 |]
-arr.[1] <- 25
-printfn "%A" arr
-printfn "%d" arr.[2]`,
-        output: "[|10; 25; 30; 40|]\n30"
-      },
-      {
-        id: 'sequences',
-        title: 'Sequences',
-        description: 'Lazy sequences generated on demand.',
-        content: `let squares = seq { for i in 1 .. 5 -> i * i }
-printfn "%A" (Seq.toList squares)
-
-let evens = Seq.initInfinite (fun i -> (i + 1) * 2)
-printfn "%A" (evens |> Seq.take 4 |> Seq.toList)`,
-        output: "[1; 4; 9; 16; 25]\n[2; 4; 6; 8]"
-      },
-      {
-        id: 'map-filter-fold',
-        title: 'Map / Filter / Fold',
-        description: 'Higher-order functions for transforming collections.',
-        content: `let nums = [1; 2; 3; 4; 5]
-let doubled = List.map (fun x -> x * 2) nums
-let evens = List.filter (fun x -> x % 2 = 0) nums
-let sum = List.fold (+) 0 nums
-
-printfn "%A, %A, %d" doubled evens sum`,
-        output: "[2; 4; 6; 8; 10], [2; 4], 15"
-      },
-    ],
-  },
-]
+        {
+      id: 'basics',
+      title: 'F# Basics',
+      description: 'Learn F# Basics',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'hello',
+      title: 'Hello World',
+      description: 'printfn.',
+      content: `printfn "Hello, World!"`,
+      output: `Hello, World!`,
+    },
+            {
+      id: 'variables',
+      title: 'let bindings',
+      description: 'Immutable by default.',
+      content: `let name = "Ada"
+let age = 36
+printfn "%s is %d" name age`,
+      output: `Ada is 36`,
+    },
+            {
+      id: 'types',
+      title: 'Type Inference',
+      description: 'Strong, inferred.',
+      content: `let x = 5
+let y = 3.14
+printfn "%A %A" x y`,
+      output: `5 3.14`,
+    },
+      ],
+    },
+        {
+      id: 'functions',
+      title: 'Functions',
+      description: 'Learn Functions',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'def',
+      title: 'Defining Functions',
+      description: 'let f x = ...',
+      content: `let square n = n * n
+printfn "%d" (square 5)`,
+      output: `25`,
+    },
+            {
+      id: 'pipe',
+      title: 'Pipe Operator',
+      description: '|> threading.',
+      content: `let result = [1; 2; 3] |> List.map (fun x -> x * 2)
+printfn "%A" result`,
+      output: `[2; 4; 6]`,
+    },
+            {
+      id: 'higher',
+      title: 'Higher-order',
+      description: 'Pass functions.',
+      content: `let evens = [1..4] |> List.filter (fun x -> x % 2 = 0)
+printfn "%A" evens`,
+      output: `[2; 4]`,
+    },
+      ],
+    },
+        {
+      id: 'collections',
+      title: 'Collections',
+      description: 'Learn Collections',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'list',
+      title: 'Lists',
+      description: 'Immutable linked.',
+      content: `let xs = [1; 2; 3]
+printfn "%A" (0 :: xs)`,
+      output: `[0; 1; 2; 3]`,
+    },
+            {
+      id: 'map',
+      title: 'Maps',
+      description: 'key-value.',
+      content: `let m = Map [("a", 1); ("b", 2)]
+printfn "%A" m.["b"]`,
+      output: `2`,
+    },
+            {
+      id: 'array',
+      title: 'Arrays',
+      description: 'Mutable, fixed.',
+      content: `let a = [| 1; 2; 3 |]
+printfn "%d" a.[0]`,
+      output: `1`,
+    },
+      ],
+    },
+        {
+      id: 'control-flow',
+      title: 'Control Flow',
+      description: 'Learn Control Flow',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'if',
+      title: 'if / else',
+      description: 'Expressions.',
+      content: `let x = 10
+let s = if x > 5 then "big" else "small"
+printfn "%s" s`,
+      output: `big`,
+    },
+            {
+      id: 'match',
+      title: 'Pattern Matching',
+      description: 'match with.',
+      content: `let d = 2
+let s = match d with | 1 -> "one" | 2 -> "two" | _ -> "other"
+printfn "%s" s`,
+      output: `two`,
+    },
+      ],
+    },
+        {
+      id: 'types',
+      title: 'Algebraic Types',
+      description: 'Learn Algebraic Types',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'du',
+      title: 'Discriminated Unions',
+      description: 'Sum types.',
+      content: `type Color = Red | Green | Blue
+printfn "%A" Green`,
+      output: `Green`,
+    },
+            {
+      id: 'record',
+      title: 'Records',
+      description: 'Composite data.',
+      content: `type Point = { X: int; Y: int }
+let p = { X = 3; Y = 4 }
+printfn "%d" p.X`,
+      output: `3`,
+    },
+            {
+      id: 'option',
+      title: 'Option',
+      description: 'Safe optional.',
+      content: `let safeHead xs = match xs with [] -> None | h::_ -> Some h
+printfn "%A" (safeHead [1;2])`,
+      output: `Some 1`,
+    },
+      ],
+    },
+        {
+      id: 'oop',
+      title: 'Objects',
+      description: 'Learn Objects',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'class',
+      title: 'Classes',
+      description: 'Members.',
+      content: `type Dog() =
+    member this.Bark() = printfn "Woof"
+Dog().Bark()`,
+      output: `Woof`,
+    },
+      ],
+    },
+        {
+      id: 'async',
+      title: 'Async',
+      description: 'Learn Async',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'async',
+      title: 'async / await',
+      description: 'Computation expressions.',
+      content: `let task = async { return 42 }
+printfn "started"`,
+      output: `started`,
+    },
+      ],
+    },
+  ],
 };

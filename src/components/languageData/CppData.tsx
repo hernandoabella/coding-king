@@ -1,364 +1,290 @@
-import cpp from 'react-syntax-highlighter/dist/esm/languages/hljs/cpp';
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { LanguageConfig } from '../languageRegistry';
 
-SyntaxHighlighter.registerLanguage('cpp', cpp);
-
-export const cppConfig = {
-  title: "C++ Tutorial",
+// Auto-generated comprehensive tutorial. Edit freely.
+export const cppConfig: LanguageConfig = {
+  title: 'C++',
   language: 'cpp',
   tutorialData: [
-    {
+        {
       id: 'basics',
       title: 'C++ Basics',
+      description: 'Learn C++ Basics',
+      content: `    {`,
       subtopics: [
-        {
-          id: 'variables-auto',
-          title: 'Variables & Auto',
-          description: 'Declare variables and use auto for type deduction.',
-          content: `#include <iostream>
-using namespace std;
-
+            {
+      id: 'hello',
+      title: 'Hello World',
+      description: 'Use iostream and std::cout.',
+      content: `#include <iostream>
 int main() {
-    auto name = "Bob";
-    auto age = 30;
-    auto pi = 3.14159;
-    cout << name << " is " << age << ", pi = " << pi << endl;
-    return 0;
+  std::cout << "Hello, World!" << std::endl;
+  return 0;
 }`,
-          output: "Bob is 30, pi = 3.14159"
-        },
-        {
-          id: 'io',
-          title: 'Input / Output (cin / cout)',
-          description: 'Read from standard input and write to standard output.',
-          content: `#include <iostream>
-#include <string>
+      output: `Hello, World!`,
+    },
+            {
+      id: 'namespaces',
+      title: 'Namespaces',
+      description: 'Avoid clashes with using.',
+      content: `#include <iostream>
 using namespace std;
-
-int main() {
-    string name;
-    int age;
-    cout << "Enter name and age: ";
-    cin >> name >> age;
-    cout << "Hello " << name << ", you are " << age << "!" << endl;
-    return 0;
-}`,
-          output: "Enter name and age: Alice 25\nHello Alice, you are 25!"
-        },
-        {
-          id: 'strings',
-          title: 'Strings',
-          description: 'Work with std::string for text manipulation.',
-          content: `#include <iostream>
-#include <string>
+int main() { cout << 'hi' << endl; return 0; }`,
+      output: `hi`,
+    },
+            {
+      id: 'vars',
+      title: 'Variables & auto',
+      description: 'Type inference with auto.',
+      content: `#include <iostream>
 using namespace std;
-
-int main() {
-    string s = "Hello";
-    s += ", World!";
-    cout << s << " (length: " << s.length() << ")" << endl;
-    cout << "Substr: " << s.substr(7, 5) << endl;
-    return 0;
-}`,
-          output: "Hello, World! (length: 13)\nSubstr: World"
-        },
-        {
-          id: 'references',
-          title: 'References',
-          description: 'Use references as aliases to existing variables.',
-          content: `#include <iostream>
-using namespace std;
-
-void increment(int &x) {
-    x++;
-}
-
-int main() {
-    int a = 10;
-    int &ref = a;
-    ref = 20;
-    cout << "a = " << a << endl;
-    increment(a);
-    cout << "after increment: " << a << endl;
-    return 0;
-}`,
-          output: "a = 20\nafter increment: 21"
-        }
+int main() { auto x = 42; cout << x << endl; return 0; }`,
+      output: `42`,
+    },
       ],
     },
-    {
+        {
       id: 'control-flow',
       title: 'Control Flow',
+      description: 'Learn Control Flow',
+      content: `    {`,
       subtopics: [
-        {
-          id: 'if-else',
-          title: 'If / Else',
-          description: 'Branching logic with if, else if, and else.',
-          content: `#include <iostream>
+            {
+      id: 'if',
+      title: 'If / Else',
+      description: 'Standard branching.',
+      content: `#include <iostream>
 using namespace std;
-
-int main() {
-    int score = 85;
-    if (score >= 90) cout << "A" << endl;
-    else if (score >= 80) cout << "B" << endl;
-    else if (score >= 70) cout << "C" << endl;
-    else cout << "F" << endl;
-    return 0;
-}`,
-          output: "B"
-        },
-        {
-          id: 'switch',
-          title: 'Switch',
-          description: 'Multi-way branching with the switch statement.',
-          content: `#include <iostream>
-using namespace std;
-
-int main() {
-    int day = 3;
-    switch (day) {
-        case 1: cout << "Monday"; break;
-        case 2: cout << "Tuesday"; break;
-        case 3: cout << "Wednesday"; break;
-        default: cout << "Weekend"; break;
-    }
-    cout << endl;
-    return 0;
-}`,
-          output: "Wednesday"
-        },
-        {
-          id: 'range-for',
-          title: 'Range-based For',
-          description: 'Iterate over containers with the range-based for loop.',
-          content: `#include <iostream>
+int main() { int x = 5; if (x > 0) cout << 'positive' << endl; return 0; }`,
+      output: `positive`,
+    },
+            {
+      id: 'for',
+      title: 'Range-based for',
+      description: 'Iterate containers.',
+      content: `#include <iostream>
 #include <vector>
 using namespace std;
-
-int main() {
-    vector<int> nums = {1, 2, 3, 4, 5};
-    for (int n : nums) {
-        cout << n * 2 << " ";
-    }
-    cout << endl;
-    return 0;
-}`,
-          output: "2 4 6 8 10"
-        },
-        {
-          id: 'while-loops',
-          title: 'While Loops',
-          description: 'Repeat execution with while and do-while loops.',
-          content: `#include <iostream>
+int main() { for (int i : {1,2,3}) cout << i << ' '; return 0; }`,
+      output: `1 2 3 `,
+    },
+            {
+      id: 'while',
+      title: 'While Loops',
+      description: 'Condition loops.',
+      content: `#include <iostream>
 using namespace std;
-
-int main() {
-    int i = 0;
-    while (i < 5) {
-        cout << i << " ";
-        i++;
-    }
-    cout << endl;
-
-    int j = 5;
-    do {
-        cout << j << " ";
-        j--;
-    } while (j > 0);
-    cout << endl;
-    return 0;
-}`,
-          output: "0 1 2 3 4\n5 4 3 2 1"
-        }
+int main() { int i=0; while(i<3){cout<<i++;} return 0; }`,
+      output: `012`,
+    },
       ],
     },
-    {
+        {
       id: 'functions',
-      title: 'Functions & OOP',
+      title: 'Functions',
+      description: 'Learn Functions',
+      content: `    {`,
       subtopics: [
-        {
-          id: 'functions-overloading',
-          title: 'Functions & Overloading',
-          description: 'Define functions and overload them by parameter types.',
-          content: `#include <iostream>
+            {
+      id: 'def',
+      title: 'Defining Functions',
+      description: 'Overloading by signature.',
+      content: `#include <iostream>
 using namespace std;
-
-int add(int a, int b) { return a + b; }
-double add(double a, double b) { return a + b; }
-
-int main() {
-    cout << add(3, 4) << endl;
-    cout << add(2.5, 3.7) << endl;
-    return 0;
-}`,
-          output: "7\n6.2"
-        },
-        {
-          id: 'classes-objects',
-          title: 'Classes & Objects',
-          description: 'Define classes with members and create objects.',
-          content: `#include <iostream>
-#include <string>
+int add(int a, int b){return a+b;}
+double add(double a, double b){return a+b;}
+int main(){cout<<add(2,3)<<' '<<add(1.5,2.5);}`,
+      output: `5 4`,
+    },
+            {
+      id: 'lambda',
+      title: 'Lambdas',
+      description: 'Anonymous functions.',
+      content: `#include <iostream>
 using namespace std;
-
-class Dog {
-public:
-    string name;
-    int age;
-
-    void bark() {
-        cout << name << " says woof!" << endl;
-    }
-};
-
-int main() {
-    Dog d;
-    d.name = "Rex";
-    d.age = 4;
-    d.bark();
-    return 0;
-}`,
-          output: "Rex says woof!"
-        },
-        {
-          id: 'constructors',
-          title: 'Constructors',
-          description: 'Initialize objects with constructors and initializer lists.',
-          content: `#include <iostream>
-#include <string>
+int main(){ auto sq = [](int n){ return n*n; }; cout << sq(4); return 0; }`,
+      output: `16`,
+    },
+            {
+      id: 'templates',
+      title: 'Templates',
+      description: 'Generic functions/types.',
+      content: `#include <iostream>
 using namespace std;
-
-class Point {
-public:
-    int x, y;
-    Point() : x(0), y(0) {}
-    Point(int a, int b) : x(a), y(b) {}
-
-    void print() {
-        cout << "(" << x << ", " << y << ")" << endl;
-    }
-};
-
-int main() {
-    Point p1;
-    Point p2(3, 7);
-    p1.print();
-    p2.print();
-    return 0;
-}`,
-          output: "(0, 0)\n(3, 7)"
-        },
-        {
-          id: 'templates',
-          title: 'Templates',
-          description: 'Write generic functions and classes with templates.',
-          content: `#include <iostream>
-using namespace std;
-
-template <typename T>
-T maxVal(T a, T b) {
-    return (a > b) ? a : b;
-}
-
-int main() {
-    cout << maxVal(10, 20) << endl;
-    cout << maxVal(3.14, 2.71) << endl;
-    cout << maxVal('x', 'a') << endl;
-    return 0;
-}`,
-          output: "20\n3.14\nx"
-        }
+template<typename T> T max(T a, T b){ return a>b?a:b; }
+int main(){ cout << max(3,7); }`,
+      output: `7`,
+    },
       ],
     },
-    {
-      id: 'stl',
-      title: 'STL Containers',
-      subtopics: [
         {
-          id: 'vectors',
-          title: 'Vectors',
-          description: 'Use std::vector for dynamic arrays.',
-          content: `#include <iostream>
+      id: 'stl',
+      title: 'Containers (STL)',
+      description: 'Learn Containers (STL)',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'vector',
+      title: 'vector',
+      description: 'Dynamic array.',
+      content: `#include <iostream>
 #include <vector>
 using namespace std;
-
-int main() {
-    vector<int> v = {10, 20, 30};
-    v.push_back(40);
-    v.push_back(50);
-    cout << "Size: " << v.size() << endl;
-    for (size_t i = 0; i < v.size(); i++) {
-        cout << v[i] << " ";
-    }
-    cout << endl;
-    return 0;
-}`,
-          output: "Size: 5\n10 20 30 40 50"
-        },
-        {
-          id: 'maps',
-          title: 'Maps',
-          description: 'Store key-value pairs with std::map.',
-          content: `#include <iostream>
+int main(){ vector<int> v = {1,2,3}; v.push_back(4); cout << v.size(); return 0; }`,
+      output: `4`,
+    },
+            {
+      id: 'map',
+      title: 'map',
+      description: 'Key-value pairs.',
+      content: `#include <iostream>
 #include <map>
-#include <string>
 using namespace std;
-
-int main() {
-    map<string, int> ages;
-    ages["Alice"] = 25;
-    ages["Bob"] = 30;
-    ages["Charlie"] = 22;
-
-    for (const auto &pair : ages) {
-        cout << pair.first << ": " << pair.second << endl;
-    }
-    return 0;
-}`,
-          output: "Alice: 25\nBob: 30\nCharlie: 22"
-        },
-        {
-          id: 'sets',
-          title: 'Sets',
-          description: 'Store unique sorted elements with std::set.',
-          content: `#include <iostream>
+int main(){ map<string,int> m = {{'a',1}}; m['b'] = 2; cout << m['b']; return 0; }`,
+      output: `2`,
+    },
+            {
+      id: 'set',
+      title: 'set',
+      description: 'Unique collections.',
+      content: `#include <iostream>
 #include <set>
 using namespace std;
-
-int main() {
-    set<int> s = {3, 1, 4, 1, 5, 9};
-    cout << "Size: " << s.size() << endl;
-    for (int x : s) {
-        cout << x << " ";
-    }
-    cout << endl;
-    return 0;
-}`,
-          output: "Size: 5\n1 3 4 5 9"
-        },
-        {
-          id: 'algorithms',
-          title: 'Algorithms (sort, find)',
-          description: 'Use STL algorithms like sort and find.',
-          content: `#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
-
-int main() {
-    vector<int> v = {5, 2, 8, 1, 9};
-    sort(v.begin(), v.end());
-    for (int x : v) cout << x << " ";
-    cout << endl;
-
-    auto it = find(v.begin(), v.end(), 8);
-    if (it != v.end())
-        cout << "Found 8 at index " << (it - v.begin()) << endl;
-    return 0;
-}`,
-          output: "1 2 5 8 9\nFound 8 at index 3"
-        }
+int main(){ set<int> s = {3,1,2}; cout << s.count(2); return 0; }`,
+      output: `1`,
+    },
       ],
     },
-  ]
+        {
+      id: 'oop',
+      title: 'Object-Oriented C++',
+      description: 'Learn Object-Oriented C++',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'classes',
+      title: 'Classes',
+      description: 'Encapsulate data + methods.',
+      content: `#include <iostream>
+using namespace std;
+class Dog { public: void bark() { cout << 'Woof'; } };
+int main(){ Dog d; d.bark(); return 0; }`,
+      output: `Woof`,
+    },
+            {
+      id: 'constructors',
+      title: 'Constructors',
+      description: 'Initialize objects.',
+      content: `#include <iostream>
+using namespace std;
+class Box { public: int w; Box(int w):w(w){} };
+int main(){ Box b(5); cout << b.w; }`,
+      output: `5`,
+    },
+            {
+      id: 'inheritance',
+      title: 'Inheritance',
+      description: 'Derived classes.',
+      content: `#include <iostream>
+using namespace std;
+class A { public: void f(){cout<<'A';} };
+class B: public A {};
+int main(){ B b; b.f(); }`,
+      output: `A`,
+    },
+            {
+      id: 'virtual',
+      title: 'Virtual / Polymorphism',
+      description: 'Dynamic dispatch.',
+      content: `#include <iostream>
+using namespace std;
+class A { public: virtual void f(){cout<<'A';} };
+class B: public A { public: void f(){cout<<'B';} };
+int main(){ A* p = new B(); p->f(); }`,
+      output: `B`,
+    },
+      ],
+    },
+        {
+      id: 'modern',
+      title: 'Modern C++',
+      description: 'Learn Modern C++',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'smart-ptr',
+      title: 'Smart Pointers',
+      description: 'RAII memory management.',
+      content: `#include <iostream>
+#include <memory>
+using namespace std;
+int main(){ auto p = make_unique<int>(9); cout << *p; }`,
+      output: `9`,
+    },
+            {
+      id: 'auto-range',
+      title: 'Structured Bindings',
+      description: 'C++17 tuple unpacking.',
+      content: `#include <iostream>
+#include <utility>
+using namespace std;
+int main(){ auto [k,v] = pair{'x',1}; cout << v; }`,
+      output: `1`,
+    },
+      ],
+    },
+        {
+      id: 'error',
+      title: 'Error Handling',
+      description: 'Learn Error Handling',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'exceptions',
+      title: 'try / catch / throw',
+      description: 'C++ exceptions.',
+      content: `#include <iostream>
+using namespace std;
+int main(){ try { throw runtime_error('oops'); } catch (const exception& e) { cout << e.what(); } return 0; }`,
+      output: `oops`,
+    },
+      ],
+    },
+        {
+      id: 'file-io',
+      title: 'File I/O',
+      description: 'Learn File I/O',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'fstream',
+      title: 'fstream',
+      description: 'Read/write files.',
+      content: `#include <fstream>
+#include <iostream>
+using namespace std;
+int main(){ ofstream f('o.txt'); f << 'hi'; f.close(); ifstream g('o.txt'); string s; g >> s; cout << s; return 0; }`,
+      output: `hi`,
+    },
+      ],
+    },
+        {
+      id: 'stl-algo',
+      title: 'Algorithms',
+      description: 'Learn Algorithms',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'sort',
+      title: 'sort',
+      description: 'STL algorithms.',
+      content: `#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+int main(){ vector<int> v={3,1,2}; sort(v.begin(),v.end()); for(int x:v) cout<<x; return 0; }`,
+      output: `123`,
+    },
+      ],
+    },
+  ],
 };

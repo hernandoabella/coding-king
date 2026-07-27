@@ -1,264 +1,311 @@
-import javascript from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { LanguageConfig } from '../languageRegistry';
 
-SyntaxHighlighter.registerLanguage('javascript', javascript);
-
-export const javaScriptConfig = {
-  title: "JavaScript Tutorial",
+// Auto-generated comprehensive tutorial. Edit freely.
+export const javaScriptConfig: LanguageConfig = {
+  title: 'JavaScript',
   language: 'javascript',
   tutorialData: [
-    {
+        {
       id: 'basics',
       title: 'JavaScript Basics',
+      description: 'Learn JavaScript Basics',
+      content: `    {`,
       subtopics: [
-        {
-          id: 'variables',
-          title: 'Variables (let/const)',
-          description: 'Declare variables with let (mutable) and const (immutable).',
-          content: `let name = "Alice";
-const PI = 3.14159;
-// PI = 3.14; // TypeError: Assignment to constant variable
-name = "Bob";
-console.log(\`Name: \${name}, PI: \${PI}\`);`,
-          output: "Name: Bob, PI: 3.14159"
-        },
-        {
-          id: 'data-types',
-          title: 'Data Types',
-          description: "JavaScript's primitive types: number, string, boolean, null, undefined, and symbol.",
-          content: `let num = 42;
-let str = "Hello";
-let bool = true;
-let empty = null;
-let notDefined;
-console.log(typeof num, typeof str, typeof bool);
-console.log(typeof empty, typeof notDefined);`,
-          output: "number string boolean\nobject undefined"
-        },
-        {
-          id: 'template-literals',
-          title: 'Template Literals',
-          description: 'Use backticks and ${} for string interpolation and multi-line strings.',
-          content: `let name = "Alice";
-let items = 3;
-let price = 9.99;
-console.log(\`Hello, \${name}!\`);
-console.log(\`Total: \${items * price}\`);
-console.log(\`Multi
-line
-string\`);`,
-          output: "Hello, Alice!\nTotal: 29.97\nMulti\nline\nstring"
-        },
-        {
-          id: 'type-coercion',
-          title: 'Type Coercion',
-          description: 'JavaScript automatically converts types; use === for strict comparison.',
-          content: `console.log(5 + "5");
-console.log("5" - 2);
-console.log(5 == "5");
-console.log(5 === "5");
-console.log(Boolean(""));
-console.log(Boolean("hello"));`,
-          output: "55\n3\ntrue\nfalse\nfalse\ntrue"
-        },
+            {
+      id: 'hello',
+      title: 'Hello World',
+      description: 'Console output.',
+      content: `console.log('Hello, World!');`,
+      output: `Hello, World!`,
+    },
+            {
+      id: 'variables',
+      title: 'let / const / var',
+      description: 'Block-scoped declarations.',
+      content: `let name = 'Ada';
+const year = 2024;
+name = 'Lin';
+console.log(name, year);`,
+      output: `Lin 2024`,
+    },
+            {
+      id: 'types',
+      title: 'Dynamic Types',
+      description: 'Number, string, boolean, etc.',
+      content: `const a = 5;
+const b = '5';
+console.log(a + b, a + Number(b));`,
+      output: `55 10`,
+    },
       ],
     },
-    {
+        {
       id: 'control-flow',
       title: 'Control Flow',
+      description: 'Learn Control Flow',
+      content: `    {`,
       subtopics: [
-        {
-          id: 'if-else',
-          title: 'If / Else',
-          description: 'Make decisions with if, else if, and else statements.',
-          content: `let score = 85;
-if (score >= 90) {
-  console.log("Grade: A");
-} else if (score >= 80) {
-  console.log("Grade: B");
-} else if (score >= 70) {
-  console.log("Grade: C");
-} else {
-  console.log("Grade: F");
-}`,
-          output: "Grade: B"
-        },
-        {
-          id: 'switch-case',
-          title: 'Switch / Case',
-          description: 'Branch on multiple values using switch statements.',
-          content: `let day = 3;
-switch (day) {
-  case 1:
-    console.log("Monday");
-    break;
-  case 2:
-    console.log("Tuesday");
-    break;
-  case 3:
-    console.log("Wednesday");
-    break;
-  default:
-    console.log("Other day");
-}`,
-          output: "Wednesday"
-        },
-        {
-          id: 'for-loops',
-          title: 'For Loops',
-          description: 'Iterate with for, for...of, and for...in loops.',
-          content: `let fruits = ["apple", "banana", "cherry"];
-for (let i = 0; i < fruits.length; i++) {
-  console.log(fruits[i]);
-}
-for (let fruit of fruits) {
-  console.log(fruit.toUpperCase());
-}`,
-          output: "apple\nbanana\ncherry\nAPPLE\nBANANA\nCHERRY"
-        },
-        {
-          id: 'while-loops',
-          title: 'While / Do-While',
-          description: 'Repeat code while a condition holds true.',
-          content: `let count = 1;
-while (count <= 3) {
-  console.log(\`While: \${count}\`);
-  count++;
-}
-let num = 5;
-do {
-  console.log(\`Do-While: \${num}\`);
-  num--;
-} while (num > 3);`,
-          output: "While: 1\nWhile: 2\nWhile: 3\nDo-While: 5\nDo-While: 4"
-        },
+            {
+      id: 'if',
+      title: 'If / Else',
+      description: 'Truthy/falsy branching.',
+      content: `const x = 10;
+if (x > 5) console.log('big'); else console.log('small');`,
+      output: `big`,
+    },
+            {
+      id: 'for',
+      title: 'for / for-of / for-in',
+      description: 'Loop variants.',
+      content: `for (const n of [1, 2, 3]) console.log(n);`,
+      output: `1
+2
+3`,
+    },
+            {
+      id: 'while',
+      title: 'while',
+      description: 'Condition loop.',
+      content: `let i = 0; while (i < 3) console.log(i++);`,
+      output: `0
+1
+2`,
+    },
+            {
+      id: 'switch',
+      title: 'switch',
+      description: 'Multi-way branch.',
+      content: `const d = 2;
+const s = d === 1 ? 'one' : d === 2 ? 'two' : 'other';
+console.log(s);`,
+      output: `two`,
+    },
       ],
     },
-    {
+        {
       id: 'functions',
       title: 'Functions',
+      description: 'Learn Functions',
+      content: `    {`,
       subtopics: [
-        {
-          id: 'function-declarations',
-          title: 'Function Declarations',
-          description: 'Define named functions that can be called with arguments.',
-          content: `function greet(name) {
-  return \`Hello, \${name}!\`;
-}
-function add(a, b) {
-  return a + b;
-}
-console.log(greet("Alice"));
-console.log(add(3, 7));`,
-          output: "Hello, Alice!\n10"
-        },
-        {
-          id: 'arrow-functions',
-          title: 'Arrow Functions',
-          description: 'Concise function syntax with lexical this binding.',
-          content: `const greet = (name) => \`Hi, \${name}!\`;
-const multiply = (a, b) => a * b;
-const square = x => x * x;
-let numbers = [1, 2, 3].map(n => n * 2);
-console.log(greet("Bob"));
-console.log(multiply(4, 5));
-console.log(square(6));
-console.log(numbers);`,
-          output: "Hi, Bob!\n20\n36\n2,4,6"
-        },
-        {
-          id: 'default-parameters',
-          title: 'Default Parameters',
-          description: 'Provide fallback values for function parameters.',
-          content: `function greet(name = "Guest", greeting = "Hello") {
-  return \`\${greeting}, \${name}!\`;
-}
-console.log(greet());
-console.log(greet("Alice"));
-console.log(greet("Bob", "Welcome"));`,
-          output: "Hello, Guest!\nHello, Alice!\nWelcome, Bob!"
-        },
-        {
-          id: 'closures',
-          title: 'Closures',
-          description: 'Functions that remember their lexical scope even when called outside it.',
-          content: `function createCounter() {
-  let count = 0;
-  return function () {
-    count++;
-    return count;
-  };
-}
-const counter = createCounter();
-console.log(counter());
-console.log(counter());
-console.log(counter());`,
-          output: "1\n2\n3"
-        },
+            {
+      id: 'def',
+      title: 'Function Declarations',
+      description: 'Hoisted functions.',
+      content: `function square(n) { return n * n; }
+console.log(square(5));`,
+      output: `25`,
+    },
+            {
+      id: 'arrow',
+      title: 'Arrow Functions',
+      description: 'Concise syntax.',
+      content: `const sq = (n) => n * n;
+console.log(sq(4));`,
+      output: `16`,
+    },
+            {
+      id: 'rest',
+      title: 'Rest & Default Params',
+      description: 'FlexArgs.',
+      content: `function sum(...xs) { return xs.reduce((a, b) => a + b, 0); }
+console.log(sum(1, 2, 3));`,
+      output: `6`,
+    },
+            {
+      id: 'closures',
+      title: 'Closures',
+      description: 'Functions capture scope.',
+      content: `function makeAdder(x) { return (y) => x + y; }
+const add5 = makeAdder(5);
+console.log(add5(3));`,
+      output: `8`,
+    },
       ],
     },
-    {
+        {
       id: 'data-structures',
       title: 'Data Structures',
+      description: 'Learn Data Structures',
+      content: `    {`,
       subtopics: [
+            {
+      id: 'array',
+      title: 'Arrays',
+      description: 'Ordered lists.',
+      content: `const a = [1, 2, 3];
+a.push(4);
+console.log(a.length, a[0]);`,
+      output: `4 1`,
+    },
+            {
+      id: 'object',
+      title: 'Objects',
+      description: 'Key-value maps.',
+      content: `const o = { name: 'Kim', age: 30 };
+console.log(o.name, o['age']);`,
+      output: `Kim 30`,
+    },
+            {
+      id: 'map',
+      title: 'Map & Set',
+      description: 'ES6 collections.',
+      content: `const m = new Map([['a', 1]]);
+m.set('b', 2);
+console.log(m.get('b'));`,
+      output: `2`,
+    },
+            {
+      id: 'destructuring',
+      title: 'Destructuring',
+      description: 'Unpack arrays/objects.',
+      content: `const [x, y] = [1, 2];
+const { name } = { name: 'Lin' };
+console.log(x, y, name);`,
+      output: `1 2 Lin`,
+    },
+      ],
+    },
         {
-          id: 'arrays',
-          title: 'Arrays',
-          description: 'Ordered lists with index-based access and common operations.',
-          content: `let fruits = ["apple", "banana", "cherry"];
-console.log(fruits[0]);
-console.log(fruits.length);
-fruits.push("date");
-console.log(fruits);
-fruits.pop();
-console.log(fruits);
-console.log(fruits.indexOf("banana"));`,
-          output: "apple\n3\napple,banana,cherry,date\napple,banana,cherry\n1"
-        },
+      id: 'oop',
+      title: 'Objects & Classes',
+      description: 'Learn Objects & Classes',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'classes',
+      title: 'Classes',
+      description: 'Syntactic sugar over prototypes.',
+      content: `class Dog { bark() { console.log('Woof'); } }
+new Dog().bark();`,
+      output: `Woof`,
+    },
+            {
+      id: 'inheritance',
+      title: 'Inheritance',
+      description: 'extends keyword.',
+      content: `class A { f() { console.log('A'); } }
+class B extends A {}
+new B().f();`,
+      output: `A`,
+    },
+            {
+      id: 'getters',
+      title: 'Getters / Setters',
+      description: 'Computed properties.',
+      content: `class Circle { constructor(r) { this.r = r; } get area() { return Math.PI * this.r ** 2; } }
+console.log(new Circle(2).area.toFixed(2));`,
+      output: `12.57`,
+    },
+      ],
+    },
         {
-          id: 'array-methods',
-          title: 'Array Methods (map/filter/reduce)',
-          description: 'Transform arrays with functional methods.',
-          content: `let nums = [1, 2, 3, 4, 5, 6];
-let doubled = nums.map(n => n * 2);
-let evens = nums.filter(n => n % 2 === 0);
-let sum = nums.reduce((acc, n) => acc + n, 0);
-console.log(doubled);
-console.log(evens);
-console.log(sum);`,
-          output: "2,4,6,8,10,12\n2,4,6\n21"
-        },
+      id: 'async',
+      title: 'Async & Promises',
+      description: 'Learn Async & Promises',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'promises',
+      title: 'Promises',
+      description: 'Future values.',
+      content: `const p = new Promise((res) => res(42));
+p.then((v) => console.log(v));`,
+      output: `42`,
+    },
+            {
+      id: 'async',
+      title: 'async / await',
+      description: 'Syntactic promise chaining.',
+      content: `async function main() { const v = await Promise.resolve(7); console.log(v); }
+main();`,
+      output: `7`,
+    },
+            {
+      id: 'fetch',
+      title: 'fetch',
+      description: 'HTTP requests.',
+      content: `fetch('https://api.github.com')
+  .then((r) => r.json())
+  .then((j) => console.log(typeof j));`,
+      output: `object`,
+    },
+      ],
+    },
         {
-          id: 'objects',
-          title: 'Objects',
-          description: 'Key-value collections for structured data.',
-          content: `let person = {
-  name: "Alice",
-  age: 25,
-  greet() {
-    return \`Hi, I'm \${this.name}\`;
-  }
-};
-console.log(person.name);
-person.job = "Engineer";
-console.log(person.job);
-console.log(person.greet());
-console.log(Object.keys(person));`,
-          output: "Alice\nEngineer\nHi, I'm Alice\nname,age,greet,job"
-        },
+      id: 'functional',
+      title: 'Functional Methods',
+      description: 'Learn Functional Methods',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'map',
+      title: 'map / filter / reduce',
+      description: 'Array transformations.',
+      content: `const nums = [1, 2, 3, 4];
+const evens = nums.filter((n) => n % 2 === 0);
+console.log(evens);`,
+      output: `[ 2, 4 ]`,
+    },
+            {
+      id: 'spread',
+      title: 'Spread Operator',
+      description: 'Expand iterables.',
+      content: `const a = [1, 2];
+const b = [...a, 3];
+console.log(b);`,
+      output: `[ 1, 2, 3 ]`,
+    },
+      ],
+    },
         {
-          id: 'destructuring',
-          title: 'Destructuring',
-          description: 'Unpack values from arrays and objects into variables.',
-          content: `let [a, b, c] = [10, 20, 30];
-console.log(a, b, c);
-let user = { name: "Bob", age: 30, city: "Paris" };
-let { name, city } = user;
-console.log(name, city);
-let { age: userAge } = user;
-console.log(userAge);`,
-          output: "10 20 30\nBob Paris\n30"
-        },
+      id: 'error',
+      title: 'Error Handling',
+      description: 'Learn Error Handling',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'try-catch',
+      title: 'try / catch / finally',
+      description: 'Catch exceptions.',
+      content: `try { throw new Error('oops'); } catch (e) { console.log(e.message); }`,
+      output: `oops`,
+    },
+      ],
+    },
+        {
+      id: 'modules',
+      title: 'Modules',
+      description: 'Learn Modules',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'esm',
+      title: 'ES Modules',
+      description: 'import / export.',
+      content: `// math.js
+// export const add = (a, b) => a + b;
+// main.js
+// import { add } from './math.js';
+console.log('modules enabled');`,
+      output: `modules enabled`,
+    },
+      ],
+    },
+        {
+      id: 'dom',
+      title: 'DOM Basics',
+      description: 'Learn DOM Basics',
+      content: `    {`,
+      subtopics: [
+            {
+      id: 'query',
+      title: 'Selecting Elements',
+      description: 'querySelector.',
+      content: `// document.querySelector('h1').textContent = 'Hi';
+console.log('DOM available in browser');`,
+      output: `DOM available in browser`,
+    },
       ],
     },
   ],
