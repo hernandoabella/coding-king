@@ -14,6 +14,9 @@ import { useTheme } from "./ThemeContext";
 import TutorialViewer from "./TutorialViewer";
 import { languageRegistry } from "./languageRegistry";
 import { buttonsData } from "./buttonsData";
+import { FaHome } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
+import * as progress from "./progress";
 
 type LanguageButton = {
   label: string;
@@ -31,7 +34,13 @@ const langColors: Record<string, string> = {
   SQL: "#E38C00", Shell: "#4EAA25", ObjectiveC: "#438EFF",
 };
 
-function Main() {
+function Main({
+  initialLang,
+  onHome,
+}: {
+  initialLang?: string;
+  onHome?: () => void;
+}) {
   const [activeLang, setActiveLang] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const [leftOpen, setLeftOpen] = useState(true);
@@ -69,7 +78,7 @@ function Main() {
     setActiveSubtopic(subtopic);
   };
 
-  useEffect(() => { selectLanguage("Python"); }, [selectLanguage]);
+  useEffect(() => { selectLanguage(initialLang || "Python"); }, [selectLanguage, initialLang]);
 
   // Keyboard shortcuts
   useEffect(() => {
@@ -105,6 +114,13 @@ function Main() {
       }`}>
         <div className="flex items-center gap-2 min-w-0">
           <div className="flex items-center gap-0.5">
+            {onHome && (
+              <button onClick={onHome}
+                className={`p-1 rounded text-xs transition-colors ${isDark ? 'hover:bg-white/10 text-gray-400' : 'hover:bg-black/5 text-gray-500'}`}
+                title="Back to home">
+                <FaHome />
+              </button>
+            )}
             <button onClick={() => setLeftOpen(!leftOpen)}
               className={`p-1 rounded text-xs transition-colors ${isDark ? 'hover:bg-white/10 text-gray-400' : 'hover:bg-black/5 text-gray-500'}`}
               title="Toggle languages (Ctrl+B)">
@@ -222,6 +238,7 @@ function Main() {
               tutorialTitle={config.title}
               tutorialData={config.tutorialData}
               language={config.language}
+              langKey={activeLang}
               activeSection={activeSection}
               activeSubtopic={activeSubtopic}
               onSubtopicChange={handleSubtopicChange}
@@ -276,7 +293,9 @@ function Main() {
                         <motion.div
                           initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.15 }}>
-                          {section.subtopics.map((sub: any, si: number) => (
+                          {section.subtopics.map((sub: any, si: number) => {
+                            const done = progress.isCompleted(activeLang, section.id, sub.id);
+                            return (
                             <motion.button
                               key={sub.id}
                               initial={{ opacity: 0, x: 8 }} animate={{ opacity: 1, x: 0 }}
@@ -287,10 +306,15 @@ function Main() {
                                   ? 'bg-blue-600/15 text-blue-400 font-medium'
                                   : isDark ? 'text-gray-600 hover:text-gray-300' : 'text-gray-400 hover:text-gray-600'
                               }`}>
-                              <span className={`w-1 h-1 rounded-full flex-shrink-0 ${activeSubtopic && activeSubtopic.id === sub.id ? 'bg-blue-400' : 'bg-gray-600'}`} />
+                              {done ? (
+                                <FaCheck className="text-[8px] text-green-500 flex-shrink-0" />
+                              ) : (
+                                <span className={`w-1 h-1 rounded-full flex-shrink-0 ${activeSubtopic && activeSubtopic.id === sub.id ? 'bg-blue-400' : 'bg-gray-600'}`} />
+                              )}
                               {sub.title}
                             </motion.button>
-                          ))}
+                            );
+                          })}
                         </motion.div>
                       )}
                     </AnimatePresence>

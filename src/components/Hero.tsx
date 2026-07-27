@@ -122,10 +122,10 @@ function Hero() {
   }, [currentIndex]);
 
   return (
-    <section className="flex justify-center items-center text-center p-10 min-h-[6rem]">
-      <div>
+    <section className="flex justify-center items-center text-center p-6 min-h-[7rem]">
+      <div className="w-full flex justify-center">
         <div
-          className="text-4xl md:text-6xl font-bold font-mono tracking-wide mb-4"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold font-mono tracking-wide"
           aria-live="polite"
         >
           {textElements.length > 0 ? textElements : null}

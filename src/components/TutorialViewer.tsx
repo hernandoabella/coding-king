@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import {
   FaChevronRight,
   FaChevronLeft,
@@ -6,11 +6,13 @@ import {
   FaCheck,
   FaPlay,
   FaTerminal,
+  FaCheckCircle,
 } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { anOldHope } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { useTheme } from './ThemeContext';
+import * as progress from './progress';
 
 const runPythonCode = async (code: string): Promise<string> => {
   const Sk = await import('skulpt');
@@ -52,17 +54,37 @@ type TutorialViewerProps = {
   tutorialTitle: string;
   tutorialData: Section[];
   language: string;
+  langKey: string;
   activeSubtopic: Subtopic;
   activeSection: Section;
   onSubtopicChange: (section: Section, subtopic: Subtopic) => void;
   accentColor: string;
 };
 
-function TutorialViewer({ tutorialTitle, tutorialData, language, activeSubtopic, activeSection, onSubtopicChange, accentColor }: TutorialViewerProps) {
+function TutorialViewer({ tutorialTitle, tutorialData, language, langKey, activeSubtopic, activeSection, onSubtopicChange, accentColor }: TutorialViewerProps) {
   const { isDark } = useTheme();
   const [copied, setCopied] = useState(false);
   const [output, setOutput] = useState('');
   const [isRunning, setIsRunning] = useState(false);
+  const [completed, setCompleted] = useState(false);
+
+  useEffect(() => {
+    setCompleted(progress.isCompleted(langKey, activeSection.id, activeSubtopic.id));
+  }, [langKey, activeSection.id, activeSubtopic.id]);
+
+  const toggleComplete = () => {
+    const next = !completed;
+    progress.setCompleted(langKey, activeSection.id, activeSubtopic.id, next);
+    setCompleted(next);
+    if (next) {
+      const { done, total } = progress.getProgress(langKey, tutorialData);
+      if (done === total) {
+        import('canvas-confetti').then(({ default: confetti }) => {
+          confetti({ particleCount: 120, spread: 70, origin: { y: 0.6 }, disableForReducedMotion: true });
+        });
+      }
+    }
+  };
 
   const handleCopyToClipboard = () => {
     navigator.clipboard
@@ -81,8 +103,8 @@ function TutorialViewer({ tutorialTitle, tutorialData, language, activeSubtopic,
       try {
         const result = await runPythonCode(activeSubtopic.content);
         setOutput(result);
-      } catch {
-        setOutput(activeSubtopic.output || '');
+      } catch (err) {
+        setOutput((activeSubtopic.output ? activeSubtopic.output + '\n' : '') + 'Error: ' + (err?.toString?.() || String(err)));
       }
     } else {
       // simulate delay for realism
@@ -242,6 +264,21 @@ function TutorialViewer({ tutorialTitle, tutorialData, language, activeSubtopic,
                 <FaPlay className="text-[9px]" />
                 {isRunning ? 'Running...' : 'Run'}
                 <kbd className="text-[8px] opacity-50 ml-0.5 hidden sm:inline">Ctrl+Enter</kbd>
+              </button>
+
+              <button
+                onClick={toggleComplete}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 border ${
+                  completed
+                    ? 'bg-green-500/15 text-green-400 border-green-500/30'
+                    : isDark
+                      ? 'bg-white/5 text-gray-400 border-white/10 hover:bg-white/10 hover:text-white'
+                      : 'bg-black/5 text-gray-500 border-black/10 hover:bg-black/10 hover:text-gray-700'
+                }`}
+                title={completed ? 'Mark as not done' : 'Mark as done'}
+              >
+                {completed ? <FaCheckCircle className="text-[9px]" /> : <FaCheck className="text-[9px]" />}
+                {completed ? 'Done' : 'Mark done'}
               </button>
 
               <div className="flex items-center gap-1 ml-auto text-[10px]">

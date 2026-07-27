@@ -35,6 +35,14 @@
   animation: gridScroll 20s linear infinite;
 }
 
+.bg-grid-light {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.035) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridScroll 20s linear infinite;
+}
+
 @keyframes gridScroll {
   from { background-position: 0 0; }
   to { background-position: 40px 40px; }

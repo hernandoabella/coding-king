@@ -37,8 +37,8 @@ val flag: Boolean = true
 val ch: Char = 'A'
 
 println(s"$n | $pi | $msg | $flag | $ch")
-println(s"Type of pi: ${pi.getClass.getSimpleName}")
-println(s"Max Int: ${Int.MaxValue}")`,
+println(s"Type of pi: \${pi.getClass.getSimpleName}")
+println(s"Max Int: \${Int.MaxValue}")`,
         output: "42 | 3.14159 | Scala | true | A\nType of pi: double\nMax Int: 2147483647"
       },
       {
@@ -49,7 +49,7 @@ println(s"Max Int: ${Int.MaxValue}")`,
 val age = 25
 
 println(s"Hello, $name!")
-println(s"${name} is $age years old, next year ${age + 1}")
+println(s"\${name} is $age years old, next year \${age + 1}")
 
 val height = 1.75
 println(f"Height: $height%.2f meters")
@@ -65,7 +65,7 @@ println(raw"No escape: \\n\\t test")`,
 
 val alice = Person("Alice", 30)
 println(alice)
-println(s"Name: ${alice.name}")
+println(s"Name: \${alice.name}")
 
 val older = alice.copy(age = 31)
 println(older)
@@ -243,7 +243,7 @@ println(hello("Bob"))`,
         description: 'Work with immutable linked lists and common operations.',
         content: `val nums = List(1, 2, 3, 4, 5)
 println(nums)
-println(s"Head: ${nums.head}, Tail: ${nums.tail}")
+println(s"Head: \${nums.head}, Tail: \${nums.tail}")
 
 val prepended = 0 :: nums
 println(prepended)
