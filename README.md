@@ -1,10 +1,1 @@
-![GitHub Banners (10)](https://github.com/user-attachments/assets/e59e1033-1e19-4da6-b61c-5f19c630f8e5)
-
-### What would you like to learn?
-- [Python](./programing-languages/python/python.md)
-- [JavaScript](#)
-- [Java](#)
-- [Go](#)
-- [C](#)
-- [C++](#)
-- [C#](#)
+<img width="1920" height="945" alt="Coding-King-07-28-2026_10_38_AM" src="https://github.com/user-attachments/assets/e4c58f2d-600b-4458-901e-d8b84db4ebac" />
